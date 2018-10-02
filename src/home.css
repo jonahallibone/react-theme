@@ -1,0 +1,208 @@
+/*** Top of Page ***/
+
+
+.hero-home {
+    padding: 6.5vw 0 6.5vw 0;
+}
+
+.hero-section {
+    padding-top: 138px;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 35vw;
+}
+
+.hero-section video {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 0;
+}
+
+header a {
+    color: #000;
+    text-decoration: none;
+}
+
+.homepage-bottom {
+    background-color: #FFF; 
+}
+
+.services {
+    padding: 2rem 0;
+}
+
+
+.slider-container {
+    /* width: 100%; */
+    height: calc(100vh - 74px);
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+
+/*** Image Slider ***/
+
+
+.piscatello-slider__container {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.piscatello-slider__cell--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+.piscatello-slider__cell {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.piscatello-slider__cell:nth-child(even) {
+    padding: 2rem 0 2rem 2rem;
+}
+
+.piscatello-slider__cell:nth-child(odd) {
+    padding: 2rem 2rem 2rem 0;
+}
+
+.cell-contents {
+    height: auto;
+    width: 100%;
+}
+.cell-image {
+    width: 100%;
+    background-color: #DDD;
+    /* box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1); */
+    transition: .45s ease all;
+    overflow: hidden;
+}
+
+.cell-image:hover {
+    transform: scale(.95);
+}
+
+.cell-image img {
+    transform: scale(1);
+    transition: .45s ease all;
+}
+
+.cell-image:hover img {
+    transform: scale(1.1);
+}
+
+.cell-information {
+    padding-top: 2rem;
+}
+
+
+/*** Service Section ***/
+
+.service-card {
+    height: 21.25vw;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.service-card-content {
+    height: 100%;
+    width: 100%;
+}
+
+/*** Top Typography control ***/
+
+.h1-appear {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.letter-of-hidden {
+    overflow: hidden;
+    display: block;
+}
+
+.letter-of-hidden span {
+    display: block;
+    animation: reveal-letter forwards 1.25s ease;
+}
+
+@keyframes reveal-letter {
+    0% {
+        transform: translateY(101%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(101%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/**** Work Cards ****/
+
+.work-card {
+    height: 28vw;
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+    background-color: #DDD;
+}
+
+@media all and (max-width: 1024px) {
+
+    .hero-section {
+        min-height: 65vw;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    .hero-section {
+        min-height: 100vw;
+    }
+
+    .piscatello-slider__cell {
+        flex: 0 0 100%;
+    }
+    .piscatello-slider__cell:nth-child(even),
+    .piscatello-slider__cell:nth-child(odd) {
+        padding: 0;
+    }
+
+    .h1-appear {
+        font-size: 3rem;
+    }
+
+    .cell-information {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+}

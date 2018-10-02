@@ -1,0 +1,462 @@
+/* Copy of reset.css 2.0 */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button, input, textarea {
+    font-family: "Rotis Sans Serif";
+}
+
+strong {
+    font-weight: bolder;
+}
+
+/* End reset.css 2.0 */
+html {
+    height: 100%;
+}
+html,body {
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FDFDFD;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Rotis Sans Serif";
+    line-height: 1.6em;
+    color: #000;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 800;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    z-index: 1;
+}
+
+h1.light,h2.light,h3.light,h4.light,h5.light {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1.25;
+}
+
+h1.reg {
+    font-size: 3rem;
+}
+
+h2.reg {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1.15;
+}
+
+h3.reg {
+    font-size: 2rem;
+    line-height: 1.27;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.78rem;
+}
+
+.text-reg {
+    font-size: 1rem;
+}
+
+.text-md {
+    font-size: 1.25rem;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-block {
+    display: block;
+}
+
+.text-grey {
+    color: #AAA;
+}
+
+.text-blue {
+    color: #4a69bd;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-white {
+    color: #FFF;
+}
+.underline {
+    border-bottom: 3px solid #333;
+}
+
+.img-block {
+    display: inline-block;
+}
+
+.img-block img {
+    display: block;
+    width: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container.padded {
+    padding: 3rem 0 2rem 0;
+}
+
+header {
+    background-color: transparent;
+    width: 100vw;
+    height: auto;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all ease .245s;
+}
+
+header.header-min {
+    padding: 1rem 0;
+    background-color: #000;
+}
+
+header .menu {
+    z-index: 999;
+}
+
+header.header-min .menu a,
+header.header-min a,
+header.header-min .menu-button,
+header.header-overlay--visible .menu,
+header.header-overlay--visible a,
+header.header-overlay--visible .menu-button {
+    color: #FFF;
+}
+
+header.header-overlay--visible .menu .bar {
+    background-color: #FFF;
+}
+
+header .menu-button {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    color: #000;
+}
+
+header .menu-button .hamburger {
+    position: relative;
+    height: 10px;
+    width: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu a {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+header .menu .bar {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
+
+
+header.header-min .bar {
+    background-color: #FFF;
+}
+
+.header-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #FFF;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s ease .345s, opacity .345s ease;
+}
+
+header.header-overlay--visible .header-overlay {
+    visibility: visible;
+    opacity: 1;
+    transition:  opacity .345s ease;
+}
+
+.header-overlay .menu-vert {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+} 
+header.header-overlay--visible .animate--pre-animate {
+    opacity: 0;
+}
+header.header-overlay--visible .animate--post-animate {
+    animation: animateMenuIn .345s ease forwards;
+}
+
+.image-hover {
+    background-color: #DDD;
+    transition: 0.345s ease all;
+}
+
+.image-hover img {
+    opacity: 1;
+}
+
+.image-hover.image-hover--transitioning {
+    transform: scale(.95);
+}
+
+.image-hover.image-hover--transitioning img {
+    opacity: 0;
+}
+
+header.header-overlay--visible .header-overlay--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+} 
+
+.hidden {
+    display: none !important;
+}
+ 
+@keyframes animateMenuIn {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    header .menu-mobile {
+        display: none;
+    }
+}
+
+/*** Background classes ***/
+
+.bg-grey {
+    background-color: #EEE;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-white {
+    background-color: #FFF;
+}
+
+/*** Padding classes ***/
+
+.padding-btm-xs {
+    padding-bottom: .75rem;   
+}
+
+.padding-btm-sm {
+    padding-bottom: 1rem;
+}
+
+.padding-btm-md {
+    padding-bottom: 1.25rem;   
+}
+
+.padding-btm-lg {
+    padding-bottom: 2rem;   
+}
+
+.padding-btm-xl {
+    padding-bottom: 3rem;   
+}
+/** Components **/
+
+button, .button-sm {
+    border: none;
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #FFF;
+    color: #000;
+    box-sizing: border-box;
+    transition: .245s ease all;
+    outline: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button.filled, button.grey {
+    border: none;
+    background-color: #CCC;
+    color: #000;
+}
+
+button.black {
+    background-color: #444;
+    color: #FFF;
+}
+
+button.black:hover,
+button.black-border:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #FFF;
+}
+
+
+button.white:hover,
+button.white-border:hover {
+    background-color: #FFF;
+    border-color: #FFF;
+    color: #000;
+}
+
+button.white {
+    background-color: #FFF;
+}
+
+button.black:active {
+    background-color: #444;
+}
+
+button.black-border {
+    background-color: transparent;
+    border: 2px solid #444;
+    color: #000;
+    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
+}
+
+button.grey-border {
+    background-color: transparent;
+    border: 2px solid #CCC;
+    color: #CCC;
+    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
+}
+
+.transition-page {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+  
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: all 250ms ease-in;
+    transition-delay: 250ms;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: all 250ms ease-out;
+}

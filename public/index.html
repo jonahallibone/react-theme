@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Piscatello Design Centre</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <style type="text/css">
+      @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=0782a05f-f4d3-4e48-8ab9-66189b665211");
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-weight: 400;
+              src:url("Fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix");
+              src:url("Fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix") format("eot"),url("Fonts/426cf71e-b8d1-4802-9690-1dcec0ef30c6.woff2") format("woff2"),url("Fonts/8acd0e02-7a91-4973-9c61-755704217f62.woff") format("woff"),url("Fonts/f308cbe1-92de-408b-91bf-9c839ab3e687.ttf") format("truetype");
+          }
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-weight: 400;
+              font-style: italic;
+              src:url("Fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix");
+              src:url("Fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix") format("eot"),url("Fonts/19b357e8-f0ac-40ba-a4d3-8d53b213ae27.woff2") format("woff2"),url("Fonts/6ea8a73f-c5a8-459e-b22f-dffe6a99f71e.woff") format("woff"),url("Fonts/24e663f4-051d-454d-8b90-d729ac47bb27.ttf") format("truetype");
+          }
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-weight: normal;
+              font-weight: 500;
+              src:url("Fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix");
+              src:url("Fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix") format("eot"),url("Fonts/979b67f1-28b4-4d3b-ab4d-551d4eaa3827.woff2") format("woff2"),url("Fonts/60d6e9b1-72ed-49c7-bcd9-026d74b98deb.woff") format("woff"),url("Fonts/03122496-25a2-4eb5-8181-fc843043fcc3.ttf") format("truetype");
+          }
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-style: italic;
+              src:url("Fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix");
+              src:url("Fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix") format("eot"),url("Fonts/02d9a70b-ad14-4810-aa3a-144f7ffe7b80.woff2") format("woff2"),url("Fonts/cadf8785-780e-486c-8257-f3315aeafdb9.woff") format("woff"),url("Fonts/9b599527-13af-4402-98a6-7ed7a0383430.ttf") format("truetype");
+          }
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-weight: bold;
+              font-weight: 700;
+              src:url("Fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix");
+              src:url("Fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix") format("eot"),url("Fonts/667fde85-ea2f-4851-a2d1-93456b293f5a.woff2") format("woff2"),url("Fonts/a789b8d7-2c89-433b-8852-dc661d2fb383.woff") format("woff"),url("Fonts/c7ede56d-0306-445f-ad54-23e574bdcb4f.ttf") format("truetype");
+          }
+          @font-face{
+              font-family:"Rotis Sans Serif";
+              font-weight: bolder;
+              font-weight: 800;
+              src:url("Fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix");
+              src:url("Fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix") format("eot"),url("Fonts/75ec2be4-7969-4594-9c01-fb9c2add6376.woff2") format("woff2"),url("Fonts/13f09a40-3a24-44ca-8083-7c5e67fe802c.woff") format("woff"),url("Fonts/c15c78f4-0b68-45e1-9e4e-5abf429825f4.ttf") format("truetype");
+          }
+      </style>      
+  </body>
+</html>
