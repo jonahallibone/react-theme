@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import Button from '../Button/Button';
 import { Link } from "react-router-dom";
 
 import '../../App.css';
-
-// Constants for images on hover
-
-const WORK_IMAGE = "http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg";
-const ABOUT_IMAGE = "http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg";
-const CONTACT_IMAGE = "http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg";
 
 class Header extends Component {
 
@@ -56,7 +49,7 @@ class Header extends Component {
     }
 
     styleHeader = () => {
-        if(document.documentElement.scrollTop) {
+        if(window.pageYOffset > 0 || document.documentElement.scrollTop > 0) {
             document.querySelector("header").classList.add("header-min")
         }
     
@@ -74,12 +67,12 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <span>Menu</span>
-                                    <span className="hamburger">
+                                    <span><h2>Menu</h2></span>
+                                    {/* <span className="hamburger">
                                         <span className="bar"></span>
                                         <span className="bar"></span>
                                         <span className="bar"></span>
-                                    </span>
+                                    </span> */}
                                 </div>
                             </Col>
                     </Row>
@@ -88,12 +81,12 @@ class Header extends Component {
                     <div className="menu-vert">
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%"}} align="center">
-                                <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+                                <Col xs={8} sm={6} md={6} lg={6} xl={6}>
                                     <Link to="/work"><h1 className="animate--pre-animate work-image menu--image-hover">Work</h1></Link>
                                     <Link to="/about"><h1 className="animate--pre-animate about-image menu--image-hover">About</h1></Link>
                                     <Link to="/contact"><h1 className="animate--pre-animate contact-image menu--image-hover">Contact</h1></Link>
                                 </Col>
-                                <Col xs={6}>
+                                <Col xs={4}>
                                     <div className="img-block image-hover">
                                         <img className="image-switcher hidden work-image--src" src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt=""></img>
                                         <img className="image-switcher hidden about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>

@@ -31,7 +31,7 @@ header a {
 }
 
 .homepage-bottom {
-    background-color: #FFF; 
+    /* background-color: #FFF;  */
 }
 
 .services {
@@ -55,7 +55,7 @@ header a {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    background-color: #FFF;
+    /* background-color: #FFF; */
 }
 
 .piscatello-slider__cell--container {

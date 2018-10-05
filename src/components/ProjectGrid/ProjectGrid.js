@@ -11,7 +11,7 @@ class ProjectGrid extends Component {
         return (
             <section className="homepage-bottom padded">
                 <div className="container padded">
-                    <h2 className="reg">Featured Work</h2>
+                    {/* <h2 className="reg">Featured Work</h2> */}
                 </div>
                 <div className="piscatello-slider__container container">
                     <div className="piscatello-slider__cell--container">
