@@ -1,41 +1,40 @@
 #twitter-band {
     padding: 3rem 0;
-    background-color: #FFF;
+    background-color: #FDFDFD;
 }
 
 .tweet-card {
-    /* height: calc(25vw - 3.75vw); */
-    height: 220px;
-    padding: 0 !important;
+    height: calc(25vw - 3.75vw);
+    /* height: 220px; */
+    padding: 0rem !important;
     box-sizing: borer-box;
     position: relative;
     display: flex;
-    align-items: flex-start;
 }
 
 .tweet-card--content {
-    height: calc(100% - 2rem);
-    width: calc(100% - 2rem);
-    background-color: #FFF;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
     font-weight: 500;
     word-break: break-word;
     line-height: 1.5;
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 1rem;
 }
 
-.tweet-card:not(:first-of-type) .tweet-card--content {
-    margin-left: 1rem;
+.tweet-card:not(:first-of-type) {
+    padding-left: -1rem !important;
 }
 
 .tweet-card:not(:first-of-type) .tweet-card--footer {
-    margin-left: 1rem;
+    left: 1rem;
 }
 
-.tweet-card:last-of-type .tweet-card--content {
-    margin-left: 2rem
-}
-
-.tweet-card:last-of-type .tweet-card--footer {
-    left: 1rem
+.tweet-card:first-of-type .tweet-card--footer {
+    left: 1rem;
 }
 
 .tweet-card--content a { 
@@ -44,10 +43,12 @@
 
 .tweet-card--footer {
     position: absolute;
-    bottom: .0;
-    width: calc(100% - 1rem);
-    left: 0;
+    width: calc(100% - 2rem);
+    bottom: 2rem;
+    left: 1rem;
     font-weight: 800;
+    padding: 0 1rem;
+    color: #000;
 }
 
 .tweet-card--footer .bird {
@@ -55,7 +56,7 @@
     width: 20px;
     height: 20px;
     align-self: center;
-    margin-right: 5%;
+    margin-right: 2%;
 }
 
 .tweet-card--footer .bird img {

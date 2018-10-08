@@ -233,18 +233,31 @@ header {
 
 header.header-min {
     padding: 1rem 0;
-    background-color: #FFF;
+    background-color: #000;
 }
 
 header .menu {
     z-index: 999;
 }
 
+header .close-menu {
+    display: none;
+}
+
+header.header-overlay--visible .close-menu {
+    display: block;
+}
+
+header.header-overlay--visible .open-menu {
+    display: none;
+}
+
 header.header-min .menu a,
 header.header-min a,
 header.header-min .menu-button {
-    color: #000;
+    color: #FFF;
 }
+
 header.header-overlay--visible .menu,
 header.header-overlay--visible a,
 header.header-overlay--visible .menu-button {
@@ -252,14 +265,25 @@ header.header-overlay--visible .menu-button {
 }
 
 header.header-overlay--visible .menu .bar {
-    background-color: #FFF;
+    background-color: #000;
+}
+
+header.header-overlay--visible a,
+header a {
+    color: #FFF;
+    transition: .345s ease color;
+}
+
+header.header-overlay--visible a:hover,
+header a:hover {
+    color: #999;
 }
 
 header .menu-button {
     display: flex;
     font-weight: bold;
     align-items: center;
-    color: #000;
+    color: #FFF;
 }
 
 header .menu-button .hamburger {
@@ -275,8 +299,18 @@ header .menu-button .hamburger {
 header .menu a {
     padding: 0 1rem;
     font-size: 1rem;
-    color: #000;
+    color: #FFF;
     text-decoration: none;
+}
+
+header .menu h2 {
+    color: #FFF;
+    cursor: pointer;
+    transition: .345s ease all;
+}
+
+header .menu h2:hover {
+    color: #999;
 }
 
 header .menu .bar {
@@ -297,7 +331,7 @@ header.header-min .bar {
     height: 100%;
     width: 100%;
     background-color: #000;
-    color: #FFF;
+    color: #999;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s ease .345s, opacity .345s ease;
@@ -314,6 +348,16 @@ header.header-overlay--visible .header-overlay {
     flex-direction: column;
     height: 100%;
 } 
+
+.header-overlay .menu-vert h1 {
+    color: #FFF;
+}
+
+.header-overlay .menu-vert h1:hover img {
+   opacity: 1;
+   transform: translate(-50%,-50%) scale(1.03);
+}
+
 header.header-overlay--visible .animate--pre-animate {
     opacity: 0;
 }
@@ -344,6 +388,21 @@ header.header-overlay--visible .header-overlay--footer {
     width: 100%;
     padding: 1rem 0;
 } 
+
+.menu--image-hover {
+    position: relative;
+}
+
+.menu--image-hover img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    max-width: 20vw;
+    opacity: 0;
+    z-index: -1;
+    transition: .345s ease all;
+}
 
 .hidden {
     display: none !important;
@@ -435,6 +494,27 @@ header.header-overlay--visible .header-overlay--footer {
 .padding-btm-xl {
     padding-bottom: 3rem;   
 }
+
+.padding-top-xs {
+    padding-bottom: .75rem;   
+}
+
+.padding-top-1 {
+    padding-bottom: 1rem;
+}
+
+.padding-top-125 {
+    padding-bottom: 1.25rem;   
+}
+
+.padding-top-2 {
+    padding-bottom: 2rem;   
+}
+
+.padding-top-3 {
+    padding-bottom: 3rem;   
+}
+
 /** Components **/
 
 button {
@@ -512,7 +592,7 @@ button.grey-border {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    height: 100%;
+    height: auto;
     top: 0;
     left: 0;
 }

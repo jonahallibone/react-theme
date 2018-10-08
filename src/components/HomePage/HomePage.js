@@ -19,13 +19,12 @@ class HomePage extends Component {
                 <img src="http://piscatello.com/wp-content/uploads/2014/04/NT_Colors.jpg"></img>
             </FlexSlider> */}
             <Statement>
-            <h2 className="reg"style={{color: "#000"}}>We are an independent design consultancy</h2>
+            <h2 className="reg text-white">Your experience is your brand.</h2>
             <br />
             <br />
-            <h3 className="reg light">We help companies remain relevant and create positive experiences through the power of design</h3>
+            <h3 className="reg light">We help companies remain relevant and create positive experiences through the power of design.</h3>
             </Statement>
-            <ProjectSlider>
-            </ProjectSlider>
+            <ProjectSlider></ProjectSlider>
             {/* <ProjectGrid>
                 <ProjectGridItem>
                 </ProjectGridItem>

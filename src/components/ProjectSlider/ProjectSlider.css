@@ -1,6 +1,7 @@
 .project-slider {
     overflow: hidden;
     max-width: 100%;
+    background-color: #000;
 }
 .slick-slider {
     width: 100vw;

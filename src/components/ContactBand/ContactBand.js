@@ -13,11 +13,18 @@ class ContactBand extends Component {
 
     render() {
         return (
-            <div id="contact-band">
+            <div id="contact-band" className="padding-top-3">
                 <Container className="container" fluid={true} style={{padding: "0"}}>
                     <Row>
                         <Col xs={12} sm={6}>
-                            <h2>Work? Career? Just want to<br/>Enter your email to get started.</h2>
+                            <h2 className="reg margin-btm-3">Lets work together.</h2>
+                            <h3 className="reg light margin-btm-3">
+                                Our work changes the way businesses think about
+                                themselves and operate. We create value for our 
+                                clients and positive experiences for people and society. 
+                                Contact us to talk about working together.
+                            </h3>
+                            <Button button-lg className="margin-btm-3">Get in touch</Button>
                         </Col>
                     </Row>
                 </Container>

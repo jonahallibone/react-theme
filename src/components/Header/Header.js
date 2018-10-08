@@ -6,12 +6,17 @@ import '../../App.css';
 
 class Header extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuLabel: "Menu"
+        }
+    }
     componentDidMount = () => {
         this.styleHeader();
         this.menuButton.addEventListener("click", this.handleMenuClick);
-
-        this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseenter", this.handleMenuHover))
-        this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseleave", this.handleMenuLeave))
+        // this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseenter", this.handleMenuHover))
+        // this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseleave", this.handleMenuLeave))
     }
 
     componentWillUnmount = () => {
@@ -41,10 +46,20 @@ class Header extends Component {
 
     handleMenuClick = () => {
         this.header.classList.toggle("header-overlay--visible");
+
+
+        if(this.state.menuLabel == "Menu") {
+            this.setState({menuLabel: "Close"})
+        }
+        else {
+            this.setState({menuLabel : "Menu"})
+        }
+
+
         this.header.querySelectorAll(".animate--pre-animate").forEach((el, i) => {
             setTimeout(() => {
                 el.classList.toggle("animate--post-animate")
-            }, i * 100);
+            }, i * 200);
         });
     }
 
@@ -61,13 +76,16 @@ class Header extends Component {
         return (
             <header ref={elem => this.header = elem}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
-                    <Row className={"text-white"} style={{alignItems: "center"}}>
+                    <Row className={"text-white logo"} style={{alignItems: "center"}}>
                         <Col xs={10} sm={6} style={{alignItems: "center"}}>
                             <h2><Link to="/">Piscatello Design Centre</Link></h2>
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <span><h2>Menu</h2></span>
+                                    <span>
+                                        <h2 className="open-menu">Menu</h2>
+                                        <h2 className="close-menu">Close</h2>
+                                    </span>
                                     {/* <span className="hamburger">
                                         <span className="bar"></span>
                                         <span className="bar"></span>
@@ -81,18 +99,38 @@ class Header extends Component {
                     <div className="menu-vert">
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%"}} align="center">
-                                <Col xs={8} sm={6} md={6} lg={6} xl={6}>
-                                    <Link to="/work"><h1 className="animate--pre-animate work-image menu--image-hover">Work</h1></Link>
-                                    <Link to="/about"><h1 className="animate--pre-animate about-image menu--image-hover">About</h1></Link>
-                                    <Link to="/contact"><h1 className="animate--pre-animate contact-image menu--image-hover">Contact</h1></Link>
+                                <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: "flex", justifyContent: "space-between"}}>
+                                    <Link to="/work">
+                                        <h1 className="animate--pre-animate work-image menu--image-hover">
+                                            Work 
+                                            <img className="image-switcher work-image--src" src="http://piscatello.com/wp-content/uploads/2018/01/RMHNY_Kitchen2.jpg" alt=""></img>
+                                        </h1>
+                                    </Link>
+                                    <Link to="/expertise">
+                                        <h1 className="animate--pre-animate about-image menu--image-hover">
+                                            Expertise
+                                            <img className="image-switcher about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
+                                        </h1>
+                                    </Link>
+                                    <Link to="/studio">
+                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                            Studio
+                                            <img className="image-switcher contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
+                                        </h1>
+                                    </Link>
+                                    <Link to="/contact">
+                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                            Contact
+                                        </h1>
+                                    </Link>
                                 </Col>
-                                <Col xs={4}>
+                                {/* <Col xs={4}>
                                     <div className="img-block image-hover">
                                         <img className="image-switcher hidden work-image--src" src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt=""></img>
                                         <img className="image-switcher hidden about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
                                         <img className="image-switcher hidden contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
                                     </div>
-                                </Col>
+                                </Col> */}
                             </Row>
                         </Container>
                     </div>   
@@ -100,7 +138,7 @@ class Header extends Component {
                         <Container fluid={true} className="container" style={{padding: 0}}>
                             <Row>
                                 <Col xs={12}>
-                                    <strong className="animate--pre-animate">330 W 38th St, New York, NY, 10028</strong>
+                                    {/* <strong className="animate--pre-animate">330 W 38th St, New York, NY, 10028</strong> */}
                                 </Col>
                             </Row>
                         </Container>
