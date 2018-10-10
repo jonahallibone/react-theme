@@ -1,4 +1,15 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_45aa5397e301_key -iv $encrypted_45aa5397e301_iv
-  -in piscatello_rsa.enc -out ~\/.ssh/piscatello_rsa -d
-zt
+- docker pull carlad/sinatra
+- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
+- docker ps -a
+- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+
+script:
+- bundle exec rake test
