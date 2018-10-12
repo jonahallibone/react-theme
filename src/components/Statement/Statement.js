@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import Button from '../Button/Button';
 
 import '../../App.css';
 import './Statement.css';

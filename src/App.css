@@ -233,7 +233,7 @@ header {
 
 header.header-min {
     padding: 1rem 0;
-    background-color: #000;
+    background-color: #333;
 }
 
 header .menu {
@@ -316,7 +316,7 @@ header .menu h2:hover {
 header .menu .bar {
     height: 2px;
     width: 100%;
-    background-color: #000;
+    background-color: #333;
 }
 
 
@@ -330,7 +330,7 @@ header.header-min .bar {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #000;
+    background-color: #333;
     color: #999;
     visibility: hidden;
     opacity: 0;
@@ -466,7 +466,7 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .bg-black {
-    background-color: #000;
+    background-color: #333;
 }
 
 .bg-white {
@@ -500,19 +500,27 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .padding-top-1 {
-    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .padding-top-125 {
-    padding-bottom: 1.25rem;   
+    padding-top: 1.25rem;   
 }
 
 .padding-top-2 {
-    padding-bottom: 2rem;   
+    padding-top: 2rem;   
 }
 
 .padding-top-3 {
-    padding-bottom: 3rem;   
+    padding-top: 3rem;   
+}
+
+.padding-top-6 {
+    padding-top: 6rem;   
+}
+
+.padding-btm-6 {
+    padding-bottom: 6rem;   
 }
 
 /** Components **/
@@ -522,7 +530,7 @@ button {
     padding: .75rem 1.5rem;
     font-size: 1rem;
     background-color: #FFF;
-    color: #000;
+    color: #333;
     box-sizing: border-box;
     transition: .245s ease all;
     outline: none;
@@ -547,7 +555,7 @@ button.filled, button.grey {
 }
 
 button.black {
-    background-color: #000;
+    background-color: #333;
     color: #FFF;
 }
 

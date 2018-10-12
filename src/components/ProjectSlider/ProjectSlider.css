@@ -1,7 +1,7 @@
 .project-slider {
     overflow: hidden;
     max-width: 100%;
-    background-color: #000;
+    background-color: #333;
 }
 .slick-slider {
     width: 100vw;
@@ -15,6 +15,19 @@
 .slick-slider .slide {
     transform: scale(.997);
     outline: none;
+    height: calc(100vh - 59px);
+}
+
+.slick-slider .slide.colors {
+    background-color: #FDFDFD;
+}
+
+.slick-slider .slide video {
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .slick-slider.grow {
@@ -28,16 +41,21 @@
 
 
 .slick-slider img {
-    width: 100%;
+    /* width: 100%; */
     /* height: 100%; */
-    object-fit: contain;
+    object-fit: cover;
     object-position: 50% 50%;
     outline: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
 }
 
 .slick-slider .slide {
     max-height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .custom-dots {
@@ -56,4 +74,47 @@
     font-size: 0;
     border-radius: 100%;
     display: none;
+}
+
+.project-slider--caption {
+    position: absolute;
+    left: 7.5%;
+    bottom: 3rem;
+    color: #000;
+    opacity: 0;
+    transition: .345s ease opacity .5s;
+}
+
+.slick-active .project-slider--caption {
+    opacity: 1;
+}
+
+.project-slider--caption h2 {
+    line-height: 1.25;
+    /* font-size: 2rem; */
+}
+
+.project-image--centered {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    border-radius: 5spx;
+    background-color: transparent;
+}
+.project-image--centered img {
+    display: block;
+    width: 100%;
+    transform: none;
+    position: relative;
+    left: 0;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25), inset 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+@media all and (min-width: 1600px) {
+    .project-image--centered {
+        width: 45%;
+    }
 }

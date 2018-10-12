@@ -1,0 +1,27 @@
+{
+    "rules": {
+        "semi": [
+            2,
+            "always"
+        ],
+        "arrow-body-style": ["error", "always"],
+        "indent": ["error", 4],
+        "comma-dangle": ["error", "never"],
+        "react/jsx-filename-extension": [
+            1, 
+            { "extensions": [
+                ".js", ".jsx"
+                ] 
+            }
+        ]
+
+    },
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ]
+}

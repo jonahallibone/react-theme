@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import Tilty from '../Tilty/Tilty';
+// import {default as Tilty} from "react-tilty";
 
 import '../../App.css';
 
@@ -12,18 +14,17 @@ class Header extends Component {
             menuLabel: "Menu"
         }
     }
+
     componentDidMount = () => {
         this.styleHeader();
         this.menuButton.addEventListener("click", this.handleMenuClick);
-        // this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseenter", this.handleMenuHover))
-        // this.header.querySelectorAll(".menu--image-hover").forEach(el => el.addEventListener("mouseleave", this.handleMenuLeave))
     }
 
     componentWillUnmount = () => {
         cancelAnimationFrame(this.styleHeader)
     }
     
-    handleMenuHover = (e) => {
+    handleMenuHover(e) {
 
         document.querySelectorAll(".image-switcher").forEach(el => el.classList.add("hidden"))
 
@@ -40,7 +41,7 @@ class Header extends Component {
         }
     }
 
-    handleMenuLeave = () => {
+    handleMenuLeave () {
         document.querySelectorAll(".image-switcher").forEach(el => el.classList.add("hidden"))
     }
 
@@ -48,7 +49,7 @@ class Header extends Component {
         this.header.classList.toggle("header-overlay--visible");
 
 
-        if(this.state.menuLabel == "Menu") {
+        if(this.state.menuLabel === "Menu") {
             this.setState({menuLabel: "Close"})
         }
         else {
@@ -100,29 +101,37 @@ class Header extends Component {
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%"}} align="center">
                                 <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: "flex", justifyContent: "space-between"}}>
-                                    <Link to="/work">
-                                        <h1 className="animate--pre-animate work-image menu--image-hover">
-                                            Work 
-                                            <img className="image-switcher work-image--src" src="http://piscatello.com/wp-content/uploads/2018/01/RMHNY_Kitchen2.jpg" alt=""></img>
-                                        </h1>
-                                    </Link>
-                                    <Link to="/expertise">
-                                        <h1 className="animate--pre-animate about-image menu--image-hover">
-                                            Expertise
-                                            <img className="image-switcher about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
-                                        </h1>
-                                    </Link>
-                                    <Link to="/studio">
-                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
-                                            Studio
-                                            <img className="image-switcher contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
-                                        </h1>
-                                    </Link>
-                                    <Link to="/contact">
-                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
-                                            Contact
-                                        </h1>
-                                    </Link>
+                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
+                                        <Link to="/work">
+                                            <h1 className="animate--pre-animate work-image menu--image-hover">
+                                                <span style={{transform: "translateZ(20px)"}}>Work</span>
+                                                <img className="image-switcher work-image--src" src="http://piscatello.com/wp-content/uploads/2018/01/RMHNY_Kitchen2.jpg" alt=""></img>
+                                            </h1>
+                                        </Link>
+                                    </Tilty>
+                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
+                                        <Link to="/expertise">
+                                            <h1 className="animate--pre-animate about-image menu--image-hover">
+                                                Expertise
+                                                <img className="image-switcher about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
+                                            </h1>
+                                        </Link>
+                                    </Tilty>
+                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
+                                        <Link to="/studio">
+                                            <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                                Studio
+                                                <img className="image-switcher contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
+                                            </h1>
+                                        </Link>
+                                    </Tilty>
+                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
+                                        <Link to="/contact">
+                                            <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                                Contact
+                                            </h1>
+                                        </Link>
+                                    </Tilty>
                                 </Col>
                                 {/* <Col xs={4}>
                                     <div className="img-block image-hover">
