@@ -36,7 +36,7 @@ class TwitterBand extends Component {
     printTweets() {
         return this.state.tweets.map((el, i) => {
             return (
-                <Col sm={3} style={{flex: "22vw"}} className="tweet-card" key={i}>
+                <div style={{flex: "22vw"}} className="tweet-card" key={i}>
                     <span>
                         <div className="tweet-card--content" dangerouslySetInnerHTML={{__html: el}}>
                          
@@ -50,7 +50,7 @@ class TwitterBand extends Component {
                             <span>@PiscatelloPDC</span>
                         </a>
                     </div>
-                </Col>
+                </div>
             )
         })
     }

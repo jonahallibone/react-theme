@@ -1,0 +1,43 @@
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.grid-container--side {
+    display: grid;
+    grid-template-rows: 1fr;
+    flex: 0 0 calc(50% - .5rem);
+    grid-gap: 1rem;
+}
+
+.grid-container--side:nth-of-type(odd) {
+    margin-right: .5rem;
+}
+
+.grid-container--side:nth-of-type(even) {
+    margin-left: .5rem;
+}
+
+.grid-container--side.of-4 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-container--side.of-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-container--side .item {
+    background-color: #000;
+}
+
+.grid-container--side.of-4 .item {
+    height: calc(14.625vw - .667rem);
+}
+
+.grid-container--side.of-1 .item {
+    height: 100%;
+}

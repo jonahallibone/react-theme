@@ -1,8 +1,8 @@
 import React from 'react';
-import TwitterBand  from '../TwitterBand/TwitterBand';
 import ContactBand from '../ContactBand/ContactBand';
 import Statement from '../Statement/Statement';
-import ProjectSlider from '../ProjectSlider/ProjectSlider';
+import FlickSlider from '../FlickSlider/FlickSlider';
+import HomePageGrid from '../HomePageGrid/HomePageGrid';
 
 import '../../App.css';
 
@@ -10,15 +10,15 @@ import '../../App.css';
 function HomePage() {
     return (
         <div className="home transition-page">
-            <Statement>
+            {/* <Statement>
                 <h2 className="reg text-white">The experience is your brand.</h2>
                 <br />
                 <br />
                 <h3 className="reg light">We design and develop brand identities, signage systems, and websites.</h3>
-            </Statement>
-            <ProjectSlider></ProjectSlider>
+            </Statement> */}
+            <FlickSlider></FlickSlider>
             <ContactBand></ContactBand>
-            <TwitterBand></TwitterBand>
+            <HomePageGrid></HomePageGrid>
         </div>
     );
 }

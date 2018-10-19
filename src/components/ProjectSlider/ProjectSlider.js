@@ -8,7 +8,6 @@ import './ProjectSlider.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import LLA from "./images/laguarda.jpg" 
 import Vinoly from "./images/vinoly.jpg" 
 import SLC from "./images/slc.jpg";
 import NYU from "./images/nyu.jpg";
@@ -88,8 +87,8 @@ class ProjectSlider extends Component {
                     <div className="slide">
                         <img src={LT}></img>
                         <div className="project-slider--caption">
-                            <h2>Lost Tribe</h2>
-                            <h2>A brand new company</h2>
+                            <h2>Lost Tribe Theatre</h2>
+                            <h2>Branding Identity Development</h2>
                         </div>
                     </div>
                     <div className="slide">

@@ -1,0 +1,11 @@
+#page-work {
+    background-color: #333;
+    padding-top: 200px;
+    position: relative;
+}
+
+#work-ticker {
+    position: absolute;
+    left: 0;
+    top: 200px;
+}

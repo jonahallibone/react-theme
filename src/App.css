@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: #333;
 }
 ol, ul {
 	list-style: none;
@@ -70,7 +71,7 @@ html,body {
 }
 
 body {
-    background-color: #FDFDFD;
+    background-color: #333;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     font-family: "Rotis Sans Serif";
@@ -223,7 +224,7 @@ header {
     background-color: transparent;
     width: 100vw;
     height: auto;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -232,7 +233,7 @@ header {
 }
 
 header.header-min {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     background-color: #333;
 }
 
@@ -497,6 +498,10 @@ header.header-overlay--visible .header-overlay--footer {
 
 .padding-top-xs {
     padding-bottom: .75rem;   
+}
+
+.padding-top-half {
+    padding-top: 0.5rem;
 }
 
 .padding-top-1 {

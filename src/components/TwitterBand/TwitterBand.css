@@ -3,6 +3,11 @@
     background-color: #FDFDFD;
 }
 
+.flex-modified {
+    display: flex;
+    flex-direction: row;
+}
+
 .tweet-card {
     height: calc(25vw - 3.75vw);
     /* height: 220px; */
