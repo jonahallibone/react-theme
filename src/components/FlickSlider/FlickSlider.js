@@ -45,6 +45,8 @@ class FlickSlider extends Component {
                     <h2>Lorem Ipsum</h2>
                     <h2>Dolor sit amet</h2>
                 </div>
+                <div className="arrows left"></div>
+                <div className="arrows right"></div>
             </Container>
         )
     }

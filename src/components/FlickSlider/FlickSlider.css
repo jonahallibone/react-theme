@@ -160,3 +160,23 @@ https://flickity.metafizzy.co
     padding-left: 2rem;
     margin-top: -5rem;
 }
+
+.arrows {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  height: 53.55vw;
+  background-repeat: no-repeat;
+  background-size: 28px 52px;
+  background-position: center center;
+}
+
+.arrows.left {
+  left: 0;
+  background-image: url('./images/Left-Arrow.png');
+}
+
+.arrows.right {
+  right: 0;
+  background-image: url('./images/Right-Arrow.png');
+}
