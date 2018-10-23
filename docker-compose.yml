@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+
+  sample-app-prod:
+    container_name: react-theme-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
