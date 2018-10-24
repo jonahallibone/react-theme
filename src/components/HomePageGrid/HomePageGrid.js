@@ -128,6 +128,62 @@ class HomePageGrid extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="grid-container">
+                    <div className="grid-container--side of-1">
+                        <div className="item">
+                            <ProgressiveImage src="https://s3.amazonaws.com/piscatello/DesignAtWork_Horiz.jpg" placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <div className={ loading ? "img-container" : "img-container loaded" }>
+                                        <img src={src} alt="an image" />
+                                    </div>
+                                )}
+                            </ProgressiveImage>
+                            <h3>Design At Work Book</h3>
+                        </div>
+                    </div>
+                    <div className="grid-container--side of-4">
+                        <div className="item">
+                            <ProgressiveImage src="https://s3.amazonaws.com/piscatello/AEA_EquityWorks.jpg" placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <div className={ loading ? "img-container" : "img-container loaded" }>
+                                        <img src={src} alt="an image" />
+                                    </div>
+                                )}
+                            </ProgressiveImage>
+                            <h3>AEA Equality Works</h3>
+                        </div>
+                        <div className="item">
+                            <ProgressiveImage src="https://s3.amazonaws.com/piscatello/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <div className={ loading ? "img-container" : "img-container loaded" }>
+                                        <img src={src} alt="an image" />
+                                    </div>
+                                )}
+                            </ProgressiveImage>
+                            <h3>Coffee House Banner</h3>
+                        </div>
+                        <div className="item">
+                            <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Lost-Tribe_Rainbow.jpg" placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <div className={ loading ? "img-container" : "img-container loaded" }>
+                                        <img src={src} alt="an image" />
+                                    </div>
+                                )}
+                            </ProgressiveImage>
+                            <h3>LostTribe Theatre Company</h3>
+                        </div>
+                        <div className="item">
+                            <ProgressiveImage src="https://s3.amazonaws.com/piscatello/DW06.jpg" placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <div className={ loading ? "img-container" : "img-container loaded" }>
+                                        <img src={src} alt="an image" />
+                                    </div>
+                                )}
+                            </ProgressiveImage>
+                            <h3>Douglass Winthrop</h3>
+                        </div>
+                    </div>
+                </div>
             </Container>
         )
     }
