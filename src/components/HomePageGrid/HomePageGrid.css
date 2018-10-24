@@ -7,6 +7,12 @@
     margin-bottom: 3rem;
 }
 
+@media all and (max-width: 1440px) {
+    .grid-container {
+        margin-bottom: 2rem;
+    }
+}
+
 .grid-container--side {
     display: grid;
     grid-template-rows: 1fr;

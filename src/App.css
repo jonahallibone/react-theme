@@ -220,6 +220,12 @@ h4 {
     padding: 3rem 0 2rem 0;
 }
 
+@media all and (max-width: 1440px) {
+    .container {
+        width: calc(100% - 4rem);
+    }
+}
+
 header {
     background-color: transparent;
     width: 100vw;
