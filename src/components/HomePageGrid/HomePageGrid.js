@@ -16,6 +16,7 @@ class HomePageGrid extends Component {
     render() {
         return (
             <Container className="container" fluid={true} style={{padding: 0}}>
+                <h2 className="text-white padding-btm-sm">Activity and Work</h2>
                 <div className="grid-container">
                     <div className="grid-container--side of-1">
                         <div className="item">
