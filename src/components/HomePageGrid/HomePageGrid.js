@@ -16,7 +16,6 @@ class HomePageGrid extends Component {
     render() {
         return (
             <Container className="container" fluid={true} style={{padding: 0}}>
-                <h2 className="text-white padding-btm-sm">Activity and Work</h2>
                 <div className="grid-container">
                     <div className="grid-container--side of-1">
                         <div className="item">
@@ -27,7 +26,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Design At Work Book</h3>
+                            <h3 className="light">Design At Work Book</h3>
                         </div>
                     </div>
                     <div className="grid-container--side of-4">
@@ -39,7 +38,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>AEA Equality Works</h3>
+                            <h3 className="light">AEA Equality Works</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
@@ -49,7 +48,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Coffee House Banner</h3>
+                            <h3 className="light">Coffee House Banner</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Lost-Tribe_Rainbow.jpg" placeholder="tiny-image.jpg">
@@ -59,7 +58,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>LostTribe Theatre Company</h3>
+                            <h3 className="light">LostTribe Theatre Company</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/DW06.jpg" placeholder="tiny-image.jpg">
@@ -69,7 +68,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Douglass Winthrop</h3>
+                            <h3 className="light">Douglass Winthrop</h3>
                         </div>
                     </div>
                 </div>
@@ -83,7 +82,7 @@ class HomePageGrid extends Component {
                                         </div>
                                     )}
                                 </ProgressiveImage>
-                            <h3>LostTribe Theatre Group</h3>
+                            <h3 className="light">LostTribe Theatre Group</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
@@ -93,7 +92,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Nomadx</h3>
+                            <h3 className="light">Nomadx</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Riverside_Entrance.jpg" placeholder="tiny-image.jpg">
@@ -103,7 +102,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Riverside Entrance</h3>
+                            <h3 className="light">Riverside Entrance</h3>
                         </div>
                         <div className="item">
                                 <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg" placeholder="tiny-image.jpg">
@@ -113,7 +112,7 @@ class HomePageGrid extends Component {
                                         </div>
                                     )}
                                 </ProgressiveImage>
-                            <h3>The US Courthouse</h3>
+                            <h3 className="light">The US Courthouse</h3>
                         </div>
                     </div>
                     <div className="grid-container--side of-1">
@@ -125,7 +124,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Timeless Massimo Vignelli</h3>
+                            <h3 className="light">Timeless Massimo Vignelli</h3>
                         </div>
                     </div>
                 </div>
@@ -139,7 +138,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Design At Work Book</h3>
+                            <h3 className="light">Design At Work Book</h3>
                         </div>
                     </div>
                     <div className="grid-container--side of-4">
@@ -151,7 +150,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>AEA Equality Works</h3>
+                            <h3 className="light">AEA Equality Works</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
@@ -161,7 +160,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Coffee House Banner</h3>
+                            <h3 className="light">Coffee House Banner</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Lost-Tribe_Rainbow.jpg" placeholder="tiny-image.jpg">
@@ -171,7 +170,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>LostTribe Theatre Company</h3>
+                            <h3 className="light">LostTribe Theatre Company</h3>
                         </div>
                         <div className="item">
                             <ProgressiveImage src="https://s3.amazonaws.com/piscatello/DW06.jpg" placeholder="tiny-image.jpg">
@@ -181,7 +180,7 @@ class HomePageGrid extends Component {
                                     </div>
                                 )}
                             </ProgressiveImage>
-                            <h3>Douglass Winthrop</h3>
+                            <h3 className="light">Douglass Winthrop</h3>
                         </div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #333;
+    background-color: #FAFAFA;
 }
 ol, ul {
 	list-style: none;
@@ -71,7 +71,7 @@ html,body {
 }
 
 body {
-    background-color: #333;
+    background-color: #FAFAFA;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     font-family: "Rotis Sans Serif";
@@ -195,7 +195,7 @@ h4 {
     color: #FFF;
 }
 .underline {
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid #FAFAFA;
 }
 
 .img-block {
@@ -235,16 +235,27 @@ header {
     top: 0;
     left: 0;
     z-index: 9999;
-    transition: all ease .245s;
+    transition: background-color ease .245s;
 }
 
 header.header-min {
     padding: 1.5rem 0;
-    background-color: #333;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #DDD;
 }
 
 header .menu {
     z-index: 999;
+}
+
+header .menu h2 {
+    color: #333;
+    cursor: pointer;
+    transition: .345s ease all;
+}
+
+header .menu h2:hover {
+    color: #999;
 }
 
 header .close-menu {
@@ -261,8 +272,9 @@ header.header-overlay--visible .open-menu {
 
 header.header-min .menu a,
 header.header-min a,
-header.header-min .menu-button {
-    color: #FFF;
+header.header-min .menu-button,
+header.header-min .menu h2 {
+    color: #999;
 }
 
 header.header-overlay--visible .menu,
@@ -277,7 +289,7 @@ header.header-overlay--visible .menu .bar {
 
 header.header-overlay--visible a,
 header a {
-    color: #FFF;
+    color: #333;
     transition: .345s ease color;
 }
 
@@ -290,7 +302,7 @@ header .menu-button {
     display: flex;
     font-weight: bold;
     align-items: center;
-    color: #FFF;
+    color: #333;
 }
 
 header .menu-button .hamburger {
@@ -306,24 +318,14 @@ header .menu-button .hamburger {
 header .menu a {
     padding: 0 1rem;
     font-size: 1rem;
-    color: #FFF;
+    color: #333;
     text-decoration: none;
-}
-
-header .menu h2 {
-    color: #FFF;
-    cursor: pointer;
-    transition: .345s ease all;
-}
-
-header .menu h2:hover {
-    color: #999;
 }
 
 header .menu .bar {
     height: 2px;
     width: 100%;
-    background-color: #333;
+    background-color: #FAFAFA;
 }
 
 
@@ -337,7 +339,7 @@ header.header-min .bar {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #333;
+    background-color: #DEDEDE;
     color: #999;
     visibility: hidden;
     opacity: 0;
@@ -473,7 +475,7 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .bg-black {
-    background-color: #333;
+    background-color: #FAFAFA;
 }
 
 .bg-white {
@@ -608,7 +610,7 @@ button.grey-border {
 }
 
 .transition-page {
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -630,4 +632,12 @@ button.grey-border {
 .fade-exit.fade-exit-active {
     opacity: 0;
     transition: all 250ms ease-out;
+}
+
+/*** Footer ***/
+
+.App {
+    padding-bottom: 500px;
+    min-height: 100vh;
+    position: relative;
 }

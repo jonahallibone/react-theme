@@ -8,7 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 import PracticePage from './components/PracticePage/PracticePage';
 import AboutPage from './components/AboutPage/AboutPage';
 import WorkPage from './components/WorkPage/WorkPage';
-
+import Footer from './components/Footer/Footer';
 class App extends Component {
 
   constructor(props) {
@@ -43,6 +43,7 @@ class App extends Component {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
+        <Footer></Footer>
       </div>
     );
   }

@@ -63,7 +63,7 @@
 }
 
 .grid-container--side .item .img-container.loaded:after {
-    transform: translateY(100%);
+    transform: translateY(101%);
 }
 
 .grid-container--side.of-1 .item .img-container {
