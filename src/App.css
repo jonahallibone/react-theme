@@ -92,6 +92,11 @@ h1.light,h2.light,h3.light,h4.light,h5.light {
     color: #999 !important;
 }
 
+h1.light-white,h2.light-white,h3.light-white,h4.light-white,h5.light-whoite {
+    font-weight: 500;
+    color: #999 !important;
+}
+
 h1 {
     font-size: 5rem;
     line-height: 1.25;
@@ -597,8 +602,8 @@ button.black:active {
 
 button.black-border {
     background-color: transparent;
-    border: 2px solid #444;
-    color: #000;
+    border: 2px solid #333;
+    color: #333;
     padding: calc(.75rem - 2px) calc(1.5rem - 2px);
 }
 
@@ -637,7 +642,7 @@ button.grey-border {
 /*** Footer ***/
 
 .App {
-    margin-bottom: 400px;
+    margin-bottom: 500px;
     min-height: 100vh;
     position: relative;
 }

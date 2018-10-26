@@ -1,14 +1,60 @@
+.input-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1rem 0;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input-container[color="black"] {
+    background-color: #121212;
+}
+
 input[type="text"] {
-    padding: 1rem .5rem;
-    min-width: 300px;
+    padding: 1.2rem 1rem .3rem 1rem;
+    min-width: 60%;
     outline: none;
     border: none;
-    margin: 1rem 0;
     font-size: 1.25rem;
     font-weight: 500;
+    position: relative;
+    background-color: transparent;
+    color: #FFF;
+    z-index: 3;
+}
+
+input[type="text"]:focus ~ .placeholder,
+.input-container.has-value .placeholder {
+    transform: scale(.6) translate(0%, -160%)
+}
+
+.input-container .placeholder {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: .345s ease all;
+    transform-origin: left center;
 }
 
 input[type="text"][color="black"] {
-    background-color: #000;
     color: #FFF;
+}
+input[type="submit"] {
+    cursor: pointer;
+    height: 56px;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    background-color: #212121;
+    color: #FFF;
+    outline: none;
+}
+
+input[type="submit"][color="black"] {
+    background-color: #FFF;
 }
