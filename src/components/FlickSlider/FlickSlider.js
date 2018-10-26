@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import LT from "./images/losttribe_gradient.jpg";
 import GB from "./images/gray-bar.png";
+import LLP from "./images/laguarda_laptop.jpg";
 
 var flickityOptions = {
     initialIndex: 0,
@@ -38,7 +39,7 @@ class FlickSlider extends Component {
                         <img src={LT} />
                     </div>
                     <div className="items">
-                        <img src={GB}/>
+                        <img src={LLP}/>
                     </div>
                 </Flickity>
                 <div className="description">

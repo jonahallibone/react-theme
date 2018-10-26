@@ -20,9 +20,9 @@ function ContactBand() {
                         </h3>
                         <Button button-lg className="margin-btm-3">Request a meeting</Button>
                     </Col>
-                    <div className="parallax-image">
+                    {/* <div className="parallax-image">
                         <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx-BC.jpg"/>
-                    </div>
+                    </div> */}
                 </Row>
             </Container>
         </div>

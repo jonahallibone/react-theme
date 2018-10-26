@@ -241,7 +241,7 @@ header {
 header.header-min {
     padding: 1.5rem 0;
     background-color: #FAFAFA;
-    border-bottom: 1px solid #DDD;
+    /* border-bottom: 1px solid #DDD; */
 }
 
 header .menu {
@@ -637,7 +637,7 @@ button.grey-border {
 /*** Footer ***/
 
 .App {
-    padding-bottom: 500px;
+    margin-bottom: 400px;
     min-height: 100vh;
     position: relative;
 }

@@ -1,13 +1,14 @@
-.piscatello-input--text {
-    padding: 1rem;
+input[type="text"] {
+    padding: 1rem .5rem;
+    min-width: 300px;
     outline: none;
     border: none;
     margin: 1rem 0;
-    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
-.piscatello-input--text.white {
-    background-color: #FFF;
-    color: #000;
-    font-size: 1.25rem;
+input[type="text"][color="black"] {
+    background-color: #000;
+    color: #FFF;
 }

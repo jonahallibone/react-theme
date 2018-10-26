@@ -10,12 +10,13 @@ import '../../App.css';
 function HomePage() {
     return (
         <div className="home transition-page">
-            {/* <Statement>
-                <h2 className="reg text-white">The experience is your brand.</h2>
+            <Statement>
+                <h2 className="reg">The experience is your brand.</h2>
                 <br />
                 <br />
-                <h3 className="reg light">We design and develop brand identities, signage systems, and websites.</h3>
-            </Statement> */}
+                <h3 className="reg light">We are a New York based, independent design studio with over 20 years expirience
+                in digital, branding, and identity work.</h3>
+            </Statement>
             <FlickSlider></FlickSlider>
             <ContactBand></ContactBand>
             <HomePageGrid></HomePageGrid>

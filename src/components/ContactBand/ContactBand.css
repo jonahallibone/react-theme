@@ -10,14 +10,14 @@
     position: absolute !important;
     right: calc(-7.5% - 22px);
     height: calc(100% + 12rem);
-    width: calc(57.5% + 2rem);
+    width: calc(57.5% + 1.5rem);
     top: -6rem;
     padding: 0 !important;
 }
 
 @media all and (max-width: 1440px) {
     .parallax-image {
-        width: calc(50% + 2rem);
+        width: calc(50% + 1.5rem);
         right: -2rem;
         top: -6rem;
         padding: 0 !important;
