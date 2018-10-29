@@ -1,4 +1,6 @@
 #footer {
+    display: flex;
+    justify-content: center;
     background-color: #333;
     color: #999;
     height: 500px;
@@ -20,7 +22,7 @@
 .sticky-bottom {
     position: absolute;
     bottom: 0;
-    padding: .74rem;
+    padding: .74rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
