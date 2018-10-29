@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Prefetch from 'react-router-prefetch';
+
 import './App.css';
 
 import HomePage from './components/HomePage/HomePage';
@@ -35,12 +37,14 @@ class App extends Component {
             key={location.key}
             classNames={"fade"}
             timeout={{enter: 500, exit: 300}}>
-            <Switch location={location}>
-              <Route path="/" exact component = {HomePage}></Route>
-              <Route path="/work" exact component = {WorkPage}></Route>
-              <Route path="/practice" exact component = {PracticePage}></Route>
-              <Route path="/about" exact component = {AboutPage}></Route>
-            </Switch>
+            <Prefetch onError={message => window.alert(message)}>
+              <Switch location={location}>
+                <Route path="/" exact component = {HomePage}></Route>
+                <Route path="/work" exact component = {WorkPage}></Route>
+                <Route path="/practice" exact component = {PracticePage}></Route>
+                <Route path="/about" exact component = {AboutPage}></Route>
+              </Switch>
+            </Prefetch>
           </CSSTransition>
         </TransitionGroup>
         <Footer></Footer>

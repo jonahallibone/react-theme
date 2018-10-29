@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #FAFAFA;
+    background-color: #F2F2F2;
 }
 ol, ul {
 	list-style: none;
@@ -71,7 +71,7 @@ html,body {
 }
 
 body {
-    background-color: #FAFAFA;
+    background-color: #F2F2F2;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     font-family: "Rotis Sans Serif";
