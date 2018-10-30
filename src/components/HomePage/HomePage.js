@@ -14,8 +14,16 @@ function HomePage() {
                 {/* <h2 className="reg">The experience is your brand.</h2> */}
                 <br />
                 <br />
-                <h3 className="reg light">We are a New York based, independent design studio with over 20 years experience
-                in digital, branding, and identity work.</h3>
+                <h3 className="reg light">
+                    Since 1997, we have been designing and developing 
+                    identities, signage, and digital experiences for a 
+                    wide range of organizations.                
+                </h3>
+                <br/>
+                <h3 className="reg light">
+                    We take the time to create a lasting impression and make life 
+                    better for everyone.
+                </h3>
             </Statement>
             <FlickSlider></FlickSlider>
             <ContactBand></ContactBand>

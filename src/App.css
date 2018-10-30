@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #F2F2F2;
+    background-color: #f2f3f5;
 }
 ol, ul {
 	list-style: none;
@@ -71,7 +71,7 @@ html,body {
 }
 
 body {
-    background-color: #F2F2F2;
+    background-color: #f2f3f5;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     font-family: "Rotis Sans Serif";
@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5 {
 
 h1.light,h2.light,h3.light,h4.light,h5.light {
     font-weight: 500;
-    color: #999 !important;
+    color: #909AA3 !important;
 }
 
 h1.light-white,h2.light-white,h3.light-white,h4.light-white,h5.light-whoite {
@@ -245,7 +245,7 @@ header {
 
 header.header-min {
     padding: 1.5rem 0;
-    background-color: #FAFAFA;
+    background-color: #f2f3f5;
     /* border-bottom: 1px solid #DDD; */
 }
 
@@ -279,7 +279,7 @@ header.header-min .menu a,
 header.header-min a,
 header.header-min .menu-button,
 header.header-min .menu h2 {
-    color: #999;
+    color: #909AA3;
 }
 
 header.header-overlay--visible .menu,
@@ -557,12 +557,24 @@ button {
     font-weight: bold;
 }
 
+button.black.shadow {
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.25);
+}
+
+button.shadow:hover {
+    box-shadow: 0 0 18px 0 rgba(0,0,0,0.25);
+}
+
+button.shadow:active {
+    box-shadow: 0 0 18px;
+}
+
 .button-sm {
     padding: 0.5rem 1rem;
 }
 
 .button-lg {
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     font-size: 1.5rem;
 }
 
@@ -573,14 +585,14 @@ button.filled, button.grey {
 }
 
 button.black {
-    background-color: #333;
+    background-color: #37474F;
     color: #FFF;
 }
 
 button.black:hover,
 button.black-border:hover {
-    background-color: #333;
-    border-color: #333;
+    background-color: #37474F;
+    border-color: #37474F;
     color: #FFF;
 }
 
@@ -602,8 +614,8 @@ button.black:active {
 
 button.black-border {
     background-color: transparent;
-    border: 2px solid #333;
-    color: #333;
+    border: 2px solid #37474F;
+    color: #37474F;
     padding: calc(.75rem - 2px) calc(1.5rem - 2px);
 }
 

@@ -19,7 +19,7 @@ function ContactBand() {
                         Our clients are diverse and range from large and small, private 
                         and public, for-profit and non-profit.
                         </h3>
-                        <Button button-lg className="black-border">Get in touch</Button>
+                        <Button button-lg className="black shadow">Get in touch</Button>
                     </Col>
                     {/* <div className="parallax-image">
                         <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx-BC.jpg"/>

@@ -1,7 +1,7 @@
 /*** Top of Page ***/
 
 .home {
-    background: #FAFAFA;
+    background: #f2f3f5;
 }
 
 .hero-home {
@@ -10,7 +10,7 @@
 
 .hero-section {
     padding-top: 138px;
-    background-color: #FAFAFA;
+    background-color: #f2f3f5;
     position: relative;
     overflow: hidden;
     width: 100%;
