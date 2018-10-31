@@ -140,10 +140,15 @@ https://flickity.metafizzy.co
 .container.slider {
     padding-top: 150px !important;
     height: calc(53.55vw + 150px);
+    margin-bottom: 5rem;
 }
 .carousel { height: 53.55vw; }
 
 .carousel .items { width: 100% }
+
+.flickity-page-dots {
+  display: none;
+}
 
 .carousel .items img {
     width: 100%;
@@ -167,16 +172,16 @@ https://flickity.metafizzy.co
   width: 120px;
   height: 53.55vw;
   background-repeat: no-repeat;
-  background-size: 28px 52px;
+  background-size: 60%;
   background-position: center center;
 }
 
 .arrows.left {
   left: 0;
-  background-image: url('./images/Left-Arrow.png');
+  background-image: url('./assets/left-arrow.svg');
 }
 
 .arrows.right {
   right: 0;
-  background-image: url('./images/Right-Arrow.png');
+  background-image: url('./assets/right-arrow.svg');
 }

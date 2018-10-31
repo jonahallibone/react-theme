@@ -15,9 +15,9 @@ function HomePage() {
                 <br />
                 <br />
                 <h3 className="reg light">
-                    Since 1997, we have been designing and developing 
-                    identities, signage, and digital experiences for a 
-                    wide range of organizations.                
+                Since 1997, we have been designing and developing 
+                brand identities, signage programs, and digital 
+                experiences for a wide range of organizations.                
                 </h3>
                 <br/>
                 <h3 className="reg light">
@@ -26,7 +26,7 @@ function HomePage() {
                 </h3>
             </Statement>
             <FlickSlider></FlickSlider>
-            <ContactBand></ContactBand>
+            {/* <ContactBand></ContactBand> */}
             <HomePageGrid></HomePageGrid>
         </div>
     );

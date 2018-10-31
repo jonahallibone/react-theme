@@ -101,37 +101,52 @@ class Header extends Component {
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%"}} align="center">
                                 <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: "flex", justifyContent: "space-between"}}>
-                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
-                                        <Link to="/work">
-                                            <h1 className="animate--pre-animate work-image menu--image-hover">
-                                                <span style={{transform: "translateZ(20px)"}}>Work</span>
-                                                <img className="image-switcher work-image--src" src="http://piscatello.com/wp-content/uploads/2018/01/RMHNY_Kitchen2.jpg" alt=""></img>
-                                            </h1>
-                                        </Link>
-                                    </Tilty>
-                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
-                                        <Link to="/expertise">
-                                            <h1 className="animate--pre-animate about-image menu--image-hover">
-                                                Expertise
-                                                <img className="image-switcher about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
-                                            </h1>
-                                        </Link>
-                                    </Tilty>
-                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
-                                        <Link to="/studio">
-                                            <h1 className="animate--pre-animate contact-image menu--image-hover">
-                                                Studio
-                                                <img className="image-switcher contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
-                                            </h1>
-                                        </Link>
-                                    </Tilty>
-                                    <Tilty settings={{reverse: true, max: 15}} style={{transformStyle: "preserve-3d"}}>
-                                        <Link to="/contact">
-                                            <h1 className="animate--pre-animate contact-image menu--image-hover">
-                                                Contact
-                                            </h1>
-                                        </Link>
-                                    </Tilty>
+                                    <Link to="/work">
+                                        <h1 className="animate--pre-animate work-image menu--image-hover">
+                                            <span style={{transform: "translateZ(20px)"}}>Work</span>
+                                            {/* <img className="image-switcher work-image--src" src="http://piscatello.com/wp-content/uploads/2018/01/RMHNY_Kitchen2.jpg" alt=""></img> */}
+                                        </h1>
+                                        <h2 className="light margin-top-1">
+                                            Our work encompasses
+                                            strategy and identity,
+                                            signage and wayfinding,
+                                            websites and digital
+                                            experiences.
+                                        </h2>
+                                    </Link>
+                                    <Link to="/expertise">
+                                        <h1 className="animate--pre-animate about-image menu--image-hover">
+                                            Expertise
+                                            {/* <img className="image-switcher about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img> */}
+                                        </h1>
+                                        <h2 className="light margin-top-1">
+                                            We provide design solutions
+                                            that create value for our clients
+                                            and their audiences.
+                                        </h2>
+                                    </Link>
+                                    <Link to="/studio">
+                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                            Centre
+                                            {/* <img className="image-switcher contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img> */}
+                                        </h1>
+                                        <h2 className="light margin-top-1">
+                                            We are a team of strategic and
+                                            creative experts committed to solving
+                                            a wide variety of communication
+                                            challenges.
+                                        </h2>
+                                    </Link>
+                                    <Link to="/contact">
+                                        <h1 className="animate--pre-animate contact-image menu--image-hover">
+                                            Contact
+                                        </h1>
+                                        <h2 className="light margin-top-1">
+                                            Contact us to learn more
+                                            about the Centre and sign up
+                                            for our newsletter.
+                                        </h2>
+                                    </Link>
                                 </Col>
                                 {/* <Col xs={4}>
                                     <div className="img-block image-hover">

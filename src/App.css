@@ -7,52 +7,140 @@
 
 
 
-body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-    background-color: #f2f3f5;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-button, input, textarea {
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #f2f3f5;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button,
+input,
+textarea {
     font-family: "Rotis Sans Serif";
 }
 
@@ -64,7 +152,9 @@ strong {
 html {
     height: 100%;
 }
-html,body {
+
+html,
+body {
     min-height: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -79,7 +169,11 @@ body {
     color: #000;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 800;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -87,14 +181,22 @@ h1,h2,h3,h4,h5 {
     z-index: 1;
 }
 
-h1.light,h2.light,h3.light,h4.light,h5.light {
+h1.light,
+h2.light,
+h3.light,
+h4.light,
+h5.light {
     font-weight: 500;
     color: #909AA3 !important;
 }
 
-h1.light-white,h2.light-white,h3.light-white,h4.light-white,h5.light-whoite {
+h1.light-white,
+h2.light-white,
+h3.light-white,
+h4.light-white,
+h5.light-whoite {
     font-weight: 500;
-    color: #999 !important;
+    color: #f2f3f5 !important;
 }
 
 h1 {
@@ -199,6 +301,7 @@ h4 {
 .text-white {
     color: #FFF;
 }
+
 .underline {
     border-bottom: 3px solid #FAFAFA;
 }
@@ -212,7 +315,9 @@ h4 {
     width: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -260,7 +365,7 @@ header .menu h2 {
 }
 
 header .menu h2:hover {
-    color: #999;
+    color: #909AA3;
 }
 
 header .close-menu {
@@ -344,7 +449,7 @@ header.header-min .bar {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #DEDEDE;
+    background-color: #f2f3f5;
     color: #999;
     visibility: hidden;
     opacity: 0;
@@ -354,27 +459,41 @@ header.header-min .bar {
 header.header-overlay--visible .header-overlay {
     visibility: visible;
     opacity: 1;
-    transition:  opacity .345s ease;
+    transition: opacity .345s ease;
 }
 
 .header-overlay .menu-vert {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-} 
+}
 
 .header-overlay .menu-vert h1 {
-    color: #FFF;
+    color: #37474F;
+}
+
+.header-overlay .menu-vert a {
+    flex: 0;
+}
+
+.header-overlay .menu-vert a h2 {
+    visibility: hidden;
+}
+
+.header-overlay .menu-vert a:hover h2 {
+    visibility: visible;
 }
 
 .header-overlay .menu-vert h1:hover img {
-   opacity: 1;
-   transform: translate(-50%,-50%) scale(1.03);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.03);
 }
 
 header.header-overlay--visible .animate--pre-animate {
     opacity: 0;
 }
+
 header.header-overlay--visible .animate--post-animate {
     animation: animateMenuIn .345s ease forwards;
 }
@@ -401,7 +520,7 @@ header.header-overlay--visible .header-overlay--footer {
     bottom: 0;
     width: 100%;
     padding: 1rem 0;
-} 
+}
 
 .menu--image-hover {
     position: relative;
@@ -410,7 +529,7 @@ header.header-overlay--visible .header-overlay--footer {
 .menu--image-hover img {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     max-width: 20vw;
     opacity: 0;
@@ -421,7 +540,7 @@ header.header-overlay--visible .header-overlay--footer {
 .hidden {
     display: none !important;
 }
- 
+
 @keyframes animateMenuIn {
     0% {
         transform: translateY(30%);
@@ -445,29 +564,29 @@ header.header-overlay--visible .header-overlay--footer {
         font-size: 3rem;
         line-height: 1.25;
     }
-    
+
     h1.reg {
         font-size: 3rem;
     }
-    
+
     h2.reg {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 1.25em;
         line-height: 1.15;
     }
-    
+
     h3.reg {
         font-size: 1.85rem;
         line-height: 1.27;
     }
-    
+
     h3 {
         font-size: 1.25em;
     }
-    
+
     h4 {
         font-size: 1.25rem;
     }
@@ -490,7 +609,7 @@ header.header-overlay--visible .header-overlay--footer {
 /*** Padding classes ***/
 
 .padding-btm-xs {
-    padding-bottom: .75rem;   
+    padding-bottom: .75rem;
 }
 
 .padding-btm-sm {
@@ -498,19 +617,19 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .padding-btm-md {
-    padding-bottom: 1.25rem;   
+    padding-bottom: 1.25rem;
 }
 
 .padding-btm-lg {
-    padding-bottom: 2rem;   
+    padding-bottom: 2rem;
 }
 
 .padding-btm-xl {
-    padding-bottom: 3rem;   
+    padding-bottom: 3rem;
 }
 
 .padding-top-xs {
-    padding-bottom: .75rem;   
+    padding-bottom: .75rem;
 }
 
 .padding-top-half {
@@ -522,109 +641,26 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .padding-top-125 {
-    padding-top: 1.25rem;   
+    padding-top: 1.25rem;
 }
 
 .padding-top-2 {
-    padding-top: 2rem;   
+    padding-top: 2rem;
 }
 
 .padding-top-3 {
-    padding-top: 3rem;   
+    padding-top: 3rem;
 }
 
 .padding-top-6 {
-    padding-top: 6rem;   
+    padding-top: 6rem;
 }
 
 .padding-btm-6 {
-    padding-bottom: 6rem;   
+    padding-bottom: 6rem;
 }
 
 /** Components **/
-
-button {
-    border: none;
-    padding: .75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #FFF;
-    color: #333;
-    box-sizing: border-box;
-    transition: .245s ease all;
-    outline: none;
-    cursor: pointer;
-    align-self: flex-start;
-    font-weight: bold;
-}
-
-button.black.shadow {
-    box-shadow: 0 0 14px 0 rgba(0,0,0,0.25);
-}
-
-button.shadow:hover {
-    box-shadow: 0 0 18px 0 rgba(0,0,0,0.25);
-}
-
-button.shadow:active {
-    box-shadow: 0 0 18px;
-}
-
-.button-sm {
-    padding: 0.5rem 1rem;
-}
-
-.button-lg {
-    padding: 1rem 3rem;
-    font-size: 1.5rem;
-}
-
-button.filled, button.grey {
-    border: none;
-    background-color: #CCC;
-    color: #000;
-}
-
-button.black {
-    background-color: #37474F;
-    color: #FFF;
-}
-
-button.black:hover,
-button.black-border:hover {
-    background-color: #37474F;
-    border-color: #37474F;
-    color: #FFF;
-}
-
-
-button.white:hover,
-button.white-border:hover {
-    background-color: #FFF;
-    border-color: #FFF;
-    color: #000;
-}
-
-button.white {
-    background-color: #FFF;
-}
-
-button.black:active {
-    background-color: #444;
-}
-
-button.black-border {
-    background-color: transparent;
-    border: 2px solid #37474F;
-    color: #37474F;
-    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
-}
-
-button.grey-border {
-    background-color: transparent;
-    border: 2px solid #CCC;
-    color: #CCC;
-    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
-}
 
 .transition-page {
     position: relative;
@@ -639,7 +675,7 @@ button.grey-border {
     opacity: 0;
     z-index: 1;
 }
-  
+
 .fade-enter.fade-enter-active {
     opacity: 1;
     transition: all 250ms ease-in;

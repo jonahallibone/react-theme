@@ -1,0 +1,118 @@
+button {
+    border: none;
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #FFF;
+    color: #333;
+    box-sizing: border-box;
+    transition: .245s ease all;
+    outline: none;
+    cursor: pointer;
+    align-self: flex-start;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button.black.shadow {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+}
+
+button.shadow:hover {
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+button.shadow:active {
+    box-shadow: 0 0 18px;
+}
+
+.button-sm {
+    padding: 0.5rem 1rem;
+}
+
+.button-lg {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+button.filled,
+button.grey {
+    border: none;
+    background-color: #CCC;
+    color: #000;
+}
+
+button.black {
+    background-color: #37474F;
+    color: #FFF;
+}
+
+button.black:hover,
+button.black-border:hover {
+    background-color: #37474F;
+    border-color: #37474F;
+    color: #FFF;
+}
+
+
+button.white:hover,
+button.white-border:hover {
+    background-color: #FFF;
+    border-color: #FFF;
+    color: #000;
+}
+
+button.white {
+    background-color: #FFF;
+}
+
+button.black:active {
+    background-color: #444;
+}
+
+button.black-border {
+    background-color: transparent;
+    border: 2px solid #37474F;
+    color: #37474F;
+    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
+}
+
+button.grey-border {
+    background-color: transparent;
+    border: 2px solid #CCC;
+    color: #CCC;
+    padding: calc(.75rem - 2px) calc(1.5rem - 2px);
+}
+
+button.fit {
+    height: 100%;
+}
+
+button .button-arrow {
+    background-image: url('./arrow-right.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-flex;
+    justify-content: flex-start;
+    background-position: center center;
+    margin-left: 1rem;
+    opacity: 0;
+    margin-left: calc(-1rem - .25rem);
+    transition: .345s ease all;
+}
+
+button:hover .button-arrow {
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.input-container button {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    background-color: #212121;
+}

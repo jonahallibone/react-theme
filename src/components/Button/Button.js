@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../../App.css';
 
+import './Button.css';
 class Button extends Component {
     // constructor(props) {
     //     super(props);
@@ -28,9 +28,19 @@ class Button extends Component {
         return classes.join(" ")       
     }
 
+    getArrow = () => {
+        if(this.props.arrow) {
+            return <div className="button-arrow"></div>
+        }
+        return "";
+    }
+
     render() {
         return (
-            <button className={this.getClasses()}>{this.props.children}</button>
+            <button className={this.getClasses()}>
+                {this.props.children}
+                {this.getArrow()}
+            </button>
         );
     }
 }

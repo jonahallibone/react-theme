@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import '../../App.css';
 import './Input.css';
+import Button from '../Button/Button';
 
 class Input extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Input extends Component {
             <div color={this.props.color} className={this.state.hasInput === true ? "input-container has-value" : "input-container"}>
                 <input type="text" onBlur={this.handleChange} />
                 <div className="placeholder">Subscribe to our newsletter</div>
-                <input type="submit" value="Join the list" />
+                <Button arrow className="black fit">Join the list</Button>
             </div>
         );
     }
