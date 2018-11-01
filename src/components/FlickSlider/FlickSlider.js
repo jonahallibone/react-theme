@@ -21,14 +21,29 @@ class FlickSlider extends Component {
         super(props);
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
+        // You can register events in componentDidMount hook
+        this.flkty.on('settle', () => {
+        //   console.log(`current index is ${this.flkty.selectedIndex}`)
+        })
+      }
+     
+    handleNext = () => {
+        // You can use Flickity API
+        this.flkty.next()
+    }
 
-    } 
+    handlePrev = () => {
+        // You can use Flickity API
+        this.flkty.previous()
+    }
+    
 
     render() {
         return (
             <Container className="container slider" fluid={true} style={{padding: 0}}>
-                <Flickity
+                <Flickity 
+                    flickityRef={c => this.flkty = c}
                     className={'carousel'} // default ''
                     elementType={'div'} // default 'div'
                     options={flickityOptions} // takes flickity options {}
@@ -46,8 +61,8 @@ class FlickSlider extends Component {
                     <h2>Lorem Ipsum</h2>
                     <h2>Dolor sit amet</h2>
                 </div>
-                <div className="arrows left"></div>
-                <div className="arrows right"></div>
+                <div className="arrows left" onClick={this.handlePrev}></div>
+                <div className="arrows right" onClick={this.handleNext}></div>
             </Container>
         )
     }

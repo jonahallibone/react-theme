@@ -32,9 +32,7 @@ https://flickity.metafizzy.co
   }
   
   .flickity-enabled.is-draggable .flickity-viewport {
-    cursor: move;
-    cursor: -webkit-grab;
-    cursor: grab;
+    cursor: url('./assets/view-project.png'), auto;
   }
   
   .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
@@ -169,7 +167,7 @@ https://flickity.metafizzy.co
 .arrows {
   position: absolute;
   bottom: 0;
-  width: 120px;
+  width: 20%;
   height: 53.55vw;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -178,10 +176,10 @@ https://flickity.metafizzy.co
 
 .arrows.left {
   left: 0;
-  background-image: url('./assets/left-arrow.svg');
+  cursor: url('./assets/left-arrow.png'), auto;
 }
 
 .arrows.right {
   right: 0;
-  background-image: url('./assets/right-arrow.svg');
+  cursor: url('./assets/right-arrow.png'), auto;
 }
