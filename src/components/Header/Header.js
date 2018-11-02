@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
-import Tilty from '../Tilty/Tilty';
+import './Header.css';
 // import {default as Tilty} from "react-tilty";
 
 import '../../App.css';
@@ -148,13 +148,6 @@ class Header extends Component {
                                         </h2>
                                     </Link>
                                 </Col>
-                                {/* <Col xs={4}>
-                                    <div className="img-block image-hover">
-                                        <img className="image-switcher hidden work-image--src" src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt=""></img>
-                                        <img className="image-switcher hidden about-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" alt=""></img>
-                                        <img className="image-switcher hidden contact-image--src" src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" alt=""></img>
-                                    </div>
-                                </Col> */}
                             </Row>
                         </Container>
                     </div>   

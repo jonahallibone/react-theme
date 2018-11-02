@@ -1,0 +1,200 @@
+header {
+    background-color: transparent;
+    width: 100vw;
+    height: auto;
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: background-color ease .245s;
+}
+
+header.header-min {
+    padding: 1.5rem 0;
+    background-color: #f2f3f5;
+    /* border-bottom: 1px solid #DDD; */
+}
+
+header .menu {
+    z-index: 999;
+}
+
+header .menu h2 {
+    color: #333;
+    cursor: pointer;
+    transition: .345s ease all;
+}
+
+header .menu h2:hover {
+    color: #909AA3;
+}
+
+header .close-menu {
+    display: none;
+}
+
+header.header-overlay--visible .close-menu {
+    display: block;
+}
+
+header.header-overlay--visible .open-menu {
+    display: none;
+}
+
+header.header-min .menu a,
+header.header-min a,
+header.header-min .menu-button,
+header.header-min .menu h2 {
+    color: #909AA3;
+}
+
+header.header-overlay--visible .menu,
+header.header-overlay--visible a,
+header.header-overlay--visible .menu-button {
+    color: #FFF;
+}
+
+header.header-overlay--visible .menu .bar {
+    background-color: #000;
+}
+
+header.header-overlay--visible a,
+header a {
+    color: #333;
+    transition: .345s ease color;
+}
+
+header.header-overlay--visible a:hover,
+header a:hover {
+    color: #999;
+}
+
+header .menu-button {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    color: #333;
+}
+
+header .menu-button .hamburger {
+    position: relative;
+    height: 10px;
+    width: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu a {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+header .menu .bar {
+    height: 2px;
+    width: 100%;
+    background-color: #FAFAFA;
+}
+
+
+header.header-min .bar {
+    background-color: #FFF;
+}
+
+.header-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f2f3f5;
+    color: #999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s ease .345s, opacity .345s ease;
+}
+
+header.header-overlay--visible .header-overlay {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .345s ease;
+}
+
+.header-overlay .menu-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-overlay .menu-vert h1 {
+    color: #37474F;
+}
+
+.header-overlay .menu-vert a {
+    flex: 0;
+}
+
+.header-overlay .menu-vert a h2 {
+    visibility: hidden;
+}
+
+.header-overlay .menu-vert a:hover h2 {
+    visibility: visible;
+}
+
+.header-overlay .menu-vert h1:hover img {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.03);
+}
+
+header.header-overlay--visible .animate--pre-animate {
+    opacity: 0;
+}
+
+header.header-overlay--visible .animate--post-animate {
+    animation: animateMenuIn .345s ease forwards;
+}
+
+.image-hover {
+    background-color: #DDD;
+    transition: 0.345s ease all;
+}
+
+.image-hover img {
+    opacity: 1;
+}
+
+.image-hover.image-hover--transitioning {
+    transform: scale(.95);
+}
+
+.image-hover.image-hover--transitioning img {
+    opacity: 0;
+}
+
+header.header-overlay--visible .header-overlay--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.menu--image-hover {
+    position: relative;
+}
+
+.menu--image-hover img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    max-width: 20vw;
+    opacity: 0;
+    z-index: -1;
+    transition: .345s ease all;
+}
