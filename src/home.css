@@ -1,7 +1,8 @@
 /*** Top of Page ***/
 
 .home {
-    background: #f2f3f5;
+    /* background-color: #f2f3f5; */
+    background: #333;
 }
 
 .hero-home {
@@ -10,7 +11,7 @@
 
 .hero-section {
     padding-top: 138px;
-    background-color: #f2f3f5;
+    /* background-color: #f2f3f5; */
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -29,7 +30,7 @@
 }
 
 header a {
-    color: #333;
+    color: #FFF;
     text-decoration: none;
 }
 

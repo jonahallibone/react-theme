@@ -19,19 +19,7 @@ class Statement extends Component {
                         {/* <Button button-lg black className="margin-top-3">See Our Work</Button> */}
                     </Col>
                     <Col xs={3}>
-                    {/* <svg viewBox="0 0 500 500">
-                            <title>Red Hot Chilli Peppers Logo</title>
-                        <defs>
-                            <path d="M243.2, 382.4c-74.8,   
-                            0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 60.7, 135.5,
-                            135.5 S318, 382.4, 243.2, 382.4z" id="textcircle" />  
-                        </defs> 
-                            <text dy="0" textLength="1200">
-                                <textPath xlinkHref="#textcircle">
-                                    Piscatello Design Centre ● Piscatello Design Centre ● Piscatello Design Centre ●
-                                </textPath>
-                            </text>
-                        </svg> */}
+
                     </Col>
                 </Row>
             </Container>
