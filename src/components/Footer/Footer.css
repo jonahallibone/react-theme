@@ -1,7 +1,7 @@
 #footer {
     display: flex;
     justify-content: center;
-    background-color: #909AA3;
+    background-color: rgb(242, 242, 242);
     color: #f2f3f5;
     height: 500px;
     padding: 2rem 0;
@@ -13,10 +13,12 @@
     z-index: -999999;
 }
 
-#footer h4 {
+#footer h4,
+#footer h4.light-white {
     line-height: 1.35;
     margin-bottom: .5rem;
     font-size: 1.2rem;
+    color: #111 !important;
 }
 
 .sticky-bottom {
@@ -27,7 +29,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 1rem;
-    color: #FFF;
+    color: #111;
     align-items: center;    
     width: 85%;
     margin: 0 auto;

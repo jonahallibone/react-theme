@@ -10,9 +10,6 @@ class Footer extends Component {
             <div id="footer">
                 <Container className="container" fluid={true} justify={"start"} style={{padding: 0}}>
                     <Row>
-
-                    </Row>
-                    <Row>
                         <Col md={4} justify={"center"}>
                             <h4>About</h4>
                             <br/>

@@ -86,7 +86,7 @@ class Header extends Component {
     }
 
     handleLeave = (e) => {
-        window.cancelAnimationFrame(this.animation);
+        // window.cancelAnimationFrame(this.animation);
         this.quoteEl.classList.remove("hovered")
         this.animating = true
         setTimeout(() => {

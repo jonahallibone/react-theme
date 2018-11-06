@@ -6,6 +6,7 @@
     "card-vibes": "0.0.3",
     "flickity": "^2.1.2",
     "imagesloaded": "^4.1.4",
+    "mobx": "^5.6.0",
     "react": "^16.5.2",
     "react-clamp": "^1.0.5",
     "react-clamp-lines": "^1.1.0",

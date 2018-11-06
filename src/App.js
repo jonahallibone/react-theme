@@ -11,6 +11,8 @@ import PracticePage from './components/PracticePage/PracticePage';
 import AboutPage from './components/AboutPage/AboutPage';
 import WorkPage from './components/WorkPage/WorkPage';
 import Footer from './components/Footer/Footer';
+
+
 class App extends Component {
 
   constructor(props) {

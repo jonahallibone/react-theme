@@ -17,7 +17,7 @@ class HomePageGrid extends Component {
 
     render() {
         return (
-            <div id="" style={{backgroundColor: "#f2f3f5", paddingTop: "5rem"}}>
+            <div id="" style={{backgroundColor: "#fff", paddingTop: "5rem"}}>
                 <Container className="container" fluid={true} style={{padding: 0}}>
                     <div className="grid-container">
                         <div className="grid-container--side of-1">
