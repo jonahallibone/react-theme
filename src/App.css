@@ -195,7 +195,7 @@ h3.light-white,
 h4.light-white,
 h5.light-whoite {
     font-weight: 500;
-    color: #f2f3f5 !important;
+    color: rgb(242, 242, 242) !important;
 }
 
 h1 {
@@ -298,7 +298,7 @@ h4 {
 }
 
 .text-white {
-    color: #FFF;
+    color: rgb(242, 242, 242);
 }
 
 .underline {
