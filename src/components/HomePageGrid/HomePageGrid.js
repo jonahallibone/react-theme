@@ -19,6 +19,9 @@ class HomePageGrid extends Component {
         return (
             <div id="" style={{backgroundColor: "#fff", paddingTop: "5rem"}}>
                 <Container className="container" fluid={true} style={{padding: 0}}>
+                    <div>
+                        <h4 className="text-black light reg" style={{margin: "0 0 1.25rem 0", color: "rgb(41, 53, 58)", fontSize: "1.5rem"}}>Feed  —  All Work  News  Events  Awards  Other </h4>
+                    </div>
                     <div className="grid-container">
                         <div className="grid-container--side of-1">
                             <div className="item">

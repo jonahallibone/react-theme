@@ -11,14 +11,18 @@ function ContactBand() {
             <Container className="container" fluid={true} style={{padding: "0"}}>
                 <Row justify={"start"}>
                     <Col xs={12} sm={6} className="text-left">
-                        {/* <h2 className="reg text-black margin-btm-3">The experience is your brand.</h2> */}
-                        <h3 className="reg light margin-btm-2">
-                        Our work encompasses strategy and identity, signage and wayfinding, 
-                        websites and digital experiences, advertising and communications.</h3>
-                        <h3 className="reg light margin-btm-3">
-                        Our clients are diverse and range from large and small, private 
-                        and public, for-profit and non-profit.
+                        <h3 className="reg light-white">
+                        Since 1997, we have been designing and developing 
+                        brand identities, signage programs, and digital 
+                        experiences for a wide range of organizations.                
                         </h3>
+                        <br/>
+                        <h3 className="reg light-white">
+                            We take the time to create a lasting impression and strive to make life 
+                            better for everyone.
+                        </h3>
+                        <br/>
+                        <br/>
                         <Button button-lg className="black shadow">Get in touch</Button>
                     </Col>
                     {/* <div className="parallax-image">

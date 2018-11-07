@@ -186,14 +186,14 @@ h3.light,
 h4.light,
 h5.light {
     font-weight: 500;
-    color: #909AA3 !important;
+    color: #111 !important;
 }
 
 h1.light-white,
 h2.light-white,
 h3.light-white,
 h4.light-white,
-h5.light-whoite {
+h5.light-white {
     font-weight: 500;
     color: rgb(242, 242, 242) !important;
 }
