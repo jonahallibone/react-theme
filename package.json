@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "card-vibes": "0.0.3",
     "flickity": "^2.1.2",
     "imagesloaded": "^4.1.4",
     "mobx": "^5.6.0",
+    "mobx-react": "^5.3.6",
     "react": "^16.5.2",
+    "react-app-rewire-mobx": "^1.0.9",
+    "react-app-rewired": "^1.6.2",
     "react-clamp": "^1.0.5",
     "react-clamp-lines": "^1.1.0",
     "react-dom": "^16.5.2",
@@ -26,10 +30,10 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start" : "react-app-rewired start",
+    "build" : "react-app-rewired build",
+    "test" : "react-app-rewired test --env=jsdom",
+    "eject" : "react-app-rewired eject"
   },
   "devDependencies": {
     "eslint": "^5.7.0",

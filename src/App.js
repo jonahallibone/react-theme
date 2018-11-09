@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Prefetch from 'react-router-prefetch';
 
+import PostStore from "./store";
 import './App.css';
 
 import HomePage from './components/HomePage/HomePage';
