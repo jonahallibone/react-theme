@@ -33,7 +33,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Equity Works</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -53,7 +53,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>City Tower Building</strong><br/>Prague</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -71,7 +71,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -89,7 +89,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Piscatello Design Centre</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"ellipsis="..."
@@ -106,7 +106,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"

@@ -150,13 +150,13 @@ class Header extends Component {
                             <Row style={{ flex: "0 0 100%"}} align="center" justify={"center"}>
                                 <Col className="link-container" xs={12} sm={8} style={{display: "flex", justifyContent: "space-between"}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
-                                        <span>Work</span>
+                                        <span>Projects</span>
+                                    </Link>
+                                    <Link className="page-link" to="/studio" data-linkname="centre">
+                                        <span>Studio</span>
                                     </Link>
                                     <Link className="page-link" to="/expertise" data-linkname="expertise">
                                         <span>Expertise</span>
-                                    </Link>
-                                    <Link className="page-link" to="/studio" data-linkname="centre">
-                                        <span>Centre</span>
                                     </Link>
                                     <Link className="page-link" to="/contact" data-linkname="contact">
                                         <span>Contact</span>

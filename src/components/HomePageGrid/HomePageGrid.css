@@ -54,7 +54,7 @@
 }
 
 .grid-container--side h3 {
-    padding-top: .75rem;
+    padding-top: .45rem;
 }
 
 .grid-container--side .item:hover  h3:not(.subtext) {

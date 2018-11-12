@@ -144,7 +144,7 @@ textarea {
 }
 
 strong {
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 /* End reset.css 2.0 */
@@ -491,4 +491,47 @@ h4 {
     margin-bottom: 500px;
     min-height: 100vh;
     position: relative;
+}
+
+/****** Extra Styles ******/
+
+u {
+    text-decoration: none;
+    position: relative;
+    transition: .15s ease-in color;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+u:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FFF;
+    right: 0;
+    bottom: 0;
+    transition: .25s ease-in-out all;
+    transform: translateY(3px);
+    z-index: -1;
+}
+
+u:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #FFF;
+    left: 0;
+    bottom: 0;
+    transition: .25s ease-in-out all .125s;
+    transform: translateY(3px);  
+}
+
+u:hover:after {
+    width: 0px;
+}
+
+u:hover:before {
+    width: 100%;
 }
