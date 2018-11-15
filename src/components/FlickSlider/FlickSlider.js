@@ -19,14 +19,37 @@ var flickityOptions = {
 class FlickSlider extends Component {
     constructor(props) {
         super(props);
+
+        this.animation = null;
     }
 
     componentDidMount = () => {
         // You can register events in componentDidMount hook
         this.flkty.on('settle', () => {
         //   console.log(`current index is ${this.flkty.selectedIndex}`)
-        })
-      }
+        });
+
+        document.addEventListener("scroll", this.setUpScroll.bind(this))
+    }
+
+    setUpScroll() {
+        this.animation = requestAnimationFrame(this.reqAnimation.bind(this));
+    }
+
+    reqAnimation() {
+        if(window.pageYOffset > 50 || document.documentElement.scrollTop > 50) {
+            document.querySelector(".description").classList.add("scrolled");
+            this.animation = window.requestAnimationFrame(this.reqAnimation.bind(this));
+        }
+
+
+        else {
+            document.querySelector(".description").classList.remove("scrolled");
+            window.cancelAnimationFrame(this.animation);
+        }
+
+        console.log("scrolled")
+    }
      
     handleNext = () => {
         // You can use Flickity API
@@ -58,8 +81,8 @@ class FlickSlider extends Component {
                     </div>
                 </Flickity>
                 <div className="description">
-                    <h2>Lorem Ipsum</h2>
-                    <h2>Dolor sit amet</h2>
+                    <h2>Laguarda.Low Architects</h2>
+                    <h2 className="light-white">Web Design, Development</h2>
                 </div>
                 <div className="arrows left" onClick={this.handlePrev}></div>
                 <div className="arrows right" onClick={this.handleNext}></div>

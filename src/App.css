@@ -450,6 +450,14 @@ h4 {
     padding-top: 3rem;
 }
 
+.padding-top-5 {
+    padding-top: 5rem;
+}
+
+.padding-btm-5 {
+    padding-bottom: 5rem;
+} 
+
 .padding-top-6 {
     padding-top: 6rem;
 }
@@ -457,6 +465,14 @@ h4 {
 .padding-btm-6 {
     padding-bottom: 6rem;
 }
+
+.padding-top-10 {
+    padding-top: 10rem;
+}
+
+.padding-btm-10 {
+    padding-bottom: 10rem;
+} 
 
 /** Components **/
 
@@ -508,10 +524,10 @@ u:after {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #FFF;
+    background-color: #AAA;
     right: 0;
     bottom: 0;
-    transition: .25s ease-in-out all;
+    transition: .25s ease-in-out all .125s;
     transform: translateY(3px);
     z-index: -1;
 }
@@ -521,17 +537,19 @@ u:before {
     position: absolute;
     height: 2px;
     width: 0;
-    background-color: #FFF;
+    background-color: rgb(242, 242, 242);
     left: 0;
     bottom: 0;
-    transition: .25s ease-in-out all .125s;
+    transition: .25s ease-in-out all;
     transform: translateY(3px);  
 }
 
 u:hover:after {
     width: 0px;
+    transition: .25s ease-in-out all;
 }
 
 u:hover:before {
     width: 100%;
+    transition: .25s ease-in-out all .125s;
 }

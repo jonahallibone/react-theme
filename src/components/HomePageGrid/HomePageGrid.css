@@ -25,15 +25,15 @@
     display: grid;
     grid-template-rows: 1fr;
     flex: 0 0 calc(50% - .5rem);
-    grid-gap: 0 1rem;
+    grid-gap: 0 1.25rem;
 }
 
 .grid-container--side:nth-of-type(odd) {
-    margin-right: .5rem;
+    margin-right: .625rem;
 }
 
 .grid-container--side:nth-of-type(even) {
-    margin-left: .5rem;
+    margin-left: .625rem;
 }
 
 .grid-container--side.of-4 {
@@ -101,4 +101,12 @@
     display: block;
     object-position: center center;
     transition: .345s ease all 2s;
+}
+
+@media all and (max-width: 768px) {
+
+    .grid-container--side.of-4 {
+        grid-template-columns: 1fr;
+    }
+
 }

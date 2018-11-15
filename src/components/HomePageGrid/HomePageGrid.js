@@ -17,12 +17,32 @@ class HomePageGrid extends Component {
 
     render() {
         return (
-            <div id="" style={{backgroundColor: "#fff", paddingTop: "5rem"}}>
+            <div id="" style={{backgroundColor: "#fff"}}>
                 <Container className="container" fluid={true} style={{padding: 0}}>
                     <div>
-                        <h4 className="text-black light reg" style={{margin: "0 0 1.25rem 0", color: "rgb(41, 53, 58)", fontSize: "1.5rem"}}>Feed  —  All Work  News  Events  Awards  Other </h4>
+                        {/* <h4 className="text-black light reg" style={{margin: "0 0 1.25rem 0", color: "rgb(41, 53, 58)", fontSize: "1.5rem"}}>Feed  —  All Work  News  Events  Awards  Other </h4> */}
                     </div>
                     <div className="grid-container">
+                        <div className="grid-container--side of-1">
+                            <div className="item">
+                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Timeless_Entrance.jpg" placeholder="tiny-image.jpg">
+                                    {(src, loading) => (
+                                        <div className={ loading ? "img-container" : "img-container loaded" }>
+                                            <img src={src} alt="an image" />
+                                        </div>
+                                    )}
+                                </ProgressiveImage>
+                                <div className="contents">
+                                    <h3 className="light">Design At Work Book</h3>
+                                    <ClampLines
+                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
+                                    lines="2"
+                                    ellipsis="..."
+                                    buttons={false}
+                                    className="subtext" />
+                                </div>
+                            </div>
+                        </div>
                         <div className="grid-container--side of-1">
                             <div className="item">
                                 <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg" placeholder="tiny-image.jpg">
@@ -43,6 +63,50 @@ class HomePageGrid extends Component {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="grid-container">
+                        <div className="grid-container--side of-1">
+                            <div className="item">
+                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
+                                    {(src, loading) => (
+                                        <div className={ loading ? "img-container" : "img-container loaded" }>
+                                            <img src={src} alt="an image" />
+                                        </div>
+                                    )}
+                                </ProgressiveImage>
+                                <div className="contents">
+                                    <h3 className="light">Design At Work Book</h3>
+                                    <ClampLines
+                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
+                                    lines="2"
+                                    ellipsis="..."
+                                    buttons={false}
+                                    className="subtext" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="grid-container--side of-1">
+                            <div className="item">
+                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
+                                    {(src, loading) => (
+                                        <div className={ loading ? "img-container" : "img-container loaded" }>
+                                            <img src={src} alt="an image" />
+                                        </div>
+                                    )}
+                                </ProgressiveImage>
+                                <div className="contents">
+                                    <h3 className="light">Design At Work Book</h3>
+                                    <ClampLines
+                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
+                                    lines="2"
+                                    ellipsis="..."
+                                    buttons={false}
+                                    className="subtext" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="grid-container">
                         <div className="grid-container--side of-4">
                             <div className="item">
                                 <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
@@ -116,8 +180,6 @@ class HomePageGrid extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="grid-container">
                         <div className="grid-container--side of-4">
                             <div className="item">
                                     <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
@@ -175,117 +237,6 @@ class HomePageGrid extends Component {
                             </div>
                             <div className="item">
                                 <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/DesignAtWork_Horiz.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Timeless_Entrance.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-container">
-                        <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid-container--side of-4">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Lost-Tribe_Bus.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Lost-Tribe_Rainbow.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/DW06.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
-                                    <ClampLines                                 text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}                                 lines="2"                                 ellipsis="..."                                 buttons={false}                                 className="subtext" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
                                     {(src, loading) => (
                                         <div className={ loading ? "img-container" : "img-container loaded" }>
                                             <img src={src} alt="an image" />
