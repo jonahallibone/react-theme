@@ -1,9 +1,8 @@
 #footer {
     display: flex;
     justify-content: center;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(242,242,242);
     color: #f2f3f5;
-    height: 500px;
     padding: 2rem 0;
     bottom: 0;
     left: 0;
@@ -13,12 +12,68 @@
     z-index: -999999;
 }
 
-#footer h4,
-#footer h4.light-white {
+
+#footer a,
+#footer a.light-white {
     line-height: 1.35;
     margin-bottom: .5rem;
     font-size: 1.2rem;
     color: #111 !important;
+    font-weight: 500;
+    padding: .25rem 0;
+    display: inline-flex;
+}
+
+#footer a:first-of-type {
+    margin: 0 1rem 0 0;
+}
+
+#footer a:last-of-type {
+    margin: 0 0 0 1rem;
+}
+
+#footer a.underlined {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#footer a.underlined:after,
+#footer a.underlined:before {
+    content: '';
+    width: calc(100%);
+    height: 2px;
+    position: absolute;
+    bottom: 2px;
+    background-color: #000;
+    left: 0;
+    transition: .345s ease all;
+}
+
+#footer a.underlined:before {
+    transform: translateX(-100%);
+    transition: .345s ease all .345s;
+}
+
+
+#footer a.underlined:first-of-type:after,
+#footer a.underlined:first-of-type:before {
+    width: calc(100%);
+    left: 0;
+}
+
+#footer a.underlined:last-of-type:after,
+#footer a.underlined:last-of-type:before {
+    width: calc(100%);
+    right: 0;
+}
+
+#footer a:hover:after {
+    transform: translateX(100%);
+}
+
+#footer a:hover:before {
+    transform: translateX(0%);
 }
 
 .sticky-bottom {

@@ -10,66 +10,18 @@ class Footer extends Component {
             <div id="footer">
                 <Container className="container" fluid={true} justify={"start"} style={{padding: 0}}>
                     <Row>
-                        <Col md={4} justify={"center"}>
-                            <h4>About</h4>
-                            <br/>
-                            <br/>
-                            <h4 className="light-white">
-                            We are an independent New York based
-                            strategic design consultancy.
-                            </h4>
-                            <br/>
-                            <h4 className="light-white">
-                            We welcome you to work with us to strengthen your brand, 
-                            increase business, and create meaningful experiences.
-                            </h4>
-                            <br/>
-                            <br/>
-                            <Input color="black" arrow/>
+                        <Col xs={6}>
+                            <a className="light">© Piscatello Design Centre, 1997 - 2018</a>
+                            <a className="light underlined">Subscribe to our Newsletter</a>
                         </Col>
-                        <Col md={2}>    
-                            <h4>Work</h4>
-                            <br/>
-                            <br/>
-                            <h4 className="light-white">Brand Identity</h4>
-                            <h4 className="light-white">Digital Expiriences</h4>
-                            <h4 className="light-white">Wayfinding & Signage</h4>
-                            <h4 className="light-white">Advertising Communications</h4>
-                        </Col>
-                        <Col md={2}>
-                            <h4>Expertise</h4>
-                            <br/>
-                            <br/>
-                            <h4 className="light-white">Lorem Ipsum</h4>
-                            <h4 className="light-white">Lorem Ipsum</h4>
-                            <h4 className="light-white">Lorem Ipsum</h4>
-                            <h4 className="light-white">Lorem Ipsum</h4>
-                        </Col>
-                        <Col md={2}>
-                            <h4>Studio</h4>
-                            <br/>
-                            <br/>
-                            <h4 className="light-white">History</h4>
-                            <h4 className="light-white">Practice</h4>
-                            <h4 className="light-white">People</h4>
-                            <h4 className="light-white">Recognition</h4>
-                        </Col>
-                        <Col md={2}>
-                            <h4>Contact</h4>
-                            <br/>
-                            <br/>
-                            <h4 className="light-white">330 West 38th Street</h4>
-                            <h4 className="light-white">New York, NY, 10028</h4>
-                            <br/>
-                            <h4 className="light-white">+1 212 502 4734</h4>
+                        <Col xs={6} style={{textAlign: "right"}}>
+                            <a className="light underlined">Contact</a>
+                            {/* <a className="light">Facebook</a> */}
+                            <a className="light underlined">Twitter</a>
+                            <a className="light underlined">Instagram</a>
                         </Col>
                     </Row>
                 </Container>
-                <div className="sticky-bottom">
-                    <span>
-                        Copyright Piscatello Design Centre, 1999 - 2018
-                    </span>
-                </div>
             </div>
         )
     }

@@ -61,8 +61,8 @@ var flickityOptions = {
     }
 
     setSelectedIndex = () => {
-        let select = this.flkty.selectedIndex;
-        select+=1;
+        // let select = this.flkty.selectedIndex;
+        let select = this.currentIndex++;
         console.log(select)
         this.currentIndex = select;
     }
