@@ -4,6 +4,9 @@ import Flickity from 'react-flickity-component';
 
 import { Container, Row, Col } from 'react-grid-system';
 
+import {observable} from 'mobx';
+import {observer} from 'mobx-react';
+
 import LT from "./images/losttribe_gradient.jpg";
 import GB from "./images/gray-bar.png";
 import LLP from "./images/laguarda_laptop.jpg";
@@ -16,20 +19,25 @@ var flickityOptions = {
     setGallerySize: false
 }
 
-class FlickSlider extends Component {
-    constructor(props) {
-        super(props);
+@observer class FlickSlider extends Component {
+    /* MobX before componentDidMount */
+    @observable currentIndex = null;
 
+    constructor(props, context) {
+        super(props, context);
+
+        this.currentIndex = 1;
         this.animation = null;
     }
 
     componentDidMount = () => {
-        // You can register events in componentDidMount hook
-        this.flkty.on('settle', () => {
-        //   console.log(`current index is ${this.flkty.selectedIndex}`)
-        });
 
         document.addEventListener("scroll", this.setUpScroll.bind(this))
+
+        this.flkty.on('change', () => {
+            this.setSelectedIndex();
+            console.log(this.currentIndex);
+        })
     }
 
     setUpScroll() {
@@ -40,6 +48,7 @@ class FlickSlider extends Component {
         if(window.pageYOffset > 50 || document.documentElement.scrollTop > 50) {
             document.querySelector(".description").classList.add("scrolled");
             this.animation = window.requestAnimationFrame(this.reqAnimation.bind(this));
+            window.cancelAnimationFrame(this.animation);
         }
 
 
@@ -50,15 +59,26 @@ class FlickSlider extends Component {
 
         console.log("scrolled")
     }
+
+    setSelectedIndex = () => {
+        let select = this.flkty.selectedIndex;
+        select+=1;
+        console.log(select)
+        this.currentIndex = select;
+    }
      
     handleNext = () => {
         // You can use Flickity API
-        this.flkty.next()
+        this.flkty.next();
     }
 
     handlePrev = () => {
         // You can use Flickity API
         this.flkty.previous()
+    }
+
+    getSlideLength = () => {
+        return this.flkty.slides.length;
     }
     
 
@@ -81,8 +101,13 @@ class FlickSlider extends Component {
                     </div>
                 </Flickity>
                 <div className="description">
-                    <h2>Laguarda.Low Architects</h2>
-                    <h2 className="light-white">Web Design, Development</h2>
+                    <div className="">
+                        <h2>Laguarda.Low Architects</h2>
+                        <h2 className="light-white">Web Design, Development</h2>
+                    </div>
+                    <div style={{textAlign: "right"}}>
+                        <h2>{this.currentIndex}</h2>
+                    </div>
                 </div>
                 <div className="arrows left" onClick={this.handlePrev}></div>
                 <div className="arrows right" onClick={this.handleNext}></div>
