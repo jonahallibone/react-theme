@@ -12,11 +12,10 @@ function ContactBand() {
                 <Row justify={"start"}>
                     <Col xs={12} sm={6} className="text-left">
                         <h3 className="reg text-black light">
-                         Our clients are diverse and range from large and small, 
-                         private and public, for-profit and non-profit.
-                         <br/>
-                         <br/>
-                         Explore recent, our activities and events                
+                            Our clients are diverse and range from large and small, private and public, for-profit and non-profit.
+                            <br/>
+                            <br/>
+                            Explore some of our recent projects, activities, and events.                
                         </h3>
                     </Col>
                     {/* <div className="parallax-image">

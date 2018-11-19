@@ -33,7 +33,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Timeless Massimo Vignelli</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -75,7 +75,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -95,7 +95,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -190,7 +190,7 @@ class HomePageGrid extends Component {
                                         )}
                                     </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -208,7 +208,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Lost Tribe Theatre</strong><br/>London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -226,7 +226,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Riverside Entrance</h3>
+                                    <h3 className="light"><strong>Riverside Entrance</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -244,7 +244,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light">Design At Work Book</h3>
+                                    <h3 className="light"><strong>Design at Work Book</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -256,7 +256,7 @@ class HomePageGrid extends Component {
                         </div>
                     </div>
                     <div style={{textAlign: "center"}} className="padding-btm-xl">
-                        <h3 className="light text-center padding-btm-lg" style={{"border": "1px solid #909AA3", "padding": "1rem 2rem", "display": "inline-block"}}>See More Work</h3>
+                        <h3 className="light text-center padding-btm-lg" style={{"border": "1px solid #909AA3", "padding": "1rem 2rem", "display": "inline-block"}}>Explore More Projects</h3>
                     </div>
                     {/* <Button button-md className="margin-btm-3 black">See More Work</Button> */}
                 </Container>

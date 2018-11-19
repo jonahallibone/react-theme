@@ -148,7 +148,7 @@ class Header extends Component {
                     <div className="menu-vert">
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%"}} align="center" justify={"center"}>
-                                <Col className="link-container" xs={12} sm={8} style={{display: "flex", justifyContent: "space-between"}}>
+                                <Col className="link-container" xs={12} sm={12} style={{display: "flex", justifyContent: "space-between", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
                                         <span>Projects</span>
                                     </Link>

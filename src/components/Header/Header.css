@@ -22,6 +22,11 @@ header .menu {
     z-index: 999;
 }
 
+header .quote-col {
+    justify-content: center;
+    display: flex;
+}
+
 header .quote-col span.quote {
     position: absolute;
     font-size: 1.5rem;
@@ -152,7 +157,7 @@ header.header-overlay--visible .header-overlay {
 .header-overlay .menu-vert span {
     color: #fff;
     font-size: 3rem;
-    padding: 0 2rem;
+    padding: 0 0;
     transition: .345s ease all;
     font-weight: bold;
 }
