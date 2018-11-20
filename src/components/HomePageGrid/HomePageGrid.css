@@ -83,7 +83,7 @@
 }
 
 .grid-container--side.of-1 .item .img-container {
-    height: calc(100% - 66px);
+    height: calc(100% - 82px);
 }
 
 .grid-container--side.of-4 .item .img-container {

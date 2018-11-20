@@ -42,8 +42,8 @@ var flickityOptions = {
 
         document.addEventListener("scroll", this.setUpScroll.bind(this))
 
-        this.flkty.on('settle', () => {
-            
+        this.flkty.on('change', () => {
+            this.setState({currentIndex: this.state.currentIndex++});
         });
     }
 
@@ -73,14 +73,7 @@ var flickityOptions = {
      
     handleNext = () => {
         // You can use Flickity API
-        // this.currentIndex++;
         this.flkty.next();
-        this.setState({currentIndex: this.state.currentIndex++});
-        // this.slides = document.querySelectorAll(".items");
-        // let selected = document.querySelector(".items.is-selected");
-        // // console.log(this.slides)
-        // this.currentIndex = Array.prototype.indexOf.call(this.slides, selected);
-
     }
 
     handlePrev = () => {
