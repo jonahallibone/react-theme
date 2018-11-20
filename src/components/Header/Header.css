@@ -134,7 +134,7 @@ header.header-min .bar {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #333;
+    background-color: #000;
     color: #999;
     visibility: hidden;
     opacity: 0;

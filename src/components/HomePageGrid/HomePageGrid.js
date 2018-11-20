@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import ProgressiveImage from 'react-progressive-image';
 import Button from '../Button/Button';
 import ClampLines from 'react-clamp-lines';
+import { Link } from 'react-router-dom';
 
 import './HomePageGrid.css';
 
@@ -255,9 +256,11 @@ class HomePageGrid extends Component {
                             </div>
                         </div>
                     </div>
-                    <div style={{textAlign: "center"}} className="padding-btm-xl">
-                        <h3 className="light text-center padding-btm-lg" style={{"border": "1px solid #909AA3", "padding": "1rem 2rem", "display": "inline-block"}}>Explore More Projects</h3>
-                    </div>
+                    <Row style={{"margin": 0, justifyContent: "center"}} className="padding-top-6 padding-btm-6">
+                        <Link to="/work">
+                            <Button button-lg arrow className="black center text-bold">View More Projects</Button>
+                        </Link>
+                    </Row>
                     {/* <Button button-md className="margin-btm-3 black">See More Work</Button> */}
                 </Container>
             </div>

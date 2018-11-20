@@ -13,6 +13,8 @@ import AboutPage from './components/AboutPage/AboutPage';
 import WorkPage from './components/WorkPage/WorkPage';
 import Footer from './components/Footer/Footer';
 
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+
 
 class App extends Component {
 
@@ -39,7 +41,7 @@ class App extends Component {
           <CSSTransition
             key={location.key}
             classNames={"fade"}
-            timeout={{enter: 500, exit: 300}}>
+            timeout={{enter: 1000, exit: 500}}>
             <Prefetch onError={message => window.alert(message)}>
               <Switch location={location}>
                 <Route path="/" exact component = {HomePage}></Route>

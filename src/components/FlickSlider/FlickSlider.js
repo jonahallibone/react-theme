@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './FlickSlider.css';
 import Flickity from 'react-flickity-component';
 
-import { Container, Row, Col } from 'react-grid-system';
+import { Container } from 'react-grid-system';
 
 import {observable,} from 'mobx';
 import {observer} from 'mobx-react';
 
 import LT from "./images/losttribe_gradient.jpg";
-import GB from "./images/gray-bar.png";
 import LLP from "./images/laguarda_laptop.jpg";
 
 var flickityOptions = {
@@ -30,6 +29,7 @@ var flickityOptions = {
         this.animation = null;
 
         this.slides = [];
+        this.scrollListener = null; 
 
         this.state = {
             currentIndex: 0
@@ -40,7 +40,10 @@ var flickityOptions = {
         this.currentIndex = this.flkty.selectedIndex;
         this.slides = document.querySelectorAll(".items");
 
-        document.addEventListener("scroll", this.setUpScroll.bind(this))
+        this.scrollListener = this.setUpScroll.bind(this);
+        document.addEventListener("scroll", this.scrollListener, { passive: true })
+
+        
 
         this.flkty.on('change', () => {
             this.setState({currentIndex: this.state.currentIndex++});
@@ -56,6 +59,7 @@ var flickityOptions = {
             document.querySelector(".description").classList.add("scrolled");
             this.animation = window.requestAnimationFrame(this.reqAnimation.bind(this));
             window.cancelAnimationFrame(this.animation);
+            console.log("scrolled");
         }
 
 
@@ -83,6 +87,12 @@ var flickityOptions = {
 
     getSlideLength = () => {
         return this.flkty.slides.length;
+    }
+
+    componentWillUnmount = () => {
+        document.removeEventListener("scroll", this.scrollListener, { passive: true });
+        this.scrollListener = null;
+        window.cancelAnimationFrame(this.animation);
     }
     
 
