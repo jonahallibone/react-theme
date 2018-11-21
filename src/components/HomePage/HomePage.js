@@ -20,7 +20,7 @@ function HomePage() {
                 </h3>
             </Statement>
             <FlickSlider></FlickSlider>
-            <ContactBand></ContactBand>
+            {/* <ContactBand></ContactBand> */}
             <HomePageGrid></HomePageGrid>
         </div>
     );

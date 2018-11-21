@@ -19,7 +19,7 @@ class HomePageGrid extends Component {
     render() {
         return (
             <div id="" style={{backgroundColor: "#fff"}}>
-                <Container className="container" fluid={true} style={{padding: 0}}>
+                <Container className="container" fluid={true} style={{padding: "5rem 0 0 0"}}>
                     <div>
                         {/* <h4 className="text-black light reg" style={{margin: "0 0 1.25rem 0", color: "rgb(41, 53, 58)", fontSize: "1.5rem"}}>Feed  —  All Work  News  Events  Awards  Other </h4> */}
                     </div>
@@ -34,7 +34,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Timeless Massimo Vignelli</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Timeless Massimo Vignelli</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -54,7 +54,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Equity Works</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Equity Works</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -76,7 +76,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -96,7 +96,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -118,7 +118,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>City Tower Building</strong><br/>Prague</h3>
+                                    <h3 className="light text-grey"><strong>City Tower Building</strong><br/>Prague</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -136,7 +136,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -154,7 +154,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Piscatello Design Centre</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Piscatello Design Centre</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"ellipsis="..."
@@ -171,7 +171,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
+                                    <h3 className="light text-grey"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -191,7 +191,7 @@ class HomePageGrid extends Component {
                                         )}
                                     </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -209,7 +209,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Lost Tribe Theatre</strong><br/>London</h3>
+                                    <h3 className="light text-grey"><strong>Lost Tribe Theatre</strong><br/>London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -227,7 +227,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Riverside Entrance</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Riverside Entrance</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
@@ -245,7 +245,7 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light"><strong>Design at Work Book</strong><br/>New York</h3>
+                                    <h3 className="light text-grey"><strong>Design at Work Book</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
