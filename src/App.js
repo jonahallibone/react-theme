@@ -12,8 +12,7 @@ import PracticePage from './components/PracticePage/PracticePage';
 import AboutPage from './components/AboutPage/AboutPage';
 import WorkPage from './components/WorkPage/WorkPage';
 import Footer from './components/Footer/Footer';
-
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import WorkPageSingle from './components/WorkPageSingle/WorkPageSingle';
 
 
 class App extends Component {
@@ -42,14 +41,13 @@ class App extends Component {
             key={location.key}
             classNames={"fade"}
             timeout={{enter: 1000, exit: 500}}>
-            <Prefetch onError={message => window.alert(message)}>
-              <Switch location={location}>
-                <Route path="/" exact component = {HomePage}></Route>
-                <Route path="/work" exact component = {WorkPage}></Route>
-                <Route path="/practice" exact component = {PracticePage}></Route>
-                <Route path="/about" exact component = {AboutPage}></Route>
-              </Switch>
-            </Prefetch>
+            <Switch location={location}>
+              <Route path="/" exact component = {HomePage}></Route>
+              <Route path="/work" exact component = {WorkPage}></Route>
+              <Route path="/practice" exact component = {PracticePage}></Route>
+              <Route path="/about" exact component = {AboutPage}></Route>
+              <Route path="/work/:id" component = {WorkPageSingle}></Route>
+            </Switch>
           </CSSTransition>
         </TransitionGroup>
         <Footer></Footer>

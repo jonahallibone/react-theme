@@ -1,0 +1,8 @@
+.work-page-single {
+    min-height: 100%;
+}
+
+#project-content {
+    min-height: 100vh;
+    background-color: #FFF;
+}
