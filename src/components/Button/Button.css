@@ -117,9 +117,29 @@ button .button-arrow {
     transition: .345s ease all;
 }
 
+button .button-left-arrow {
+    background-image: url('./arrow-left.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-flex;
+    justify-content: flex-start;
+    background-position: center center;
+    opacity: 0;
+    margin-right: calc(-1rem - .25rem);
+    transition: .345s ease all;
+    transform: scaleX(-1)
+}
+
 button:hover .button-arrow {
     opacity: 1;
     margin-left: 1rem;
+}
+
+button:hover .button-left-arrow {
+    margin-right: 1rem;
+    opacity: 1;
 }
 
 .input-container button {

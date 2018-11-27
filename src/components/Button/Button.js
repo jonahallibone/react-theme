@@ -34,10 +34,18 @@ class Button extends Component {
         }
         return "";
     }
+    
+    getLeftArrow = () => {
+        if(this.props.arrowLeft) {
+            return <div className="button-left-arrow"></div>
+        }
+        return "";
+    }
 
     render() {
         return (
             <button className={this.getClasses()}>
+                {this.getLeftArrow()}
                 {this.props.children}
                 {this.getArrow()}
             </button>

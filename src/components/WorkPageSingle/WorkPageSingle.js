@@ -100,8 +100,8 @@ class WorkPageSingle extends Component {
               <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx-BC.jpg" alt="business cards" />
             </div>
             <div className="bottom-directions">
-              <Button button-lg arrow className="black center text-bold">Last Project</Button>
-              <Button button-lg arrow className="black center text-bold">View All</Button>
+              <Button button-lg arrowLeft className="black center text-bold">Last Project</Button>
+              <Button button-lg className="black center text-bold">View All</Button>
               <Button button-lg arrow className="black center text-bold">Next Project</Button>
             </div>
           </Container>
