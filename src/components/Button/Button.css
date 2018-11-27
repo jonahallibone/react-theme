@@ -5,7 +5,7 @@ button {
     background-color: #FFF;
     color: #333;
     box-sizing: border-box;
-    transition: .245s ease all;
+    transition: .345s ease all;
     outline: none;
     cursor: pointer;
     align-self: flex-start;
@@ -54,6 +54,15 @@ button.grey {
 button.black {
     background-color: #333;
     color: #FFF;
+}
+
+button.black-red {
+    background-color: #000;
+    color: #FFF;
+}
+
+button.black-red:hover {
+    background-color: #ff4350;
 }
 
 button.center {

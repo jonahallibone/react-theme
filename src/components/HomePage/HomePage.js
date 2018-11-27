@@ -15,8 +15,7 @@ function HomePage() {
                 <br />
                 <br />
                 <h3 className="reg light-white">
-                For nearly 25 years, we have been designing and developing <br/>
-                <u>brand identities</u>, <u>signage programs</u>, and <u>digital experiences</u><br/>for clients and cities worldwide.                
+                For nearly 25 years, we have been designing and developing <u>brand identities,</u> <u>signage programs,</u> and <u>digital experiences</u> for clients and cities worldwide.                
                 </h3>
             </Statement>
             <FlickSlider></FlickSlider>

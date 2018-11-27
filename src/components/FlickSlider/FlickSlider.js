@@ -108,10 +108,10 @@ var flickityOptions = {
                     reloadOnUpdate={true} // default false
                 >
                     <div className="items">
-                        <img src={LT} />
+                        <img src={LLP} />
                     </div>
                     <div className="items">
-                        <img src={LLP}/>
+                        <img src={LT}/>
                     </div>
                     <div className="items">
                         <img src={LT} />
@@ -121,7 +121,7 @@ var flickityOptions = {
                 <div className="description">
                     <div className="">
                         <h2>Laguarda.Low Architects</h2>
-                        <h2 className="light-white">Web Design, Development</h2>
+                        <h2 className="light-white">New York and Beijing</h2>
                     </div>
                     <div style={{textAlign: "right"}}>
                         <h2>{this.state.currentIndex}</h2>

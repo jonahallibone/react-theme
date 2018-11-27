@@ -34,13 +34,14 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Timeless Massimo Vignelli</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong className="text-black">Timeless Massimo Vignelli</strong>
+                                    <br/><span className="text-black">Barcelona</span></h3>
                                     <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
+                                    text={"Poster for an international exhibition"}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
@@ -54,13 +55,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Equity Works</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Equity Works</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
@@ -76,13 +77,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
@@ -96,13 +97,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
@@ -118,13 +119,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>City Tower Building</strong><br/>Prague</h3>
+                                    <h3 className="light text-black"><strong>City Tower Building</strong><br/>Prague</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />                            
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -136,13 +137,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -154,12 +155,12 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Piscatello Design Centre</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Piscatello Design Centre</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -171,13 +172,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
+                                    <h3 className="light text-black"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
@@ -191,13 +192,13 @@ class HomePageGrid extends Component {
                                         )}
                                     </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Douglass Winthrop</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -209,13 +210,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Lost Tribe Theatre</strong><br/>London</h3>
+                                    <h3 className="light text-black"><strong>Lost Tribe Theatre</strong><br/>London</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -227,13 +228,13 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Riverside Entrance</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Riverside Entrance</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                             <div className="item">
@@ -245,20 +246,20 @@ class HomePageGrid extends Component {
                                     )}
                                 </ProgressiveImage>
                                 <div className="contents">
-                                    <h3 className="light text-grey"><strong>Design at Work Book</strong><br/>New York</h3>
+                                    <h3 className="light text-black"><strong>Design at Work Book</strong><br/>New York</h3>
                                     <ClampLines
                                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
                                     lines="2"
                                     ellipsis="..."
                                     buttons={false}
-                                    className="subtext" />
+                                    className="subtext text-red" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <Row style={{"margin": 0, justifyContent: "center"}} className="padding-top-6 padding-btm-6">
                         <Link to="/work">
-                            <Button button-lg arrow className="black center text-bold">View More Projects</Button>
+                            <Button button-lg arrow className="black-red center text-bold">View More Projects</Button>
                         </Link>
                     </Row>
                     {/* <Button button-md className="margin-btm-3 black">See More Work</Button> */}

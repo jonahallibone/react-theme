@@ -49,10 +49,6 @@ header .menu h2 {
     transition: .345s ease all;
 }
 
-header .menu h2:hover {
-    color: #909AA3;
-}
-
 header .close-menu {
     display: none;
 }
@@ -70,6 +66,10 @@ header.header-min a,
 header.header-min .menu-button,
 header.header-min .menu h2 {
     color: #f2f3f5;
+}
+
+header .menu h2:hover {
+    color: #ff4350;
 }
 
 header.header-overlay--visible .menu,

@@ -18,10 +18,15 @@
     line-height: 1.35;
     margin-bottom: .5rem;
     font-size: 1.2rem;
-    color: #111 !important;
+    color: #000;
     font-weight: 500;
     padding: .25rem 0;
     display: inline-flex;
+}
+
+#footer a:hover,
+#footer a.light-white:hover {
+    color: #ff4350;
 }
 
 #footer a:first-of-type {
@@ -70,10 +75,12 @@
 
 #footer a:hover:after {
     transform: translateX(100%);
+    background-color: #ff4350;
 }
 
 #footer a:hover:before {
     transform: translateX(0%);
+    background-color: #ff4350;
 }
 
 .sticky-bottom {
