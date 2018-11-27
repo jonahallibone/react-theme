@@ -6,3 +6,34 @@
     min-height: 100vh;
     background-color: #FFF;
 }
+
+.single-project-banner {
+    background-color: #DDD;
+    margin-top: 1.5rem;
+}
+
+.single-project-banner img,
+.single-project-grid .item img {
+    width: 100%;
+    display: block;
+}
+
+.single-project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.single-project-grid .item {
+    background-color: #DDD;
+}
+
+.bottom-directions {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 1;
+    justify-content: space-between;
+    padding: 6rem 0;
+}
