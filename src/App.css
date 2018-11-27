@@ -531,6 +531,10 @@ u {
     white-space: nowrap;
 }
 
+u:hover {
+    color: #ff4350 !important;
+}
+
 u:after {
     content: '';
     position: absolute;
@@ -549,7 +553,7 @@ u:before {
     position: absolute;
     height: 2px;
     width: 0;
-    background-color: rgb(242, 242, 242);
+    background-color: #ff4350;
     left: 0;
     bottom: 0;
     transition: .25s ease-in-out all;
