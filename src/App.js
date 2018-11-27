@@ -44,9 +44,10 @@ class App extends Component {
             <Switch location={location}>
               <Route path="/" exact component = {HomePage}></Route>
               <Route path="/work" exact component = {WorkPage}></Route>
+              <Route path="/work/:type" exact component = {WorkPage}></Route>
               <Route path="/practice" exact component = {PracticePage}></Route>
               <Route path="/about" exact component = {AboutPage}></Route>
-              <Route path="/work/:id" component = {WorkPageSingle}></Route>
+              <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
             </Switch>
           </CSSTransition>
         </TransitionGroup>

@@ -13,14 +13,20 @@ class WorkPage extends Component {
     return (
       <section className="transition-page" id="page-work">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
-          <h3 className="reg light-white padding-top-6">
-          Our clients are diverse and range from large and small, <br/>private and public, for-profit and non-profit.
-          </h3>
+          <h2 className="reg text-white text-bold padding-top-6">
+            Brand Identity
+          </h2>
+          <div className="option-list text-white">
+            <span className="filter-option">All</span>
+            <span className="filter-option">Brand Identities</span>
+            <span className="filter-option">Digital Expiriences</span>
+            <span className="filter-option">Signage Programs</span>
+          </div>
         </Container>
         <section id="work-list">
         <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="image-grid-row">
-            <Link to="/work/test" className="project">
+            <Link to="/work/digital/test-project" className="project">
               <div className="image-holder">
                 <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
               </div>
