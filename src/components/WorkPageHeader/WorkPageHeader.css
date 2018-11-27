@@ -1,7 +1,7 @@
 #featured-header {
     height: calc(500px - 75px);
     padding-top: 75px;
-    background-color: #F20;
+    background-color: #34A;
     z-index: -1;
     position: relative;
 }

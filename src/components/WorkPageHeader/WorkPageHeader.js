@@ -10,11 +10,11 @@ class WorkPageHeader extends Component {
         return (
             <section id="featured-header">
                 <Container fluid={true} className="container" style={{padding: 0, position: "relative", height: "100%"}}>
-                    <div className="information">
+                    {/* <div className="information">
                         <p className="text-white text-bold">
                             July 2018 &bull; Web Development & Design
                         </p>
-                    </div>
+                    </div> */}
                 </Container>
             </section>
         )
