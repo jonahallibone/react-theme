@@ -7,20 +7,62 @@ import './WorkPage.css';
 class WorkPage extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      pageTitle: null,
+      pageDescription: null
+    }
+
+    this.pages = {
+      "all": {
+        title: "All Work",
+        description: `We create work that builds business value and enhances life for people. Our clients are diverse and range from large and small, private and public, for-profit and non-profit.`
+      },
+      "brand": {
+        title: "Brand Identities",
+        description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`
+      },
+      "digital": {
+        title: "Digital Expiriences",
+        description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`
+      },
+      "signage": {
+        title: "Signage Programs",
+        description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`
+      }
+    }
+  }
+
+  componentDidMount() {
+    if(this.props.match.params.type) {
+      let page = this.pages[this.props.match.params.type];
+      this.setState(
+        {pageTitle: page.title, pageDescription: page.description}
+      )
+    }
+    
+    else {
+      this.setState({pageTitle: this.pages["all"].title, pageDescription: this.pages["all"].description})
+    }
   }
 
   render() {
     return (
       <section className="transition-page" id="page-work">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
-          <h2 className="reg text-white text-bold padding-top-6">
-            Brand Identity
-          </h2>
-          <div className="option-list text-white">
-            <span className="filter-option">All</span>
-            <span className="filter-option">Brand Identities</span>
-            <span className="filter-option">Digital Expiriences</span>
-            <span className="filter-option">Signage Programs</span>
+          <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3>
+          <Row>
+            <Col xs={6}>
+              <h3 className="reg light-white padding-top-2">
+                {this.state.pageDescription}
+              </h3>
+            </Col>
+          </Row>
+          <div className="option-list text-red">
+            <span className="filter-option"><Link to="/work/">All Work</Link></span>
+            <span className="filter-option"><Link to="/work/brand/">Brand Identities</Link></span>
+            <span className="filter-option"><Link to="/work/digital">Digital Experiences</Link></span>
+            <span className="filter-option"><Link to="/work/signage">Signage Programs</Link></span>
           </div>
         </Container>
         <section id="work-list">
