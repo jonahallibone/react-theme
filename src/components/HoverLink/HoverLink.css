@@ -1,0 +1,18 @@
+.underline--container {
+    position: relative;
+    transition: .345s ease all;
+}
+
+.underline--container:hover {
+    color: #ff4350;
+}
+
+@keyframes underline {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}

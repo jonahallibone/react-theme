@@ -13,8 +13,7 @@
 #work-list {
     background-color: #FFF;
     width: 100%;
-    padding: 5rem 0;
-    margin-top: 2.5rem;
+    padding: 0 0 5rem 0;
 }
 
 .filter-box {
@@ -36,6 +35,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 1.5rem;
+    margin-top: 1.25rem;
     margin-bottom: 1.5rem;
     transition: .345s ease all;
 }
@@ -78,8 +78,32 @@
 .option-list {
     display: flex;
     flex-direction: row;
-    margin-top: 2.5rem;
-    padding: 2.5rem 0;
+    align-items: center;
+    height: 75px;
+    position: sticky;
+    top: 75px;
+    width: 100vw;
+    margin-left: -7.5vw;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    background-color: #FFF;
+    z-index: 999;
+    transition:.345s ease box-shadow;
+}
+
+.option-list.shadow {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #EEE;
+    transition: .345s ease .25s box-shadow;
+}
+
+@media all and (max-width: 1440px) {
+    .option-list.shadow {
+        margin-left: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: .345s ease .25s box-shadow;
+    }
 }
 
 .option-list .filter-option {
@@ -90,7 +114,7 @@
 }
 
 .filter-option a {
-    color: #ff4350;
+    color: #999;
     transition: .345s ease all;
 }
 

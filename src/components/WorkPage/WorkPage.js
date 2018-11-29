@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
+import HoverLink from '../HoverLink/HoverLink';
+
 import '../../App.css';
 import './WorkPage.css';
+import ProjectThumbnail from '../ProjectThumbnail/ProjectThumbnail';
 
 class WorkPage extends Component {
   constructor(props) {
@@ -12,6 +15,8 @@ class WorkPage extends Component {
       pageTitle: null,
       pageDescription: null
     }
+
+    this.scrollAnim = null;
 
     this.pages = {
       "all": {
@@ -23,7 +28,7 @@ class WorkPage extends Component {
         description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`
       },
       "digital": {
-        title: "Digital Expiriences",
+        title: "Digital Experiences",
         description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`
       },
       "signage": {
@@ -44,6 +49,21 @@ class WorkPage extends Component {
     else {
       this.setState({pageTitle: this.pages["all"].title, pageDescription: this.pages["all"].description})
     }
+
+    document.addEventListener("scroll", this.addShadow)
+  }
+
+  addShadow = () => {
+    let list = document.querySelector(".option-list");
+
+    if(list.getBoundingClientRect().top <=75) {
+      list.classList.add("shadow");
+    }
+    else list.classList.remove("shadow");
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.addShadow);
   }
 
   render() {
@@ -52,111 +72,52 @@ class WorkPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
           <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3>
           <Row>
-            <Col xs={6}>
+            <Col xs={7} style={{ paddingBottom: "5rem"}}>
               <h3 className="reg light-white padding-top-2">
                 {this.state.pageDescription}
               </h3>
             </Col>
           </Row>
+        </Container>
+        <section id="work-list">
+        <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="option-list text-red">
-            <span className="filter-option"><Link to="/work/">All Work</Link></span>
+            {/* <span className="filter-option"><span className={{color: "#999"}}></span></span> */}
+            <span className="filter-option"><Link to="/work/"><HoverLink>All Work</HoverLink></Link></span>
             <span className="filter-option"><Link to="/work/brand/">Brand Identities</Link></span>
             <span className="filter-option"><Link to="/work/digital">Digital Experiences</Link></span>
             <span className="filter-option"><Link to="/work/signage">Signage Programs</Link></span>
           </div>
-        </Container>
-        <section id="work-list">
-        <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="image-grid-row">
             <Link to="/work/digital/test-project" className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </Link>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
             <div className="project">
-              <div className="image-holder">
-                <img src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg"/>
-              </div>
-              <article>
-                <h3>Equity Works</h3>
-                <h3 className="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              </article>
+              <ProjectThumbnail></ProjectThumbnail>
             </div>
           </div>
         </Container>

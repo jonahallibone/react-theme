@@ -16,7 +16,7 @@ class Header extends Component {
         }
 
         this.animation = null;
-        this.animating = false,
+        this.animating = false;
 
         this.descriptions = {
             "work": 
@@ -53,8 +53,8 @@ class Header extends Component {
 
     setUpEvents() {
         document.querySelectorAll(".page-link").forEach( el => {
-            el.addEventListener("mouseenter", event => { this.handleHover(event) });
-            el.addEventListener("mouseleave", event => { this.handleLeave(event) });
+            // el.addEventListener("mouseenter", event => { this.handleHover(event) });
+            // el.addEventListener("mouseleave", event => { this.handleLeave(event) });
         })
     }    
 
@@ -147,8 +147,8 @@ class Header extends Component {
                 <div className="header-overlay" ref={elem => this.overlay = elem}>
                     <div className="menu-vert">
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
-                            <Row style={{ flex: "0 0 100%"}} align="center" justify={"center"}>
-                                <Col className="link-container" xs={12} sm={12} style={{display: "flex", justifyContent: "space-between", padding: 0}}>
+                            <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
+                                <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
                                         <span>Projects</span>
                                     </Link>
@@ -161,10 +161,10 @@ class Header extends Component {
                                     <Link className="page-link" to="/contact" data-linkname="contact">
                                         <span>Contact</span>
                                     </Link>
-                                </Col>
-                                <Col xs={12} sm={8} className="quote-col">
+                                </div>
+                                <div xs={12} sm={8} className="quote-col">
                                     <span className="quote" ref={elem => this.quoteEl = elem}>{this.getQuotes()}</span>
-                                </Col>
+                                </div>
                             </Row>
                         </Container>
                     </div>   

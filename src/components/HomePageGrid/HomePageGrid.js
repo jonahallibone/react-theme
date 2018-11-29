@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
-import ProgressiveImage from 'react-progressive-image';
+import { Container, Row } from 'react-grid-system';
 import Button from '../Button/Button';
-import ClampLines from 'react-clamp-lines';
 import { Link } from 'react-router-dom';
+import ProjectThumbnail from '../ProjectThumbnail/ProjectThumbnail';
 
 import './HomePageGrid.css';
 
 class HomePageGrid extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     componentDidMount() {
 
@@ -25,236 +21,32 @@ class HomePageGrid extends Component {
                     </div>
                     <div className="grid-container">
                         <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Timeless_Entrance.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong className="text-black">Timeless Massimo Vignelli</strong>
-                                    <br/><span className="text-black">Barcelona</span></h3>
-                                    <ClampLines
-                                    text={"Poster for an international exhibition"}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                         <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/AEA_EquityWorks.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Equity Works</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                     </div>
                     <div className="grid-container">
                         <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                         <div className="grid-container--side of-1">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Large/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                     </div>
                     <div className="grid-container">
                         <div className="grid-container--side of-4">
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>City Tower Building</strong><br/>Prague</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/DW06.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/DesignAtWork_Horiz.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Piscatello Design Centre</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Lost-Tribe_Bus.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Lost Tribe Theatre</strong><br/>New York, London</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                         <div className="grid-container--side of-4">
-                            <div className="item">
-                                    <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Nomadx-BC.jpg" placeholder="tiny-image.jpg">
-                                        {(src, loading) => (
-                                            <div className={ loading ? "img-container" : "img-container loaded" }>
-                                                <img src={src} alt="an image" />
-                                            </div>
-                                        )}
-                                    </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Douglass Winthrop</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/Lost-Tribe_Rainbow.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Lost Tribe Theatre</strong><br/>London</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/CoffeeHouse_Banner.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Riverside Entrance</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
-                            <div className="item">
-                                <ProgressiveImage src="https://s3.amazonaws.com/piscatello/Small/DesignAtWork_Horiz.jpg" placeholder="tiny-image.jpg">
-                                    {(src, loading) => (
-                                        <div className={ loading ? "img-container" : "img-container loaded" }>
-                                            <img src={src} alt="an image" />
-                                        </div>
-                                    )}
-                                </ProgressiveImage>
-                                <div className="contents">
-                                    <h3 className="light text-black"><strong>Design at Work Book</strong><br/>New York</h3>
-                                    <ClampLines
-                                    text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit."}
-                                    lines="2"
-                                    ellipsis="..."
-                                    buttons={false}
-                                    className="subtext text-red" />
-                                </div>
-                            </div>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
+                            <ProjectThumbnail></ProjectThumbnail>
                         </div>
                     </div>
                     <Row style={{"margin": 0, justifyContent: "center"}} className="padding-top-6 padding-btm-6">

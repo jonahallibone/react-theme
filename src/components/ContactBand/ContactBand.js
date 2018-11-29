@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import Button from '../Button/Button';
 
 import '../../App.css';
 import './ContactBand.css';
@@ -12,9 +11,6 @@ function ContactBand() {
                 <Row justify={"start"}>
                     <Col xs={12} sm={6} className="text-left">
                     </Col>
-                    {/* <div className="parallax-image">
-                        <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx-BC.jpg"/>
-                    </div> */}
                 </Row>
             </Container>
         </div>

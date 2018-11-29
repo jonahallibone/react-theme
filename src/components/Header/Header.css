@@ -156,10 +156,18 @@ header.header-overlay--visible .header-overlay {
 
 .header-overlay .menu-vert span {
     color: #fff;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0 0;
     transition: .345s ease all;
-    font-weight: bold;
+    font-weight: 800;
+    padding: 1rem 0;
+    line-height: 1;
+    display: inline-flex;
+}
+
+.header-overlay .menu-vert .link-container {
+    flex-direction: column;
+    flex-grow: 0;
 }
 
 .header-overlay .menu-vert .link-container:hover span {
@@ -167,7 +175,7 @@ header.header-overlay--visible .header-overlay {
 }
 
 .header-overlay .menu-vert .link-container:hover span:hover {
-    color: #FFF;
+    color: #ff4350;
 }
 
 .header-overlay .menu-vert a {
