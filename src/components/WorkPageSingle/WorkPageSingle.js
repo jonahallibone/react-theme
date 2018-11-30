@@ -70,7 +70,14 @@ class WorkPageSingle extends Component {
               </Row>
               <Row>
                 <Col xs={12} sm={6}>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non velit est.</h4>
+                  <h4 className="light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+                  sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+                  vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
+                  id molestie nec, gravida vel erat. Phasellus imperdiet fermentum felis, non viverra 
+                  erat efficitur eu. Nulla interdum elementum posuere. Donec iaculis metus 
+                  ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue
+                  </h4>
                 </Col>
               </Row>
             </div>
