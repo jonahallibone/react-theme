@@ -1,14 +1,30 @@
 #featured-header {
-    height: calc(500px - 75px);
-    padding-top: 75px;
-    background-color: #34A;
-    z-index: -1;
-    position: relative;
+    background-color: #FFF;
+    height: 75px;
+    position: sticky;
+    top: 75px;
+    width: 100vw;
+    padding: 0 7.5vw;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#featured-header .information {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem 0;
+@media all and (max-width: 1440px) {
+    #featured-header {
+        padding: 0 2rem;
+    }
+}
+
+#featured-header .title-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+#featured-header .title-row .side {
+    display: flex;
+    height: 75px;
+    align-items: center;
 }

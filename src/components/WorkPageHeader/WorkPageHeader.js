@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
+import Button from '../Button/Button';
+
+
 import './WorkPageHeader.css';
 
 class WorkPageHeader extends Component {
@@ -9,9 +12,14 @@ class WorkPageHeader extends Component {
     render() {
         return (
             <section id="featured-header">
-                <Container fluid={true} className="container" style={{padding: 0, position: "relative", height: "100%"}}>
-                    
-                </Container>
+                <div className="title-row">
+                    <div className="side">
+                        <h3 className="reg text-black">Project Title</h3>
+                    </div>
+                    <div className="side">
+                        <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
+                    </div>
+                </div>
             </section>
         )
     }

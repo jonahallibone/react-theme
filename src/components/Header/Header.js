@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import './Header.css';
-// import {default as Tilty} from "react-tilty";
+import HoverLink from '../HoverLink/HoverLink';
 
 import '../../App.css';
 
@@ -150,16 +150,24 @@ class Header extends Component {
                             <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
                                 <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
-                                        <span>Projects</span>
+                                        <HoverLink thick>
+                                            <span>Projects</span>
+                                        </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/studio" data-linkname="centre">
-                                        <span>Studio</span>
+                                        <HoverLink thick>
+                                            <span>Studio</span>
+                                        </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/expertise" data-linkname="expertise">
-                                        <span>Expertise</span>
+                                        <HoverLink thick>
+                                            <span>Expertise</span>
+                                        </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/contact" data-linkname="contact">
-                                        <span>Contact</span>
+                                        <HoverLink thick>
+                                            <span>Contact</span>
+                                        </HoverLink>
                                     </Link>
                                 </div>
                                 <div xs={12} sm={8} className="quote-col">

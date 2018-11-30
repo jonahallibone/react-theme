@@ -49,7 +49,6 @@
 }
 
 .project h3 {
-    color: #999;
     transition: .15s ease all;
 }
 
@@ -86,18 +85,25 @@
     margin-left: -7.5vw;
     padding-left: 7.5vw;
     padding-right: 7.5vw;
-    background-color: #FFF;
+    background-color: #f2f3f5;
     z-index: 999;
     transition:.345s ease box-shadow;
 }
 
 .option-list.shadow {
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #EEE;
+    /* box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1); */
+    /* border-bottom: 1px solid #EEE; */
     transition: .345s ease .25s box-shadow;
 }
 
 @media all and (max-width: 1440px) {
+    .option-list {
+        margin-left: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: .345s ease .25s box-shadow;
+    }
+
     .option-list.shadow {
         margin-left: -2rem;
         padding-left: 2rem;
@@ -114,10 +120,14 @@
 }
 
 .filter-option a {
-    color: #999;
+    color: #000;
     transition: .345s ease all;
 }
 
 .filter-option a:hover {
     color: #fff;
+}
+
+.request-meeting {
+    margin-left: auto;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import HoverLink from '../HoverLink/HoverLink';
+import Button from '../Button/Button';
 
 import '../../App.css';
 import './WorkPage.css';
@@ -83,10 +84,29 @@ class WorkPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="option-list text-red">
             {/* <span className="filter-option"><span className={{color: "#999"}}></span></span> */}
-            <span className="filter-option"><Link to="/work/"><HoverLink>All Work</HoverLink></Link></span>
-            <span className="filter-option"><Link to="/work/brand/">Brand Identities</Link></span>
-            <span className="filter-option"><Link to="/work/digital">Digital Experiences</Link></span>
-            <span className="filter-option"><Link to="/work/signage">Signage Programs</Link></span>
+            <span className="filter-option">
+              <Link to="/work/">
+                <HoverLink selected>All Work</HoverLink>
+              </Link>
+            </span>
+            <span className="filter-option">
+              <Link to="/work/brand/">
+                <HoverLink>Brand Identities</HoverLink>
+              </Link>
+            </span>
+            <span className="filter-option">
+              <Link to="/work/digital/">
+                <HoverLink>Digital Experiences</HoverLink>
+              </Link>
+            </span>
+            <span className="filter-option">
+              <Link to="/work/signage/">
+                <HoverLink>Signage Programs</HoverLink>
+              </Link>
+            </span>
+            <div className="filter-option request-meeting" style={{marginRight: 0}}>
+              <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
+            </div>
           </div>
           <div className="image-grid-row">
             <Link to="/work/digital/test-project" className="project">

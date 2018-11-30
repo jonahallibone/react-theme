@@ -59,16 +59,6 @@ class WorkPageSingle extends Component {
         <WorkPageHeader></WorkPageHeader>
         <section id="project-content">
           <Container className="container" fluid={true} style={{padding: 0}}>
-            <div className="single-project-banner-description">
-              <Row style={{padding: "1.5rem 0"}}>
-                <Col xs={12} sm={6}>
-                  <h4 className="reg text-black">Lorem Ipsum</h4>
-                </Col>
-                <Col xs={12} sm={6}>
-                  <h4>{this.state.post !== null ? <pre>{this.state.post.title}</pre>: ""}</h4>
-                </Col>
-              </Row>
-            </div>
             <div className="single-project-banner">
               <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/>
             </div>

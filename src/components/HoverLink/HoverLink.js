@@ -9,17 +9,38 @@ class HoverLink extends Component {
         this.link = null;
     }
 
-    componentDidMount() {
-        this.link.addEventListener("mouseenter", this.applyAnimation)
-    }
+    getClass() {
+        let classes = [];
+        if(this.props.inverse) {
+            classes.push("inverse");
+        }
 
-    applyAnimation = () => {
-        this.link.classList.add("hover");
+        if(this.props.grey) {
+            classes.push("grey")
+        }
+
+        if(this.props.selected) {
+            classes.push("selected")
+        }
+
+        if(this.props.thick) {
+            classes.push("thick")
+        }
+
+        if(this.props["solid-black"]) {
+            classes.push("solid-black")
+        }
+
+        if(this.props["grey-black"]) {
+            classes.push("grey-black")
+        }
+
+        return classes.join(" ")
     }
 
     render() {
         return(
-            <div ref={elem => this.link = elem} className="underline--container">
+            <div ref={elem => this.link = elem} className={"underline--container " + this.getClass()}>
                 {this.props.children}
             </div>
         )
