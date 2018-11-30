@@ -67,6 +67,8 @@ class WorkPageSingle extends Component {
                 <Col xs={12} sm={6}>
                   <h4 className="reg text-black">Lorem Ipsum</h4>
                 </Col>
+              </Row>
+              <Row>
                 <Col xs={12} sm={6}>
                   <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non velit est.</h4>
                 </Col>

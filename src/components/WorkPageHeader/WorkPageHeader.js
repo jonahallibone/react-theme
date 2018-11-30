@@ -16,7 +16,7 @@ class WorkPageHeader extends Component {
                     <div className="side">
                         <h3 className="reg text-black">Project Title</h3>
                     </div>
-                    <div className="side">
+                    <div className="side" style={{justifyContent: "flex-end"}}>
                         <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
                     </div>
                 </div>
