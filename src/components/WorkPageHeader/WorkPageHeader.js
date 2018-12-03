@@ -14,7 +14,8 @@ class WorkPageHeader extends Component {
             <section id="featured-header">
                 <div className="title-row">
                     <div className="side">
-                        <h3 className="reg text-black">Project Title</h3>
+                        <h3 className="reg text-black">Douglass Winthrop</h3><br/>
+                        <h5 className="text-black light">Web Development / Design &bull; Identity</h5>
                     </div>
                     <div className="side" style={{justifyContent: "flex-end"}}>
                         <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
