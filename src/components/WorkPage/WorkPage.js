@@ -13,8 +13,9 @@ class WorkPage extends Component {
     super(props);
 
     this.state = {
-      pageTitle: null,
-      pageDescription: null
+      pageTitle: undefined,
+      pageDescription: undefined,
+      selected: undefined
     }
 
     this.scrollAnim = null;
@@ -63,6 +64,12 @@ class WorkPage extends Component {
     else list.classList.remove("shadow");
   }
 
+  handleClick = (e) => {
+
+    console.log(e);
+    // this.setState({selected:})
+  }
+
   componentWillUnmount() {
     document.removeEventListener("scroll", this.addShadow);
   }
@@ -86,22 +93,22 @@ class WorkPage extends Component {
             {/* <span className="filter-option"><span className={{color: "#999"}}></span></span> */}
             <span className="filter-option">
               <Link to="/work/">
-                <HoverLink selected>All Work</HoverLink>
+                <HoverLink selected={this.state.selected} name="all" onclick={this.handleClick}>All Work</HoverLink>
               </Link>
             </span>
             <span className="filter-option">
               <Link to="/work/brand/">
-                <HoverLink>Brand Identities</HoverLink>
+                <HoverLink selected={this.state.selected} name="brand" onclick={this.handleClick}>Brand Identities</HoverLink>
               </Link>
             </span>
             <span className="filter-option">
               <Link to="/work/digital/">
-                <HoverLink>Digital Experiences</HoverLink>
+                <HoverLink selected={this.state.selected} name="digital" onclick={this.handleClick}>Digital Experiences</HoverLink>
               </Link>
             </span>
             <span className="filter-option">
               <Link to="/work/signage/">
-                <HoverLink>Signage Programs</HoverLink>
+                <HoverLink selected={this.state.selected} name="signage" onclick={this.handleClick}>Signage Programs</HoverLink>
               </Link>
             </span>
             <div className="filter-option request-meeting" style={{marginRight: 0}}>
