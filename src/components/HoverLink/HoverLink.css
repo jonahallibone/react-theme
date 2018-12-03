@@ -125,6 +125,7 @@
 
 .underline--container.selected:after {
     transform: scaleX(1);
+    transition: 0s;
 }
 
 .underline--container.selected {

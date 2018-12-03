@@ -14,14 +14,14 @@ class Footer extends Component {
                                 © Piscatello Design Centre, 1997 - 2018
                             </a>
                             <a className="light">
-                                <HoverLink grey-black>Subscribe to our Newsletter</HoverLink>
+                                <HoverLink grey-black="true">Subscribe to our Newsletter</HoverLink>
                             </a>
                         </Col>
                         <Col xs={6} style={{textAlign: "right"}}>
-                            <a className="light"><HoverLink grey-black>Contact</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Contact</HoverLink></a>
                             {/* <a className="light">Facebook</a> */}
-                            <a className="light"><HoverLink grey-black>Twitter</HoverLink></a>
-                            <a className="light"><HoverLink grey-black>Instagram</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Twitter</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>
                         </Col>
                     </Row>
                 </Container>

@@ -19,10 +19,6 @@ class HoverLink extends Component {
             classes.push("grey")
         }
 
-        if(this.props.selected) {
-            classes.push("selected")
-        }
-
         if(this.props.thick) {
             classes.push("thick")
         }
@@ -35,12 +31,16 @@ class HoverLink extends Component {
             classes.push("grey-black")
         }
 
+        if(this.props.selected) {
+            classes.push("selected")
+        }
+
         return classes.join(" ")
     }
 
     render() {
         return(
-            <div ref={elem => this.link = elem} className={"underline--container " + this.getClass()}>
+            <div ref={elem => this.link = elem} className={"underline--container " + this.getClass()} {...this.props}>
                 {this.props.children}
             </div>
         )

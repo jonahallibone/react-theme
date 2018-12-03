@@ -150,22 +150,22 @@ class Header extends Component {
                             <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
                                 <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
-                                        <HoverLink thick>
+                                        <HoverLink thick="true">
                                             <span>Projects</span>
                                         </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/studio" data-linkname="centre">
-                                        <HoverLink thick>
+                                        <HoverLink thick="true">
                                             <span>Studio</span>
                                         </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/expertise" data-linkname="expertise">
-                                        <HoverLink thick>
+                                        <HoverLink thick="true">
                                             <span>Expertise</span>
                                         </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/contact" data-linkname="contact">
-                                        <HoverLink thick>
+                                        <HoverLink thick="true">
                                             <span>Contact</span>
                                         </HoverLink>
                                     </Link>

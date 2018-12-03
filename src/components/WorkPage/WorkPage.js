@@ -15,7 +15,7 @@ class WorkPage extends Component {
     this.state = {
       pageTitle: undefined,
       pageDescription: undefined,
-      selected: undefined
+      selectedName: "",
     }
 
     this.scrollAnim = null;
@@ -23,19 +23,24 @@ class WorkPage extends Component {
     this.pages = {
       "all": {
         title: "All Work",
-        description: `We create work that builds business value and enhances life for people. Our clients are diverse and range from large and small, private and public, for-profit and non-profit.`
+        description: `We create work that builds business value and enhances life for people. Our clients are diverse and range from large and small, private and public, for-profit and non-profit.`,
+        url: ""
+
       },
       "brand": {
         title: "Brand Identities",
-        description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`
+        description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
+        url: "brand"
       },
       "digital": {
         title: "Digital Experiences",
-        description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`
+        description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`,
+        url: "digital"
       },
       "signage": {
         title: "Signage Programs",
-        description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`
+        description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
+        url: "signage"
       }
     }
   }
@@ -44,7 +49,7 @@ class WorkPage extends Component {
     if(this.props.match.params.type) {
       let page = this.pages[this.props.match.params.type];
       this.setState(
-        {pageTitle: page.title, pageDescription: page.description}
+        {pageTitle: page.title, pageDescription: page.description, selectedName: page.url}
       )
     }
     
@@ -65,9 +70,28 @@ class WorkPage extends Component {
   }
 
   handleClick = (e) => {
+    this.setState({selectedName: e.target.attributes["name"].value})
+  }
 
-    console.log(e);
-    // this.setState({selected:})
+  getSelected(page) {
+    if(this.pages[page].url === this.state.selectedName) {
+      return true
+    }
+    else return false;
+  }
+
+  getLinks() {
+    return (
+      Object.keys(this.pages).map(page => {
+        return (
+          <span className="filter-option" key={page}>
+            <Link to={"/work/" + this.pages[page].url}>
+              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)} onClick={this.handleClick}>{this.pages[page].title}</HoverLink>
+            </Link>
+          </span>
+        )
+      })
+    )
   }
 
   componentWillUnmount() {
@@ -90,27 +114,7 @@ class WorkPage extends Component {
         <section id="work-list">
         <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="option-list text-red">
-            {/* <span className="filter-option"><span className={{color: "#999"}}></span></span> */}
-            <span className="filter-option">
-              <Link to="/work/">
-                <HoverLink selected={this.state.selected} name="all" onclick={this.handleClick}>All Work</HoverLink>
-              </Link>
-            </span>
-            <span className="filter-option">
-              <Link to="/work/brand/">
-                <HoverLink selected={this.state.selected} name="brand" onclick={this.handleClick}>Brand Identities</HoverLink>
-              </Link>
-            </span>
-            <span className="filter-option">
-              <Link to="/work/digital/">
-                <HoverLink selected={this.state.selected} name="digital" onclick={this.handleClick}>Digital Experiences</HoverLink>
-              </Link>
-            </span>
-            <span className="filter-option">
-              <Link to="/work/signage/">
-                <HoverLink selected={this.state.selected} name="signage" onclick={this.handleClick}>Signage Programs</HoverLink>
-              </Link>
-            </span>
+            {this.getLinks()}
             <div className="filter-option request-meeting" style={{marginRight: 0}}>
               <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
             </div>

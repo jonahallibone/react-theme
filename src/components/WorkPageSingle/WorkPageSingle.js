@@ -59,6 +59,15 @@ class WorkPageSingle extends Component {
         <WorkPageHeader></WorkPageHeader>
         <section id="project-content">
           <Container className="container" fluid={true} style={{padding: 0}}>
+            <Row>
+              <Col xs={12} sm={6}>
+                <h4 className="light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+                  sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+                  vel purus quis, pretium feugiat odio.
+                </h4>
+              </Col>
+            </Row>
             <div className="single-project-banner">
               <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/>
             </div>
