@@ -17,6 +17,8 @@ class WorkPageSingle extends Component {
     const content = await this.getPostContent();
     console.log(content);
     this.setState({post: content.data.posts.edges[0].node})
+
+    document.addEventListener("scroll", this.handleScroll);
   }
   
   async getPostContent(id) {
@@ -56,37 +58,32 @@ class WorkPageSingle extends Component {
   render() {
     return (
       <div className="work-page-single">
-        <WorkPageHeader></WorkPageHeader>
+        <WorkPageHeader projectTitle="Nomadx"></WorkPageHeader>
         <section id="project-content">
           <Container className="container" fluid={true} style={{padding: 0}}>
             <Row>
-              <Col xs={12} sm={6}>
-                <h4 className="light">
+              <Col xs={12} sm={8}>
+                <h3 className="light reg text-grey">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
                   sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
                   vel purus quis, pretium feugiat odio.
-                </h4>
+                </h3>
               </Col>
             </Row>
             <div className="single-project-banner">
               <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/>
             </div>
             <div className="single-project-banner-description">
-              <Row style={{padding: "1.5rem 0"}}>
-                <Col xs={12} sm={6}>
-                  <h4 className="reg text-black">Lorem Ipsum</h4>
-                </Col>
-              </Row>
               <Row>
                 <Col xs={12} sm={6}>
-                  <h4 className="light">
+                  <h2 className="light text-grey padding-top-15">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
                   sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
                   vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
                   id molestie nec, gravida vel erat. Phasellus imperdiet fermentum felis, non viverra 
                   erat efficitur eu. Nulla interdum elementum posuere. Donec iaculis metus 
-                  ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue
-                  </h4>
+                  ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue.
+                  </h2>
                 </Col>
               </Row>
             </div>
@@ -104,16 +101,23 @@ class WorkPageSingle extends Component {
                 <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt="tote" />
               </div>
             </div>
-            <div className="single-project-banner">
-              <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx-BC.jpg" alt="business cards" />
-            </div>
-            <div className="bottom-directions">
-              <Button button-lg arrowLeft className="black center text-bold">Last Project</Button>
-              <Button button-lg className="black center text-bold">View All</Button>
-              <Button button-lg arrow className="black center text-bold">Next Project</Button>
-            </div>
           </Container>
         </section>
+        <Container className="container" fluid={true} style={{padding: 0}}>
+          <h4 className="text-red padding-top-5">Next Project</h4>
+        </Container>
+        <WorkPageHeader projectTitle="Fashionhaus"></WorkPageHeader>
+          <Container className="container" fluid={true} style={{padding: 0}}>
+            <Row>
+              <Col xs={12} sm={8}>
+                <h3 className="light reg text-grey">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+                  sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+                  vel purus quis, pretium feugiat odio.
+                </h3>
+              </Col>
+            </Row>
+          </Container>
       </div>
     );
   }

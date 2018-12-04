@@ -17,6 +17,14 @@
     }
 }
 
+#featured-header .project-title {
+    transition: .345s ease all;
+}
+
+#featured-header.shrink .project-title {
+    font-size: 1.5rem;
+}
+
 #featured-header .title-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

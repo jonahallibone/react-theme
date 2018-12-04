@@ -1,13 +1,14 @@
 .work-page-single {
     min-height: 100%;
-    padding-top: 17rem;
+    padding-top: 14rem;
+    padding-bottom: 5rem;
     background-color: #FFF;
 }
 
 #project-content {
     min-height: 100vh;
     background-color: #FFF;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .single-project-banner {
@@ -15,7 +16,7 @@
 }
 
 .single-project-banner:not(:first-of-type) {
-    margin-top: 1.5rem;
+    margin-top: 5rem;
 }
 
 .single-project-banner img,
