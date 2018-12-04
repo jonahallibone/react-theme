@@ -75,8 +75,8 @@ class WorkPageSingle extends Component {
             </div>
             <div className="single-project-banner-description">
               <Row>
-                <Col xs={12} sm={6}>
-                  <h2 className="light text-grey padding-top-15">
+                <Col xs={12} sm={8} md={6}>
+                  <h2 className="light text-grey padding-top-15 padding-btm-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
                   sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
                   vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
@@ -108,7 +108,7 @@ class WorkPageSingle extends Component {
         </Container>
         <WorkPageHeader projectTitle="Fashionhaus"></WorkPageHeader>
           <Container className="container" fluid={true} style={{padding: 0}}>
-            <Row>
+            <Row div className="padding-top-1">
               <Col xs={12} sm={8}>
                 <h3 className="light reg text-grey">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 

@@ -104,7 +104,7 @@ class WorkPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
           <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3>
           <Row>
-            <Col xs={7} style={{ paddingBottom: "5rem"}}>
+            <Col xs={12} sm={10} md={8} lg={7}  style={{ paddingBottom: "5rem"}}>
               <h3 className="reg light-white padding-top-2">
                 {this.state.pageDescription}
               </h3>
