@@ -55,11 +55,19 @@ class WorkPageSingle extends Component {
     return res;
   }
 
+  getBodyClass() {
+    if(this.props.isUpdate == true) {
+      return "bg-dark-grey";
+    }
+
+    else return "";
+  }
+
   render() {
     return (
-      <div className="work-page-single">
-        <WorkPageHeader projectTitle="Nomadx"></WorkPageHeader>
-        <section id="project-content">
+      <div className={"work-page-single " + this.getBodyClass()}>
+        <WorkPageHeader projectTitle="Nomadx" {...this.props}></WorkPageHeader>
+        <section id="project-content" className={this.getBodyClass()}>
           <Container className="container" fluid={true} style={{padding: 0}}>
             <Row>
               <Col xs={12} sm={8}>

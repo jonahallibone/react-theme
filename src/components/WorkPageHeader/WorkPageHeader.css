@@ -1,5 +1,5 @@
 #featured-header {
-    background-color: #FFF;
+    /* background-color: #FFF; */
     height: 75px;
     position: sticky;
     top: 75px;
@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .345s ease all;
 }
 
 @media all and (max-width: 1440px) {
@@ -19,6 +20,10 @@
 
 #featured-header .project-title {
     transition: .345s ease all;
+}
+
+#featured-header.shrink {
+    background-color: #D9D9D9;
 }
 
 #featured-header.shrink .project-title {

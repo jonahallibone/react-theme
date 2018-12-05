@@ -37,13 +37,13 @@ class HomePageGrid extends Component {
                     </div>
                     <div className="grid-container">
                         <div className="grid-container--side of-4">
-                            <ProjectThumbnail></ProjectThumbnail>
+                            <Link to="/update/test-1"><ProjectThumbnail></ProjectThumbnail></Link>
                             <ProjectThumbnail></ProjectThumbnail>
                             <ProjectThumbnail></ProjectThumbnail>
                             <ProjectThumbnail></ProjectThumbnail>
                         </div>
                         <div className="grid-container--side of-4">
-                            <ProjectThumbnail></ProjectThumbnail>
+                            <Link to="/update/test-1"><ProjectThumbnail></ProjectThumbnail></Link>
                             <ProjectThumbnail></ProjectThumbnail>
                             <ProjectThumbnail></ProjectThumbnail>
                             <ProjectThumbnail></ProjectThumbnail>
