@@ -30,7 +30,7 @@ class WorkPageHeader extends Component {
 
     render() {
         return (
-            <section id="featured-header">
+            <section id="featured-header" className={this.props.isUpdate == true ? "bg-dark-grey" : ""}>
                 <div className="title-row">
                     <div className="side">
                         <h3 className="reg text-black project-title">{this.props.projectTitle}</h3><br/>
