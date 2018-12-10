@@ -112,13 +112,15 @@ class WorkPage extends Component {
           </Row>
         </Container>
         <section id="work-list">
-        <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="option-list text-red">
-            {this.getLinks()}
-            <div className="filter-option request-meeting" style={{marginRight: 0}}>
-              <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
-            </div>
+            <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
+              {this.getLinks()}
+              <div className="filter-option request-meeting" style={{marginRight: 0}}>
+                <Button button-md arrow className="black-red center text-bold">Start a Project</Button>
+              </div>
+            </Container>
           </div>
+          <Container fluid={true} className="container" style={{padding: 0}}>
           <div className="image-grid-row">
             <Link to="/work/digital/test-project" className="project">
               <ProjectThumbnail></ProjectThumbnail>

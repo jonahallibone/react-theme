@@ -5,6 +5,8 @@ import FlickSlider from '../FlickSlider/FlickSlider';
 import HomePageGrid from '../HomePageGrid/HomePageGrid';
 import HoverLink from '../HoverLink/HoverLink';
 import { Link } from 'react-router-dom';
+import ProjectList from '../ProjectList/ProjectList';
+
 import '../../App.css';
 
 
@@ -18,7 +20,8 @@ function HomePage() {
             </Statement>
             <FlickSlider></FlickSlider>
             {/* <ContactBand></ContactBand> */}
-            <HomePageGrid></HomePageGrid>
+            {/* <HomePageGrid></HomePageGrid> */}
+            <ProjectList></ProjectList>
         </div>
     );
 }

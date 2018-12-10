@@ -107,6 +107,11 @@ button.grey-border {
     padding: calc(.75rem - 2px) calc(1.5rem - 2px);
 }
 
+button.grey-border:hover {
+    background: #CCC;
+    color: #FFF;
+}
+
 button.fit {
     height: 100%;
 }

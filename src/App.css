@@ -314,7 +314,7 @@ h4 {
 }
 
 .text-white {
-    color: rgb(242, 242, 242);
+    color: #FFF;
 }
 
 .text-capitalize {
@@ -347,6 +347,7 @@ h4 {
 .container {
     width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
 }
 
 .container.padded {

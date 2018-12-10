@@ -4,10 +4,9 @@
     position: sticky;
     top: 75px;
     width: 100vw;
-    padding: 0 7.5vw;
     z-index: 99;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transition: .345s ease all;
 }
@@ -34,6 +33,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    max-width: 1440px;
 }
 
 #featured-header .title-row .side {

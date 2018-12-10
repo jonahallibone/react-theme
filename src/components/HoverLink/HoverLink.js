@@ -31,6 +31,10 @@ class HoverLink extends Component {
             classes.push("grey-black")
         }
 
+        if(this.props["grey-grey"]) {
+            classes.push("grey-grey")
+        }
+
         if(this.props.selected) {
             classes.push("selected")
         }

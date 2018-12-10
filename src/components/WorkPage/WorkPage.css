@@ -82,9 +82,6 @@
     position: sticky;
     top: 75px;
     width: 100vw;
-    margin-left: -7.5vw;
-    padding-left: 7.5vw;
-    padding-right: 7.5vw;
     background-color: #f2f3f5;
     z-index: 999;
     transition:.345s ease box-shadow;
@@ -98,16 +95,6 @@
 
 @media all and (max-width: 1440px) {
     .option-list {
-        margin-left: -2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        transition: .345s ease .25s box-shadow;
-    }
-
-    .option-list.shadow {
-        margin-left: -2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
         transition: .345s ease .25s box-shadow;
     }
 }
