@@ -42,8 +42,6 @@ class Header extends Component {
     }
 
     componentDidMount = () => {
-        this.styleHeader();
-        this.setUpEvents();
         this.menuButton.addEventListener("click", this.handleMenuClick);
     }
 
@@ -51,52 +49,6 @@ class Header extends Component {
         cancelAnimationFrame(this.styleHeader)
     }
 
-    setUpEvents() {
-        document.querySelectorAll(".page-link").forEach( el => {
-            // el.addEventListener("mouseenter", event => { this.handleHover(event) });
-            // el.addEventListener("mouseleave", event => { this.handleLeave(event) });
-        })
-    }    
-
-    handleHover = (e) => {
-        let target = e.target;
-        this.animation = window.requestAnimationFrame(this.repeat.bind(this,target));
-    }
-
-    repeat = (target) => {
-        if(this.animating) {
-            this.animation = window.requestAnimationFrame(this.repeat.bind(this,target));
-        }
-        else {
-            this.setQuote(target)
-            window.cancelAnimationFrame(this.animation);
-        }
-    }
-
-    setQuote = (target) => {
-        if(this.animating === true) {
-            return false;
-        }
-
-        else {
-            this.setState({"currentQuote": this.descriptions[target.dataset.linkname]})
-            this.quoteEl.classList.add("hovered")
-            return;
-        }
-    }
-
-    handleLeave = (e) => {
-        // window.cancelAnimationFrame(this.animation);
-        this.quoteEl.classList.remove("hovered")
-        this.animating = true
-        setTimeout(() => {
-            this.animating = false
-        }, 150)
-    }
-
-    getQuotes = () => {
-        return this.state.currentQuote;
-    }
 
     handleMenuClick = () => {
         this.header.classList.toggle("header-overlay--visible");
@@ -115,15 +67,6 @@ class Header extends Component {
                 el.classList.toggle("animate--post-animate")
             }, i * 200);
         });
-    }
-
-    styleHeader = () => {
-        if(window.pageYOffset > 0 || document.documentElement.scrollTop > 0) {
-            document.querySelector("header").classList.add("header-min")
-        }
-    
-        else document.querySelector("header").classList.remove("header-min")
-        requestAnimationFrame(this.styleHeader)
     }
 
     render() {
@@ -169,9 +112,6 @@ class Header extends Component {
                                             <span>Contact</span>
                                         </HoverLink>
                                     </Link>
-                                </div>
-                                <div xs={12} sm={8} className="quote-col">
-                                    <span className="quote" ref={elem => this.quoteEl = elem}>{this.getQuotes()}</span>
                                 </div>
                             </Row>
                         </Container>

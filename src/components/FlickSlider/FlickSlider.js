@@ -120,7 +120,7 @@ class FlickSlider extends Component {
                         <h2 className="light-white">{this.state.slides[this.state.activeSlide].location}</h2>
                     </div>
                     <div style={{textAlign: "right"}}>
-                        <h2>{this.state.activeSlide + 1}</h2>
+                        <h2>0{this.state.activeSlide + 1} &mdash; 05</h2>
                     </div>
                 </div>
             </Container>
