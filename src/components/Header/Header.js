@@ -94,17 +94,17 @@ class Header extends Component {
                                 <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
                                         <HoverLink thick="true">
-                                            <span>Projects</span>
-                                        </HoverLink>
-                                    </Link>
-                                    <Link className="page-link" to="/studio" data-linkname="centre">
-                                        <HoverLink thick="true">
-                                            <span>Studio</span>
+                                            <span>Work</span>
                                         </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/expertise" data-linkname="expertise">
                                         <HoverLink thick="true">
-                                            <span>Expertise</span>
+                                            <span>Approach</span>
+                                        </HoverLink>
+                                    </Link>
+                                    <Link className="page-link" to="/studio" data-linkname="centre">
+                                        <HoverLink thick="true">
+                                            <span>Practice</span>
                                         </HoverLink>
                                     </Link>
                                     <Link className="page-link" to="/contact" data-linkname="contact">

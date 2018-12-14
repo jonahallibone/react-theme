@@ -11,6 +11,7 @@ header {
     background-color: #000;
     display: flex;
     align-items: center;
+    transform: translate(0, 0, 0);
 }
 
 header.header-min {

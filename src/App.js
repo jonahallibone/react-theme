@@ -13,7 +13,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import WorkPage from './components/WorkPage/WorkPage';
 import Footer from './components/Footer/Footer';
 import WorkPageSingle from './components/WorkPageSingle/WorkPageSingle';
-
+import ContactPage from './components/ContactPage/ContactPage';
 
 class App extends Component {
 
@@ -48,6 +48,7 @@ class App extends Component {
               <Route path="/practice" exact component = {PracticePage}></Route>
               <Route path="/about" exact component = {AboutPage}></Route>
               <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
+              <Route path="/contact" component = {ContactPage}></Route>
               <Route path="/update/:id" render={() => <WorkPageSingle isUpdate={true} />}></Route>
             </Switch>
           </CSSTransition>

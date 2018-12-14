@@ -1,5 +1,87 @@
 .contact-page {
     min-height: 100vh;
-    background-color: #000;
+    background-color: #FFF;
+    padding-top: 0rem;
+}
+
+.contact-header {
+    background: #000;
     padding-top: 12rem;
+}
+
+#form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 5rem 0 0 0;
+    grid-gap: 1.5rem;
+}
+
+@media all and (max-width: 960px) {
+    #form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container input[type="text"] {
+    display: block;
+    flex: 1 0 45%;
+    background: 2px solid #f2f3f5;
+    border: 2px solid #DDD;
+    padding: 1rem 1rem;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.input-container input[type="text"].half {
+    width: 45%;
+    flex: 0 0 50%;
+}
+
+.radio-boxes {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 100%;
+}
+
+.radio-boxes .box {
+    padding: 1rem 0rem;
+    font-size: 1.25rem;
+    border: 2px solid #DDD;
+    flex: 0 0 33.333%;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+    outline: none;
+}
+
+.box:focus {
+    background-color: #DDD;
+    color: #FFF;
+}
+
+.radio-boxes .box:hover,
+.radio-boxes .box.selected {
+    background: #DDD;
+    border: 2px solid #DDD;
+    color: #FFF;
+}
+.radio-boxes .box:first-of-type {
+    border-right: none;
+}
+
+.radio-boxes .box:last-of-type {
+    border-left: none;
+}
+
+.floating-contact {
+    position: sticky;
+    width: 100%;
+    background: #000;
+    padding: 1rem;
 }

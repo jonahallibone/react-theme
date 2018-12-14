@@ -28,6 +28,10 @@
     opacity: 1;
 }
 
+.project-grid .project .image-container {
+    background-color: #DDD;
+}
+
 @media all and (min-width: 1440px) {
     .project-grid .project .image-container {
         overflow: hidden;
@@ -95,11 +99,15 @@
     grid-gap: 1.75rem;
 }
 
+.news-grid .project .image-container {
+    background-color: #DDD;
+}
+
 @media all and (min-width: 1440px) {
     .news-grid .project .image-container {
         overflow: hidden;
         border-radius: 3px;
-        height: calc(((85vw - 12.25rem) / 4) * .5625);
+        height: calc((1440px / 4 - 1.25rem) * .5625);
     }
 }
 
@@ -107,7 +115,7 @@
     .news-grid .project .image-container {
         overflow: hidden;
         border-radius: 3px;
-        height: calc(((85vw - 12.25rem) / 4) * .5625);
+        height: calc((85vw / 4 - 1.25rem) * .5625);
     }
 }
   
@@ -115,6 +123,20 @@
     .news-grid .project .image-container {
         overflow: hidden;
         border-radius: 3px;
-        height: calc(((1440px * .5625) / 4) - 1.75rem);
+        height: calc(((100vw - 4rem) / 4 - 1.25rem) * .5625);
+    }
+}
+
+@media all and (max-width: 700px) {
+    .project-grid, .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid .project .image-container,
+    .news-grid .project .image-container {
+        will-change: transform;
+        overflow: hidden;
+        border-radius: 3px;
+        height: calc(((100vw - 4rem) * .5625));
     }
 }

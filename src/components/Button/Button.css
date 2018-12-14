@@ -46,9 +46,8 @@ button.shadow:active {
 
 button.filled,
 button.grey {
-    border: none;
-    background-color: #CCC;
-    color: #000;
+    border: 2px solid #DDD;
+    color: #000; 
 }
 
 button.black {
@@ -109,6 +108,12 @@ button.grey-border {
 
 button.grey-border:hover {
     background: #CCC;
+    color: #FFF;
+}
+
+button.grey:hover {
+    background: #ff4350;
+    border: #ff4350 2px solid;
     color: #FFF;
 }
 

@@ -21,6 +21,10 @@ class Button extends Component {
             classes.push("black")
         }
 
+        if(this.props["grey"]) {
+            classes.push("grey")
+        }
+
         if(this.props.className) {
             classes.push(this.props.className);
         }

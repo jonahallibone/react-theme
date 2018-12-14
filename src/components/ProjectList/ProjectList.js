@@ -5,6 +5,7 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 import './ProjectList.css';
 import HoverLink from '../HoverLink/HoverLink';
+import Button from '../Button/Button';
 
 class ProjectList extends Component {
     constructor(props) {
@@ -104,6 +105,9 @@ class ProjectList extends Component {
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="project-grid">
                         {this.renderProjects()}
+                    </div>
+                    <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
+                        <Button grey arrow>View More Work</Button>
                     </div>
                 </Container>
                 <div className="homepage-news">
