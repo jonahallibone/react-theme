@@ -24,6 +24,9 @@ class Footer extends Component {
                         </Col>
                     </Row>
                 </Container>
+                <div className="newsletter-input">
+                    
+                </div>
             </div>
         )
     }

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import HoverLink from '../HoverLink/HoverLink';
 import Button from '../Button/Button';
+import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 import '../../App.css';
 import './WorkPage.css';
@@ -16,6 +17,7 @@ class WorkPage extends Component {
       pageTitle: undefined,
       pageDescription: undefined,
       selectedName: "",
+      projects: []
     }
 
     this.scrollAnim = null;
@@ -57,6 +59,58 @@ class WorkPage extends Component {
       this.setState({pageTitle: this.pages["all"].title, pageDescription: this.pages["all"].description})
     }
 
+    const projects = [
+      {
+          title: "LostTribe Theatre Company",
+          thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
+          type: "Branding",
+          tagline: "A brand new company"
+      },
+      {
+          title: "Nomadx Solutions",
+          thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+          type: "Branding",
+          tagline: "Identifying a new start up"
+      },
+      {
+          title: "Timeless Massimo Vignelli",
+          thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
+          type: "Exibition",
+          tagline: "A brand new company"
+      },
+      {
+          title: "United States Courthouse",
+          thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+          type: "Signage and Wayfinding",
+          tagline: "Navigating a complex environment"
+      },
+      {
+        title: "LostTribe Theatre Company",
+        thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
+        type: "Branding",
+        tagline: "A brand new company"
+    },
+    {
+        title: "Nomadx Solutions",
+        thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+        type: "Branding",
+        tagline: "Identifying a new start up"
+    },
+    {
+        title: "Timeless Massimo Vignelli",
+        thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
+        type: "Exibition",
+        tagline: "A brand new company"
+    },
+    {
+        title: "United States Courthouse",
+        thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+        type: "Signage and Wayfinding",
+        tagline: "Navigating a complex environment"
+    }
+    ]
+
+    this.setState({"projects": projects});
     document.addEventListener("scroll", this.addShadow)
   }
 
@@ -94,6 +148,14 @@ class WorkPage extends Component {
     )
   }
 
+  renderProjects = () => {
+    const template = this.state.projects.map((el, i) => (
+        <ProjectContainer project={el} key={i} />
+    ))
+
+    return template;
+  }
+
   componentWillUnmount() {
     document.removeEventListener("scroll", this.addShadow);
   }
@@ -120,40 +182,14 @@ class WorkPage extends Component {
               </div>
             </Container>
           </div>
-          <Container fluid={true} className="container" style={{padding: 0}}>
-          <div className="image-grid-row">
-            <Link to="/work/digital/test-project" className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </Link>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
-            <div className="project">
-              <ProjectThumbnail></ProjectThumbnail>
-            </div>
+          <div id="project-list">
+            <Container fluid={true} className="container" style={{padding: 0}}>
+              <div className="project-grid">
+                  {this.renderProjects()}
+              </div>
+            </Container>
           </div>
-        </Container>
+          
         </section>
       </section>
     );

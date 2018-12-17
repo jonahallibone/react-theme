@@ -88,7 +88,7 @@ class ProjectList extends Component {
     renderNews = () => {
         
         const template = this.state.news.map((el, i) => (
-            <ProjectContainer project={el} key={i} />
+            <ProjectContainer news={true} project={el} key={i} />
         ))
 
         return template;

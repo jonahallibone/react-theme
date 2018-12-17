@@ -39,8 +39,18 @@ class ProjectContainer extends Component {
 
     render() {
         const el = this.props.project;
+        const isNews = this.props.news || "";
+        let link = "";
+        
+        if(isNews) {
+            link = "/update/test"
+        }
+
+        else link = "/work/category/test"
+
         return(
-            <Link to="/work/category/test">
+
+            <Link to={link}>
                 <div className={"project " + this.isVisible()} ref={this.root}>
                     <div className="image-container">
                         <img src={el.thumbnail} />
