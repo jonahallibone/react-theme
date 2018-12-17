@@ -5,9 +5,6 @@ import '../../App.css';
 import './Statement.css';
 
 class Statement extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return( 

@@ -5,16 +5,16 @@ import Slider from "react-slick";
 import { Container } from 'react-grid-system';
 
 export const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
-        <div className="arrows left" onClick={this.handlePrev} onClick={onClick}></div>
+        <div className={"arrows left"} onClick={onClick}></div>
     )
 }
 
 export const NextArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
-        <div className="arrows right" onClick={this.handleNext} onClick={onClick}></div>
+        <div className="arrows right" onClick={onClick}></div>
     )
 }
 
@@ -86,7 +86,7 @@ class FlickSlider extends Component {
         return this.state.slides.map((el, i) => {
             return(
                 <div key={i}>
-                        <img src={el.image} />
+                        <img src={el.image} alt={el.title}/>
                 </div>
             )
         })

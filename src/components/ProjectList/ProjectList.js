@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
-import { Link } from 'react-router-dom';
+import { Container } from 'react-grid-system';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 import './ProjectList.css';
-import HoverLink from '../HoverLink/HoverLink';
 import Button from '../Button/Button';
 
 class ProjectList extends Component {
@@ -47,7 +45,7 @@ class ProjectList extends Component {
         const news = [
             {
                 title: "New Haven Art Exhibition",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
+                thumbnail: "https://s3.amazonaws.com/piscatello/New-Haven_Cropped_01.jpg",
                 type: "Events",
                 tagline: "28 November, 2018"
             },

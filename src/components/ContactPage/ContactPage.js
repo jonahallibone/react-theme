@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import Input from '../Input/Input';
 import '../../App.css';
 import './ContactPage.css';
 
@@ -57,7 +56,6 @@ class ContactPage extends Component {
               <h4 className="text-white">330 West 38th Street</h4>
               <h4 className="text-white">New York, NY, 10018</h4>
               <br/>
-              <h4 className="text-white"></h4>
             </div>
           </div>
           </Container>

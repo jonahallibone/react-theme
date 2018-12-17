@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
-import Button from '../Button/Button';
 
 
 import './WorkPageHeader.css';
 
 class WorkPageHeader extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
         document.addEventListener("scroll", this.handleScroll)
@@ -30,7 +25,7 @@ class WorkPageHeader extends Component {
 
     render() {
         return (
-            <section id="featured-header" className={this.props.isUpdate == true ? "bg-dark-grey" : ""}>
+            <section id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
                 <div className="title-row">
                     <div className="side">
                         <h3 className="reg text-black project-title">{this.props.projectTitle}</h3><br/>

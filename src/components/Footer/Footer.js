@@ -11,7 +11,7 @@ class Footer extends Component {
                     <Row>
                         <Col xs={6}>
                             <a className="light">
-                                © Piscatello Design Centre, 1997 - 2018
+                                <span style={{fontSize: "1.65rem"}}>©&nbsp;</span>Piscatello Design Centre, 1997 - 2018
                             </a>
                             <a className="light">
                             <HoverLink grey-black="true">Download our Profile</HoverLink>
@@ -25,7 +25,7 @@ class Footer extends Component {
                     </Row>
                 </Container>
                 <div className="newsletter-input">
-                    
+
                 </div>
             </div>
         )

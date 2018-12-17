@@ -3,17 +3,18 @@
     height: 75px;
     position: sticky;
     top: 75px;
-    width: 100vw;
+    width: 85vw;
     z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .345s ease all;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 @media all and (max-width: 1440px) {
     #featured-header {
-        padding: 0 2rem;
+        width: calc(100% - 4rem);
     }
 }
 

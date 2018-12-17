@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import '../../App.css';
 import './WorkPageSingle.css';
-import Button from '../Button/Button';
 
 class WorkPageSingle extends Component {
   constructor(props) {
@@ -56,7 +55,7 @@ class WorkPageSingle extends Component {
   }
 
   getBodyClass() {
-    if(this.props.isUpdate == true) {
+    if(this.props.isUpdate === true) {
       return "bg-dark-grey";
     }
 
@@ -66,6 +65,10 @@ class WorkPageSingle extends Component {
   getProjectTitle() {
     return (this.props.isUpdate ? "Reflections on Ten Qualities of Design" : "Nomadx");
   }
+
+  // loadNext = () => {
+  //   document.push 
+  // }
 
   
   getProjectPost() {
@@ -127,12 +130,18 @@ class WorkPageSingle extends Component {
             </h3>
           </Col>
         </Row>
-        <div className="single-project-grid">
+        <div className="single-project-grid padding-top-5">
           <div className="item">
             <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_1.jpg" alt="Color Guide" />
           </div>
           <div className="item">
             <img src="https://s3.amazonaws.com/piscatello/rpINSTA+copy.jpg" alt="Color Guide" />
+          </div>
+          <div className="item" style={{backgroundColor: 'none', padding: '2rem'}}>
+            <h3 className="reg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel.
+            </h3>
           </div>
           <div className="item">
             <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_2.jpg" alt="letterhead" />

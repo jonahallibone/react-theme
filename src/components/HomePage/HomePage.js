@@ -1,8 +1,6 @@
 import React from 'react';
-import ContactBand from '../ContactBand/ContactBand';
 import Statement from '../Statement/Statement';
 import FlickSlider from '../FlickSlider/FlickSlider';
-import HomePageGrid from '../HomePageGrid/HomePageGrid';
 import HoverLink from '../HoverLink/HoverLink';
 import { Link } from 'react-router-dom';
 import ProjectList from '../ProjectList/ProjectList';
@@ -19,8 +17,6 @@ function HomePage() {
                 </h3>
             </Statement>
             <FlickSlider></FlickSlider>
-            {/* <ContactBand></ContactBand> */}
-            {/* <HomePageGrid></HomePageGrid> */}
             <ProjectList></ProjectList>
         </div>
     );

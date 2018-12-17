@@ -7,7 +7,6 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 import '../../App.css';
 import './WorkPage.css';
-import ProjectThumbnail from '../ProjectThumbnail/ProjectThumbnail';
 
 class WorkPage extends Component {
   constructor(props) {
