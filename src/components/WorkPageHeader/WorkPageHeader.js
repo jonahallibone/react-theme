@@ -5,6 +5,12 @@ import './WorkPageHeader.css';
 
 class WorkPageHeader extends Component {
 
+    constructor(props) {
+        super(props);
+        const { onClick } = props;
+        this.onClick = onClick;
+    }
+
     componentDidMount() {
         document.addEventListener("scroll", this.handleScroll)
     }
@@ -25,7 +31,7 @@ class WorkPageHeader extends Component {
 
     render() {
         return (
-            <section id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
+            <section onclick = {this.props.onclick}id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
                 <div className="title-row">
                     <div className="side">
                         <h3 className="reg text-black project-title">{this.props.projectTitle}</h3><br/>

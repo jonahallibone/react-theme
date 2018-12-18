@@ -60,7 +60,7 @@ class ProjectContainer extends Component {
                         <img src={el.thumbnail} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
                     </div>
                     <div className="project-description">
-                        <div className="project-title margin-top-1 text-black">
+                        <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
                             {el.title}
                         </div>
                     </div>

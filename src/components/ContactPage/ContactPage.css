@@ -2,17 +2,18 @@
     min-height: 100vh;
     background-color: #FFF;
     padding-top: 0rem;
+    padding-bottom: 5rem;
 }
 
 .contact-header {
-    background: #000;
+    background: #FFF;
     padding-top: 12rem;
 }
 
 #form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 5rem 0 0 0;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0 0 0;
     grid-gap: 1.5rem;
 }
 
@@ -23,24 +24,50 @@
     }
 }
 
+#form-grid .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+}
+
 .input-container {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    width: 100%;
+}
+
+.input-container label {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
 }
 
 .input-container input[type="text"] {
     display: block;
-    flex: 1 0 45%;
-    background: 2px solid #f2f3f5;
-    border: 2px solid #DDD;
+    background:#f1f1f1;
+    border: none;
     padding: 1rem 1rem;
     font-size: 1.25rem;
     color: #000;
+    outline: none;
+    font-weight: 500;
+    width: 100%;
+    transition: .345s ease all;
 }
 
-.input-container input[type="text"].half {
-    width: 45%;
-    flex: 0 0 50%;
+.input-container input[type="text"]:focus {
+    background-color: #edeaea;
+}
+
+.input-container textarea {
+    border: none;
+    background:#f2f3f5;
+    padding: 1rem 1rem;
+    resize: none;
+    width: 100%;
+    font-size: 1.25rem;
+    outline: none;
+    height: 250px;
 }
 
 .radio-boxes {
@@ -82,6 +109,32 @@
 .floating-contact {
     position: sticky;
     width: 100%;
-    background: #000;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.information-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    padding-top: 1.6rem;
+}
+
+.contact-banner img {
+    width: 100%;
+    display: block;
+}
+
+@media all and (max-width: 996px) {
+    .information-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media all and (max-width: 517px) {
+    .information-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }

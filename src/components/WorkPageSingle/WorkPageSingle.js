@@ -66,9 +66,9 @@ class WorkPageSingle extends Component {
     return (this.props.isUpdate ? "Reflections on Ten Qualities of Design" : "Nomadx");
   }
 
-  // loadNext = () => {
-  //   document.push 
-  // }
+  loadNext = () => {
+    window.history.pushState(12, "/work/newwork")
+  }
 
   
   getProjectPost() {
@@ -137,11 +137,16 @@ class WorkPageSingle extends Component {
           <div className="item">
             <img src="https://s3.amazonaws.com/piscatello/rpINSTA+copy.jpg" alt="Color Guide" />
           </div>
-          <div className="item" style={{backgroundColor: 'none', padding: '2rem'}}>
-            <h3 className="reg">
+          <div className="item" style={{backgroundColor: 'transparent'}}>
+            <h2 className="light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel.
-            </h3>
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio.
+            </h2>
           </div>
           <div className="item">
             <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_2.jpg" alt="letterhead" />
@@ -163,9 +168,9 @@ class WorkPageSingle extends Component {
           </Container>
         </section>
         <Container className="container" fluid={true} style={{padding: 0}}>
-          <h4 className="text-red padding-top-5">Next Project</h4>
+          <h4 className="text-red padding-top-5">{this.props.isUpdate ? "Next Update" : "Next Project"}</h4>
         </Container>
-        <WorkPageHeader projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
+        <WorkPageHeader onclick={this.loadNext()} projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
           <Container className="container" fluid={true} style={{padding: 0}}>
             <Row className="padding-top-1">
               <Col xs={12} sm={8}>

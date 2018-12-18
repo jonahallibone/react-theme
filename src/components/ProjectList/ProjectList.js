@@ -44,28 +44,28 @@ class ProjectList extends Component {
 
         const news = [
             {
-                title: "New Haven Art Exhibition",
+                title: "Rocco Piscatello to speak at the University of New Haven",
                 thumbnail: "https://s3.amazonaws.com/piscatello/New-Haven_Cropped_01.jpg",
                 type: "Events",
-                tagline: "28 November, 2018"
+                tagline: "28 November 2018"
             },
             {
-                title: "Nomadx Solutions",
+                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-                type: "Branding",
-                tagline: "Identifying a new start up"
+                type: "Press",
+                tagline: "30 November 2018"
             },
             {
-                title: "Timeless Massimo Vignelli",
+                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-                type: "Exibition",
-                tagline: "A brand new company"
+                type: "Exhibitions",
+                tagline: "01 December 2018"
             },
             {
-                title: "United States Courthouse",
+                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-                type: "Signage and Wayfinding",
-                tagline: "Navigating a complex environment"
+                type: "Awards",
+                tagline: "02 January 2019"
             }
         ]
 
