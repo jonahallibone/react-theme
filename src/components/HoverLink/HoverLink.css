@@ -108,6 +108,20 @@
     background-color: #AAA;
 }
 
+.underline--container.white-grey {
+    color: #FFF;
+}
+
+.underline--container.white-grey:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    bottom: -2px;
+    position: absolute;
+    left: 0;
+    background-color: #FFF;
+}
+
 .underline--container.grey-black:before {
     content: '';
     height: 2px;
@@ -134,7 +148,8 @@
 
 .underline--container.grey:hover,
 .underline--container.grey-black:hover,
-.underline--container.grey-grey:hover {
+.underline--container.grey-grey:hover,
+.underline--container.white-grey:hover {
     color: #ff4350;
 }
 

@@ -3,6 +3,7 @@ import './FlickSlider.css';
 import Slider from "react-slick";
 
 import { Container } from 'react-grid-system';
+import HoverLink from '../HoverLink/HoverLink';
 
 export const PrevArrow = (props) => {
     const { onClick } = props;
@@ -116,11 +117,10 @@ class FlickSlider extends Component {
                 </Slider>
                 <div className="description">
                     <div className="">
-                        <h2>{this.state.slides[this.state.activeSlide].title}</h2>
-                        <h2 className="light-white">{this.state.slides[this.state.activeSlide].location}</h2>
+                        <h3 className="reg"><HoverLink grey>{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                     </div>
                     <div style={{textAlign: "right"}}>
-                        <h2>0{this.state.activeSlide + 1} &mdash; 05</h2>
+                        <h3 className="reg">0{this.state.activeSlide + 1} &mdash; 05</h3>
                     </div>
                 </div>
             </Container>

@@ -11,6 +11,20 @@
   }
 }
 
+@media all and (min-width: 1440px) {
+  .slick-slide {
+    will-change: transform;
+    height: calc(1440px * 56.25 / 100);
+  }
+}
+
+@media all and (max-width: 1692px) {
+  .slick-slide {
+      overflow: hidden;
+      height: calc(85vw * 56.25 / 100);
+    }
+}
+
 @media all and (max-width: 1440px) {
   .slick-slide {
     will-change: transform;

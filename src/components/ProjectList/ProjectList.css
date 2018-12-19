@@ -59,7 +59,6 @@
 @media all and (min-width: 1440px) {
     .project-grid .project .image-container {
         overflow: hidden;
-        border-radius: 3px;
         height: calc((1440px * .5625 - 44px) / 2);
     }
 }
@@ -67,7 +66,6 @@
 @media all and (max-width: 1692px) {
     .project-grid .project .image-container {
         overflow: hidden;
-        border-radius: 3px;
         height: calc(((85vw - 5rem) / 2) * .5625);
     }
 }
@@ -76,7 +74,6 @@
     .project-grid .project .image-container {
         will-change: transform;
         overflow: hidden;
-        border-radius: 3px;
         height: calc((((100vw - 4rem) * .5625) / 2) - 1.75rem);
     }
 }
@@ -89,6 +86,11 @@
     transform: scale(1.01);
 }
 
+.project-grid .project:hover .project-title,
+.news-grid .project:hover .project-title {
+    color: #ff4350;
+}
+
 .project-grid .project:hover .image-container img,
 .news-grid .project:hover .image-container img {
     transform: scale(1.05);
@@ -96,17 +98,25 @@
 
 .project .project-description,
 .news-grid .project-description {
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
 }
 
 .project .project-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
     font-weight: 800;
+    line-height: 1.25;
+    transition: .345s ease all;
+}
+
+.project .project-info {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    font-weight: 500;
     line-height: 1.25;
 }
 
 .project .details {
-    padding: 2rem 0 0 0;
+    padding: 1.5rem 0 0 0;
     font-size: 1.2rem;
     margin-top: auto;
 }
@@ -124,14 +134,15 @@
     grid-gap: 1.75rem;
 }
 
-.news-grid .project .image-container {
+.project .image-container {
     background-color: #DDD;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 @media all and (min-width: 1440px) {
     .news-grid .project .image-container {
         overflow: hidden;
-        border-radius: 3px;
         height: calc((1440px / 4 - 1.25rem) * .5625);
     }
 }
@@ -139,7 +150,6 @@
 @media all and (max-width: 1692px) {
     .news-grid .project .image-container {
         overflow: hidden;
-        border-radius: 3px;
         height: calc((85vw / 4 - 1.25rem) * .5625);
     }
 }
@@ -147,7 +157,6 @@
 @media all and (max-width: 1440px) {
     .news-grid .project .image-container {
         overflow: hidden;
-        border-radius: 3px;
         height: calc(((100vw - 4rem) / 4 - 1.25rem) * .5625);
     }
 }
@@ -161,7 +170,6 @@
     .news-grid .project .image-container {
         will-change: transform;
         overflow: hidden;
-        border-radius: 3px;
         height: calc(((100vw - 4rem) * .5625));
     }
 }

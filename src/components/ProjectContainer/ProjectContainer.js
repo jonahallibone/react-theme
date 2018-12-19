@@ -63,10 +63,18 @@ class ProjectContainer extends Component {
                         <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
                             {el.title}
                         </div>
+                        {!isNews ?
+                            <div className="project-info text-grey">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra
+                            </div> 
+                            :
+                            <div></div>
+                        }
+                        
                     </div>
                     <div className="details">
                         <h5 className="text-red">{el.type}</h5>
-                        <span className="text-grey">{el.tagline}</span>
                     </div>
                 </div>
             </Link>

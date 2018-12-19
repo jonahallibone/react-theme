@@ -2,7 +2,7 @@
     min-height: 100vh;
     background-color: #FFF;
     padding-top: 0rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
 }
 
 .contact-header {
@@ -123,6 +123,16 @@
 .contact-banner img {
     width: 100%;
     display: block;
+}
+
+.blink {
+    animation: blink 2.25s steps(2, start) infinite;
+}
+
+@keyframes blink  {
+    to {
+        visibility: hidden;
+    }
 }
 
 @media all and (max-width: 996px) {

@@ -50,19 +50,19 @@ class ProjectList extends Component {
                 tagline: "28 November 2018"
             },
             {
-                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
+                title: "Lorem ipsum dolor sit amet.",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
                 type: "Press",
                 tagline: "30 November 2018"
             },
             {
-                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
+                title: "Lorem ipsum dolor sit amet.",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
                 type: "Exhibitions",
                 tagline: "01 December 2018"
             },
             {
-                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui",
+                title: "Lorem ipsum dolor sit amet.",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
                 type: "Awards",
                 tagline: "02 January 2019"
