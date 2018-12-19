@@ -11,7 +11,7 @@ header {
     background-color: #000;
     display: flex;
     align-items: center;
-    transform: translate(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 header.header-min {
@@ -143,6 +143,7 @@ header.header-min .bar {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s ease .345s, opacity .345s ease;
+    height: 100vh;
 }
 
 header.header-overlay--visible .header-overlay {
