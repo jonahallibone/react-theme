@@ -75,6 +75,12 @@ class ProjectContainer extends Component {
                     </div>
                     <div className="details">
                         <h5 className="text-red">{el.type}</h5>
+                        {isNews ? 
+                            <span className="text-grey">{el.tagline}</span>
+                            :
+                            <div></div>
+                        }
+                        
                     </div>
                 </div>
             </Link>
