@@ -45,11 +45,11 @@ class ContactPage extends Component {
     return (
       <section className="transition-page contact-page">
         <section className="contact-header">
-          <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
-            <h3 className="reg text-bold text-black padding-top-4 text-capitalize">Contact Us</h3>
+          <Container fluid={true} className="container" style={{padding: 0}}>
+            <h3 className="reg text-bold text-white padding-top-4 text-capitalize">Contact Us</h3>
             <Row>
               <Col xs={12} sm={10} md={8} lg={7}  style={{ paddingBottom: "5rem"}}>
-                <h3 className="light reg text-grey padding-top-2">
+                <h3 className="light reg text-white padding-top-2">
                   Give us a call or send us an email.
                 </h3>
               </Col>
