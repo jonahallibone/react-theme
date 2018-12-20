@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
+ 
 import './App.css';
 
 import HomePage from './components/HomePage/HomePage';
@@ -12,6 +12,7 @@ import WorkPage from './components/WorkPage/WorkPage';
 import Footer from './components/Footer/Footer';
 import WorkPageSingle from './components/WorkPageSingle/WorkPageSingle';
 import ContactPage from './components/ContactPage/ContactPage';
+import Expterise from './components/Expertise/Expertise';
 
 class App extends Component {
 
@@ -44,6 +45,7 @@ class App extends Component {
               <Route path="/work" exact component = {WorkPage}></Route>
               <Route path="/work/:type" exact component = {WorkPage}></Route>
               <Route path="/practice" exact component = {PracticePage}></Route>
+              <Route path="/expertise" exact component = {Expterise}></Route>
               <Route path="/about" exact component = {AboutPage}></Route>
               <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
               <Route path="/contact" component = {ContactPage}></Route>

@@ -135,21 +135,34 @@ class WorkPageSingle extends Component {
             <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_1.jpg" alt="Color Guide" />
           </div>
           <div className="item">
-            <img src="https://s3.amazonaws.com/piscatello/rpINSTA+copy.jpg" alt="Color Guide" />
+            <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_2.jpg" alt="letterhead" />
           </div>
           <div className="item" style={{backgroundColor: 'transparent'}}>
-            <h2 className="light">
+            <h2 className="light text-grey">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
               sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
               vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
               sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
+              <br/><br/>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
               vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
               sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio.
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
+            </h2>
+          </div>
+          <div className="item" style={{backgroundColor: 'transparent'}}>
+            <h2 className="light text-grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
+              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
+              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
             </h2>
           </div>
           <div className="item">
-            <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_2.jpg" alt="letterhead" />
+            <img src="https://s3.amazonaws.com/piscatello/rpINSTA+copy.jpg" alt="Color Guide" />
           </div>
           
         </div>
@@ -172,7 +185,7 @@ class WorkPageSingle extends Component {
         </Container>
         <WorkPageHeader onclick={this.loadNext()} projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
           <Container className="container" fluid={true} style={{padding: 0}}>
-            <Row className="padding-top-1">
+            <Row className="">
               <Col xs={12} sm={8}>
                 <h3 className="light reg text-grey">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 

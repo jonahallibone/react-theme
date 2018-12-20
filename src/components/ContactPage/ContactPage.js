@@ -131,34 +131,6 @@ class ContactPage extends Component {
             </div>
           </div>
         </Container>
-        {/* <section id="contact-form">
-          <Container fluid={true} className="container" style={{padding: 0}}>
-            <div id="form-grid">
-              <div className="form">
-                <div className="input-container">
-                  <label>Full Name</label>
-                  <input type="text" name="fullname" value={this.state.form.fullName} onChange={this.handleChange}/>
-                </div>
-                <div className="input-container">
-                  <label>Email</label>
-                  <input type="text"/>
-                </div>
-                <div className="input-container">
-                  <label>Phone</label>
-                  <input type="text" />
-                </div>
-                <div className="input-container">
-                  <label>Company</label>
-                  <input type="text" />
-                </div>
-                <div className="input-container">
-                  <label>Message</label>
-                  <textarea autoComplete={"new-message"} name="message"></textarea>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section> */}
       </section>
     );
   }

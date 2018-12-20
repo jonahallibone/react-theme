@@ -1,0 +1,34 @@
+#expertise {
+    background: #000;
+    padding-top: 75px;
+}
+
+.flex-scroll-container {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    height: calc(100vh - 74px);
+    height: auto;
+}
+
+.flex-scroll-item {
+   width: 50%;  
+   height: auto;
+
+}
+
+.flex-scroll-item.sticky {
+    position: sticky;
+    top: 75px;
+    left: 0;
+    height: calc(100vh - 75px);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.flex-scroll-item .section {
+    min-height: 100vh;
+}
+
