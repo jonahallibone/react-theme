@@ -9,12 +9,12 @@
     background: #fff;
     height: calc(100vh - 74px);
     height: auto;
+    justify-content: flex-end;
 }
 
 .flex-scroll-item {
    width: 50%;  
    height: auto;
-
 }
 
 .flex-scroll-item.sticky {
@@ -29,6 +29,10 @@
 }
 
 .flex-scroll-item .section {
-    min-height: 100vh;
+    height: calc(100vh - 75px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
-import { Route, Switch, withRouter } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { BrowserRouter, Route, Link, Switch, withRouter } from 'react-router-dom';
+import posed, { PoseGroup } from 'react-pose';
  
 import './App.css';
 
@@ -13,6 +13,11 @@ import Footer from './components/Footer/Footer';
 import WorkPageSingle from './components/WorkPageSingle/WorkPageSingle';
 import ContactPage from './components/ContactPage/ContactPage';
 import Expterise from './components/Expertise/Expertise';
+import Careers from './components/Careers/Careers';
+const RouteContainer = posed.div({
+  enter: { opacity: 1, delay: 200, beforeChildren: true, transition: { default: { duration: 100 } } },
+  exit: { opacity: 0 }
+});
 
 class App extends Component {
 
@@ -35,27 +40,24 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <TransitionGroup>
-          <CSSTransition
-            key={location.key}
-            classNames={"fade"}
-            timeout={{enter: 1000, exit: 500}}>
+        <PoseGroup>
+          <RouteContainer key={location.pathname}>
             <Switch location={location}>
-              <Route path="/" exact component = {HomePage}></Route>
-              <Route path="/work" exact component = {WorkPage}></Route>
-              <Route path="/work/:type" exact component = {WorkPage}></Route>
-              <Route path="/practice" exact component = {PracticePage}></Route>
-              <Route path="/expertise" exact component = {Expterise}></Route>
-              <Route path="/about" exact component = {AboutPage}></Route>
-              <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
-              <Route path="/contact" component = {ContactPage}></Route>
-              <Route path="/update/:id" render={() => <WorkPageSingle isUpdate={true} />}></Route>
+              <Route path="/" exact component = {HomePage} key="home"></Route>
+              <Route path="/work" exact component = {WorkPage} key="work"></Route>
+              <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
+              <Route path="/practice" component = {PracticePage} key="practice"></Route>
+              <Route path="/expertise" component = {Expterise} key="approach"></Route>
+              <Route path="/work/:type/:id" component = {WorkPageSingle} key="worksingle"></Route>
+              <Route path="/contact" component = {ContactPage} key="contact"></Route>
+              <Route path="/careers" exact component = {Careers} key="careers"></Route>
+              <Route path="/update/:id" render={() => <WorkPageSingle isUpdate={true} />} key="update"></Route>
             </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-        <Footer></Footer>
+          </RouteContainer>
+        </PoseGroup>
+        {/* <Footer></Footer> */}
       </div>
-    );
+    )
   }
 }
 
