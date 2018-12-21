@@ -21,6 +21,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <base href="/">
     <title>Piscatello Design Centre</title>
   </head>
   <body>
@@ -44,42 +45,42 @@
           @font-face{
               font-family:"Rotis Sans Serif";
               font-weight: 400;
-              src:url("/Fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix");
-              src:url("/Fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix") format("eot"),url("Fonts/426cf71e-b8d1-4802-9690-1dcec0ef30c6.woff2") format("woff2"),url("Fonts/8acd0e02-7a91-4973-9c61-755704217f62.woff") format("woff"),url("Fonts/f308cbe1-92de-408b-91bf-9c839ab3e687.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/936d702e-cc78-418c-bf42-07956a0e18e0.eot?#iefix") format("eot"),url("Fonts/426cf71e-b8d1-4802-9690-1dcec0ef30c6.woff2") format("woff2"),url("Fonts/8acd0e02-7a91-4973-9c61-755704217f62.woff") format("woff"),url("Fonts/f308cbe1-92de-408b-91bf-9c839ab3e687.ttf") format("truetype");
           }
           @font-face{
               font-family:"Rotis Sans Serif";
               font-weight: 400;
               font-style: italic;
-              src:url("/Fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix");
-              src:url("/Fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix") format("eot"),url("Fonts/19b357e8-f0ac-40ba-a4d3-8d53b213ae27.woff2") format("woff2"),url("Fonts/6ea8a73f-c5a8-459e-b22f-dffe6a99f71e.woff") format("woff"),url("Fonts/24e663f4-051d-454d-8b90-d729ac47bb27.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/1f3e93c6-507f-42ce-99ff-0c56ad99fef2.eot?#iefix") format("eot"),url("Fonts/19b357e8-f0ac-40ba-a4d3-8d53b213ae27.woff2") format("woff2"),url("Fonts/6ea8a73f-c5a8-459e-b22f-dffe6a99f71e.woff") format("woff"),url("Fonts/24e663f4-051d-454d-8b90-d729ac47bb27.ttf") format("truetype");
           }
           @font-face{
               font-family:"Rotis Sans Serif";
               font-weight: normal;
               font-weight: 500;
-              src:url("/Fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix");
-              src:url("/Fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix") format("eot"),url("Fonts/979b67f1-28b4-4d3b-ab4d-551d4eaa3827.woff2") format("woff2"),url("Fonts/60d6e9b1-72ed-49c7-bcd9-026d74b98deb.woff") format("woff"),url("Fonts/03122496-25a2-4eb5-8181-fc843043fcc3.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/d3158683-496c-49da-9a42-6a2ab1f8457a.eot?#iefix") format("eot"),url("Fonts/979b67f1-28b4-4d3b-ab4d-551d4eaa3827.woff2") format("woff2"),url("Fonts/60d6e9b1-72ed-49c7-bcd9-026d74b98deb.woff") format("woff"),url("Fonts/03122496-25a2-4eb5-8181-fc843043fcc3.ttf") format("truetype");
           }
           @font-face{
               font-family:"Rotis Sans Serif";
               font-style: italic;
-              src:url("/Fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix");
-              src:url("/Fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix") format("eot"),url("Fonts/02d9a70b-ad14-4810-aa3a-144f7ffe7b80.woff2") format("woff2"),url("Fonts/cadf8785-780e-486c-8257-f3315aeafdb9.woff") format("woff"),url("Fonts/9b599527-13af-4402-98a6-7ed7a0383430.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/ab60f47e-ecee-4cd6-86b9-54166c1fe42b.eot?#iefix") format("eot"),url("Fonts/02d9a70b-ad14-4810-aa3a-144f7ffe7b80.woff2") format("woff2"),url("Fonts/cadf8785-780e-486c-8257-f3315aeafdb9.woff") format("woff"),url("Fonts/9b599527-13af-4402-98a6-7ed7a0383430.ttf") format("truetype");
           }
           @font-face{
               font-family:"Rotis Sans Serif";
               font-weight: bold;
               font-weight: 700;
-              src:url("/Fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix");
-              src:url("/Fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix") format("eot"),url("Fonts/667fde85-ea2f-4851-a2d1-93456b293f5a.woff2") format("woff2"),url("Fonts/a789b8d7-2c89-433b-8852-dc661d2fb383.woff") format("woff"),url("Fonts/c7ede56d-0306-445f-ad54-23e574bdcb4f.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/bfaa64da-e2ff-4871-9db9-9853cec95733.eot?#iefix") format("eot"),url("Fonts/667fde85-ea2f-4851-a2d1-93456b293f5a.woff2") format("woff2"),url("Fonts/a789b8d7-2c89-433b-8852-dc661d2fb383.woff") format("woff"),url("Fonts/c7ede56d-0306-445f-ad54-23e574bdcb4f.ttf") format("truetype");
           }
           @font-face{
               font-family:"Rotis Sans Serif";
               font-weight: bolder;
               font-weight: 800;
-              src:url("/Fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix");
-              src:url("/Fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix") format("eot"),url("Fonts/75ec2be4-7969-4594-9c01-fb9c2add6376.woff2") format("woff2"),url("Fonts/13f09a40-3a24-44ca-8083-7c5e67fe802c.woff") format("woff"),url("Fonts/c15c78f4-0b68-45e1-9e4e-5abf429825f4.ttf") format("truetype");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix");
+              src:url("https://s3.amazonaws.com/piscatello/fonts/7e5aeac5-0308-416d-a347-0aaad96a2d31.eot?#iefix") format("eot"),url("Fonts/75ec2be4-7969-4594-9c01-fb9c2add6376.woff2") format("woff2"),url("Fonts/13f09a40-3a24-44ca-8083-7c5e67fe802c.woff") format("woff"),url("Fonts/c15c78f4-0b68-45e1-9e4e-5abf429825f4.ttf") format("truetype");
           }
       </style>      
   </body>

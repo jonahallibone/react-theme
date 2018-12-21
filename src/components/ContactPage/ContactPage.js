@@ -47,7 +47,7 @@ class ContactPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
           <div className="information-grid">
             <div className="info-block">
-              <h3 className="reg text-white">Let's Start</h3>
+              <h3 className="reg text-red">Let's Start</h3>
               <h4 className="light padding-top-2 text-white">New Work</h4>
               <h4 className="light text-white">+1 212 502 4734</h4>
               <h4 className="light text-white"><HoverLink grey>work@piscatello.com</HoverLink></h4>
