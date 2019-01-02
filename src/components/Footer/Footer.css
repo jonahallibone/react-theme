@@ -124,7 +124,7 @@
 .row-flex {
     display: flex;
     flex-wrap: wrap;
-    
+    min-width: 100%;
 }
 
 @media screen and (max-width: 1084px) {

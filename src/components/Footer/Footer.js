@@ -7,7 +7,7 @@ class Footer extends Component {
     render() {
         return (
             <div id="footer">
-                <Container className="container" fluid={true} justify={"start"} style={{padding: 0}}>6
+                <Container className="container" fluid={true} justify={"start"} style={{padding: 0, display: "flex"}}>
                     <div className="row-flex">
                         <div className="break">
                             <a className="light pdc-copy">
