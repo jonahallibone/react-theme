@@ -43,12 +43,19 @@ class Header extends Component {
 
     componentDidMount = () => {
         this.menuButton.addEventListener("click", this.handleMenuClick);
+        document.addEventListener("scroll" , this.styleBlack);
+        document.querySelector("header").classList.add("black-bg");
+
     }
 
     componentWillUnmount = () => {
         cancelAnimationFrame(this.styleHeader)
     }
 
+    styleBlack = () => {
+        document.querySelector("header").classList.remove("white-bg");
+        document.querySelector("header").classList.add("black-bg");
+    }
 
     handleMenuClick = () => {
         this.header.classList.toggle("header-overlay--visible");
@@ -75,7 +82,7 @@ class Header extends Component {
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <Row className={"text-white logo"} style={{alignItems: "center"}}>
                         <Col xs={10} sm={6} style={{alignItems: "center"}}>
-                            <h2><Link to="/">Piscatello Design Centre</Link></h2>
+                            <h2><Link to="/" className="logo-link">Piscatello Design Centre</Link></h2>
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>

@@ -55,7 +55,7 @@ class App extends Component {
             </Switch>
           </RouteContainer>
         </PoseGroup>
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
       </div>
     )
   }

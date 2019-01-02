@@ -88,14 +88,31 @@ header.header-overlay--visible .menu .bar {
 
 header.header-overlay--visible a,
 header a {
-    color: #FFF;
     transition: .345s ease color;
+}
+
+.black-bg .logo-link{
+    color: #FFF !important;
+}
+
+.white-bg .logo-link {
+    color: #000 !important;
 }
 
 header.header-overlay--visible a:hover,
 header a:hover {
     color: #999;
 }
+
+header.white-bg {
+    background: #FFF;
+    border-bottom: 1px solid #DDD;
+}
+
+header.black-bg {
+    background: #000;
+}
+
 
 header .menu-button {
     display: flex;
@@ -121,10 +138,19 @@ header .menu a {
     text-decoration: none;
 }
 
+
+.black-bg .menu h2 {
+    color: #FFF;
+}
+
+.white-bg .menu h2 {
+    color: #000;
+}
+
 header .menu .bar {
     height: 2px;
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #000;
 }
 
 
