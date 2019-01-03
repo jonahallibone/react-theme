@@ -84,12 +84,6 @@ class ContactPage extends Component {
           <Container fluid={true} className="container" style={{padding: "0 0 0 0"}}>
             <div className="information-grid" style={{paddingTop: 0}}>
               <div className="info-block">
-                <h3 className="reg text-white">Press</h3>
-                <h4 className="light padding-top-2 text-white">Requests</h4>
-                <h4 className="light text-white">+1 212 502 4734</h4>
-                <h4 className="light text-white"><HoverLink grey>press@piscatello.com</HoverLink></h4>
-              </div>
-              <div className="info-block">
                 <h3 className="reg text-white">General</h3>
                 <h4 className="light padding-top-2 text-white">Information</h4>
                 <h4 className="light text-white">+1 212 502 4734</h4>
@@ -102,10 +96,16 @@ class ContactPage extends Component {
                 <h4 className="light text-white"><HoverLink grey>careers@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
-                <h3 className="reg text-white">Follow Us</h3>
-                <h4 className="light text-white padding-top-2">Instagram</h4>
-                <h4 className="light text-white">LinkedIn</h4>
-                <h4 className="light text-white">Twitter</h4>
+                <h3 className="reg text-white">Press</h3>
+                <h4 className="light padding-top-2 text-white">Requests</h4>
+                <h4 className="light text-white">+1 212 502 4734</h4>
+                <h4 className="light text-white"><HoverLink grey>press@piscatello.com</HoverLink></h4>
+              </div>
+              <div className="info-block">
+                <h3 className="reg text-white">Connect</h3>
+                <h4 className="light text-white padding-top-2"><HoverLink grey>Instagram</HoverLink></h4>
+                <h4 className="light text-white"><HoverLink grey>LinkedIn</HoverLink></h4>
+                <h4 className="light text-white"><HoverLink grey>Twitter</HoverLink></h4>
               </div>
             </div>
           </Container>

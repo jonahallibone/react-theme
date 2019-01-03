@@ -1,0 +1,23 @@
+#swipe-slider {
+    width: 100%;
+    display: block;
+    height: auto;
+    overflow: hidden;
+}
+
+#swipe-slider .swipe-track {
+    display: flex;
+    min-width: 100%;
+    width: auto;
+    grid-template-columns: min-content;
+    justify-content: space-between;
+}
+
+#swipe-slider .swipe-track .swipe-slide {
+    margin-left: 1.75rem;
+    flex-basis: auto;
+}
+
+#swipe-slider .swipe-track .swipe-slide:first-of-type {
+    margin-left: 0;
+}

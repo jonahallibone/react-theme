@@ -129,7 +129,7 @@
 }
 
 .news-grid {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.75rem;
 }
@@ -172,4 +172,13 @@
         overflow: hidden;
         height: calc(((100vw - 4rem) * .5625));
     }
+}
+
+.homepage-news .slick-slide {
+    height: auto;
+    padding-right: 4px
+}
+
+.homepage-news .slick-slide:not(:first-of-type) {
+    padding-left: 1.75rem;
 }

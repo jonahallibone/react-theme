@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Container } from 'react-grid-system';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import SwipeSlider from '../SwipeSlider/SwipeSlider';
 
 import './ProjectList.css';
 import Button from '../Button/Button';
@@ -67,6 +69,12 @@ class ProjectList extends Component {
                 thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
                 type: "Awards",
                 tagline: "02 January 2019"
+            },
+            {
+                title: "Lorem ipsum dolor sit amet.",
+                thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+                type: "Awards",
+                tagline: "02 January 2019"
             }
         ]
 
@@ -99,6 +107,19 @@ class ProjectList extends Component {
     }
 
     render() {
+        const settings = {
+            className: "",
+            dots: false,
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            adaptiveHeight: false,
+            arrows: true,
+            // nextArrow: <NextArrow />,
+            // prevArrow: <PrevArrow />,
+            // beforeChange: (current, next) => this.setState({ activeSlide: next }),
+            // afterChange: current => this.setState({ activeSlide2: current })
+        };
         return(
             <div id="project-list">
                 <Container fluid={true} className="container" style={{padding: 0}}>
@@ -110,11 +131,10 @@ class ProjectList extends Component {
                     </div>
                 </Container>
                 <div className="homepage-news">
-                    <Container fluid={true} className="container" style={{padding: 0}}>
-                        {/* <Link to="/updates" className="margin-btm-2" style={{display: "block"}}><HoverLink grey-grey><h4>Updates (33)</h4></HoverLink></Link> */}
-                        <div className="news-grid">
+                    <Container fluid={true} className="container news-grid" style={{padding: 0}}>
+                        <SwipeSlider>
                             {this.renderNews()}
-                        </div>
+                        </SwipeSlider> 
                     </Container>
                 </div>
             </div>
