@@ -31,7 +31,7 @@ class WorkPageHeader extends Component {
 
     render() {
         return (
-            <section onclick = {this.props.onclick}id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
+            <section onClick = {this.props.onclick}id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
                 <div className="title-row">
                     <div className="side">
                         <h3 className="reg text-black project-title">{this.props.projectTitle}</h3><br/>

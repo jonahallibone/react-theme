@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-grid-system';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
+import { Link } from 'react-router-dom';
 
 import './ProjectList.css';
 import Button from '../Button/Button';
@@ -105,7 +106,7 @@ class ProjectList extends Component {
                         {this.renderProjects()}
                     </div>
                     <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                        <Button grey arrow>View More Work</Button>
+                        <Link to="/work"><Button arrow className="black-border">More Work</Button></Link>
                     </div>
                 </Container>
                 <div className="homepage-news">

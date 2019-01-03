@@ -1,7 +1,7 @@
 button {
     border: none;
     padding: .75rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.15rem;
     background-color: #FFF;
     color: #333;
     box-sizing: border-box;
@@ -16,6 +16,7 @@ button {
     justify-content: center;
     align-items: center;
     text-decoration: none !important;
+    font-weight: bold;
 }
 
 * :visited button {
@@ -47,7 +48,7 @@ button.shadow:active {
 button.filled,
 button.grey {
     border: 2px solid #DDD;
-    color: #000; 
+    color: #DDD; 
 }
 
 button.black {
@@ -71,8 +72,8 @@ button.center {
 
 button.black:hover,
 button.black-border:hover {
-    background-color: #000;
-    border-color: #000;
+    background-color: #ff4350;
+    border-color: #ff4350;
     color: #FFF;
 }
 
@@ -94,8 +95,8 @@ button.black:active {
 
 button.black-border {
     background-color: transparent;
-    border: 2px solid #37474F;
-    color: #37474F;
+    border: 2px solid #000;
+    color: #000;
     padding: calc(.75rem - 2px) calc(1.5rem - 2px);
 }
 

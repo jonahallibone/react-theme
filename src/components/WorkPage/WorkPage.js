@@ -177,7 +177,7 @@ class WorkPage extends Component {
             <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
               {this.getLinks()}
               <div className="filter-option request-meeting" style={{marginRight: 0}}>
-                <Link to="/contact"><Button button-md arrow className="black-red center text-bold">Start a Project</Button></Link>
+                <Link to="/contact"><Button button-md arrow className="black-border">Start a Project</Button></Link>
               </div>
             </Container>
           </div>

@@ -168,7 +168,7 @@ header.header-min .bar {
     color: #999;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s ease .345s, opacity .345s ease;
+    transition: visibility 0s ease .495s, opacity .345s ease .15s;
     height: 100vh;
 }
 

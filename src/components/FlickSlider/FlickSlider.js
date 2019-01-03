@@ -117,7 +117,7 @@ class FlickSlider extends Component {
                 </Slider>
                 <div className="description">
                     <div className="">
-                        <h3 className="reg"><HoverLink grey>{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
+                        <h3 className="reg"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                     </div>
                     <div style={{textAlign: "right"}}>
                         <h3 className="reg">0{this.state.activeSlide + 1} &mdash; 05</h3>

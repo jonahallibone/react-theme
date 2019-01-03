@@ -13,7 +13,7 @@ function HomePage() {
         <div className="home transition-page">
             <Statement>
                 <h3 className="reg text-white light padding-top-6">
-                For nearly 25 years, we have been designing and developing <Link to="/work/brand"><HoverLink grey={true}>brand identities,</HoverLink></Link> <Link to="/work/signage"><HoverLink grey={true}>signage programs,</HoverLink></Link> and <Link to="/work/digital"><HoverLink grey={true}>digital experiences</HoverLink></Link> for clients and cities worldwide.                
+                For nearly 25 years, we have been designing and developing <Link to="/work/brand"><HoverLink grey="true">brand identities,</HoverLink></Link> <Link to="/work/signage"><HoverLink grey="true">signage programs,</HoverLink></Link> and <Link to="/work/digital"><HoverLink grey="true">digital experiences</HoverLink></Link> for clients and cities worldwide.                
                 </h3>
             </Statement>
             <FlickSlider></FlickSlider>

@@ -116,9 +116,10 @@
 .pdc-copy:before {
     content: '©';
     font-size: 1.75rem;
-    transform: translateX(-1.15rem);
+    transform: translateX(-1.15rem) !important;
     top: 2px;
     position: absolute;
+    background: transparent !important;
 }
 
 .row-flex {
