@@ -76,7 +76,7 @@ class ProjectContainer extends Component {
                     <div className="details">
                         <h5 className="text-red">{el.type}</h5>
                         {isNews ? 
-                            <span className="text-grey">{el.tagline}</span>
+                            <span className="text-grey light" style={{fontWeight: "500"}}>{el.tagline}</span>
                             :
                             <div></div>
                         }

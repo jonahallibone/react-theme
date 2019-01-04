@@ -1,27 +1,121 @@
 import React, { Component } from 'react';
 
 import './SwipeSlider.css';
+import { toJS, computed } from 'mobx';
 
 class SwipeSlider extends Component {
     constructor(props) {
         super(props);
+        
+        // Root slider element set by JSX ref
         this.slider = React.createRef();
 
+        //Check if mouse is clicked
+        this.isClicked = false;
+        this.raf = undefined;
+        this.isLooping = false;
+
+        //Store mouse position over element
+        this.clickedXPos = null;
+        this.mousePos = {
+            x: undefined,
+            y: undefined
+        }
+
+        this.position = 0;
+
+
         this.state = {
-            slideWidth: undefined
+            slideWidth: undefined,
+            rawWidth: undefined
         }
     }
     
     componentWillMount() {
-        window.addEventListener("resize", this.calcWidth.bind(this))
+        window.addEventListener("resize", this.calcWidth)
     }
 
     componentDidMount() {
         this.calcWidth();
+        this.slider.current.addEventListener("mousemove", this.startDrag.bind(this))
+        this.slider.current.addEventListener("mousedown", this.setUp.bind(this))
+        this.slider.current.addEventListener("mouseup", this.endDrag)
+        
+        //Touch Events
+        this.slider.current.addEventListener("touchmove", this.startDrag.bind(this), {passive: true})
+        this.slider.current.addEventListener("touchstart", this.setUp.bind(this), {passive: true})
+        this.slider.current.addEventListener("touchend", this.endDrag)
+
+        //Fallback for testing
+        this.slider.current.addEventListener("mouseleave", this.endDrag.bind(this))
     }
 
-    calcWidth() {
-        let width = `calc(${this.slider.current.offsetWidth / 4}px - 21px)`;
+    setUp(e) {
+        e.preventDefault();  
+        this.clickedXPos = e.pageX;
+        this.isClicked = true;
+        this.originalPosition = this.position
+        this.slider.current.classList.add("dragging")
+    }
+
+    startDrag(e) {
+        console.log("touch", e)
+        e.preventDefault()
+        this.mousePos.x = e.pageX;
+
+
+        if(this.isClicked && this.isLooping === false) {
+            this.raf = requestAnimationFrame(this.animateDrag);
+            this.isLooping = true
+        }
+
+        else if(this.isClicked) {
+            if( (this.mousePos.x - this.clickedXPos) + this.originalPosition > 0) return
+            this.position = (this.mousePos.x - this.clickedXPos) + this.originalPosition;
+        }
+    }
+
+    endDrag = (e) => {
+        e.preventDefault();
+        this.isLooping = false;
+        this.isClicked = false;
+        cancelAnimationFrame(this.raf);
+
+        let slideWidth = (this.slider.current.offsetWidth / 4) - 21;
+
+        if(this.position > this.originalPosition) {
+            this.position = Math.ceil(this.position / (this.rawWidth)) * (this.rawWidth);
+        }
+        else if(this.position < this.originalPosition) {
+            this.position = Math.floor(this.position / (this.rawWidth)) * (this.rawWidth);
+        }
+
+        let elem = this.slider.current.querySelector(".swipe-track");
+        elem.style.transform = `translateX(${(this.position)}px)`
+
+        this.slider.current.classList.remove("dragging")
+    }
+
+    animateDrag = () => {
+        let elem = this.slider.current.querySelector(".swipe-track");
+        elem.style.transform = `translateX(${(this.position)}px)`
+        this.raf = requestAnimationFrame(this.animateDrag);
+    }
+
+    calcWidth = () => {
+        let width = 0;
+        let rawWidth = 0;
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            width = `calc(${this.slider.current.offsetWidth}px)`;
+            rawWidth  = (this.slider.current.offsetWidth) + 28;
+        }
+
+        else {
+            width = `calc(${this.slider.current.offsetWidth / 4}px - 21px)`;
+            rawWidth = (this.slider.current.offsetWidth / 4) + 28;
+        }
+        
+        this.setState({rawWidth: rawWidth})
         this.setState({slideWidth: width});
     }
 
@@ -33,6 +127,10 @@ class SwipeSlider extends Component {
                 </div>
             )
         })
+    }
+
+    componentWillUnmount() {
+        window.cancelAnimationFrame(this.raf);
     }
 
     render() {

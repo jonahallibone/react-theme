@@ -23,10 +23,15 @@ class WorkPage extends Component {
 
     this.pages = {
       "all": {
-        title: "All Work",
+        title: "Work",
         description: `We create work that builds business value and enhances life for people. Our clients are diverse and range from large and small, private and public, for-profit and non-profit.`,
         url: ""
 
+      },
+      "brand-strategies": {
+        title: "Brand Strategies",
+        description: `Brand Strategies expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
+        url: "brand-strategies"
       },
       "brand": {
         title: "Brand Identities",

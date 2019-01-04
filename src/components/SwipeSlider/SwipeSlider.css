@@ -3,6 +3,8 @@
     display: block;
     height: auto;
     overflow: hidden;
+    cursor: -webkit-grab;
+    cursor: grab;
 }
 
 #swipe-slider .swipe-track {
@@ -16,6 +18,10 @@
 #swipe-slider .swipe-track .swipe-slide {
     margin-left: 1.75rem;
     flex-basis: auto;
+}
+
+#swipe-slider:not(.dragging) .swipe-track {
+    transition: .345s ease-in-out all;
 }
 
 #swipe-slider .swipe-track .swipe-slide:first-of-type {

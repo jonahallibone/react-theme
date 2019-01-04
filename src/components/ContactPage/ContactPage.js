@@ -47,12 +47,19 @@ class ContactPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
           <div className="information-grid">
             <div className="info-block">
-              <h3 className="reg text-red">Let's Start</h3>
-              <h4 className="light padding-top-2 text-white">New Work</h4>
-              <h4 className="light text-white">+1 212 502 4734</h4>
-              <h4 className="light text-white"><HoverLink grey>work@piscatello.com</HoverLink></h4>
+              <h3 className="reg text-red">Schedule a Meeting</h3>
+              <h4 className="light padding-top-2 text-white">
+                Our projects are about collaboration and partnership. Contact us 
+                to learn how we can become integral to your team.
+                <br/><br/>
+                <HoverLink grey>meeting@piscatello.com</HoverLink> <br/>
+              </h4>
             </div>
             <div className="info-block">
+              {/* <h3 className="reg">Request a Meeting</h3>
+              <h4 className="light padding-top-2 text-white">New Work</h4>
+              <h4 className="light text-white">+1 212 502 4734</h4>
+              <h4 className="light text-white"><HoverLink grey>work@piscatello.com</HoverLink></h4> */}
             </div>
             <div className="info-block text-white">
               <h3 className="reg">
@@ -60,8 +67,10 @@ class ContactPage extends Component {
               </h3>
               <h4 className="light text-white padding-top-2">
                 330 West 38th Street <br/>
-                New York, NY 10018 <br/>
-                Get Directions <br/>
+                New York, NY 10018 <br/><br/>
+                +1 212 502 4734 <br/><br/><br/>
+                <HoverLink grey>Get Directions</HoverLink> 
+
               </h4>
             </div>
             <div className="info-block">
@@ -96,10 +105,7 @@ class ContactPage extends Component {
                 <h4 className="light text-white"><HoverLink grey>careers@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
-                <h3 className="reg text-white">Press</h3>
-                <h4 className="light padding-top-2 text-white">Requests</h4>
-                <h4 className="light text-white">+1 212 502 4734</h4>
-                <h4 className="light text-white"><HoverLink grey>press@piscatello.com</HoverLink></h4>
+
               </div>
               <div className="info-block">
                 <h3 className="reg text-white">Connect</h3>
