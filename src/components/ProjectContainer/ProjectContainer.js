@@ -59,9 +59,7 @@ class ProjectContainer extends Component {
 
         else link = "/work/category/test";
 
-        console.log(document.querySelector("#swipe-slider").classList)
-
-        if(!document.querySelector("#swipe-slider").classList.contains("dragging")) {
+        if(!document.querySelector("#swipe-slider").classList.contains("active")) {
             history.push(link)
         }   
     }

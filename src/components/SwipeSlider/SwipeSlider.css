@@ -30,8 +30,10 @@
 
 .arrow-container {
     display: flex;
-    justify-content: flex-end;
-    padding: 2rem 0;
+    justify-content: space-between;
+    padding: 0 0 2rem 0;
+    width: calc((100% / 4) - 21px);
+    margin-left: auto;
 }
 
 .slide-arrow-left,

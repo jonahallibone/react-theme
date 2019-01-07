@@ -66,12 +66,12 @@ class SwipeSlider extends Component {
         e.preventDefault();
         e.stopPropagation();
         
-        this.slider.current.classList.add("active")
 
         this.mousePos.x = e.pageX || e.touches[0].pageX;
         
         if(this.isClicked && this.isLooping === false) {
             this.raf = requestAnimationFrame(this.animateDrag);
+            this.slider.current.classList.add("active")
             this.isLooping = true
         }
 
@@ -108,7 +108,12 @@ class SwipeSlider extends Component {
         let elem = this.slider.current.querySelector(".swipe-track");
         elem.style.transform = `translateX(${(this.position)}px)`
 
-        this.slider.current.classList.remove("active")
+        setTimeout(() => {
+            if(this.slider) {
+                this.slider.current.classList.remove("active");
+            }
+        },1);
+
         this.slider.current.classList.remove("dragging")
     }
 
