@@ -41,9 +41,9 @@ class SwipeSlider extends Component {
         this.slider.current.addEventListener("mousedown", this.setUp.bind(this))
         this.slider.current.addEventListener("mouseup", this.endDrag)
         
-        //Touch Events
-        this.slider.current.addEventListener("touchmove", this.startDrag.bind(this), {passive: true})
-        this.slider.current.addEventListener("touchstart", this.setUp.bind(this), {passive: true})
+        // Touch Events
+        this.slider.current.addEventListener("touchmove", this.startDrag.bind(this))
+        this.slider.current.addEventListener("touchstart", this.setUp.bind(this))
         this.slider.current.addEventListener("touchend", this.endDrag)
 
         //Fallback for testing
@@ -52,25 +52,27 @@ class SwipeSlider extends Component {
 
     setUp(e) {
         e.preventDefault();  
-        this.clickedXPos = e.pageX;
+        e.stopImmediatePropagation();
+        
+        console.log(e.currentTarget);
+        
+        this.clickedXPos = e.pageX || e.touches[0].pageX;;
         this.isClicked = true;
         this.originalPosition = this.position
         this.slider.current.classList.add("dragging")
     }
 
     startDrag(e) {
-        console.log("touch", e)
         e.preventDefault()
-        this.mousePos.x = e.pageX;
-
-
+        this.mousePos.x = e.pageX || e.touches[0].pageX;
+        
         if(this.isClicked && this.isLooping === false) {
             this.raf = requestAnimationFrame(this.animateDrag);
             this.isLooping = true
         }
 
         else if(this.isClicked) {
-            if( (this.mousePos.x - this.clickedXPos) + this.originalPosition > 0) return
+            // if( (this.mousePos.x - this.clickedXPos) + this.originalPosition > 0) return
             this.position = (this.mousePos.x - this.clickedXPos) + this.originalPosition;
         }
     }
@@ -81,13 +83,11 @@ class SwipeSlider extends Component {
         this.isClicked = false;
         cancelAnimationFrame(this.raf);
 
-        let slideWidth = (this.slider.current.offsetWidth / 4) - 21;
-
         if(this.position > this.originalPosition) {
-            this.position = Math.ceil(this.position / (this.rawWidth)) * (this.rawWidth);
+            this.position = Math.ceil(this.position / (this.state.rawWidth)) * (this.state.rawWidth);
         }
         else if(this.position < this.originalPosition) {
-            this.position = Math.floor(this.position / (this.rawWidth)) * (this.rawWidth);
+            this.position = Math.floor(this.position / (this.state.rawWidth)) * (this.state.rawWidth);
         }
 
         let elem = this.slider.current.querySelector(".swipe-track");
@@ -112,7 +112,7 @@ class SwipeSlider extends Component {
 
         else {
             width = `calc(${this.slider.current.offsetWidth / 4}px - 21px)`;
-            rawWidth = (this.slider.current.offsetWidth / 4) + 28;
+            rawWidth = (this.slider.current.offsetWidth / 4)  + 7;
         }
         
         this.setState({rawWidth: rawWidth})
@@ -131,6 +131,11 @@ class SwipeSlider extends Component {
 
     componentWillUnmount() {
         window.cancelAnimationFrame(this.raf);
+        window.removeEventListener("resize", this.calcWidth)
+
+        this.slider.current.removeEventListener("mousemove", this.startDrag)
+        this.slider.current.removeEventListener("mousedown", this.setUp)
+        this.slider.current.removeEventListener("mouseup", this.endDrag)
     }
 
     render() {
