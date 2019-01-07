@@ -57,9 +57,13 @@ class ProjectContainer extends Component {
             link = "/update/test"
         }
 
-        else link = "/work/category/test"
+        else link = "/work/category/test";
 
-        history.push(link)
+        console.log(document.querySelector("#swipe-slider").classList)
+
+        if(!document.querySelector("#swipe-slider").classList.contains("dragging")) {
+            history.push(link)
+        }   
     }
 
     render() {
@@ -67,7 +71,7 @@ class ProjectContainer extends Component {
         const isNews = this.props.news || "";
 
         return(
-            <div onClick={this.goToLink}>
+            <div onMouseUp={this.goToLink}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
                         <img src={el.thumbnail} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>

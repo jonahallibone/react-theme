@@ -54,8 +54,8 @@ class SwipeSlider extends Component {
 
     setUp(e) {
         e.preventDefault();  
-        e.stopPropagation();
-                
+        e.stopImmediatePropagation();
+
         this.clickedXPos = e.pageX || e.touches[0].pageX;;
         this.isClicked = true;
         this.originalPosition = this.position
@@ -65,6 +65,9 @@ class SwipeSlider extends Component {
     startDrag(e) {
         e.preventDefault();
         e.stopPropagation();
+        
+        this.slider.current.classList.add("active")
+
         this.mousePos.x = e.pageX || e.touches[0].pageX;
         
         if(this.isClicked && this.isLooping === false) {
@@ -105,6 +108,7 @@ class SwipeSlider extends Component {
         let elem = this.slider.current.querySelector(".swipe-track");
         elem.style.transform = `translateX(${(this.position)}px)`
 
+        this.slider.current.classList.remove("active")
         this.slider.current.classList.remove("dragging")
     }
 
