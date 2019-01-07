@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { withRouter } from 'react-router-dom'
 
 class ProjectContainer extends Component {
+
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
+    };
 
     constructor(props) {
         super(props);
@@ -41,8 +48,8 @@ class ProjectContainer extends Component {
         document.removeEventListener("scroll", this.checkVisibility, {passive: true});
     }
 
-    render() {
-        const el = this.props.project;
+    goToLink = () => {
+        const { match, location, history } = this.props;
         const isNews = this.props.news || "";
         let link = "";
 
@@ -52,9 +59,15 @@ class ProjectContainer extends Component {
 
         else link = "/work/category/test"
 
-        return(
+        history.push(link)
+    }
 
-            <Link to={link}>
+    render() {
+        const el = this.props.project;
+        const isNews = this.props.news || "";
+
+        return(
+            <div onClick={this.goToLink}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
                         <img src={el.thumbnail} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
@@ -83,9 +96,9 @@ class ProjectContainer extends Component {
                         
                     </div>
                 </div>
-            </Link>
+            </div>
         )
     }
 }
 
-export default ProjectContainer;
+export default withRouter(ProjectContainer);

@@ -8,7 +8,7 @@
 }
 
 #swipe-slider .swipe-track {
-    display: flex;
+    display: inline-flex;
     min-width: 100%;
     width: auto;
     grid-template-columns: min-content;
@@ -26,4 +26,24 @@
 
 #swipe-slider .swipe-track .swipe-slide:first-of-type {
     margin-left: 0;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+}
+
+.slide-arrow-left,
+.slide-arrow-right {
+    background-image: url('./assets/left-arrow.png');
+    height: 18px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.slide-arrow-right {
+    transform: rotate(180deg)
 }

@@ -9,11 +9,13 @@ class SwipeSlider extends Component {
         
         // Root slider element set by JSX ref
         this.slider = React.createRef();
+        this.sliderTrack = React.createRef();
 
         //Check if mouse is clicked
         this.isClicked = false;
         this.raf = undefined;
         this.isLooping = false;
+        this.isTransitioning = false;
 
         //Store mouse position over element
         this.clickedXPos = null;
@@ -37,25 +39,23 @@ class SwipeSlider extends Component {
 
     componentDidMount() {
         this.calcWidth();
-        this.slider.current.addEventListener("mousemove", this.startDrag.bind(this))
-        this.slider.current.addEventListener("mousedown", this.setUp.bind(this))
-        this.slider.current.addEventListener("mouseup", this.endDrag)
+        this.sliderTrack.current.addEventListener("mousemove", this.startDrag.bind(this))
+        this.sliderTrack.current.addEventListener("mousedown", this.setUp.bind(this))
+        this.sliderTrack.current.addEventListener("mouseup", this.endDrag)
         
         // Touch Events
-        this.slider.current.addEventListener("touchmove", this.startDrag.bind(this))
-        this.slider.current.addEventListener("touchstart", this.setUp.bind(this))
-        this.slider.current.addEventListener("touchend", this.endDrag)
+        this.sliderTrack.current.addEventListener("touchmove", this.startDrag.bind(this))
+        this.sliderTrack.current.addEventListener("touchstart", this.setUp.bind(this))
+        this.sliderTrack.current.addEventListener("touchend", this.endDrag)
 
         //Fallback for testing
-        this.slider.current.addEventListener("mouseleave", this.endDrag.bind(this))
+        this.sliderTrack.current.addEventListener("mouseleave", this.endDrag.bind(this))
     }
 
     setUp(e) {
         e.preventDefault();  
-        e.stopImmediatePropagation();
-        
-        console.log(e.currentTarget);
-        
+        e.stopPropagation();
+                
         this.clickedXPos = e.pageX || e.touches[0].pageX;;
         this.isClicked = true;
         this.originalPosition = this.position
@@ -63,7 +63,8 @@ class SwipeSlider extends Component {
     }
 
     startDrag(e) {
-        e.preventDefault()
+        e.preventDefault();
+        e.stopPropagation();
         this.mousePos.x = e.pageX || e.touches[0].pageX;
         
         if(this.isClicked && this.isLooping === false) {
@@ -90,6 +91,17 @@ class SwipeSlider extends Component {
             this.position = Math.floor(this.position / (this.state.rawWidth)) * (this.state.rawWidth);
         }
 
+        //Disallow scrolling past first slide
+        if(this.position > 0) {{
+            this.position = 0;
+        }}
+
+        //Disallow scrolling past last slide
+        let sliderWidth = this.slider.current.querySelector(".swipe-track").offsetWidth;
+        if(Math.abs(this.position) > sliderWidth) {
+            this.position = (sliderWidth * -1) + this.slider.current.offsetWidth;
+        }
+
         let elem = this.slider.current.querySelector(".swipe-track");
         elem.style.transform = `translateX(${(this.position)}px)`
 
@@ -106,17 +118,48 @@ class SwipeSlider extends Component {
         let width = 0;
         let rawWidth = 0;
         if (window.matchMedia("(max-width: 600px)").matches) {
-            width = `calc(${this.slider.current.offsetWidth}px)`;
+            width = `${this.slider.current.offsetWidth}px`;
             rawWidth  = (this.slider.current.offsetWidth) + 28;
         }
 
         else {
-            width = `calc(${this.slider.current.offsetWidth / 4}px - 21px)`;
+            width = `${this.slider.current.offsetWidth / 4 - 21}px`;
             rawWidth = (this.slider.current.offsetWidth / 4)  + 7;
         }
         
         this.setState({rawWidth: rawWidth})
         this.setState({slideWidth: width});
+    }
+
+    slideLeft = () => {
+
+        if(!this.isTransitioning && this.position + this.state.rawWidth <= 0) {
+            this.isTransitioning = true;
+            this.position += this.state.rawWidth;
+
+            this.sliderTrack.current.style.transform = `translateX(${(this.position)}px)`
+
+            setTimeout(()=> {
+                this.isTransitioning = false;
+            }, 345)
+
+        }
+
+    }
+
+    slideRight = () => {
+        
+        if(!this.isTransitioning && this.position > (this.sliderTrack.current.offsetWidth - this.state.rawWidth) * -1) {
+            this.isTransitioning = true;
+
+            this.position = this.position - this.state.rawWidth;
+
+            this.sliderTrack.current.style.transform = `translateX(${(this.position)}px)`
+            setTimeout(()=> {
+                this.isTransitioning = false;
+            }, 345)
+        }
+
     }
 
     getSlides() {
@@ -136,12 +179,19 @@ class SwipeSlider extends Component {
         this.slider.current.removeEventListener("mousemove", this.startDrag)
         this.slider.current.removeEventListener("mousedown", this.setUp)
         this.slider.current.removeEventListener("mouseup", this.endDrag)
+
+        this.slider = null;
+        this.sliderTrack = null;
     }
 
     render() {
         return(
             <div id="swipe-slider" ref={this.slider}>
-                <div className="swipe-track">
+                <div className="arrow-container">
+                    <div className="slide-arrow-left" onClick={this.slideLeft}></div>
+                    <div className="slide-arrow-right" onClick={this.slideRight}></div>
+                </div>
+                <div className="swipe-track" ref={this.sliderTrack}>
                     {this.getSlides()}
                 </div>
             </div>
