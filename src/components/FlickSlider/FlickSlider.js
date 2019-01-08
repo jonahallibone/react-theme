@@ -57,18 +57,29 @@ class FlickSlider extends Component {
             activeSlide2: 0,
             slides: [
                 {
-                    image: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+                    image: "https://s3.amazonaws.com/piscatello/Nomadx-Animation.mp4",
                     title: "Nomadx Solutions",
+                    location: "New York, NY",
+                    video: true
+                },
+                {
+                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
+                    title: "Irish Hunger Memorial",
                     location: "New York, NY"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/Riverside_Entrance.jpg",
-                    title: "New York Department of Health",
+                    image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
+                    title: "New York University - Advanced Research Institutes",
                     location: "New York, NY"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/DesignAtWork_Horiz.jpg",
-                    title: "Design at Work",
+                    image: "https://s3.amazonaws.com/piscatello/SaltLake_KioskRender3-2000x1125.jpg",
+                    title: "United States Courthouse - Salt Lake City",
+                    location: "New York, NY"
+                },
+                {
+                    image: "https://s3.amazonaws.com/piscatello/Laguarda-Mockup_01_v7.jpg",
+                    title: "Laguarda Low Architects",
                     location: "New York, NY"
                 }
             ],
@@ -119,7 +130,15 @@ class FlickSlider extends Component {
         return this.state.slides.map((el, i) => {
             return(
                 <div key={i}>
-                        <img src={el.image} alt={el.title}/>
+                        {el.video ?
+                                <video autoPlay={true} muted loop controls={false}>
+                                    <source src={el.image} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            : 
+                            <img src={el.image} alt={el.title}/>
+                        }
+                        
                 </div>
             )
         })

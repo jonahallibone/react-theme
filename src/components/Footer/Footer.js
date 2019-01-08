@@ -19,7 +19,7 @@ class Footer extends Component {
                         </div>
                         <div className="column-right break">
                             <a className="light"><HoverLink grey-black="true">Subscribe to our Newsletter</HoverLink></a>
-                            <a className="light"><HoverLink grey-black="true">Careers</HoverLink></a>
+                            {/* <a className="light"><HoverLink grey-black="true">Careers</HoverLink></a> */}
                             <a className="light"><HoverLink grey-black="true">Contact</HoverLink></a>
                         </div>
                     </div>

@@ -29,22 +29,27 @@ class WorkPage extends Component {
 
       },
       "brand-strategies": {
-        title: "Brand Strategies",
+        title: "Strategy",
         description: `Brand Strategies expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
         url: "brand-strategies"
       },
       "brand": {
-        title: "Brand Identities",
+        title: "Identity",
         description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
         url: "brand"
       },
       "digital": {
-        title: "Digital Experiences",
+        title: "Digital",
         description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`,
         url: "digital"
       },
+      "Print": {
+        title: "Print",
+        description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
+        url: "Print"
+      },
       "signage": {
-        title: "Signage Programs",
+        title: "Signage",
         description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
         url: "signage"
       }
@@ -144,7 +149,7 @@ class WorkPage extends Component {
         return (
           <span className="filter-option" key={page}>
             <Link to={"/work/" + this.pages[page].url}>
-              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)} onClick={this.handleClick}>{this.pages[page].title}</HoverLink>
+              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)} onClick={this.handleClick}>{this.pages[page].title == "Work" ? "All " : ""}{this.pages[page].title}</HoverLink>
             </Link>
           </span>
         )

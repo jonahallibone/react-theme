@@ -3,6 +3,11 @@
   display: block;
 }
 
+.slick-slide video {
+  width: 100%;
+  display: block;
+}
+
 
 @media all and (min-width: 1440px) {
   .slick-slide {
