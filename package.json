@@ -21,6 +21,7 @@
     "react-grid-system": "^4.3.1",
     "react-live-clock": "^3.0.0",
     "react-pose": "^4.0.4",
+    "react-pose-text": "^3.1.0",
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^4.3.1",
     "react-router-prefetch": "^0.6.3",

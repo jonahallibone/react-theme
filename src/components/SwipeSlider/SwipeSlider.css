@@ -21,8 +21,10 @@
 }
 
 #swipe-slider:not(.dragging) .swipe-track {
-    transition: .345s ease-in-out all;
-}
+    transition: -webkit-transform .35s;
+    transition: transform .35s;
+    transition: transform .35s,-webkit-transform .35s;
+    transition-timing-function: cubic-bezier(.25,.46,.45,.94);}
 
 #swipe-slider .swipe-track .swipe-slide:first-of-type {
     margin-left: 0;

@@ -3,8 +3,17 @@ import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import HoverLink from '../HoverLink/HoverLink';
+import SplitText from 'react-pose-text';
 
 import '../../App.css';
+
+const charPoses = {
+    exit: { opacity: 0 },
+    enter: {
+      opacity: 1,
+      delay: ({ charIndex }) => charIndex * 30
+    }
+};
 
 class Header extends Component {
 
@@ -82,7 +91,13 @@ class Header extends Component {
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <Row className={"text-white logo"} style={{alignItems: "center"}}>
                         <Col xs={10} sm={6} style={{alignItems: "center"}}>
-                            <h2><Link to="/" className="logo-link">Piscatello Design Centre</Link></h2>
+                            <h2>
+                                <Link to="/" className="logo-link">
+                                    <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                                        Piscatello Design Centre
+                                    </SplitText>
+                                </Link>
+                            </h2>
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
