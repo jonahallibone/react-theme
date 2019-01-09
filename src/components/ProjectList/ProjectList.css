@@ -1,7 +1,7 @@
 #project-list {
     background: #FFF;
     width: 100vw;
-    padding: 5rem 0 0 0;
+    padding: 2.5rem 0 0 0;
 }
 
 .project-grid {
@@ -9,6 +9,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 5rem;
+    padding-top: 2.5rem;
 }
 
 .project-grid .project,

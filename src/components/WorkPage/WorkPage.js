@@ -173,10 +173,10 @@ class WorkPage extends Component {
     return (
       <section className="transition-page" id="page-work">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
-          <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3>
+          {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
           <Row>
             <Col xs={12} sm={10} md={8} lg={7}  style={{ paddingBottom: "5rem"}}>
-              <h3 className="reg text-grey light padding-top-2">
+              <h3 className="reg text-white light padding-top-2">
                 {this.state.pageDescription}
               </h3>
             </Col>
@@ -193,6 +193,7 @@ class WorkPage extends Component {
           </div>
           <div id="project-list">
             <Container fluid={true} className="container" style={{padding: 0}}>
+              <h3 className="reg text-black">{this.state.pageTitle}</h3>
               <div className="project-grid">
                   {this.renderProjects()}
               </div>

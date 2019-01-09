@@ -58,6 +58,9 @@ class App extends Component {
             <Footer></Footer>
           </RouteContainer>
         </PoseGroup>
+        <RouteContainer key={location.pathname}>
+          <Switch location={location}></Switch>
+        </RouteContainer>
       </div>
     )
   }

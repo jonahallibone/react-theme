@@ -196,10 +196,6 @@ class SwipeSlider extends Component {
     render() {
         return(
             <div id="swipe-slider" ref={this.slider}>
-                <div className="arrow-container">
-                    <div className="slide-arrow-left" onClick={this.slideLeft}></div>
-                    <div className="slide-arrow-right" onClick={this.slideRight}></div>
-                </div>
                 <div className="swipe-track" ref={this.sliderTrack}>
                     {this.getSlides()}
                 </div>

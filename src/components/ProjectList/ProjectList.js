@@ -54,7 +54,7 @@ class ProjectList extends Component {
             },
             {
                 title: "Lorem ipsum dolor sit amet.",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+                thumbnail: "https://s3.amazonaws.com/piscatello/PDC-Website_Updates_DaVinci-Thumbnail-05-05.jpg",
                 type: "Press",
                 tagline: "30 November 2018"
             },
@@ -66,7 +66,7 @@ class ProjectList extends Component {
             },
             {
                 title: "Lorem ipsum dolor sit amet.",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+                thumbnail: "https://s3.amazonaws.com/piscatello/PDC-Website_Updates_Bauhaus-Thumbnail-03.jpg",
                 type: "Awards",
                 tagline: "02 January 2019"
             },

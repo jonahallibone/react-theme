@@ -114,7 +114,10 @@ class FlickSlider extends Component {
 
 
         else {
-            document.querySelector(".description").classList.remove("scrolled");
+            let elem = document.querySelector(".description");
+            if(elem){
+                document.querySelector(".description").classList.remove("scrolled");
+            }
             window.cancelAnimationFrame(this.animation);
         }
 

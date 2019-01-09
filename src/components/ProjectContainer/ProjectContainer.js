@@ -59,9 +59,14 @@ class ProjectContainer extends Component {
 
         else link = "/work/category/test";
 
-        if(!document.querySelector("#swipe-slider").classList.contains("active")) {
-            history.push(link)
+        if(document.querySelector("#swipe-slider")) {
+            if(!document.querySelector("#swipe-slider").classList.contains("active")) {
+                history.push(link)
+            }
         }   
+        else {
+            history.push(link);
+        }
     }
 
     render() {
@@ -69,7 +74,7 @@ class ProjectContainer extends Component {
         const isNews = this.props.news || "";
 
         return(
-            <div onMouseUp={this.goToLink}>
+            <div onMouseUp={this.goToLink} style={{height: "100%"}}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
                         <img src={el.thumbnail} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
@@ -89,13 +94,12 @@ class ProjectContainer extends Component {
                         
                     </div>
                     <div className="details">
-                        <h5 className="text-red">{el.type}</h5>
                         {isNews ? 
-                            <span className="text-grey light" style={{fontWeight: "500"}}>{el.tagline}</span>
+                            <span className="text-grey" style={{fontWeight: "500"}}>{el.tagline}</span>
                             :
                             <div></div>
                         }
-                        
+                        <h5 className="text-red">{el.type}</h5>
                     </div>
                 </div>
             </div>
