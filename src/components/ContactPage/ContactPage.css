@@ -157,4 +157,16 @@
     align-self: center;
     margin-left: 5px;
     margin-top: 4px;
+    transition: .345s ease background-image;
+}
+
+.link-arrow.black {
+    background: url('./link-arrow-black.svg');
+    background-repeat: no-repeat;
+}
+
+.link-arrow.red,
+.arrow-hover:hover .link-arrow {
+    background: url('./link-arrow-red.svg');
+    background-repeat: no-repeat;
 }
