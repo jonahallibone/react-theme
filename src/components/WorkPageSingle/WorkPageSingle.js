@@ -8,8 +8,13 @@ import './WorkPageSingle.css';
 class WorkPageSingle extends Component {
   constructor(props) {
     super(props);
+    this.newProject = React.createRef();
+    this.timeout = null;
+
     this.state = {
-      post: null
+      post: null,
+      transition: false,
+      projectTitle: this.props.projecTitle
     }
   }
   async componentDidMount() {
@@ -67,7 +72,26 @@ class WorkPageSingle extends Component {
   }
 
   loadNext = () => {
-    window.history.pushState(12, "/work/newwork")
+    // window.history.pushState(12, "/work/newwork")
+    this.setState({transition: true});
+
+    console.log(this.newProject);
+
+    let boundingRect = this.newProject.current.getBoundingClientRect();
+
+    
+    this.newProject.current.style.transform = `translateY(-${boundingRect.top - 115}px)`
+    
+    this.timeout = setTimeout(() => {
+      this.setState({projectTitle: "Fashionhaus"})
+      document.querySelector("#featured-header").classList.remove(".shrink");
+    },345)
+
+    this.timeout = setTimeout(() => {
+      window.scrollTo(0,0)
+      this.newProject.current.style.transform = `translateY(0)`
+      this.setState({transition: false})
+    },1000)
   }
 
   
@@ -173,17 +197,19 @@ class WorkPageSingle extends Component {
   render() {
     return (
       <div className={"work-page-single " + this.getBodyClass()}>
-
-        <WorkPageHeader projectTitle={this.getProjectTitle()} isUpdate={this.props.isUpdate}></WorkPageHeader>
-        <section id="project-content" className={this.getBodyClass()}>
+        <div className="project-container" style={{opacity: this.state.transition ? 0 : 1}}>
+          <WorkPageHeader projectTitle={this.state.projectTitle} isUpdate={this.props.isUpdate}></WorkPageHeader>
+          <section id="project-content" className={this.getBodyClass()}>
+            <Container className="container" fluid={true} style={{padding: 0}}>
+              {this.props.isUpdate ? this.getUpdatePost() : this.getProjectPost()}
+            </Container>
+          </section>
+        </div>
+        <div className="new-project-link" ref={this.newProject}>
           <Container className="container" fluid={true} style={{padding: 0}}>
-            {this.props.isUpdate ? this.getUpdatePost() : this.getProjectPost()}
+              <h4 className="text-red padding-top-5" style={{opacity: this.state.transition ? 0 : 1}}>{this.props.isUpdate ? "Next Update" : "Next Project"}</h4>
           </Container>
-        </section>
-        <Container className="container" fluid={true} style={{padding: 0}}>
-          <h4 className="text-red padding-top-5">{this.props.isUpdate ? "Next Update" : "Next Project"}</h4>
-        </Container>
-        <WorkPageHeader onclick={this.loadNext()} projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
+          <WorkPageHeader onclick={this.loadNext} projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
           <Container className="container" fluid={true} style={{padding: 0}}>
             <Row className="">
               <Col xs={12} sm={8}>
@@ -195,6 +221,7 @@ class WorkPageSingle extends Component {
               </Col>
             </Row>
           </Container>
+        </div>
       </div>
     );
   }
