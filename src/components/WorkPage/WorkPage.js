@@ -185,7 +185,7 @@ class WorkPage extends Component {
           <Row className="padding-top-5">
             <Col xs={12} sm={10} md={8} lg={7}  style={{ paddingBottom: "5rem"}}>
               <h3 className="reg text-black">{this.state.pageTitle}</h3>
-              <h3 className="reg light padding-top-2">
+              <h3 className="reg text-grey light padding-top-2">
                 {this.state.pageDescription}
               </h3>
             </Col>
