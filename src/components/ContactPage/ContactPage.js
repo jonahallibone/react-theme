@@ -52,7 +52,7 @@ class ContactPage extends Component {
                 Our projects are about collaboration and partnership. Contact us 
                 to learn how we can become integral to your team.
                 <br/><br/>
-                <HoverLink grey>meeting@piscatello.com</HoverLink> <br/>
+                <HoverLink grey="true">meeting@piscatello.com</HoverLink> <br/>
               </h4>
             </div>
             <div className="info-block">
@@ -69,7 +69,7 @@ class ContactPage extends Component {
                 330 West 38th Street <br/>
                 New York, NY 10018 <br/><br/>
                 +1 212 502 4734 <br/><br/><br/>
-                <HoverLink grey>Get Directions</HoverLink> 
+                <HoverLink grey="true">Get Directions</HoverLink> 
 
               </h4>
             </div>
@@ -96,22 +96,22 @@ class ContactPage extends Component {
                 <h3 className="reg">General</h3>
                 <h4 className="light padding-top-2">Information</h4>
                 <h4 className="light">+1 212 502 4734</h4>
-                <h4 className="light"><HoverLink grey-black>info@piscatello.com</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black="true">info@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
                 <h3 className="reg">Careers</h3>
                 <h4 className="light padding-top-2">Inquiries</h4>
                 <h4 className="light">+1 212 502 4734</h4>
-                <h4 className="light"><HoverLink grey-black>careers@piscatello.com</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black="true">careers@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
 
               </div>
               <div className="info-block">
                 <h3 className="reg">Connect</h3>
-                <h4 className="light padding-top-2"><HoverLink grey-black>Instagram</HoverLink></h4>
-                <h4 className="light"><HoverLink grey-black>LinkedIn</HoverLink></h4>
-                <h4 className="light"><HoverLink grey-black>Twitter</HoverLink></h4>
+                <h4 className="light padding-top-2"><HoverLink grey-black="true">Instagram</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black="true">LinkedIn</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black="true">Twitter</HoverLink></h4>
               </div>
             </div>
           </Container>
