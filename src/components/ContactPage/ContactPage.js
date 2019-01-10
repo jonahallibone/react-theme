@@ -85,33 +85,33 @@ class ContactPage extends Component {
               </h4>
             </div>
           </div>
-          <div className="contact-banner padding-top-5">
+          <div className="contact-banner padding-top-5 padding-btm-5">
               <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>
           </div>
         </Container>
-        <div style={{backgroundColor: "#000", paddingTop:"2rem", paddingBottom: "10rem"}}>
+        <div style={{backgroundColor: "#f2f3f5", paddingTop:"5rem", paddingBottom: "10rem", borderBottom: "1px solid #DDD"}}>
           <Container fluid={true} className="container" style={{padding: "0 0 0 0"}}>
             <div className="information-grid" style={{paddingTop: 0}}>
               <div className="info-block">
-                <h3 className="reg text-white">General</h3>
-                <h4 className="light padding-top-2 text-white">Information</h4>
-                <h4 className="light text-white">+1 212 502 4734</h4>
-                <h4 className="light text-white"><HoverLink grey>info@piscatello.com</HoverLink></h4>
+                <h3 className="reg">General</h3>
+                <h4 className="light padding-top-2">Information</h4>
+                <h4 className="light">+1 212 502 4734</h4>
+                <h4 className="light"><HoverLink grey-black>info@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
-                <h3 className="reg text-white">Careers</h3>
-                <h4 className="light padding-top-2 text-white">Inquiries</h4>
-                <h4 className="light text-white">+1 212 502 4734</h4>
-                <h4 className="light text-white"><HoverLink grey>careers@piscatello.com</HoverLink></h4>
+                <h3 className="reg">Careers</h3>
+                <h4 className="light padding-top-2">Inquiries</h4>
+                <h4 className="light">+1 212 502 4734</h4>
+                <h4 className="light"><HoverLink grey-black>careers@piscatello.com</HoverLink></h4>
               </div>
               <div className="info-block">
 
               </div>
               <div className="info-block">
-                <h3 className="reg text-white">Connect</h3>
-                <h4 className="light text-white padding-top-2"><HoverLink grey>Instagram</HoverLink></h4>
-                <h4 className="light text-white"><HoverLink grey>LinkedIn</HoverLink></h4>
-                <h4 className="light text-white"><HoverLink grey>Twitter</HoverLink></h4>
+                <h3 className="reg">Connect</h3>
+                <h4 className="light padding-top-2"><HoverLink grey-black>Instagram</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black>LinkedIn</HoverLink></h4>
+                <h4 className="light"><HoverLink grey-black>Twitter</HoverLink></h4>
               </div>
             </div>
           </Container>
