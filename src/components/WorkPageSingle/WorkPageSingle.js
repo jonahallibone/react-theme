@@ -14,7 +14,7 @@ class WorkPageSingle extends Component {
     this.state = {
       post: null,
       transition: false,
-      projectTitle: this.props.projecTitle || "Nomadx Solutions"
+      projectTitle: !this.props.isUpdate ? "Nomadx Solutions" : "Rocco Piscatello to speak at the University of New Haven"
     }
   }
   async componentDidMount() {
