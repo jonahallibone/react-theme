@@ -147,3 +147,14 @@
         text-align: center;
     }
 }
+
+.link-arrow {
+    background: url('./link-arrow.svg');
+    width: 13px;
+    height: 10px;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    align-self: center;
+    margin-left: 5px;
+    margin-top: 4px;
+}

@@ -69,8 +69,12 @@ class ContactPage extends Component {
                 330 West 38th Street <br/>
                 New York, NY 10018 <br/><br/>
                 +1 212 502 4734 <br/><br/><br/>
-                <HoverLink grey="true">Get Directions</HoverLink> 
-
+                <div>
+                  <HoverLink grey="true">
+                    Get Directions
+                  </HoverLink> 
+                  <span className="link-arrow"></span>
+                </div>
               </h4>
             </div>
             <div className="info-block">
