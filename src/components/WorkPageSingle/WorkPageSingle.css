@@ -51,4 +51,5 @@
 
 .new-project-link {
     transition: .345s ease transform .345s;
+    cursor: pointer;
 }

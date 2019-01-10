@@ -205,11 +205,11 @@ class WorkPageSingle extends Component {
             </Container>
           </section>
         </div>
-        <div className="new-project-link" ref={this.newProject}>
+        <div className="new-project-link" ref={this.newProject} onClick={this.loadNext}>
           <Container className="container" fluid={true} style={{padding: 0}}>
               <h4 className="text-red padding-top-5" style={{opacity: this.state.transition ? 0 : 1}}>{this.props.isUpdate ? "Next Update" : "Next Project"}</h4>
           </Container>
-          <WorkPageHeader onclick={this.loadNext} projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
+          <WorkPageHeader projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
           <Container className="container" fluid={true} style={{padding: 0}}>
             <Row className="">
               <Col xs={12} sm={8}>
