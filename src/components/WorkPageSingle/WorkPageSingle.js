@@ -14,7 +14,7 @@ class WorkPageSingle extends Component {
     this.state = {
       post: null,
       transition: false,
-      projectTitle: this.props.projecTitle
+      projectTitle: this.props.projecTitle || "Nomadx Solutions"
     }
   }
   async componentDidMount() {
