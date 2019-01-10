@@ -91,8 +91,12 @@ header a {
     transition: .345s ease color;
 }
 
-.black-bg .logo-link{
-    color: #FFF !important;
+.black-bg .logo-link {
+    color: #FFF;
+}
+
+.black-bg .logo-link:hover {
+    color: #999;
 }
 
 .white-bg .logo-link {
