@@ -89,7 +89,7 @@ class ContactPage extends Component {
               <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>
           </div>
         </Container>
-        <div style={{backgroundColor: "#f2f3f5", paddingTop:"5rem", paddingBottom: "10rem", borderBottom: "1px solid #DDD"}}>
+        <div style={{backgroundColor: "#f2f3f5", paddingTop:"5rem", paddingBottom: "5rem", borderBottom: "1px solid #DDD"}}>
           <Container fluid={true} className="container" style={{padding: "0 0 0 0"}}>
             <div className="information-grid" style={{paddingTop: 0}}>
               <div className="info-block">
