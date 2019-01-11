@@ -79,24 +79,17 @@
     flex-direction: row;
     align-items: center;
     height: 75px;
-    position: sticky;
+    position: fixed;
     top: 75px;
     width: 100vw;
     background-color: #f2f3f5;
     z-index: 999;
-    transition:.345s ease box-shadow;
+    transition: .345s ease all;
+    transform: translateY(0%);
 }
 
-.option-list.shadow {
-    /* box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1); */
-    /* border-bottom: 1px solid #EEE; */
-    transition: .345s ease .25s box-shadow;
-}
-
-@media all and (max-width: 1440px) {
-    .option-list {
-        transition: .345s ease .25s box-shadow;
-    }
+.option-list.up {
+    transform: translateY(-100%);
 }
 
 .option-list .filter-option {

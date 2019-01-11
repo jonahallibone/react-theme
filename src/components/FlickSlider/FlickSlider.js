@@ -57,7 +57,7 @@ class FlickSlider extends Component {
             activeSlide2: 0,
             slides: [
                 {
-                    image: "https://s3.amazonaws.com/piscatello/Nomadx_Animation_1.10.19.mp4",
+                    image: "https://s3.amazonaws.com/piscatello/Nomadx_Animation_30FPS_1.11.19+(1).mp4",
                     title: "Nomadx Solutions",
                     location: "New York, NY",
                     video: true

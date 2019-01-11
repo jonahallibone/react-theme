@@ -50,7 +50,7 @@ class ContactPage extends Component {
               <h3 className="reg text-red">Schedule a Meeting</h3>
               <h4 className="light padding-top-2 text-white">
                 Our projects are about collaboration and partnership. Contact us 
-                to learn how we can become integral to your team.
+                to learn how we can become extension to your team.
                 <br/><br/>
                 <HoverLink grey="true">meeting@piscatello.com</HoverLink> <br/>
               </h4>

@@ -19,6 +19,8 @@ class WorkPage extends Component {
       projects: []
     }
 
+    this.lastScrollY = null;
+
     this.scrollAnim = null;
 
     this.pages = {
@@ -120,16 +122,23 @@ class WorkPage extends Component {
     ]
 
     this.setState({"projects": projects});
-    document.addEventListener("scroll", this.addShadow)
+    document.addEventListener("scroll", this.addShadow, {passive: true})
   }
 
   addShadow = () => {
     let list = document.querySelector(".option-list");
 
-    if(list.getBoundingClientRect().top <=75) {
-      list.classList.add("shadow");
+
+    if(this.lastScrollY < window.scrollY) {
+      list.classList.add("up");
     }
-    else list.classList.remove("shadow");
+
+    else {
+      list.classList.remove("up");
+    }
+
+    this.lastScrollY = window.scrollY;
+
   }
 
   handleClick = (e) => {
@@ -182,8 +191,8 @@ class WorkPage extends Component {
         </div>
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
-          <Row className="padding-top-5">
-            <Col xs={12} sm={10} md={8} lg={7}  style={{ paddingBottom: "5rem"}}>
+          <Row className="padding-top-10">
+            <Col xs={12} sm={10} md={8} lg={6}  style={{ paddingBottom: "5rem"}}>
               <h3 className="reg text-black">{this.state.pageTitle}</h3>
               <h3 className="reg text-grey light padding-top-2">
                 {this.state.pageDescription}
