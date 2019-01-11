@@ -4,9 +4,33 @@ import { Link } from 'react-router-dom';
 import HoverLink from '../HoverLink/HoverLink';
 import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
+import posed, { PoseGroup } from 'react-pose';
 
 import '../../App.css';
 import './WorkPage.css';
+
+const staggerDuration = 100;
+
+const Movement = posed.div({
+  enter: {
+      y: 0,
+      opacity: 1,
+      transition: { 
+          default: {
+              duration: 600
+          } 
+      },
+      ease: 'easeIn',
+      delay: ({ i }) => i * staggerDuration + 300
+  },
+  exit: {
+      y: 30,
+      opacity: 0,
+      transition: { duration: 600 },
+      ease: 'easeIn',
+      delay: ({ i }) => (3 - i) * staggerDuration
+  }
+});
 
 class WorkPage extends Component {
   constructor(props) {
@@ -191,12 +215,18 @@ class WorkPage extends Component {
         </div>
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
-          <Row className="padding-top-10">
+          <Row style={{paddingTop: "13.5rem"}}>
             <Col xs={12} sm={10} md={8} lg={6}  style={{ paddingBottom: "5rem"}}>
-              <h3 className="reg text-black">{this.state.pageTitle}</h3>
-              <h3 className="reg text-grey light padding-top-2">
-                {this.state.pageDescription}
-              </h3>
+              <PoseGroup staggerChildren="100">
+                <Movement key="1" i="1">
+                  <h3 className="reg text-black">{this.state.pageTitle}</h3>
+                </Movement>
+                <Movement key="2" i="2">
+                  <h3 className="reg text-grey light padding-top-2">
+                    {this.state.pageDescription}
+                  </h3>
+                </Movement>
+              </PoseGroup>
             </Col>
           </Row>
         </Container>

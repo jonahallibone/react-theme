@@ -134,7 +134,7 @@ class FlickSlider extends Component {
             return(
                 <div key={i}>
                         {el.video ?
-                                <video autoPlay={true} muted loop controls={false}>
+                                <video autoPlay={true} muted loop controls={false} poster="https://s3.amazonaws.com/piscatello/Piscatello_Nomadx_Logo-01.jpg">
                                     <source src={el.image} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
