@@ -56,6 +56,53 @@ class Updates extends Component {
                         </div>
                     </Container>
                 </div>
+                <Container fluid={true} className="container" style={{padding: 0}}>
+                    <div style={{width: "100%"}}>
+                        <h3 className="reg text-black" style={{paddingTop: "18rem"}}>Latest News</h3>
+                    </div>
+                    <div className="updates-quick-grid">
+                        <div className="update-item">
+                            <h3 className="reg">
+                                <HoverLink grey-black="true">09 February</HoverLink>
+                            </h3>
+                            <h5 className="text-bold padding-top-175">Reflections on the 10 Qualities of Design Exhibition</h5>
+                            <h5 className="text-grey light padding-top-175">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
+                            </h5>
+                            <h5 className="text-red">Exhibition</h5>
+                        </div>
+                        <div className="update-item">
+                            <h3 className="reg">
+                                <HoverLink grey-black="true">13 March</HoverLink>
+                            </h3>
+                            <h5 className="text-bold padding-top-175">Timeless Massimo Vignelli: International</h5>
+                            <h5 className="text-grey light padding-top-175">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
+                            </h5>
+                            <h5 className="text-red">Exhibition</h5>
+                        </div>
+                        <div className="update-item">
+                            <h3 className="reg">
+                                <HoverLink grey-black="true">28 April</HoverLink>
+                            </h3>
+                            <h5 className="text-bold padding-top-175">Lorem ipsum dolor sit amet consectetur</h5>
+                            <h5 className="text-grey light padding-top-175">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
+                            </h5>
+                            <h5 className="text-red">Event</h5>
+                        </div>
+                        <div className="update-item">
+                            <h3 className="reg">
+                                <HoverLink grey-black="true">07 May</HoverLink>
+                            </h3>
+                            <h5 className="text-bold padding-top-175">Lorem ipsum dolor sit amet consectetur</h5>
+                            <h5 className="text-grey light padding-top-175">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
+                            </h5>
+                            <h5 className="text-red">Exhibition</h5>
+                        </div>
+                    </div>
+                </Container>
             </section>
         )
     }

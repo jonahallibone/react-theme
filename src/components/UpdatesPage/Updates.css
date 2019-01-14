@@ -1,0 +1,22 @@
+.updates-page {
+    background: #FFF;
+    min-height: 100vh;
+}
+
+.updates-quick-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.update-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-item h5:last-of-type {
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
