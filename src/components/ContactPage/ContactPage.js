@@ -52,7 +52,7 @@ class ContactPage extends Component {
                 Our projects are about collaboration and partnership. Contact us 
                 to learn how we can become extension to your team.
                 <br/><br/>
-                <HoverLink grey="true">meeting@piscatello.com</HoverLink> <br/>
+                <HoverLink grey="true">projects@piscatello.com</HoverLink> <br/>
               </h4>
             </div>
             <div className="info-block">
