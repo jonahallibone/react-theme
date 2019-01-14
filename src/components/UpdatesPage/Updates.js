@@ -103,6 +103,48 @@ class Updates extends Component {
                         </div>
                     </div>
                 </Container>
+                <section className="update-section">
+                    <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
+                        <div className="update-feed">
+                            <div className="update-row">
+                                <div className="update-des">
+                                    <h3 className="reg">
+                                        <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
+                                    </h3>
+                                    <h5 className="text-grey light padding-top-175">03 January 2019</h5>
+                                    <h5 className="text-grey light padding-top-175">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
+                                        Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
+                                        Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
+                                        volutpat lacus vitae commodo. Nulla facilisi.
+                                    </h5>
+                                </div>
+                                <div className="update-img">
+                                    <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_DaVinci-Thumbnail-05-05.jpg" />
+                                </div>
+                            </div>
+                            <div className="update-row">
+                                <div className="update-des">
+                                    <h3 className="reg">
+                                        <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
+                                    </h3>
+                                    <h5 className="text-grey light padding-top-175">03 January 2019</h5>
+                                    <h5 className="text-grey light padding-top-175">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
+                                        Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
+                                        Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
+                                        volutpat lacus vitae commodo. Nulla facilisi.
+                                    </h5>
+                                </div>
+                                <div className="update-img">
+                                    <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_Bauhaus-Thumbnail-03.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </Container>
+                </section>
             </section>
         )
     }

@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2.5rem;
     margin-top: 2.5rem;
+    padding-bottom: 5rem;
 }
 
 .update-item {
@@ -19,4 +20,34 @@
     margin-top: auto;
     padding-top: 1.5rem;
 }
+
+/* Update Feed */
+.update-section {
+    background: #FAFAFA;
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.update-feed {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-feed .update-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:  0 0 2.5rem 0;
+    border-bottom: 1px solid #DDD;
+    grid-gap: 2.5rem;
+}
+
+.update-feed .update-row:not(:first-of-type) {
+    padding:  2.5rem 0 2.5rem 0;
+}
+
+.update-feed .update-row .update-img img {
+    display: block;
+    width: 100%;
+}
+
 
