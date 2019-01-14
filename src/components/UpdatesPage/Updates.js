@@ -58,7 +58,7 @@ class Updates extends Component {
                 </div>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div style={{width: "100%"}}>
-                        <h3 className="reg text-black" style={{paddingTop: "18rem"}}>Latest News</h3>
+                        <h3 className="reg text-black" style={{paddingTop: "18rem"}}>Latest Updates</h3>
                     </div>
                     <div className="updates-quick-grid">
                         <div className="update-item">
