@@ -33,22 +33,12 @@ class Updates extends Component {
                         </span>
                         <span className="filter-option">
                             <Link to={"/update/"}>
-                                <HoverLink>Exhibitions</HoverLink>
-                            </Link>
-                        </span>
-                        <span className="filter-option">
-                            <Link to={"/update/"}>
                                 <HoverLink>Press</HoverLink>
                             </Link>
                         </span>
                         <span className="filter-option">
                             <Link to={"/update/"}>
                                 <HoverLink>Thoughts</HoverLink>
-                            </Link>
-                        </span>
-                        <span className="filter-option">
-                            <Link to={"/update/"}>
-                                <HoverLink>Projects</HoverLink>
                             </Link>
                         </span>
                         <div className="filter-option request-meeting" style={{marginRight: 0}}>
