@@ -15,6 +15,7 @@ import ContactPage from './components/ContactPage/ContactPage';
 import Expterise from './components/Expertise/Expertise';
 import Careers from './components/Careers/Careers';
 import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
+import Updates from './components/UpdatesPage/Updates';
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 600, beforeChildren: true, transition: { default: { duration: 150 } } },
   exit: { opacity: 0, delay: 0, beforeChildren: false, transition: { default: { duration: 300 } } }
@@ -59,7 +60,9 @@ class App extends Component {
           </RouteContainer>
         </PoseGroup>
         <RouteContainer key={location.pathname}>
-          <Switch location={location}></Switch>
+          <Switch location={location}>
+            <Route path="/update" exact component = {Updates} key="update"></Route>
+          </Switch>
         </RouteContainer>
       </div>
     )
