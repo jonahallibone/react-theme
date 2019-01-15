@@ -49,7 +49,7 @@ class WorkPageHeader extends Component {
                             <Icon icon={socialLinkedin} size="25" />
                         </div>
                         <div style={{color: '#999'}}>
-                            <Icon icon={iosEmail} size="35" />
+                            <Icon icon={iosEmail} size="25" />
                         </div>  
                         <div style={{color: '#999'}}>
                             <Icon icon={link} size="28" />     
