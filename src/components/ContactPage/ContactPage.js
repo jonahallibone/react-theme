@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import '../../App.css';
 import './ContactPage.css';
 import Clock from 'react-live-clock';
+import { Link } from "react-router-dom";
 
 import HoverLink from '../HoverLink/HoverLink';
 
@@ -52,7 +53,7 @@ class ContactPage extends Component {
                 Our projects are about collaboration and partnership. Contact us 
                 to learn how we can become an extension to your team.
                 <br/><br/>
-                <HoverLink grey="true">projects@piscatello.com</HoverLink> <br/>
+                <a href="mailto:projects@piscatello.com"><HoverLink grey="true">projects@piscatello.com</HoverLink></a> <br/>
               </h4>
             </div>
             <div className="info-block">
@@ -113,9 +114,24 @@ class ContactPage extends Component {
               </div>
               <div className="info-block">
                 <h3 className="reg">Connect</h3>
-                <h4 className="light padding-top-2 arrow-hover"><HoverLink grey-black="true">Instagram</HoverLink><span className="link-arrow black"></span></h4>
-                <h4 className="light arrow-hover"><HoverLink grey-black="true">LinkedIn</HoverLink><span className="link-arrow black"></span></h4>
-                <h4 className="light arrow-hover"><HoverLink grey-black="true">Twitter</HoverLink><span className="link-arrow black"></span></h4>
+                <h4 className="light padding-top-2 arrow-hover">
+                  <a href="https://www.instagram.com/piscatellodesigncentre/" target="_blank" className="text-black">
+                    <HoverLink grey-black="true">Instagram</HoverLink>
+                    <span className="link-arrow black"></span>
+                  </a>
+                </h4>
+                <h4 className="light">
+                  <a href="https://www.linkedin.com/company/piscatello-design-centre" target="_blank" className="text-black arrow-hover">
+                    <HoverLink grey-black="true">LinkedIn</HoverLink>
+                    <span className="link-arrow black"></span>
+                  </a>
+                </h4>
+                <h4 className="light arrow-hover">
+                  <a href="https://twitter.com/piscatellopdc" target="_blank" className="text-black">
+                    <HoverLink grey-black="true">Twitter</HoverLink>
+                    <span className="link-arrow black"></span>
+                  </a>
+                </h4>
               </div>
             </div>
           </Container>
