@@ -103,13 +103,25 @@ class ContactPage extends Component {
                 <h3 className="reg">General</h3>
                 <h4 className="light padding-top-2">Information</h4>
                 <h4 className="light">+1 212 502 4734</h4>
-                <h4 className="light"><HoverLink grey-black="true">info@piscatello.com</HoverLink></h4>
+                <h4 className="light">
+                  <a href="mailto:info@piscatello.com" className="text-black">
+                    <HoverLink grey-black="true">
+                      info@piscatello.com
+                    </HoverLink>
+                  </a>
+                </h4>
               </div>
               <div className="info-block">
                 <h3 className="reg">Careers</h3>
                 <h4 className="light padding-top-2">Inquiries</h4>
                 <h4 className="light">+1 212 502 4734</h4>
-                <h4 className="light"><HoverLink grey-black="true">careers@piscatello.com</HoverLink></h4>
+                <h4 className="light">
+                  <a href="mailto:info@piscatello.com" className="text-black">
+                    <HoverLink grey-black="true">
+                      careers@piscatello.com
+                    </HoverLink>
+                  </a>
+                </h4>
               </div>
               <div className="info-block">
 
