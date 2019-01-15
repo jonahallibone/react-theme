@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
 import './Footer.css';
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
     render() {
@@ -20,7 +21,7 @@ class Footer extends Component {
                         <div className="column-right break">
                             <a className="light"><HoverLink grey-black="true">Subscribe to our Newsletter</HoverLink></a>
                             {/* <a className="light"><HoverLink grey-black="true">Careers</HoverLink></a> */}
-                            <a className="light"><HoverLink grey-black="true">Contact</HoverLink></a>
+                            <Link className="light" to="/contact"><HoverLink grey-black="true">Contact</HoverLink></Link>
                         </div>
                     </div>
                 </Container>

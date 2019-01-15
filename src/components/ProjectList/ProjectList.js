@@ -136,7 +136,7 @@ class ProjectList extends Component {
                             {this.renderNews()}
                         </SwipeSlider> 
                         <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                            <Link to="/work"><Button arrow className="black-border">More Updates</Button></Link>
+                            <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>
                         </div>
                     </Container>
                 </div>
