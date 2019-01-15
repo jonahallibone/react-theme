@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { withRouter } from 'react-router-dom'
+import HoverLink from "../HoverLink/HoverLink";
 
 class ProjectContainer extends Component {
 
@@ -14,10 +15,12 @@ class ProjectContainer extends Component {
         super(props);
         this.root = React.createRef();
         this.state = {
-            imageLoaded: false
+            imageLoaded: false,
+            hovered: false
         }
 
         this.visible = false;
+
     }
     
     componentWillMount() {
@@ -31,7 +34,10 @@ class ProjectContainer extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener("scroll", this.checkVisibility, {passive: true})
+        document.addEventListener("scroll", this.checkVisibility, {passive: true});
+        this.root.current.addEventListener("mouseenter", () => this.setState({"hovered": true}));
+        this.root.current.addEventListener("mouseleave", () => this.setState({"hovered": false}));
+
         this.checkVisibility();
     }
 
@@ -81,7 +87,7 @@ class ProjectContainer extends Component {
                     </div>
                     <div className="project-description">
                         <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
-                            {el.title}
+                            <HoverLink hovered={this.state.hovered}>{el.title}</HoverLink>
                         </div>
                         {!isNews ?
                             <div className="project-info text-grey">
