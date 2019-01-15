@@ -71,9 +71,11 @@ class ContactPage extends Component {
                 New York, NY 10018 <br/><br/>
                 +1 212 502 4734 <br/><br/><br/>
                 <div className="arrow-hover">
-                  <HoverLink grey="true">
-                    Get Directions
-                  </HoverLink> 
+                  <a href="https://www.google.com/maps/place/Piscatello+Design+Centre/@40.7552864,-73.9956748,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ad6a5bed71:0x1799cc511d2dd26a!8m2!3d40.7552824!4d-73.9934861">
+                    <HoverLink grey="true">
+                      Get Directions
+                    </HoverLink> 
+                  </a>
                   <span className="link-arrow"></span>
                 </div>
               </h4>
