@@ -36,7 +36,7 @@ class HomePage extends Component {
     constructor(props){ 
         super(props);
 
-        this.random = Math.floor(Math.random() * 4);
+        this.random = Math.floor(Math.random() * 2);
 
         this.state = { isVisible: false };
 
@@ -49,7 +49,6 @@ class HomePage extends Component {
     }
 
     render() {
-        console.log(this.random)
         return (
             <div className="home transition-page">
                 <Statement>
@@ -58,7 +57,7 @@ class HomePage extends Component {
                                 {this.state.isVisible && this.random == 0 && [
                                     <Movement key="1" i="1">
                                         <div>
-                                            For nearly 25 years, we have been designing and
+                                            For nearly 25 years, we have specialized in designing and
                                         </div>
                                     </Movement>,
                                     <Movement key="2" i="2">
@@ -72,43 +71,11 @@ class HomePage extends Component {
 
                                 {this.state.isVisible && this.random == 1 && [
                                     <Movement key="1" i="1">
-                                        <div>
-                                            Before we begin the creative <Link to="/approach"><HoverLink grey="true">process,</HoverLink></Link> our team
-                                        </div>
+                                        Whether you’re established or just starting, we can help 
                                     </Movement>,
                                     <Movement key="2" i="2">
-                                        develops a clear <Link to="/strategy"><HoverLink grey="true">strategy</HoverLink></Link> that helps guide the 
+                                        your company grow through <Link to="/work"><HoverLink grey="true">great design</HoverLink></Link>
                                     </Movement>,
-                                    <Movement key="3" i="3">
-                                        design process.
-                                    </Movement>
-                                ]}
-
-                                {this.state.isVisible && this.random == 2 && [
-                                    <Movement key="1" i="1">
-                                        <div>
-                                            The best design comes from an understanding of all
-                                        </div>
-                                    </Movement>,
-                                    <Movement key="2" i="2">
-                                        the elements that comprise and inform the character
-                                    </Movement>,
-                                    <Movement key="3" i="3">
-                                        of a brand or place–whether digital or physical.
-                                    </Movement>
-                                ]}
-                                {this.state.isVisible && this.random == 3 && [
-                                    <Movement key="1" i="1">
-                                        <div>
-                                        We design across a growing number of disciplines  
-                                        </div>
-                                    </Movement>,
-                                    <Movement key="2" i="2">
-                                        to ensure that each user touchpoint is fully integrated
-                                    </Movement>,
-                                    <Movement key="3" i="3">
-                                        and receives an equally high level of creativity.
-                                    </Movement>
                                 ]}
                             </PoseGroup>
                     </h3>
