@@ -4,16 +4,6 @@
     display: flex;
 }
 
-path {
-    fill: transparent;
-}
-
-svg {
-    animation: spin infinite 10s linear;
-    height: 400px;
-    width: 400px;
-}
-
 text {
     fill: #999;
     font-weight: 800;

@@ -1,0 +1,23 @@
+.update-page-single {
+    background: #FFF;
+    min-height: 100vh;
+    padding-top: 14rem;
+}
+
+.update-description {
+    max-width: 60%;
+}
+
+.update-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.update-content .side {
+    flex: 0 0 50%;
+}
+
+.update-content .side .image-side-single img {
+    display: block;
+    width: 100%;
+}

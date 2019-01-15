@@ -16,6 +16,7 @@ import Expterise from './components/Expertise/Expertise';
 import Careers from './components/Careers/Careers';
 import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
 import Updates from './components/UpdatesPage/Updates';
+import UpdatePageSingle from './components/UpdatePageSingle/UpdatePageSingle';
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 600, beforeChildren: true, transition: { default: { duration: 150 } } },
   exit: { opacity: 0, delay: 0, beforeChildren: false, transition: { default: { duration: 300 } } }
@@ -54,7 +55,7 @@ class App extends Component {
               <Route path="/contact" component = {ContactPage} key="contact"></Route>
               <Route path="/careers" exact component = {Careers} key="careers"></Route>
               <Route path="/careers/:id" exact component = {CareerPageSingle} key="careersingle"></Route>
-              <Route path="/update/:id" render={() => <WorkPageSingle isUpdate={true} />} key="update"></Route>
+              <Route path="/update/:id" component = {UpdatePageSingle} key="update"></Route>
             </Switch>
             <Footer></Footer>
           </RouteContainer>

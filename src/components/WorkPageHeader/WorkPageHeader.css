@@ -48,3 +48,19 @@
     margin-top: -1rem;
     flex: 0 0 100%;
 }
+
+#featured-header .side:last-of-type > div {
+    margin-left: 1.5rem;
+}
+
+#featured-header .side:last-of-type {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: .345s ease all;
+}
+
+#featured-header.shrink .side:last-of-type {
+    opacity: 1;
+    transform: translateY(0);
+}
+
