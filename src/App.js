@@ -47,8 +47,6 @@ class App extends Component {
           <RouteContainer key={location.pathname}>
             <Switch location={location}>
               <Route path="/" exact component = {HomePage} key="home"></Route>
-              <Route path="/work" exact component = {WorkPage} key="work"></Route>
-              <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
               <Route path="/practice" component = {PracticePage} key="practice"></Route>
               <Route path="/expertise" component = {Expterise} key="approach"></Route>
               <Route path="/work/:type/:id" component = {WorkPageSingle} key="worksingle"></Route>
@@ -63,6 +61,8 @@ class App extends Component {
         <RouteContainer key={location.pathname}>
           <Switch location={location}>
             <Route path="/update" exact component = {Updates} key="update"></Route>
+            <Route path="/work" exact component = {WorkPage} key="work"></Route>
+            <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
           </Switch>
         </RouteContainer>
       </div>

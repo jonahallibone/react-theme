@@ -165,8 +165,8 @@
     background-repeat: no-repeat;
 }
 
-.link-arrow.red,
-.arrow-hover:hover .link-arrow {
+.link-arrow.red {
+/* .arrow-hover:hover .link-arrow { */
     background: url('./link-arrow-red.svg');
     background-repeat: no-repeat;
 }

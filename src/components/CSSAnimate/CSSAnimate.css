@@ -1,0 +1,15 @@
+.cssanimation {
+    transition: .345s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10%);
+}
+
+.cssanimation.translate-opacity.exit {
+    opacity: 0;
+    transform: translateY(10%);
+}
+
+.cssanimation.translate-opacity.enter {
+    opacity: 1;
+    transform: translateY(0%);
+}

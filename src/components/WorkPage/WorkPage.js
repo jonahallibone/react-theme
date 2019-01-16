@@ -8,6 +8,7 @@ import posed, { PoseGroup } from 'react-pose';
 
 import '../../App.css';
 import './WorkPage.css';
+import CSSAnimate from '../CSSAnimate/CSSAnimate';
 
 const staggerDuration = 100;
 
@@ -170,7 +171,8 @@ class WorkPage extends Component {
   }
 
   getSelected(page) {
-    if(this.pages[page].url === this.state.selectedName) {
+    if(this.pages[page].url === this.state.selectedName) { 
+      console.log(this.pages[page].url)
       return true
     }
     else return false;
@@ -217,16 +219,12 @@ class WorkPage extends Component {
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
           <Row style={{paddingTop: "13.5rem"}}>
             <Col xs={12} sm={10} md={8} lg={6}  style={{ paddingBottom: "5rem"}}>
-              <PoseGroup staggerChildren="100">
-                <Movement key="1" i="1">
-                  <h3 className="reg text-black">{this.state.pageTitle}</h3>
-                </Movement>
-                <Movement key="2" i="2">
-                  <h3 className="reg text-grey light padding-top-2">
-                    {this.state.pageDescription}
-                  </h3>
-                </Movement>
-              </PoseGroup>
+              <CSSAnimate delay="100">
+                <h3 className="reg text-black">{this.state.pageTitle}</h3>
+                <h3 className="reg text-grey light padding-top-2">
+                  {this.state.pageDescription}
+                </h3>
+              </CSSAnimate>
             </Col>
           </Row>
         </Container>

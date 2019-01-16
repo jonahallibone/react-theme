@@ -4,48 +4,25 @@ import FlickSlider from '../FlickSlider/FlickSlider';
 import HoverLink from '../HoverLink/HoverLink';
 import { Link } from 'react-router-dom';
 import ProjectList from '../ProjectList/ProjectList';
-import posed, { PoseGroup } from 'react-pose';
+import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 import '../../App.css';
-
-const staggerDuration = 100;
-
-const Movement = posed.div({
-    enter: {
-        y: 0,
-        opacity: 1,
-        transition: { 
-            default: {
-                duration: 600
-            } 
-        },
-        ease: 'easeIn',
-        delay: ({ i }) => i * staggerDuration + 300
-    },
-    exit: {
-        y: 30,
-        opacity: 0,
-        transition: { duration: 600 },
-        ease: 'easeIn',
-        delay: ({ i }) => (3 - i) * staggerDuration
-    }
-});
 
 class HomePage extends Component {
     
     constructor(props){ 
         super(props);
-
         this.random = Math.floor(Math.random() * 2);
-
         this.state = { isVisible: false };
-
+        this.setTimeout = null;
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({isVisible: !this.state.isVisible})
-        }, 500);
+        this.setState({isVisible: !this.state.isVisible})
+    }
+
+    componentWillUnmount() {
+        window.clearTimeout(this.timeout);
     }
 
     render() {
@@ -53,31 +30,31 @@ class HomePage extends Component {
             <div className="home transition-page">
                 <Statement>
                     <h3 className="reg text-white light padding-top-6">
-                            <PoseGroup staggerChildren="100">
                                 {this.state.isVisible && this.random == 0 && [
-                                    <Movement key="1" i="1">
+                                    <CSSAnimate key="i" delay="1000">
                                         <div>
-                                            For nearly 25 years, we have specialized in designing and
+                                            For nearly 25 years, we have specialized in designing 
                                         </div>
-                                    </Movement>,
-                                    <Movement key="2" i="2">
-                                        developing <Link to="/work/brand"><HoverLink grey="true">brand identities,</HoverLink></Link> 
-                                        &nbsp;<Link to="/work/signage"><HoverLink grey="true">signage programs,</HoverLink></Link> and
-                                    </Movement>,
-                                    <Movement key="3" i="3">
-                                        <Link to="/work/digital"><HoverLink grey="true">digital experiences</HoverLink></Link> for clients and cities worldwide.
-                                    </Movement>
+                                        <div>
+                                            and developing <Link to="/work/brand"><HoverLink grey="true">brand identities,</HoverLink></Link> 
+                                            <Link to="/work/signage">&nbsp;<HoverLink grey="true">signage programs,</HoverLink></Link> and
+                                        </div>
+                                        <div>
+                                            <Link to="/work/digital"><HoverLink grey="true">digital experiences</HoverLink></Link> for clients and cities worldwide.
+                                        </div>
+                                    </CSSAnimate>  
                                 ]}
 
                                 {this.state.isVisible && this.random == 1 && [
-                                    <Movement key="1" i="1">
-                                        Whether you’re established or just starting, we can help 
-                                    </Movement>,
-                                    <Movement key="2" i="2">
-                                        your company grow through <Link to="/work"><HoverLink grey="true">great design</HoverLink></Link>
-                                    </Movement>,
+                                        <CSSAnimate key="i" delay="1000">
+                                            <div>
+                                                Whether you’re established or just starting, we can
+                                            </div> 
+                                            <div>
+                                                help your company grow through <Link to="/work"><HoverLink grey="true">great design</HoverLink></Link>
+                                            </div>
+                                        </CSSAnimate>
                                 ]}
-                            </PoseGroup>
                     </h3>
                 </Statement>
                 <FlickSlider></FlickSlider>

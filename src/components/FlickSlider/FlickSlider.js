@@ -1,32 +1,11 @@
 import React, { Component } from 'react';
 import './FlickSlider.css';
 import Slider from "react-slick";
-import posed, { PoseGroup } from 'react-pose';
+import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 import { Container } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
 
-
-const MovedSlider = posed.div({
-    enter: {
-        y: 0,
-        opacity: 1,
-        transition: { 
-            default: {
-                duration: 600
-            } 
-        },
-        ease: 'easeIn',
-        delay: 1000
-    },
-    exit: {
-        y: 30,
-        opacity: 0,
-        transition: { duration: 600 },
-        ease: 'easeIn',
-        delay: 1000
-    }
-});
 
 
 
@@ -169,9 +148,9 @@ class FlickSlider extends Component {
         return (
             <Container className="container slider" fluid={true} style={{padding: 0}}>
 
-                <PoseGroup>
-                    {this.state.isVisible && [
-                        <MovedSlider key="i">
+                {this.state.isVisible && [
+                    <CSSAnimate key="i" delay="1250">
+                        <div>
                             <Slider {...settings}>
                                 {this.renderSlides()}
                             </Slider>
@@ -183,9 +162,9 @@ class FlickSlider extends Component {
                                     <h3 className="reg">0{this.state.activeSlide + 1} &mdash; 05</h3>
                                 </div>
                             </div>
-                        </MovedSlider>
-                    ]}
-                </PoseGroup>
+                        </div>
+                    </CSSAnimate>
+                ]}
             </Container>
         )
     }
