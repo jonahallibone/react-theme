@@ -17,6 +17,7 @@ import Careers from './components/Careers/Careers';
 import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
 import Updates from './components/UpdatesPage/Updates';
 import UpdatePageSingle from './components/UpdatePageSingle/UpdatePageSingle';
+
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 600, beforeChildren: true, transition: { default: { duration: 150 } } },
   exit: { opacity: 0, delay: 0, beforeChildren: false, transition: { default: { duration: 300 } } }
@@ -27,6 +28,10 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      transitioning: false
+    }
+
     this.props.history.listen((location, action) => {
       document.querySelector("header").classList.remove("header-overlay--visible");
 
@@ -36,6 +41,30 @@ class App extends Component {
     });
   }
 
+  componentWillMount() {
+    this.unlisten = this.props.history.listen((location, action) => {
+      console.log("on route change");
+    });
+  }
+
+  // Hook into react router v4
+
+  // componentDidUpdate(prevProps) {
+  //   let { pathname } = this.props.location;
+  //   if(pathname !== prevProps.location.pathname) {
+  //     this.onRouteChanged(pathname)
+  //   }
+  // }
+
+  onRouteChanged(pathname) {
+    console.log("Route change!!", pathname);
+    this.setState({transitioning: true});
+    setTimeout(() => {
+      this.setState({transitioning: false});
+    }, 2000)
+  }
+
+
   render() {
 
     const { location } = this.props
@@ -43,28 +72,25 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <PoseGroup>
-          <RouteContainer key={location.pathname}>
-            <Switch location={location}>
-              <Route path="/" exact component = {HomePage} key="home"></Route>
-              <Route path="/practice" component = {PracticePage} key="practice"></Route>
-              <Route path="/expertise" component = {Expterise} key="approach"></Route>
-              <Route path="/work/:type/:id" component = {WorkPageSingle} key="worksingle"></Route>
-              <Route path="/contact" component = {ContactPage} key="contact"></Route>
-              <Route path="/careers" exact component = {Careers} key="careers"></Route>
-              <Route path="/careers/:id" exact component = {CareerPageSingle} key="careersingle"></Route>
-              <Route path="/update/:id" component = {UpdatePageSingle} key="update"></Route>
-            </Switch>
-            <Footer></Footer>
-          </RouteContainer>
-        </PoseGroup>
-        <RouteContainer key={location.pathname}>
           <Switch location={location}>
-            <Route path="/update" exact component = {Updates} key="update"></Route>
+            <Route path="/" exact component = {HomePage}></Route>
+            <Route path="/practice" component = {PracticePage}></Route>
+            <Route path="/expertise" component = {Expterise}></Route>
+            <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
+            <Route path="/contact" component = {ContactPage}></Route>
+            <Route path="/careers" exact component = {Careers}></Route>
+            <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
+            <Route path="/update/:id" component = {UpdatePageSingle}></Route>
             <Route path="/work" exact component = {WorkPage} key="work"></Route>
             <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
+            <Route path="/update" exact component = {Updates}></Route>
           </Switch>
-        </RouteContainer>
+          <Footer></Footer>
+          <Switch location={location}>
+            
+          </Switch>
+
+        <div className={this.state.transitioning ? "transition-curtain visible" : "transition-curtain"}></div>
       </div>
     )
   }

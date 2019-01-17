@@ -40,7 +40,7 @@ class CSSAnimate extends Component {
 
     componentWillReceiveProps(newProps) {
         if(!newProps.mounted) {
-            // this.setState({enterExit: "exit"})
+            this.setState({enterExit: "exit"})
         }
     }
 

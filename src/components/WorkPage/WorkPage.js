@@ -52,7 +52,7 @@ class WorkPage extends Component {
       "all": {
         title: "Work",
         description: `We create work that builds business value and enhances life for people. Our clients are diverse and range from large and small, private and public, for-profit and non-profit.`,
-        url: ""
+        url: "all"
 
       },
       "brand-strategies": {
@@ -70,10 +70,10 @@ class WorkPage extends Component {
         description: `Our digital work includes browser-based applications such as websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
         url: "digital"
       },
-      "Print": {
+      "print": {
         title: "Print",
         description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
-        url: "Print"
+        url: "print"
       },
       "signage": {
         title: "Signage",
@@ -166,6 +166,31 @@ class WorkPage extends Component {
 
   }
 
+  sleep(duration) {
+    return new Promise(function(resolve, reject) {
+      setTimeout(()=> { resolve(0) }, duration);
+    })
+  }
+  
+  
+  handleClick = async (e) => {
+
+    let page = e.target.attributes["name"].value;
+    await this.sleep(2000);
+
+    document.querySelectorAll(".cssanimation").forEach(el => el.classList.remove("exit"));
+    document.querySelectorAll(".cssanimation").forEach(el => el.classList.add("enter"))
+
+    this.setState(
+      {
+        selectedName: page,
+        pageTitle: this.pages[page].title, 
+        pageDescription: this.pages[page].description, 
+        selectedName: this.pages[page].url
+      }
+    )
+  }
+
   getSelected(page) {
     if(this.pages[page].url === this.state.selectedName) { 
       return true
@@ -179,7 +204,7 @@ class WorkPage extends Component {
         return (
           <span className="filter-option" key={page}>
             <Link to={"/work/" + this.pages[page].url}>
-              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)}>{this.pages[page].title == "Work" ? "All " : ""}{this.pages[page].title}</HoverLink>
+              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)} onClick={this.handleClick}>{this.pages[page].title == "Work" ? "All " : ""}{this.pages[page].title}</HoverLink>
             </Link>
           </span>
         )

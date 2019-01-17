@@ -119,7 +119,7 @@ class Header extends Component {
                                             <span>Work</span>
                                         </HoverLink>
                                     </Link>
-                                    <Link className="page-link" to="/studio" data-linkname="centre">
+                                    <Link className="page-link" to="/practice" data-linkname="centre">
                                         <HoverLink thick="true">
                                             <span>Practice</span>
                                         </HoverLink>

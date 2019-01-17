@@ -16,8 +16,8 @@ class UpdatePageSingle extends Component {
     render() {
         return(
             <div className="update-page-single">
-                <Container fluid={true} className="container" style={{padding: 0}}>
-                    <WorkPageHeader projectTitle={"Test Post"} isUpdate={this.props.isUpdate}></WorkPageHeader>
+                <WorkPageHeader projectTitle={"Test Post"} isUpdate={this.props.isUpdate}></WorkPageHeader>
+                <Container fluid={true} className="container" style={{padding: 0}}>                    
                     <h3 className="text-red reg text-bold padding-top-175">07 January 2019</h3>
                     <h3 className="text-grey reg light padding-top-175 update-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
