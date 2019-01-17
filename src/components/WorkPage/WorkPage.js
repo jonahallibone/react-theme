@@ -57,17 +57,17 @@ class WorkPage extends Component {
       },
       "brand-strategies": {
         title: "Strategy",
-        description: `Brand Strategies expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
+        description: `Our brand strategy work encompasses brand positioning, brand promise, brand voice, brand architecture and brand alignment strategies.`,
         url: "brand-strategies"
       },
       "brand": {
         title: "Identity",
-        description: `Brand identity expresses itself in every touchpoint of a brand. It is a constant symbol of an organizations values and heritage.`,
+        description: `Our brand identity work includes visual identity systems, logomarks, color palettes, typography, icon development, graphic elements and brand guidelines.`,
         url: "brand"
       },
       "digital": {
         title: "Digital",
-        description: `A website is the first place people visit to learn more about a company or product. It provides the means to market and communicate from anywhere in the world.`,
+        description: `Our digital work includes browser-based applications such as websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
         url: "digital"
       },
       "Print": {
@@ -83,7 +83,7 @@ class WorkPage extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     if(this.props.match.params.type) {
       let page = this.pages[this.props.match.params.type];
       this.setState(
@@ -166,13 +166,8 @@ class WorkPage extends Component {
 
   }
 
-  handleClick = (e) => {
-    this.setState({selectedName: e.target.attributes["name"].value})
-  }
-
   getSelected(page) {
     if(this.pages[page].url === this.state.selectedName) { 
-      console.log(this.pages[page].url)
       return true
     }
     else return false;
@@ -184,7 +179,7 @@ class WorkPage extends Component {
         return (
           <span className="filter-option" key={page}>
             <Link to={"/work/" + this.pages[page].url}>
-              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)} onClick={this.handleClick}>{this.pages[page].title == "Work" ? "All " : ""}{this.pages[page].title}</HoverLink>
+              <HoverLink name={this.pages[page].url} selected={this.getSelected(page)}>{this.pages[page].title == "Work" ? "All " : ""}{this.pages[page].title}</HoverLink>
             </Link>
           </span>
         )

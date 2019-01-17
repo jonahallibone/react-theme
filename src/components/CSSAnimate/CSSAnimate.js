@@ -19,7 +19,6 @@ class CSSAnimate extends Component {
 
         this.timeout = setTimeout(() => this.setState({enterExit: "enter"}), delay);
 
-        console.log("mounted")
     }
 
     getClasses() {
