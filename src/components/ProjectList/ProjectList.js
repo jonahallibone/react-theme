@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Container } from 'react-grid-system';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
+
 import SwipeSlider from '../SwipeSlider/SwipeSlider';
+
+import DelayLink from '../DelayLink/DelayLink';
 
 import './ProjectList.css';
 import Button from '../Button/Button';
@@ -127,7 +129,7 @@ class ProjectList extends Component {
                         {this.renderProjects()}
                     </div>
                     <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                        <Link to="/work"><Button arrow className="black-border">More Work</Button></Link>
+                        <DelayLink delay={1000} to="/work"><Button arrow className="black-border">More Work</Button></DelayLink>
                     </div>
                 </Container>
                 <div className="homepage-news">

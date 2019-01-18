@@ -626,11 +626,11 @@ u:hover:before {
     visibility: hidden;
     transform: translateY(100%);
     z-index: 999;
-    transition: .5s ease-in transform, visibility 0s linear .5s;
+    transition: .345s ease-in-out transform, visibility 0s linear .5s;
 }
 
 .transition-curtain.visible {
     visibility: visible;
     transform: translateY(0);
-    transition: .5s ease-in-out transform;
+    transition: .345s ease-in-out transform;
 }

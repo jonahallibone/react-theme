@@ -176,14 +176,15 @@ class WorkPage extends Component {
   handleClick = async (e) => {
 
     let page = e.target.attributes["name"].value;
-    await this.sleep(2000);
+    document.querySelectorAll(".cssanimation").forEach(el => el.classList.remove("enter"))
+    this.setState({selectedName: page })
+    await this.sleep(1000);
 
     document.querySelectorAll(".cssanimation").forEach(el => el.classList.remove("exit"));
     document.querySelectorAll(".cssanimation").forEach(el => el.classList.add("enter"))
 
     this.setState(
       {
-        selectedName: page,
         pageTitle: this.pages[page].title, 
         pageDescription: this.pages[page].description, 
         selectedName: this.pages[page].url

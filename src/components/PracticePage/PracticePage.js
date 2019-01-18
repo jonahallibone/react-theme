@@ -22,7 +22,9 @@ class PracticePage extends Component {
           </div>
 
           <div className="banner-image padding-top-5">
-            <img src="https://s3.amazonaws.com/piscatello/placeholder.jpg"/>
+            <video loop={true} muted controls={false} autoPlay={true} style={{width: "100%", display: "block"}}>
+              <source src="https://s3.amazonaws.com/piscatello/Practice+Page+Animation.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className="top-text padding-top-5">
@@ -58,7 +60,7 @@ class PracticePage extends Component {
                 His past and present clients include The Robin Hood Foundation, New York University, Ronald McDonald House, Starwood Hotels and Resorts, Jean-Georges Management, Metropolitan Transit Authority, Battery Park City Authority, and United States General Services Administration— to name a few.
                 <br/>
                 <br/>
-                Prior to founding Piscatello Design Centre, Piscatello was a designer at Vignelli Associates. In his time there he worked on brand identities including United Colors of Benetton, Ducati Motors and Warner Bros.
+                Prior to founding Piscatello Design Centre, Piscatello was a designer at Vignelli Associates. In his time there he worked on brand identities, signage programs, and publications for the United Colors of Benetton, Dale Chihuly, Ducati Motors, Guggenheim Museum and Warner Bros.
                 <br/>
                 <br/>
                 Piscatello also has experience working on signage and wayfinding projects that are responsible for guiding millions of people on a daily basis. Highlighted projects include Grand Central Terminal, Battery Park City Authority Parks Conservancy and the Great North Eastern Railway in England.
@@ -69,6 +71,33 @@ class PracticePage extends Component {
               </div>
               <div className="image-container sticky">
                 <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
+              </div>
+            </div>
+            <h3 className="reg text-grey padding-top-5">Team</h3>
+            <div className="grid-half">
+              <div className="text-white">
+              <h2 className="text-grey">Rocco Piscatello</h2>
+              <h2 className="text-grey light">Chief Creative Director</h2>
+              </div>
+              <div className="text-white">
+                <h2 className="text-grey">Jonah Allibone</h2>
+                <h2 className="text-grey light">Web Development & Design</h2>
+              </div>
+              <div className="text-white">
+                <h2 className="text-grey">Kimberly Piscatello</h2>
+                <h2 className="text-grey light">Communications & Operations</h2>
+              </div>
+              <div className="text-white">
+                <h2 className="text-grey">Joshua Kessler</h2>
+                <h2 className="text-grey light">Branding, Digital, & Environmental Experiences</h2>
+              </div>
+              <div className="text-white">
+                <h2 className="text-grey">Leandra Tidwell</h2>
+                <h2 className="text-grey light">Branding, Digital, & Environmental Experiences</h2>
+              </div>
+              <div className="text-white">
+                <h2 className="text-grey">Josephine Florance</h2>
+                <h2 className="text-grey light">Branding, Digital, & Environmental Experiences</h2>
               </div>
             </div>
           </Container> 

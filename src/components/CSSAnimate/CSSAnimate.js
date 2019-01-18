@@ -38,11 +38,11 @@ class CSSAnimate extends Component {
         })
     }
 
-    componentWillReceiveProps(newProps) {
-        if(!newProps.mounted) {
-            this.setState({enterExit: "exit"})
-        }
-    }
+    // componentWillReceiveProps(newProps) {
+    //     if(!newProps.mounted) {
+    //         this.setState({enterExit: "exit"})
+    //     }
+    // }
 
     componentWillUnmount() {
         clearTimeout(this.timeout);
