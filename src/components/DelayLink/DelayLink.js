@@ -24,7 +24,11 @@ export default class DelayLink extends React.Component {
   static defaultProps = {
     delay:        0,
     onDelayStart: () => { document.querySelector(".transition-curtain").classList.add("visible") },
-    onDelayEnd:   () => { document.querySelector(".transition-curtain").classList.remove("visible") }
+    onDelayEnd:   () => { 
+        setTimeout(() => {
+            document.querySelector(".transition-curtain").classList.remove("visible") 
+        }, 1000)
+    }
   };
 
   static contextTypes = Link.contextTypes;

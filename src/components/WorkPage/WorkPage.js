@@ -5,6 +5,8 @@ import HoverLink from '../HoverLink/HoverLink';
 import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import posed, { PoseGroup } from 'react-pose';
+import Reveal from 'react-reveal/Reveal';
+
 
 import '../../App.css';
 import './WorkPage.css';
@@ -72,7 +74,7 @@ class WorkPage extends Component {
       },
       "print": {
         title: "Print",
-        description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
+        description: `Our print work encompasses brand stationery, brand announcements, marketing collateral, magazines, books and event posters.`,
         url: "print"
       },
       "signage": {
@@ -215,7 +217,9 @@ class WorkPage extends Component {
 
   renderProjects = () => {
     const template = this.state.projects.map((el, i) => (
+      <Reveal effect="fadeInUp">
         <ProjectContainer project={el} key={i} />
+      </Reveal>
     ))
 
     return template;
@@ -228,7 +232,7 @@ class WorkPage extends Component {
   render() {
     return (
       <section className="transition-page" id="page-work">
-        <div className="option-list text-red">
+        <div className="option-list text-red" style={{whiteSpace: "nowrap"}}>
           <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
             {this.getLinks()}
             <div className="filter-option request-meeting" style={{marginRight: 0}}>
@@ -240,7 +244,7 @@ class WorkPage extends Component {
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
           <Row style={{paddingTop: "13.5rem"}}>
             <Col xs={12} sm={10} md={8} lg={6}  style={{ paddingBottom: "5rem"}}>
-              <CSSAnimate delay="100">
+              <CSSAnimate delay="1100">
                 <h3 className="reg text-black">{this.state.pageTitle}</h3>
                 <h3 className="reg text-grey light padding-top-2">
                   {this.state.pageDescription}

@@ -14,7 +14,7 @@ class Updates extends Component {
     render() {
         return(
             <section className="updates-page">
-                <div className="option-list text-red">
+                <div className="option-list text-red" style={{whiteSpace: "nowrap"}}>
                     <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
                         <span className="filter-option">
                             <Link to={"/update/"}>

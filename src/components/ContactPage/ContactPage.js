@@ -48,10 +48,10 @@ class ContactPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
           <div className="information-grid">
             <div className="info-block">
-              <h3 className="reg text-red">Contact Us</h3>
+              <h3 className="reg text-red">Get in touch</h3>
               <h4 className="light padding-top-2 text-white">
-                Our projects are about collaboration and partnership. Contact us 
-                to learn how we can become an extension to your team.
+                We are ready to lead you into the world of design and 
+                become an extension of your team.
                 <br/><br/>
                 <a href="mailto:projects@piscatello.com"><HoverLink grey="true">projects@piscatello.com</HoverLink></a> <br/>
               </h4>

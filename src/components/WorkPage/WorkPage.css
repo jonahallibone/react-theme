@@ -86,6 +86,7 @@
     z-index: 999;
     transition: .345s ease all;
     transform: translateY(0%);
+    overflow-x: auto;
 }
 
 .option-list.up {

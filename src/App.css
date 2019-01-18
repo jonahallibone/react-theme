@@ -626,11 +626,33 @@ u:hover:before {
     visibility: hidden;
     transform: translateY(100%);
     z-index: 999;
-    transition: .345s ease-in-out transform, visibility 0s linear .5s;
+    transition: 10s ease-in-out transform 5s, visibility 0s linear 10s;
 }
 
 .transition-curtain.visible {
     visibility: visible;
-    transform: translateY(0);
-    transition: .345s ease-in-out transform;
+    transform: translateY(-100%);
+    transition: .345s ease-in-out transform; 
+    animation-name: animateEnterOut;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes animateEnterOut {
+    0% {
+        transform: translateY(100%)
+    }
+
+    30% {
+        transform: translateY(0%)
+    }
+
+    70% {
+        transform: translateY(0%)
+    }
+
+    100% {
+        transform: translateY(-100%)
+    }
 }

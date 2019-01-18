@@ -11,26 +11,28 @@ class PracticePage extends Component {
           <div className="top-text">
             <h3 className="reg text-black text-bold">About Us</h3>
             <h3 className="reg text-grey light padding-top-2">
-              We are an independent multidisciplinary design consultancy.
-              Our work takes place at the intersection of business goals, brand objectives and user intent.
+              We are an independent multidisciplinary design consultancy. 
+              Our work takes place at the intersection of brand, communications and people.
               </h3>
               <h3 className="reg text-grey light padding-top-2">
-              We specialize in developing memorable 
-              brand identities, connections between people and place, and 
-              intelligent-meaningful interactions.
+              Our work takes place at the intersection of business objectives, 
+              brand objectives and user goals. We specialize in developing brand identities, 
+              environmental signage, and digital interactions.
             </h3>
           </div>
 
           <div className="banner-image padding-top-5">
             <video loop={true} muted controls={false} autoPlay={true} style={{width: "100%", display: "block"}}>
-              <source src="https://s3.amazonaws.com/piscatello/Practice+Page+Animation.mp4" type="video/mp4" />
+              <source src="https://s3.amazonaws.com/piscatello/Practice+Page+Animation+2.mp4" type="video/mp4" />
             </video>
           </div>
 
           <div className="top-text padding-top-5">
             <h3 className="reg text-grey light">
-            Our team is composed of experienced strategists, designers and communicators. Each member is 
-            responsible for delivering actionable guidance for our clients and a high level of creativity.
+              Our team is composed of experienced strategists, designers and communicators. 
+              Each member is responsible for delivering actionable guidance for our clients and a high level of creativity.
+              <br/><br/>
+              Our greatest differentiator is our investment and dedication to the projects we are involved in.
             </h3>
           </div>
           <div className="image-grid-2 padding-top-5">
@@ -73,7 +75,7 @@ class PracticePage extends Component {
                 <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
               </div>
             </div>
-            <h3 className="reg text-grey padding-top-5">Team</h3>
+            <h3 className="reg text-grey padding-top-5">Associates</h3>
             <div className="grid-half">
               <div className="text-white">
               <h2 className="text-grey">Rocco Piscatello</h2>

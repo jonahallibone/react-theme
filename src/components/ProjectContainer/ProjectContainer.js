@@ -34,7 +34,7 @@ class ProjectContainer extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener("scroll", this.checkVisibility, {passive: true});
+        // document.addEventListener("scroll", this.checkVisibility, {passive: true});
         this.root.current.addEventListener("mouseenter", this.addHover.bind(this));
         this.root.current.addEventListener("mouseleave", this.removeHover.bind(this) );
 
@@ -59,7 +59,7 @@ class ProjectContainer extends Component {
     }
 
     componentWillUnmount() {
-        document.removeEventListener("scroll", this.checkVisibility, {passive: true});
+        // document.removeEventListener("scroll", this.checkVisibility, {passive: true});
         this.root.current.removeEventListener("mouseenter", this.addHover);
         this.root.current.removeEventListener("mouseleave", this.removeHover) ;
     }
