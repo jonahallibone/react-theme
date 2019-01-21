@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './Practice.css';
 import { Container } from 'react-grid-system';
+import { Link } from "react-router-dom";
+import HoverLink from "../HoverLink/HoverLink";
 
 class PracticePage extends Component {
   render() {
@@ -11,8 +13,9 @@ class PracticePage extends Component {
           <div className="top-text">
             <h3 className="reg text-black text-bold">About Us</h3>
             <h3 className="reg text-grey light padding-top-2">
-              We are an independent multidisciplinary design consultancy. 
-              Our work takes place at the intersection of brand, communications and people.
+                For nearly 25 years, we have specialized in designing 
+                and developing brand identities signage programs, and
+                digital experiences for clients and cities worldwide.
               </h3>
               <h3 className="reg text-grey light padding-top-2">
               Our work takes place at the intersection of business objectives, 
