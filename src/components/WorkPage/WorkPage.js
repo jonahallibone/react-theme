@@ -268,4 +268,57 @@ class WorkPage extends Component {
   }
 }
 
+const projects = [
+  {
+      title: "LostTribe Theatre Company",
+      thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
+      type: "Branding",
+      tagline: "A brand new company"
+  },
+  {
+      title: "Nomadx Solutions",
+      thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+      type: "Branding",
+      tagline: "Identifying a new start up"
+  },
+  {
+      title: "Timeless Massimo Vignelli",
+      thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
+      type: "Exibition",
+      tagline: "A brand new company"
+  },
+  {
+      title: "United States Courthouse",
+      thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+      type: "Signage and Wayfinding",
+      tagline: "Navigating a complex environment"
+  },
+  {
+    title: "LostTribe Theatre Company",
+    thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
+    type: "Branding",
+    tagline: "A brand new company"
+},
+{
+    title: "Nomadx Solutions",
+    thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
+    type: "Branding",
+    tagline: "Identifying a new start up"
+},
+{
+    title: "Timeless Massimo Vignelli",
+    thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
+    type: "Exibition",
+    tagline: "A brand new company"
+},
+{
+    title: "United States Courthouse",
+    thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
+    type: "Signage and Wayfinding",
+    tagline: "Navigating a complex environment"
+}
+]
+
+export { projects }
+
 export default WorkPage;

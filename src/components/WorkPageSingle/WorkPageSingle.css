@@ -47,6 +47,7 @@
 
 .project-container {
     transition: .345s ease opacity;
+    padding-bottom: 5rem;
 }
 
 .new-project-link {

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import WorkPageHeader from '../WorkPageHeader/WorkPageHeader';
 import { Container, Row, Col } from 'react-grid-system';
-
+import { projects } from "../WorkPage/WorkPage";
 import '../../App.css';
 import './WorkPageSingle.css';
+import Reveal from 'react-reveal/Reveal';
+import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 class WorkPageSingle extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ class WorkPageSingle extends Component {
     this.state = {
       post: null,
       transition: false,
+      projects: projects,
       projectTitle: !this.props.isUpdate ? "Nomadx Solutions" : "Rocco Piscatello to speak at the University of New Haven"
     }
   }
@@ -194,6 +197,16 @@ class WorkPageSingle extends Component {
     )
   }
 
+  renderProjects = () => {
+    const template = this.state.projects.map((el, i) => (
+      <Reveal effect="fadeInUp">
+        <ProjectContainer project={el} key={i} />
+      </Reveal>
+    ))
+
+    return template;
+  }
+
   render() {
     return (
       <div className={"work-page-single " + this.getBodyClass()}>
@@ -205,23 +218,15 @@ class WorkPageSingle extends Component {
             </Container>
           </section>
         </div>
-        <div className="new-project-link" ref={this.newProject} onClick={this.loadNext}>
-          <Container className="container" fluid={true} style={{padding: 0}}>
-              <h4 className="text-red padding-top-5" style={{opacity: this.state.transition ? 0 : 1}}>{this.props.isUpdate ? "Next Update" : "Next Project"}</h4>
-          </Container>
-          <WorkPageHeader projectTitle="Fashionhaus" isUpdate={this.props.isUpdate}></WorkPageHeader>
-          <Container className="container" fluid={true} style={{padding: 0}}>
-            <Row className="">
-              <Col xs={12} sm={8}>
-                <h3 className="light reg text-grey">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-                  sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-                  vel purus quis, pretium feugiat odio.
-                </h3>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <section id="work-list" style={{paddingTop: "2rem"}}>
+          <div id="project-list">
+            <Container fluid={true} className="container" style={{padding: 0}}>
+              <div className="project-grid">
+                  {this.renderProjects()}
+              </div>
+            </Container>
+          </div>
+        </section>
       </div>
     );
   }
