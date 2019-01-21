@@ -2,17 +2,17 @@
     min-height: 100%;
     padding-top: 14rem;
     padding-bottom: 5rem;
-    background-color: #FFF;
+    background-color: #000;
 }
 
 #project-content {
     min-height: 100vh;
-    background-color: #FFF;
+    background-color: #000;
     padding-top: 1rem;
 }
 
 .single-project-banner {
-    background-color: #DDD;
+    background-color: #000;
 }
 
 .single-project-banner:not(:first-of-type) {

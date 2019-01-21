@@ -1,5 +1,5 @@
 #featured-header {
-    background-color: #FFF;
+    background-color: #000;
     height: 75px;
     position: sticky;
     top: 75px;
@@ -23,7 +23,7 @@
 }
 
 #featured-header.shrink {
-    background-color: #FFF;
+    background-color: #000;
 }
 
 #featured-header.shrink .project-title {

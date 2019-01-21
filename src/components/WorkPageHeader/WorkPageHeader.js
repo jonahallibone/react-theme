@@ -36,22 +36,22 @@ class WorkPageHeader extends Component {
             <section onClick = {this.props.onclick}id="featured-header" className={this.props.isUpdate === true ? "bg-dark-grey" : ""}>
                 <div className="title-row">
                     <div className="side">
-                        <h3 className="reg text-black project-title">{this.props.projectTitle}</h3><br/>
+                        <h3 className="reg text-white project-title">{this.props.projectTitle}</h3><br/>
                     </div>
                     <div className="side" style={{justifyContent: "flex-end"}}>
-                        <div style={{color: '#999'}}>
+                        <div style={{color: '#FFF'}}>
                             <Icon icon={socialFacebook} size="25" />
                         </div>
-                        <div style={{color: '#999'}}>
+                        <div style={{color: '#FFF'}}>
                             <Icon icon={socialTwitter} size="25" />
                         </div>
-                        <div style={{color: '#999'}}>
+                        <div style={{color: '#FFF'}}>
                             <Icon icon={socialLinkedin} size="25" />
                         </div>
-                        <div style={{color: '#999'}}>
+                        <div style={{color: '#FFF'}}>
                             <Icon icon={iosEmail} size="25" />
                         </div>  
-                        <div style={{color: '#999'}}>
+                        <div style={{color: '#FFF'}}>
                             <Icon icon={link} size="28" />     
                         </div>
                     </div>
