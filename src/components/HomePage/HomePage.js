@@ -12,7 +12,8 @@ class HomePage extends Component {
     
     constructor(props){ 
         super(props);
-        this.random = Math.floor(Math.random() * 2);
+        // this.random = Math.floor(Math.random() * 2);
+        this.random = 1;
         this.state = { isVisible: false };
         this.setTimeout = null;
     }
