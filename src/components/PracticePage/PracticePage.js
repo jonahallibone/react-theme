@@ -78,7 +78,7 @@ class PracticePage extends Component {
                 <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
               </div>
             </div>
-            <h3 className="reg text-grey padding-top-5">Associates</h3>
+            <h3 className="reg text-grey" style={{paddingTop: "10rem"}}>Associates</h3>
             <div className="grid-half">
               <div className="text-white">
               <h2 className="text-grey">Rocco Piscatello</h2>
