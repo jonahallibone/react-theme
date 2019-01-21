@@ -9,7 +9,7 @@
     "card-vibes": "0.0.3",
     "flickity": "^2.1.2",
     "imagesloaded": "^4.1.4",
-    "mobx": "^5.8.0",
+    "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
     "rc-scroll-anim": "^2.5.6",
     "react": "^16.7.0",
@@ -45,10 +45,10 @@
     "eject": "react-app-rewired eject"
   },
   "devDependencies": {
-    "eslint": "^5.12.0",
+    "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.12.3"
+    "eslint-plugin-react": "^7.12.4"
   }
 }

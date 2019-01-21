@@ -14,12 +14,12 @@ class Footer extends Component {
                             <a className="light pdc-copy">
                                Piscatello Design Centre, 1997 - 2018
                             </a>
-                            <a className="light">
-                            <HoverLink grey-black="true">Download our Profile</HoverLink>
-                            </a>
+                            <a className="light"><HoverLink grey-black="true">Subscribe to our Updates</HoverLink></a>
                         </div>
                         <div className="column-right break">
-                            <a className="light"><HoverLink grey-black="true">Subscribe to our Newsletter</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Twitter</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">LinkedIn</HoverLink></a>
                             {/* <a className="light"><HoverLink grey-black="true">Careers</HoverLink></a> */}
                             <Link className="light" to="/contact"><HoverLink grey-black="true">Contact</HoverLink></Link>
                         </div>
