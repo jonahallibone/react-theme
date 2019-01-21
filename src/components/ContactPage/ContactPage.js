@@ -50,7 +50,7 @@ class ContactPage extends Component {
             <div className="info-block">
               <h3 className="reg text-red">Partner with us</h3>
               <h4 className="light padding-top-2 text-white">
-                Get in touch with us to learn how we can help you and become an extension of your team.
+                Get in touch learn how we can help you and become an extension of your team.
                 <br/><br/>
                 <a href="mailto:projects@piscatello.com"><HoverLink grey="true">projects@piscatello.com</HoverLink></a> <br/>
               </h4>
