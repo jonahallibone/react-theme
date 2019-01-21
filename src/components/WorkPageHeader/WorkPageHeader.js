@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import './WorkPageHeader.css';
 import Icon from 'react-icons-kit';
-import {socialFacebook, socialTwitter, socialLinkedin, iosEmail, link} from 'react-icons-kit/ionicons'
+import {socialFacebook, socialTwitter, socialLinkedin, iosEmail, link, androidShareAlt} from 'react-icons-kit/ionicons'
 
 class WorkPageHeader extends Component {
 
@@ -39,20 +39,30 @@ class WorkPageHeader extends Component {
                         <h3 className="reg text-white project-title">{this.props.projectTitle}</h3><br/>
                     </div>
                     <div className="side" style={{justifyContent: "flex-end"}}>
-                        <div style={{color: '#FFF'}}>
-                            <Icon icon={socialFacebook} size="25" />
-                        </div>
-                        <div style={{color: '#FFF'}}>
-                            <Icon icon={socialTwitter} size="25" />
-                        </div>
-                        <div style={{color: '#FFF'}}>
-                            <Icon icon={socialLinkedin} size="25" />
-                        </div>
-                        <div style={{color: '#FFF'}}>
-                            <Icon icon={iosEmail} size="25" />
-                        </div>  
-                        <div style={{color: '#FFF'}}>
-                            <Icon icon={link} size="28" />     
+                        <div className="social-hover" style={{display: "flex"}}>
+                            <div className="social-icon" style={{display: "flex"}}>
+                                <span style={{color: "#FFF", fontSize: "1.15rem", fontWeight: "bold"}}>Share</span>
+                                <div style={{color: '#FFF', marginLeft: "1rem"}}>
+                                    <Icon icon={androidShareAlt} size="25" />
+                                </div>
+                            </div>
+                            <div className="social-list" style={{display: "flex", justifyContent: "flex-end"}}>
+                                <div style={{color: '#FFF'}}>
+                                    <Icon icon={socialFacebook} size="25" />
+                                </div>
+                                <div style={{color: '#FFF'}}>
+                                    <Icon icon={socialTwitter} size="25" />
+                                </div>
+                                <div style={{color: '#FFF'}}>
+                                    <Icon icon={socialLinkedin} size="25" />
+                                </div>
+                                <div style={{color: '#FFF'}}>
+                                    <Icon icon={iosEmail} size="25" />
+                                </div>  
+                                <div style={{color: '#FFF'}}>
+                                    <Icon icon={link} size="28" />     
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

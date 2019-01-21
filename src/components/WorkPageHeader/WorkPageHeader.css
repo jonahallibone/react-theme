@@ -10,6 +10,7 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 @media all and (max-width: 1440px) {
@@ -49,7 +50,24 @@
     flex: 0 0 100%;
 }
 
-#featured-header .side:last-of-type > div {
+#featured-header .social-list {
+    transform: translateX(100%);
+    transition: .345s ease all;
+    background-color: #000;
+    opacity: 0;
+}
+
+.social-icon {
+    position: absolute;
+    right: 0;
+}
+
+#featured-header .social-hover:hover .social-list {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#featured-header .side:last-of-type .social-list > div {
     margin-left: 1.5rem;
 }
 
