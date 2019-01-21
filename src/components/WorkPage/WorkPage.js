@@ -69,7 +69,7 @@ class WorkPage extends Component {
       },
       "digital": {
         title: "Digital",
-        description: `Our digital work includes browser-based applications such as websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
+        description: `Our digital work includes websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
         url: "digital"
       },
       "print": {
