@@ -51,7 +51,7 @@ class HomePage extends Component {
                                                 Whether you’re established or just starting, we can
                                             </div> 
                                             <div>
-                                                help your company grow through <Link to="/work"><HoverLink grey="true">the power of design.</HoverLink></Link>
+                                                help your organization grow through <Link to="/work"><HoverLink grey="true">the power of design.</HoverLink></Link>
                                             </div>
                                         </CSSAnimate>
                                 ]}
