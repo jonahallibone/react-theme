@@ -47,19 +47,19 @@ class WorkPageHeader extends Component {
                                 </div>
                             </div>
                             <div className="social-list" style={{display: "flex", justifyContent: "flex-end"}}>
-                                <div style={{color: '#FFF'}}>
+                                <div style={{color: '#FFF'}} className="share-icon">
                                     <Icon icon={socialFacebook} size="25" />
                                 </div>
-                                <div style={{color: '#FFF'}}>
+                                <div style={{color: '#FFF'}} className="share-icon">
                                     <Icon icon={socialTwitter} size="25" />
                                 </div>
-                                <div style={{color: '#FFF'}}>
+                                <div style={{color: '#FFF'}} className="share-icon">
                                     <Icon icon={socialLinkedin} size="25" />
                                 </div>
-                                <div style={{color: '#FFF'}}>
+                                <div style={{color: '#FFF'}} className="share-icon">
                                     <Icon icon={iosEmail} size="25" />
                                 </div>  
-                                <div style={{color: '#FFF'}}>
+                                <div style={{color: '#FFF'}} className="share-icon">
                                     <Icon icon={link} size="28" />     
                                 </div>
                             </div>

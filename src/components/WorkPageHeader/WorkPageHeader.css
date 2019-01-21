@@ -52,7 +52,7 @@
 
 #featured-header .social-list {
     transform: translateX(100%);
-    transition: .345s ease all;
+    transition: .345s ease-in-out all;
     background-color: #000;
     opacity: 0;
 }
@@ -60,6 +60,12 @@
 .social-icon {
     position: absolute;
     right: 0;
+}
+
+.share-icon:hover {
+    color: #ff4350 !important;
+    transition: .345s ease-in-out;
+    cursor: pointer;
 }
 
 #featured-header .social-hover:hover .social-list {
