@@ -53,7 +53,7 @@ class WorkPage extends Component {
     this.pages = {
       "all": {
         title: "Work",
-        description: `We create work that builds business value and enhances life for people and the places they inhabit`,
+        description: `We create work that builds business value and enhances life for people and the places they inhabit.`,
         url: "all"
 
       },
