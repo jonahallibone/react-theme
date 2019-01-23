@@ -43,7 +43,7 @@ class PracticePage extends Component {
               <img src="https://s3.amazonaws.com/piscatello/DSC_4375.jpg" />
             </div>
             <div className="image-container">
-              <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" />
+              <img src="https://s3.amazonaws.com/piscatello/practice-page-empty.jpg" />
             </div>
           </div>
           <div className="image-container padding-top-5">

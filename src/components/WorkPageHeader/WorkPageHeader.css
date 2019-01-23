@@ -1,5 +1,5 @@
 #featured-header {
-    background-color: #000;
+    background-color: transparent;
     height: 75px;
     position: sticky;
     top: 75px;
@@ -20,11 +20,20 @@
 }
 
 #featured-header .project-title {
+    color: #FFF;
+}
+
+.update-page-single #featured-header .project-title {
     transition: .345s ease all;
+    color: #000;
 }
 
 #featured-header.shrink {
     background-color: #000;
+}
+
+.update-page-single #featured-header.shrink {
+    background-color: #FFF;
 }
 
 #featured-header.shrink .project-title {

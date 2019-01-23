@@ -53,42 +53,32 @@ class Updates extends Component {
                     <div className="updates-quick-grid">
                         <div className="update-item">
                             <h3 className="reg">
-                                <HoverLink grey-black="true">09 February</HoverLink>
+                                <HoverLink black="true">23 February</HoverLink>
                             </h3>
-                            <h5 className="text-bold padding-top-175">Reflections on the 10 Qualities of Design Exhibition</h5>
-                            <h5 className="text-grey light padding-top-175">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
+                            <h5 className="light text-grey padding-top-175">Reflections on Ten Qualities of Design Exhibition at the University of New Haven Extended to Saturday, 23 February 2019.</h5>
+                            <h5 className="text-red">Exhibition</h5>
+                        </div>
+                        <div className="update-item">
+                            <h3 className="reg">
+                                <HoverLink black="true">22 January</HoverLink>
+                            </h3>
+                            <h5 className="light text-grey padding-top-175">
+                                Piscatello Design Centre completes comprehensive wayfinding and donor signage program for Saint David’s School.
                             </h5>
                             <h5 className="text-red">Exhibition</h5>
                         </div>
                         <div className="update-item">
                             <h3 className="reg">
-                                <HoverLink grey-black="true">13 March</HoverLink>
+                                <HoverLink black="true">15 December</HoverLink>
                             </h3>
-                            <h5 className="text-bold padding-top-175">Timeless Massimo Vignelli: International</h5>
-                            <h5 className="text-grey light padding-top-175">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
-                            </h5>
-                            <h5 className="text-red">Exhibition</h5>
-                        </div>
-                        <div className="update-item">
-                            <h3 className="reg">
-                                <HoverLink grey-black="true">28 April</HoverLink>
-                            </h3>
-                            <h5 className="text-bold padding-top-175">Lorem ipsum dolor sit amet consectetur</h5>
-                            <h5 className="text-grey light padding-top-175">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
-                            </h5>
+                            <h5 className="light text-grey padding-top-175">Rocco Piscatello’s “Poster Works for FIT” publication Featured on Mohawk Connects.</h5>
                             <h5 className="text-red">Event</h5>
                         </div>
                         <div className="update-item">
                             <h3 className="reg">
-                                <HoverLink grey-black="true">07 May</HoverLink>
+                                <HoverLink black="true">12 November</HoverLink>
                             </h3>
-                            <h5 className="text-bold padding-top-175">Lorem ipsum dolor sit amet consectetur</h5>
-                            <h5 className="text-grey light padding-top-175">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae odio porttitor, faucibus.
-                            </h5>
+                            <h5 className="light text-grey padding-top-175">Rocco Piscatello to lecture at the University of New Haven on Thursday, 12 November.</h5>
                             <h5 className="text-red">Exhibition</h5>
                         </div>
                     </div>

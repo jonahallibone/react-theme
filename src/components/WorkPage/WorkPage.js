@@ -5,7 +5,7 @@ import HoverLink from '../HoverLink/HoverLink';
 import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import posed, { PoseGroup } from 'react-pose';
-import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Reveal';
 
 
 import '../../App.css';
@@ -217,9 +217,9 @@ class WorkPage extends Component {
 
   renderProjects = () => {
     const template = this.state.projects.map((el, i) => (
-      <Reveal effect="fadeInUp">
-        <ProjectContainer project={el} key={i} />
-      </Reveal>
+      <Fade bottom key={i}>
+        <ProjectContainer project={el} />
+      </Fade>
     ))
 
     return template;

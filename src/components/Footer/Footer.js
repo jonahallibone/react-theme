@@ -18,8 +18,8 @@ class Footer extends Component {
                         </div>
                         <div className="column-right break">
                             <a className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>
-                            <a className="light"><HoverLink grey-black="true">Twitter</HoverLink></a>
                             <a className="light"><HoverLink grey-black="true">LinkedIn</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Twitter</HoverLink></a>
                             {/* <a className="light"><HoverLink grey-black="true">Careers</HoverLink></a> */}
                             <Link className="light" to="/contact"><HoverLink grey-black="true">Contact</HoverLink></Link>
                         </div>
