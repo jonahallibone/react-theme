@@ -54,3 +54,23 @@
     transition: .345s ease transform .345s;
     cursor: pointer;
 }
+
+/*** Drop Down ***/
+
+.drop-down {
+    
+}
+
+
+
+.list-row {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    border-top: 1px solid #999;
+    width: 50%;
+    justify-content: space-between;
+}
+.list-row:last-of-type {
+    border-bottom: 1px solid #999;
+}

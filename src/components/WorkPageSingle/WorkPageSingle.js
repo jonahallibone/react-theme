@@ -6,6 +6,8 @@ import '../../App.css';
 import './WorkPageSingle.css';
 import Reveal from 'react-reveal/Reveal';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
+import Icon from 'react-icons-kit';
+import {iosPlusEmpty} from 'react-icons-kit/ionicons/iosPlusEmpty';
 
 class WorkPageSingle extends Component {
   constructor(props) {
@@ -97,35 +99,42 @@ class WorkPageSingle extends Component {
     },1000)
   }
 
+  getDropDown() {
+    return(
+      <div> 
+          <div className="drop-down">
+            <ul>
+              <li className="list-row">                
+                <h2 className="light text-white">Identity</h2>
+                <div style={{color: "#FFF" }} className="share-icon">
+                    <Icon icon={iosPlusEmpty} size="22" />
+                </div>
+              </li>
+              <li className="list-row">
+                <h2 className="light text-white">Digital</h2>
+                <div style={{color: "#FFF" }} className="share-icon">
+                    <Icon icon={iosPlusEmpty} size="22" />
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    )
+  }
+
   
   getProjectPost() {
     return(
       <div>
         <Row>
           <Col xs={12} sm={8}>
-            <h3 className="light reg text-grey">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio.
-            </h3>
+            <h2 className="light text-grey" style={{marginTop: "-1rem"}}>
+              Denver, Colorado
+            </h2>
           </Col>
         </Row>
         <div className="single-project-banner">
             <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/> 
-        </div>
-        <div className="single-project-banner-description">
-          <Row>
-            <Col xs={12} sm={8} md={6}>
-              <h2 className="light text-grey padding-top-15 padding-btm-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
-              id molestie nec, gravida vel erat. Phasellus imperdiet fermentum felis, non viverra 
-              erat efficitur eu. Nulla interdum elementum posuere. Donec iaculis metus 
-              ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue.
-              </h2>
-            </Col>
-          </Row>
         </div>
         <div className="single-project-grid">
           <div className="item">
@@ -141,57 +150,22 @@ class WorkPageSingle extends Component {
             <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt="tote" />
           </div>
         </div>
-      </div>
-    )
-  }
-
-  getUpdatePost() {
-    return(
-      <div>
-        <Row>
-          <Col xs={12} sm={8}>
-            <h3 className="light reg text-grey">
+        <div className="single-project-banner-description">
+          <Row className="padding-top-5">
+            <Col xs={12} xs={6} sm={6} md={6}>
+              {this.getDropDown()}
+            </Col>
+            <Col xs={12} xs={6} sm={6} md={6}>
+              <h2 className="light text-grey padding-btm-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
               sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio.
-            </h3>
-          </Col>
-        </Row>
-        <div className="single-project-grid padding-top-5">
-          <div className="item">
-            <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_1.jpg" alt="Color Guide" />
-          </div>
-          <div className="item">
-            <img src="https://s3.amazonaws.com/piscatello/RoccoPiscatello_NewHaven_2.jpg" alt="letterhead" />
-          </div>
-          <div className="item" style={{backgroundColor: 'transparent'}}>
-            <h2 className="light text-grey">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
-              <br/><br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
-            </h2>
-          </div>
-          <div className="item" style={{backgroundColor: 'transparent'}}>
-            <h2 className="light text-grey">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Lorem ipsum dolor sit amet.
-            </h2>
-          </div>
-          <div className="item">
-            <img src="https://s3.amazonaws.com/piscatello/rpINSTA+copy.jpg" alt="Color Guide" />
-          </div>
-          
+              vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
+              id molestie nec, gravida vel erat. Phasellus imperdiet fermentum felis, non viverra 
+              erat efficitur eu. Nulla interdum elementum posuere. Donec iaculis metus 
+              ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue.
+              </h2>
+            </Col>
+          </Row>
         </div>
       </div>
     )
@@ -214,7 +188,7 @@ class WorkPageSingle extends Component {
           <WorkPageHeader projectTitle={this.state.projectTitle} isUpdate={this.props.isUpdate}></WorkPageHeader>
           <section id="project-content" className={this.getBodyClass()}>
             <Container className="container" fluid={true} style={{padding: 0}}>
-              {this.props.isUpdate ? this.getUpdatePost() : this.getProjectPost()}
+               {this.getProjectPost()}
             </Container>
           </section>
         </div>

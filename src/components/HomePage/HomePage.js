@@ -49,10 +49,10 @@ class HomePage extends Component {
                                 {this.state.isVisible && this.random == 1 && [
                                         <CSSAnimate key="i" delay="1000">
                                             <div>
-                                                Whether you’re established or just starting, we can
+                                                Whether you’re established or just starting, we
                                             </div> 
                                             <div>
-                                                help your organization grow through <Link to="/work"><HoverLink grey="true">the power of design.</HoverLink></Link>
+                                                can help your organization grow through <Link to="/work"><HoverLink grey="true">design.</HoverLink></Link>
                                             </div>
                                         </CSSAnimate>
                                 ]}

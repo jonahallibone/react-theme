@@ -4,38 +4,87 @@ import './Practice.css';
 import { Container } from 'react-grid-system';
 import { Link } from "react-router-dom";
 import HoverLink from "../HoverLink/HoverLink";
+import { throws } from 'assert';
+import { styler, tween, easing } from 'popmotion'
+import { interpolate } from "flubber";
 
 class PracticePage extends Component {
+
+  constructor(props) {
+    super(props)
+    this.timeout = null;
+    this.video = React.createRef();
+    this.morpher = React.createRef();
+    
+  }
+
+  componentDidMount() {
+    document.addEventListener("scroll", this.handleScroll);
+
+
+    const triangle = "M144 0L287.76 249H0.239777L144 0Z";
+    const circle = "M0,127.5a127.5,127.5 0 1,0 255,0a127.5,127.5 0 1,0 -255,0";
+    const shape = styler(this.morpher.current);
+    console.log(this.morpher.current);
+    
+    tween({
+      duration: 700,
+      ease: easing.easeInOut,
+      flip: Infinity
+    }).pipe(interpolate(circle, triangle, { maxSegmentLength: 2 }))
+      .start(shape.set('d'));
+    
+  }
+
+  handleScroll = () => {
+    // let top = this.video.current.getBoundingClientRect().top 
+  }
+
+  componentWillUnmount() {
+    // document.removeEventListener("scroll", this.handleScroll);
+    // document.body.style.overflow = "auto";
+  }
   render() {
     return (
       <div className="page-practice">
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-            <h3 className="reg text-black text-bold">About Us</h3>
+            <h3 className="reg text-black text-bold">About</h3>
             <h3 className="reg text-grey light padding-top-2">
-                For nearly 25 years, we have specialized in designing 
-                and developing brand identities signage programs, and
-                digital experiences for clients and cities worldwide.
+              Piscatello Design Centre is a New York-based design consultancy 
+              that is committed to creating informative and meaningful connections 
+              between organizations and people. Our goal is to create memorable brands 
+              and places that inspire and delight their audiences.
               </h3>
-              <h3 className="reg text-grey light padding-top-2">
-              Our work takes place at the intersection of business objectives, 
-              brand objectives and user goals. We specialize in developing brand identities, 
-              environmental signage, and digital interactions.
-            </h3>
           </div>
 
-          <div className="banner-image padding-top-5">
-            <video loop={true} muted controls={false} autoPlay={true} style={{width: "100%", display: "block"}}>
-              <source src="https://s3.amazonaws.com/piscatello/Practice+Page+Animation+2.mp4" type="video/mp4" />
-            </video>
+          <div className="animated-scroll-video">
+            <div className="sticky-scroll-container">
+            "hello"
+            </div>
+            <div className="sticky-scroll-container">
+            {/* <video controls={false} style={{width: "100%"}} ref={this.video}>
+              <source src="https://s3.amazonaws.com/piscatello/Shape-Morph-Practice-Animation.mp4" type="video/mp4"/>
+            </video> */}
+
+              <div className="morpher">
+                <svg viewBox="0 0 400 400" style={{height: "600px", width: "600px"}}>
+                  <path ref={this.morpher} />
+                </svg>
+              </div>
+            </div>
           </div>
 
           <div className="top-text padding-top-5">
-            <h3 className="reg text-grey light">
-              Our team is composed of experienced strategists, designers and communicators. 
-              Each member is responsible for delivering actionable guidance for our clients and a high level of creativity.
+            <h3 className="reg text-black text-bold">Team</h3>
+            <h3 className="reg text-grey light padding-top-2">
+              Our team is composed of experienced strategists, designers, and 
+              communicators. Led by principal Rocco Piscatello, each member is 
+              responsible for delivering actionable guidance for our clients and 
+              a high level of creativity.
               <br/><br/>
-              Our greatest differentiator is our investment and dedication to the projects we are involved in.
+              Our greatest differentiator is the commitment we make to every 
+              project and our zeal to deliver excellent client services.
             </h3>
           </div>
           <div className="image-grid-2 padding-top-5">

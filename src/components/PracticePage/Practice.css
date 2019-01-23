@@ -62,3 +62,25 @@
     padding-top: 1rem;
     border-top: 1px solid #999;
 }
+
+/*** Animated shit ***/
+
+
+.animated-scroll-video {
+    height: 300vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+}
+
+.sticky-scroll-container {
+    display: flex;
+    max-height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 70px;
+}
+
+path {
+    fill: black;
+}

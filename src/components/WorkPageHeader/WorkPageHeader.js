@@ -42,7 +42,9 @@ class WorkPageHeader extends Component {
             <section onClick = {this.props.onclick}id="featured-header">
                 <div className="title-row">
                     <div className="side">
-                        <h3 className="reg project-title">{this.props.projectTitle}</h3><br/>
+                        <h1 className="reg project-title">
+                            {this.props.projectTitle}
+                        </h1><br/>
                     </div>
                     <div className="side" style={{justifyContent: "flex-end"}}>
                         <div className="social-hover" style={{display: "flex"}}>
