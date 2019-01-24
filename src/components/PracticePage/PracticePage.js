@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 import './Practice.css';
 import { Container } from 'react-grid-system';
-import { Link } from "react-router-dom";
-import HoverLink from "../HoverLink/HoverLink";
-import { throws } from 'assert';
 import { styler, tween, easing } from 'popmotion'
 import { interpolate } from "flubber";
+import Fade from 'react-reveal/Fade';
 
+const triangle = "M144 0L287.76 249H0.239777L144 0Z";
+const circle = "M0,127.5a127.5,127.5 0 1,0 255,0a127.5,127.5 0 1,0 -255,0";
+const rect = "M5 5H244V244H5V124.5V5Z"
 class PracticePage extends Component {
 
   constructor(props) {
@@ -15,33 +16,90 @@ class PracticePage extends Component {
     this.timeout = null;
     this.video = React.createRef();
     this.morpher = React.createRef();
-    
+
+    this.shape = "";    
+
+    this.currentShape = "";
   }
 
   componentDidMount() {
     document.addEventListener("scroll", this.handleScroll);
 
 
-    const triangle = "M144 0L287.76 249H0.239777L144 0Z";
-    const circle = "M0,127.5a127.5,127.5 0 1,0 255,0a127.5,127.5 0 1,0 -255,0";
-    const shape = styler(this.morpher.current);
-    console.log(this.morpher.current);
     
-    tween({
-      duration: 700,
-      ease: easing.easeInOut,
-      flip: Infinity
-    }).pipe(interpolate(circle, triangle, { maxSegmentLength: 2 }))
-      .start(shape.set('d'));
+    this.shape = styler(this.morpher.current);
+    console.log(this.morpher.current);
     
   }
 
+  setTriangle() {
+    tween({
+      duration: 500,
+      ease: easing.easeInOut,
+      flip: 0
+    }).pipe(interpolate(rect, triangle, { maxSegmentLength: 2 }))
+      .start(this.shape.set('d'));
+  }
+
+  setSquare() {
+    if(this.currentShape == "triangle") {
+      tween({
+        duration: 500,
+        ease: easing.easeInOut,
+        flip: 0
+      }).pipe(interpolate(triangle, rect, { maxSegmentLength: 2 }))
+        .start(this.shape.set('d'));
+    }
+
+    else {
+      tween({
+        duration: 500,
+        ease: easing.easeInOut,
+        flip: 0
+      }).pipe(interpolate(circle, rect, { maxSegmentLength: 2 }))
+        .start(this.shape.set('d'));
+    }
+    
+  }
+
+  setCircle() {
+    tween({
+      duration: 500,
+      ease: easing.easeInOut,
+      flip: 0
+    }).pipe(interpolate(rect, circle, { maxSegmentLength: 2 }))
+      .start(this.shape.set('d'));
+  }
+
+
   handleScroll = () => {
-    // let top = this.video.current.getBoundingClientRect().top 
+    let triPos = document.querySelector(".scroll-container").getBoundingClientRect().top;
+    let sqPos = document.querySelector(".scroll-container.two").getBoundingClientRect().top;
+    let circPos = document.querySelector(".scroll-container:last-of-type").getBoundingClientRect().top;
+
+    
+    if(triPos >= 0 && this.currentShape !== "triangle" && this.currentShape=="square") {
+      this.setTriangle();
+      this.currentShape = "triangle";
+      return;
+    }
+
+    else if(circPos <= window.outerHeight * .25 && sqPos <= window.outerHeight * .75 && this.currentShape != "circle") {
+      this.setCircle();
+      this.currentShape = "circle";
+      return;
+    }
+    
+    else if(sqPos <= window.outerHeight * .25 && sqPos >=( window.outerHeight * .35) * -1 && this.currentShape !== "square") {
+      this.setSquare();
+      this.currentShape = "square";
+      return;
+    }
+
   }
 
   componentWillUnmount() {
-    // document.removeEventListener("scroll", this.handleScroll);
+    document.removeEventListener("scroll", this.handleScroll);
     // document.body.style.overflow = "auto";
   }
   render() {
@@ -59,19 +117,57 @@ class PracticePage extends Component {
           </div>
 
           <div className="animated-scroll-video">
-            <div className="sticky-scroll-container">
-            "hello"
+            <div>
+              <Fade>
+                <div className="scroll-container">
+                  <h3 className="reg text-black text-bold">Brand</h3>
+                  <h3 className="reg text-grey light padding-top-2">
+                      A brand is more than a logo, an identity, or a product. 
+                      A brand is a sum of infinite experiences and interactions 
+                      that can be felt by consumers, users, and visitors. Every 
+                      touchpoint matters-- and we get that. We design with the 
+                      concept of brand in mind in order to create timeless solutions 
+                      that accommodate growth and change--so a company can develop, 
+                      respond, and shift with time.
+                  </h3>
+                </div>
+              </Fade>
+              <Fade>
+                <div className="scroll-container two">
+                  <h3 className="reg text-black text-bold">Communication</h3>
+                  <h3 className="reg text-grey light padding-top-2">
+                  Communication is at the core of consideration when we begin 
+                  the design process. We help to achieve our clients’ 
+                  communication goals by analysing , structuring, and planning 
+                  solutions that are tailored to their specific purposes. Our 
+                  work operates across a growing number of communication channels.
+                    </h3>
+                </div>
+              </Fade>
+              <Fade>
+                <div className="scroll-container">
+                  <h3 className="reg text-black text-bold">People</h3>
+                  <h3 className="reg text-grey light padding-top-2">
+                  At the touchpoints of the experiences and interactions 
+                  that we create are the visitors, users, and consumers 
+                  of the companies who hire us. The design solutions that 
+                  we arrive at are curated specifically to meet the expectations 
+                  of these people.
+                    </h3>
+                </div>
+              </Fade>
             </div>
             <div className="sticky-scroll-container">
             {/* <video controls={false} style={{width: "100%"}} ref={this.video}>
               <source src="https://s3.amazonaws.com/piscatello/Shape-Morph-Practice-Animation.mp4" type="video/mp4"/>
             </video> */}
-
-              <div className="morpher">
-                <svg viewBox="0 0 400 400" style={{height: "600px", width: "600px"}}>
-                  <path ref={this.morpher} />
-                </svg>
-              </div>
+              <Fade bottom>
+                <div className="morpher">
+                  <svg viewBox="-22.5 -22.5 350 350" style={{height: "300px", width: "300px"}} preserveAspectRatio="xMidYMid meet" >
+                    <path ref={this.morpher} d="M144 0L287.76 249H0.239777L144 0Z" />
+                  </svg>
+                </div>
+              </Fade>
             </div>
           </div>
 

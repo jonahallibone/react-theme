@@ -97,7 +97,7 @@ class ProjectContainer extends Component {
                     </div>
                     <div className="project-description">
                         <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
-                            <HoverLink hovered={this.state.hovered}>{el.title}</HoverLink>
+                            <HoverLink hovered={this.state.hovered.toString()}>{el.title}</HoverLink>
                         </div>
                         {!isNews ?
                             <div className="project-info text-grey">

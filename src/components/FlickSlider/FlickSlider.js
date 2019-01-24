@@ -131,6 +131,8 @@ class FlickSlider extends Component {
         const settings = {
             className: "",
             dots: false,
+            fade: true,
+            cssEase: "ease",
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -141,8 +143,8 @@ class FlickSlider extends Component {
             speed: 1000,
             nextArrow: <NextArrow />,
             prevArrow: <PrevArrow />,
-            beforeChange: (current, next) => this.setState({ activeSlide: next }),
-            afterChange: current => this.setState({ activeSlide2: current })
+            beforeChange: (current, next) => setTimeout(() => {this.setState( {activeSlide: next }) }, 10),
+            afterChange: (current) => this.setState({ activeSlide2: current })
         };
 
         return (

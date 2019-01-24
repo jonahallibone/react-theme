@@ -105,16 +105,27 @@ class WorkPageSingle extends Component {
           <div className="drop-down">
             <ul>
               <li className="list-row">                
-                <h2 className="light text-white">Identity</h2>
                 <div style={{color: "#FFF" }} className="share-icon">
-                    <Icon icon={iosPlusEmpty} size="22" />
+                    <Icon icon={iosPlusEmpty} size="29" />
                 </div>
+                <h2 className="light text-white">Design Services</h2>
               </li>
-              <li className="list-row">
-                <h2 className="light text-white">Digital</h2>
+            </ul>
+          </div>
+      </div>
+    )
+  }
+
+  getDescriptionDropDown() {
+    return(
+      <div> 
+          <div className="drop-down">
+            <ul>
+              <li className="list-row">                
                 <div style={{color: "#FFF" }} className="share-icon">
-                    <Icon icon={iosPlusEmpty} size="22" />
+                    <Icon icon={iosPlusEmpty} size="29" />
                 </div>
+                <h2 className="light text-white">Project Information</h2>
               </li>
             </ul>
           </div>
@@ -156,14 +167,7 @@ class WorkPageSingle extends Component {
               {this.getDropDown()}
             </Col>
             <Col xs={12} xs={6} sm={6} md={6}>
-              <h2 className="light text-grey padding-btm-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est sem, 
-              sagittis non tortor vel, dapibus blandit dolor. Nam velit sapien, bibendum 
-              vel purus quis, pretium feugiat odio. Aliquam erat neque, dapibus 
-              id molestie nec, gravida vel erat. Phasellus imperdiet fermentum felis, non viverra 
-              erat efficitur eu. Nulla interdum elementum posuere. Donec iaculis metus 
-              ac dignissim ornare. Donec arcu mauris, vehicula a mollis non, bibendum non augue.
-              </h2>
+              {this.getDescriptionDropDown()}
             </Col>
           </Row>
         </div>
