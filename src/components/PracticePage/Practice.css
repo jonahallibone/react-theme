@@ -1,11 +1,11 @@
 .page-practice {
-    padding-top: 18.5rem;
-    background: #FFF;
+    padding-top: 16rem;
+    background: #000;
     min-height: 100vh;
 }
 
 .top-text {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .banner-image {
@@ -18,12 +18,20 @@
 }
 
 .image-grid-2 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 7rem;
+    grid-gap: 2.5rem;
 }
 
-.image-grid-2 .image-container {
-    flex: 0 0 50%;
+.image-grid-2 > div {
+    width: 100%;
+}
+
+.image-grid-2 img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
 }
 
 .image-grid-2 .image-container.sticky img {
@@ -50,24 +58,30 @@
     padding-bottom: 10rem;
 }
 
-.grid-half {
+.grid-double {
     display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 1.5rem;
-    grid-gap: 2.5rem;
-    width: calc(50% - 2.5rem);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+.grid-half {
+    width: 100%;
 }
 
 .grid-half > div {
-    padding-top: 1rem;
-    border-top: 1px solid #999;
+    padding-top: 2.025rem;
+    /* border-top: 1px solid #999; */
+}
+
+.grid-half > div:first-of-type {
+    padding-top: 2rem;
 }
 
 /*** Animated shit ***/
 
 
 .animated-scroll-video {
-    height: 300vh;
+    height: 400vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
@@ -93,7 +107,7 @@
 }
 
 .sticky-scroll-container path {
-    fill: transparent;
-    stroke: #000;
+    /* fill: 000; */
+    stroke: #FFF;
     stroke-width: 10;
 }

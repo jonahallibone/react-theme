@@ -4,9 +4,12 @@ import '../../App.css';
 import './ContactPage.css';
 import Clock from 'react-live-clock';
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
 
 import HoverLink from '../HoverLink/HoverLink';
 
+
+import '../FlickSlider/FlickSlider.css';
 
 class ContactPage extends Component {
 
@@ -43,6 +46,22 @@ class ContactPage extends Component {
   }
 
   render() {
+    const settings = {
+      className: "",
+      dots: false,
+      fade: true,
+      cssEase: "ease",
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 1000,
+      pauseOnHover: false
+    };
+    
     return (
       <section className="transition-page contact-page">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
@@ -92,7 +111,10 @@ class ContactPage extends Component {
             </div>
           </div>
           <div className="contact-banner padding-top-5 padding-btm-5">
-              <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>
+              <Slider {...settings}>
+                <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>
+                <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg"/>
+              </Slider>
           </div>
         </Container>
         <div style={{backgroundColor: "#f2f3f5", paddingTop:"5rem", paddingBottom: "5rem", borderBottom: "1px solid #DDD"}}>

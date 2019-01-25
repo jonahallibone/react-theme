@@ -125,7 +125,7 @@ class ProjectList extends Component {
         return(
             <div id="project-list">
                 <Container fluid={true} className="container" style={{padding: 0}}>
-                    <div className="project-grid">
+                    <div className="project-grid"  style={{paddingTop: "3rem"}}>
                         {this.renderProjects()}
                     </div>
                     <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>

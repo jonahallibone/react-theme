@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import './HoverLink.css';
 
@@ -56,6 +57,10 @@ class HoverLink extends Component {
             </div>
         )
     }
+}
+
+HoverLink.propTypes = {
+    hovered: PropTypes.bool
 }
 
 export default HoverLink;

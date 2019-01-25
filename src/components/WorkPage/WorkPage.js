@@ -6,7 +6,8 @@ import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import posed, { PoseGroup } from 'react-pose';
 import Fade from 'react-reveal/Reveal';
-
+import {messageSquare} from 'react-icons-kit/feather/messageSquare'
+import Icon from 'react-icons-kit';
 
 import '../../App.css';
 import './WorkPage.css';
@@ -236,7 +237,12 @@ class WorkPage extends Component {
           <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
             {this.getLinks()}
             <div className="filter-option request-meeting" style={{marginRight: 0}}>
-              <Link to="/contact"><Button button-md arrow className="black-border">Contact Us</Button></Link>
+              <Link to="/contact">
+                <Button button-md arrow className="black-border">
+                  <div style={{color: "#000" }} className="share-icon">
+                    <Icon icon={messageSquare} size="20" />
+                  </div>
+                </Button></Link>
             </div>
           </Container>
         </div>
