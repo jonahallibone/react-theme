@@ -140,6 +140,7 @@ class FlickSlider extends Component {
             arrows: true,
             autoplay: true,
             autoplaySpeed: 5000,
+            pauseOnHover: false,
             speed: 1000,
             nextArrow: <NextArrow />,
             prevArrow: <PrevArrow />,
