@@ -20,7 +20,13 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.setState({isVisible: !this.state.isVisible})
+        this.styleBlack();
     }
+
+    styleBlack = () => {
+        document.querySelector("header").classList.remove("white-bg");
+        document.querySelector("header").classList.add("black-bg");
+      }
 
     componentWillUnmount() {
         window.clearTimeout(this.timeout);
@@ -30,7 +36,7 @@ class HomePage extends Component {
         return (
             <div className="home transition-page">
                 <Statement>
-                    <h3 className="reg text-white light padding-top-6">
+                    <h1 className="reg text-white lighter padding-top-6">
                                 {this.state.isVisible && this.random == 0 && [
                                     <CSSAnimate key="i" delay="1000">
                                         <div>
@@ -49,14 +55,11 @@ class HomePage extends Component {
                                 {this.state.isVisible && this.random == 1 && [
                                         <CSSAnimate key="i" delay="1000">
                                             <div>
-                                                Whether you’re established or just starting, we
-                                            </div> 
-                                            <div>
-                                                can help your organization grow through <Link to="/work"><HoverLink grey="true">design.</HoverLink></Link>
+                                                Whether you’re established or just starting, we can help your organization grow through the power of design.
                                             </div>
                                         </CSSAnimate>
                                 ]}
-                    </h3>
+                    </h1>
                 </Statement>
                 <FlickSlider></FlickSlider>
                 <ProjectList></ProjectList>

@@ -61,11 +61,6 @@ class Header extends Component {
         cancelAnimationFrame(this.styleHeader)
     }
 
-    styleBlack = () => {
-        document.querySelector("header").classList.remove("white-bg");
-        document.querySelector("header").classList.add("black-bg");
-    }
-
     handleMenuClick = () => {
         this.header.classList.toggle("header-overlay--visible");
 

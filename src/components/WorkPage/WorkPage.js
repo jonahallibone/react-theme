@@ -150,7 +150,21 @@ class WorkPage extends Component {
     ]
 
     this.setState({"projects": projects});
-    document.addEventListener("scroll", this.addShadow, {passive: true})
+    // document.addEventListener("scroll", this.addShadow, {passive: true})
+  }
+  
+  componentDidMount() {
+    this.styleWhite();
+  }
+
+  styleBlack = () => {
+    document.querySelector("header").classList.remove("white-bg");
+    document.querySelector("header").classList.add("black-bg");
+  }
+
+  styleWhite = () => {
+      document.querySelector("header").classList.remove("black-bg");
+      document.querySelector("header").classList.add("white-bg");
   }
 
   addShadow = () => {
@@ -233,7 +247,7 @@ class WorkPage extends Component {
   render() {
     return (
       <section className="transition-page" id="page-work">
-        <div className="option-list text-red" style={{whiteSpace: "nowrap"}}>
+        {/* <div className="option-list text-red" style={{whiteSpace: "nowrap"}}>
           <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
             {this.getLinks()}
             <div className="filter-option request-meeting" style={{marginRight: 0}}>
@@ -245,16 +259,16 @@ class WorkPage extends Component {
                 </Button></Link>
             </div>
           </Container>
-        </div>
+        </div> */}
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
-          <Row style={{paddingTop: "13.5rem"}}>
-            <Col xs={12} sm={10} md={8} lg={6}  style={{ paddingBottom: "5rem"}}>
-              <CSSAnimate delay="1100">
-                <h3 className="reg text-black">{this.state.pageTitle}</h3>
-                <h3 className="reg text-grey light padding-top-2">
+          <Row style={{paddingTop: "8.5rem"}}>
+            <Col xs={12} sm={10} md={9} lg={9}  style={{ paddingBottom: "5rem"}}>
+              <CSSAnimate delay="300">
+                {/* <h1 className="reg text-black">{this.state.pageTitle}</h1> */}
+                <h1 className="reg lighter text-grey">
                   {this.state.pageDescription}
-                </h3>
+                </h1>
               </CSSAnimate>
             </Col>
           </Row>
@@ -262,6 +276,13 @@ class WorkPage extends Component {
         <section id="work-list">
           <div id="project-list">
             <Container fluid={true} className="container" style={{padding: 0}}>
+              <h2 className="light padding-btm-lg">
+                Showing – &nbsp;
+                <span className="text-grey">All</span>&nbsp;&nbsp;
+                <span className="text-grey">Brand Identity</span>&nbsp;&nbsp;
+                <span className="text-grey">Digital Design</span>&nbsp;&nbsp;
+                <span className="text-grey">Environmental Graphics</span>&nbsp;&nbsp;
+              </h2>
               <div className="project-grid">
                   {this.renderProjects()}
               </div>

@@ -206,6 +206,14 @@ h5.light {
     font-weight: 500;
 }
 
+h1.lighter,
+h2.lighter,
+h3.lighter,
+h4.lighter,
+h5.lighter {
+    font-weight: 300;
+}
+
 h1.light-white,
 h2.light-white,
 h3.light-white,
