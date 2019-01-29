@@ -137,7 +137,7 @@
 
 .project .image-container {
     background-color: #DDD;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     overflow: hidden;
 }
 

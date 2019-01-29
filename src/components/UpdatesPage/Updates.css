@@ -23,9 +23,9 @@
 
 /* Update Feed */
 .update-section {
-    background: #f2f3f5;
+    /* background: #f2f3f5; */
     width: 100%;
-    padding: 5rem 0;
+    padding: 2.5rem 0;
 }
 
 .update-feed {
@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:  0 0 2.5rem 0;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #f2f3f5;
     grid-gap: 2.5rem;
 }
 
@@ -65,4 +65,66 @@
     .updates-quick-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.updates-heading {
+    padding: 7rem 0;
+}
+
+.update-input-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.update-input {
+    border: 0;
+    padding: .5rem 0;
+    font-size: 3rem;
+    font-weight: light;
+    border-bottom: 1px dashed #EAEAEA;
+    outline: none;
+    transition: .345s ease all;
+    color: #999;
+}
+
+.update-input::placeholder {
+    color: #EAEAEA;
+}
+
+.update-input:focus,
+.update-input:focus:hover {
+    border-color: #999;
+}
+
+.signup-button {
+    font-size: 1.5frem;
+    color: #999;
+    border-bottom: 1px dashed #999;
+    height: 71px;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    opacity: 0;
+    transform: translateX(-25%);
+    transition: .345s ease all;
+    cursor: pointer;
+}
+
+.signup-button svg {
+    transition: .345s ease all;
+}
+
+.signup-button:hover svg {
+    transform: translateX(10px) !important;
+}
+
+.update-input:focus ~ .signup-button {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.signup-button > div {
+    margin-top: 10px;
 }

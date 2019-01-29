@@ -21,6 +21,7 @@
 
 #featured-header .project-title {
     color: #FFF;
+    transition: .345s ease font-size;
 }
 
 .update-page-single #featured-header .project-title {

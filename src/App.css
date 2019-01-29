@@ -131,6 +131,12 @@ ul {
     list-style: none;
 }
 
+li {
+    font-size: 1.5rem;
+    line-height: 1.35rem;
+    font-weight: 500;
+}
+
 blockquote,
 q {
     quotes: none;
@@ -182,8 +188,17 @@ body {
 }
 
 p {
-    line-height: 1.2;
-    font-size: 1.15rem;
+    line-height: 1.35;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+
+p:after {
+    content: '';
+    margin-bottom: 1.5rem;
+    white-space: pre;
+    display: block;
 }
 
 h1,
@@ -237,7 +252,7 @@ h2.reg {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 1.35;
 }
 

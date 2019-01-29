@@ -23,11 +23,16 @@ class WorkPageSingle extends Component {
     }
   }
   async componentDidMount() {
+    this.styleBlack();
     const content = await this.getPostContent();
     console.log(content);
     this.setState({post: content.data.posts.edges[0].node})
-
     document.addEventListener("scroll", this.handleScroll);
+  }
+
+  styleBlack = () => {
+    document.querySelector("header").classList.remove("white-bg");
+    document.querySelector("header").classList.add("black-bg");
   }
   
   async getPostContent(id) {
@@ -99,35 +104,52 @@ class WorkPageSingle extends Component {
     },1000)
   }
 
+  revealDropDown = () => {
+    document.querySelector(".drop-down").classList.toggle("open");
+  }
+
   getDropDown() {
     return(
       <div> 
-          <div className="drop-down">
+          <div className="drop-down" onClick={this.revealDropDown}>
             <ul>
               <li className="list-row">                
-                <div style={{color: "#FFF" }} className="share-icon">
-                    <Icon icon={iosPlusEmpty} size="29" />
+                <div style={{color: "#FFF" }} className="share-icon plus">
+                    <Icon icon={iosPlusEmpty} size="31" />
                 </div>
-                <h2 className="light text-white">Design Services</h2>
+                <h2 className="light text-white drop-down--label">Project Information</h2>
               </li>
             </ul>
           </div>
-      </div>
-    )
-  }
-
-  getDescriptionDropDown() {
-    return(
-      <div> 
-          <div className="drop-down">
-            <ul>
-              <li className="list-row">                
-                <div style={{color: "#FFF" }} className="share-icon">
-                    <Icon icon={iosPlusEmpty} size="29" />
-                </div>
-                <h2 className="light text-white">Project Information</h2>
-              </li>
-            </ul>
+          <div className="project-description--inner">
+            <article className="service-list">
+              <h2 className="text-grey light">Services</h2>
+              <ul className="text-grey">
+                <li>Identity Design</li>
+                <li>Identity System Development</li>
+                <li>Print Collateral</li>
+                <li>Stationary Program</li>
+                <li> Website Design</li>
+              </ul>
+            </article>
+            <article className="text-white">
+              <p>
+                Nomadx Solutions provides risk management services for trustees and other fiduciaries. 
+                Our team worked to develop a mark that embodies the trustworthy, sophisticated, and 
+                creative nature of the company.
+              </p>
+              <p>
+                The logo our team created conveys both integrity and confidence through thick, 
+                solid lines and a bold sans serif typeface. The diagonal cut through the square 
+                is implies the Nomadx ‘N’ and creates an upward pointing arrow, suggesting growth 
+                and innovation.
+              </p>
+              <p>
+                Our design program included a brand identity system, logotype, color scheme and 
+                typography, as well as several identity applications including a stationery system, forms, 
+                website, and other communication identifiers.
+              </p>
+            </article>
           </div>
       </div>
     )
@@ -144,6 +166,11 @@ class WorkPageSingle extends Component {
             </h2>
           </Col>
         </Row>
+        <div className="single-project-banner-description">
+          <div className="padding-top-5">
+              {this.getDropDown()}
+          </div>
+        </div>
         <div className="single-project-banner">
             <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/> 
         </div>
@@ -160,16 +187,6 @@ class WorkPageSingle extends Component {
           <div className="item">
             <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt="tote" />
           </div>
-        </div>
-        <div className="single-project-banner-description">
-          <Row className="padding-top-5">
-            <Col xs={12} xs={6} sm={6} md={6}>
-              {this.getDropDown()}
-            </Col>
-            <Col xs={12} xs={6} sm={6} md={6}>
-              {this.getDescriptionDropDown()}
-            </Col>
-          </Row>
         </div>
       </div>
     )

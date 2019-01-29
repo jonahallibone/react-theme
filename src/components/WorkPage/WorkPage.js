@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import posed, { PoseGroup } from 'react-pose';
 import Fade from 'react-reveal/Reveal';
-import {messageSquare} from 'react-icons-kit/feather/messageSquare'
+
 import Icon from 'react-icons-kit';
 
 import '../../App.css';
@@ -157,11 +157,6 @@ class WorkPage extends Component {
     this.styleWhite();
   }
 
-  styleBlack = () => {
-    document.querySelector("header").classList.remove("white-bg");
-    document.querySelector("header").classList.add("black-bg");
-  }
-
   styleWhite = () => {
       document.querySelector("header").classList.remove("black-bg");
       document.querySelector("header").classList.add("white-bg");
@@ -262,7 +257,7 @@ class WorkPage extends Component {
         </div> */}
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           {/* <h3 className="reg text-bold text-white padding-top-4 text-capitalize">{this.state.pageTitle}</h3> */}
-          <Row style={{paddingTop: "8.5rem"}}>
+          <Row style={{paddingTop: "7rem"}}>
             <Col xs={12} sm={10} md={9} lg={9}  style={{ paddingBottom: "5rem"}}>
               <CSSAnimate delay="300">
                 {/* <h1 className="reg text-black">{this.state.pageTitle}</h1> */}

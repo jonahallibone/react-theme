@@ -16,7 +16,17 @@
 }
 
 .single-project-banner:not(:first-of-type) {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
+}
+
+.plus {
+    transform: rotate(0) scale(1);
+    transition: .15s ease-out transform;
+}
+
+.open .plus {
+    transform: rotate(45deg) scale(1.1);
+    transition: .15s ease-in transform;
 }
 
 .single-project-banner img,
@@ -59,6 +69,34 @@
 
 .drop-down {
     
+}
+
+
+.service-list ul {
+    padding-top: 2rem;
+}
+.service-list li {
+    padding: .25rem 0;
+    display: block;
+}
+
+.project-description--inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: none;
+    padding: 1rem 0;
+}
+
+.drop-down--label {
+    opacity: 1;
+    transition: .15s ease-in-out;
+}
+
+.open .drop-down--label {
+    opacity: 0;
+}
+.open ~ .project-description--inner {
+    display: grid;
 }
 
 
