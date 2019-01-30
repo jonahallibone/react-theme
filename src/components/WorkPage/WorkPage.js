@@ -6,8 +6,7 @@ import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import posed, { PoseGroup } from 'react-pose';
 import Fade from 'react-reveal/Reveal';
-
-import Icon from 'react-icons-kit';
+import Filter from "../Filter/Filter";
 
 import '../../App.css';
 import './WorkPage.css';
@@ -271,12 +270,9 @@ class WorkPage extends Component {
         <section id="work-list">
           <div id="project-list">
             <Container fluid={true} className="container" style={{padding: 0}}>
-              <h2 className="light padding-btm-lg">
+              <h2 className="light padding-btm-lg" style={{display: "flex"}}>
                 Showing – &nbsp;
-                <span className="text-grey">All</span>&nbsp;&nbsp;
-                <span className="text-grey">Brand Identity</span>&nbsp;&nbsp;
-                <span className="text-grey">Digital Design</span>&nbsp;&nbsp;
-                <span className="text-grey">Environmental Graphics</span>&nbsp;&nbsp;
+                <Filter></Filter>
               </h2>
               <div className="project-grid">
                   {this.renderProjects()}

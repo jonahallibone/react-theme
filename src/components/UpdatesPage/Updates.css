@@ -26,28 +26,32 @@
     /* background: #f2f3f5; */
     width: 100%;
     padding: 2.5rem 0;
+    border-top: 1px solid #f2f3f5;
 }
 
 .update-feed {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
     flex-direction: column;
 }
 
 .update-feed .update-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding:  0 0 2.5rem 0;
     border-bottom: 1px solid #f2f3f5;
     grid-gap: 2.5rem;
 }
 
-.update-feed .update-row:not(:first-of-type) {
-    padding:  2.5rem 0 2.5rem 0;
-}
-
 .update-feed .update-row .update-img img {
     display: block;
     width: 100%;
+}
+
+.update-feed--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
 }
 
 

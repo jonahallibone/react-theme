@@ -1,0 +1,8 @@
+.filter-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-flex .filter {
+    margin-right: .75rem;
+}
