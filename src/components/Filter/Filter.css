@@ -1,8 +1,37 @@
 .filter-flex {
     display: flex;
     flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-flex .selected-filter {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: .345s ease all;
+    border-bottom: 1px solid #999;
+}
+
+.filter-flex:hover .selected-filter {
+    transform: translate(0,-10px);
+    opacity: 0;
 }
 
 .filter-flex .filter {
     margin-right: .75rem;
+    transform: translate(0, 10px);
+    opacity: 0;
+    transition: .345s ease all;
+}
+
+.filter-flex:hover .filter {
+    visibility: visible;
+    transform: translate(0,0);
+    transition-delay: 0 !important;
+    opacity: 1;
+}
+
+.filter-flex .filter:hover {
+    color: red;
 }

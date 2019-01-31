@@ -37,7 +37,7 @@ class Updates extends Component {
                             </div>
                         </div>
                     </div>
-                    <h2 className="light padding-btm-lg">
+                    <h2 className="light padding-btm-lg" style={{borderBottom: "1px solid #f2f3f5"}}>
                         Showing – &nbsp;
                         <span className="text-black" style={{borderBottom: "1px solid #999"}}>All</span>&nbsp;&nbsp;
                     </h2>
@@ -154,6 +154,30 @@ class Updates extends Component {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                            <div></div>
+                            <div style={{position: "sticky", top: "70px", height: "100vh"}}>
+                                <div>
+                                    <p className="reg light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
+                                    New Haven Connecticut
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="reg light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
+                                    New Haven Connecticut
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="reg light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
+                                    New Haven Connecticut
+                                    </p>
+                                </div>                                
                             </div>
                         </div>
                     </Container>

@@ -194,7 +194,7 @@ p {
     white-space: pre-wrap;
 }
 
-p:after {
+p:not(:first-of-type):before {
     content: '';
     margin-bottom: 1.5rem;
     white-space: pre;

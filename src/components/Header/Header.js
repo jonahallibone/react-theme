@@ -111,6 +111,11 @@ class Header extends Component {
                                 <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                     <Link className="page-link" to="/work" data-linkname="work">
                                         <HoverLink thick="true">
+                                            <span>Home</span>
+                                        </HoverLink>
+                                    </Link>
+                                    <Link className="page-link" to="/work" data-linkname="work">
+                                        <HoverLink thick="true">
                                             <span>Work</span>
                                         </HoverLink>
                                     </Link>

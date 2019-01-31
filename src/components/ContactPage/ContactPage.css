@@ -1,7 +1,7 @@
 .contact-page {
     min-height: 100vh;
     background-color: #000;
-    padding-top: 0rem;
+    padding-top: 70px;
 }
 
 .contact-header {
@@ -116,7 +116,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.5rem;
-    padding-top: 13.75rem;
 }
 
 .contact-banner img {

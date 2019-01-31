@@ -36,7 +36,7 @@ class HomePage extends Component {
         return (
             <div className="home transition-page">
                 <Statement>
-                    <h1 className="reg text-white lighter padding-top-6">
+                    <h1 className="reg text-white lighter">
                                 {this.state.isVisible && this.random == 0 && [
                                     <CSSAnimate key="i" delay="1000">
                                         <div>

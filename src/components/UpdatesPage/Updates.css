@@ -26,7 +26,6 @@
     /* background: #f2f3f5; */
     width: 100%;
     padding: 2.5rem 0;
-    border-top: 1px solid #f2f3f5;
 }
 
 .update-feed {
@@ -86,7 +85,7 @@
     padding: .5rem 0;
     font-size: 3rem;
     font-weight: light;
-    border-bottom: 1px dashed #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
     outline: none;
     transition: .345s ease all;
     color: #999;
@@ -104,12 +103,11 @@
 .signup-button {
     font-size: 1.5frem;
     color: #999;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px solid #999;
     height: 71px;
     padding-left: 1rem;
     display: flex;
     align-items: center;
-    margin-left: 2px;
     opacity: 0;
     transform: translateX(-25%);
     transition: .345s ease all;
@@ -131,4 +129,15 @@
 
 .signup-button > div {
     margin-top: 10px;
+}
+
+.hover-underline {
+    transition: .345s ease-in-out all;
+    border: 1px solid #f2f3f5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hover-underline:hover {
+    color: red;
 }

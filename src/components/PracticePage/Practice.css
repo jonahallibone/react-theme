@@ -1,11 +1,12 @@
 .page-practice {
-    padding-top: 16rem;
+    padding-top: 70px;
     background: #000;
     min-height: 100vh;
 }
 
 .top-text {
-    max-width: 50%;
+    padding: 7rem 0;
+    max-width: 75%;
 }
 
 .banner-image {
@@ -20,7 +21,6 @@
 .image-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 7rem;
     grid-gap: 2.5rem;
 }
 

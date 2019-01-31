@@ -28,7 +28,7 @@ class PracticePage extends Component {
   componentDidMount() {
     document.addEventListener("scroll", this.handleScroll);
 
-
+    this.styleBlack();
     
     this.shape = styler(this.morpher.current);
     console.log(this.morpher.current);
@@ -72,6 +72,11 @@ class PracticePage extends Component {
       flip: 0
     }).pipe(interpolate(rect, circle, { maxSegmentLength: 2 }))
       .start(this.shape.set('d'));
+  }
+
+  styleBlack = () => {
+    document.querySelector("header").classList.remove("white-bg");
+    document.querySelector("header").classList.add("black-bg");
   }
 
 
@@ -129,12 +134,18 @@ class PracticePage extends Component {
       <div className="page-practice">
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-            <h3 className="reg text-white light padding-top-2">
-              Piscatello Design Centre is a New York-based design consultancy that is committed to creating informative and meaningful connections between organizations and people.
-            </h3>
+            <h1 className="reg text-white lighter padding-top-2">
+            We are a multidisciplinary design consultancy.
+            <br/><br/>
+            We combine business strategy with creativity to develop communication systems and branded environments that define, inspire, and engage people.
+            <br/><br/>
+            Our work is informative, meaningful, and dignified.
+            <br/><br/>
+            Every project we work on is made for the sole purpose of making an organization stronger by design.
+            </h1>
           </div>
 
-          <div className="image-grid-2 padding-top-5">
+          <div className="image-grid-2">
           <Slider {...settings}>
               <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" />
               <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" />
