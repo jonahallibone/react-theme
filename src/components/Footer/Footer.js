@@ -12,9 +12,9 @@ class Footer extends Component {
                     <div className="row-flex">
                         <div className="break">
                             <a className="light pdc-copy">
-                               Piscatello Design Centre, 1997 - 2018
+                               Piscatello Design Centre, 1997 - {(new Date()).getFullYear()}
                             </a>
-                            <a className="light"><HoverLink grey-black="true">Subscribe to our Updates</HoverLink></a>
+                            <a className="light"><HoverLink grey-black="true">Stay Updated</HoverLink></a>
                         </div>
                         <div className="column-right break">
                             <a className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>

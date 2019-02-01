@@ -106,10 +106,26 @@
     align-items: center;
     padding: .5rem 0;
     /* border-top: 1px solid #999; */
-    width: 50%;
+    width: 100%;
     justify-content: flex-start;
     cursor: pointer;
 }
+
+.list-row:hover h2 {
+    color: #ff4350;
+}
+
+.list-row:hover .share-icon svg {
+    fill: #ff4350;
+    transition: .345s ease all;
+}
+
 .list-row .share-icon {
     margin-right: .5rem;
+    display: inline-block;
+    margin-left: -10px;
+}
+
+.list-row:hover .share-icon svg {
+    transition: .345s ease all;
 }

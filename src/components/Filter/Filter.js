@@ -1,35 +1,41 @@
 import React, { Component } from "react";
 
 import "./Filter.css";
+import { WorkContext, Pages } from "../WorkPage/Pages";
 
 class Filter extends Component {
     constructor(props) {
         super(props);
 
-         this.filters = [
-            "Brand Identity",
-            "Digital Design",
-            "Environmental Graphics"
-        ]
+        this.state = { 
+            selectedFilter: "All"
+        }
     }
 
-    listFilters() {
+    listFilters(selectFilter) {
         let delay = 0;
-        return this.filters.map((el, i) => {
+        return Object.keys(Pages).map((el, i) => {
             delay += 100;
             return (
-                <div className="filter" key={i} style={{transitionDelay: `${delay}ms`}}>{el}</div>
+                <div className="filter" key={i} style={{transitionDelay: `${delay}ms`}} onClick={() => { selectFilter(el.toLowerCase()) }}>{el}</div>
             )
         })
     }
 
+    selectFilter(el) {
+        this.setState({ "selectedFilter": el })
+    }
+
     render() {
         return(
-            <div className="filter-flex">
-                <div className="selected-filter">Brand Identity</div>
-                <div className="filter">{this.props.selectedFilter || "All"}</div>
-                {this.listFilters()}
-            </div>
+            <WorkContext.Consumer>
+                {({ filter, setFilter}) => (
+                    <div className="filter-flex">
+                        <div className="selected-filter">{filter.title}</div>
+                        {this.listFilters(setFilter)}
+                    </div>
+                )}
+            </WorkContext.Consumer>
         )
     }   
 }

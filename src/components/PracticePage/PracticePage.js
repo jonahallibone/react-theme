@@ -121,13 +121,12 @@ class PracticePage extends Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      adaptiveHeight: true,
       arrows: false,
       autoplay: true,
       autoplaySpeed: 5000,
       speed: 1000,
-      pauseOnHover: false,
-      variableWidth: true,
-      vertical: true
+      pauseOnHover: false
     };
 
     return (
@@ -140,23 +139,17 @@ class PracticePage extends Component {
             We combine business strategy with creativity to develop communication systems and branded environments that define, inspire, and engage people.
             <br/><br/>
             Our work is informative, meaningful, and dignified.
-            <br/><br/>
-            Every project we work on is made for the sole purpose of making an organization stronger by design.
             </h1>
           </div>
-
-          <div className="image-grid-2">
           <Slider {...settings}>
-              <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" />
-              <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" />
+              <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>
+              <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg"/>
           </Slider>
-          <Slider {...settings}>
-              <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_light.jpg" />
-              <img src="http://piscatello.com/wp-content/themes/pdc/images/studio_people.jpg" />
-          </Slider>
-          
-          </div>
-
+          <h1 className="reg text-white lighter padding-top-5">
+          "To design is to question and challenge. It is the act of advancing from an existing condition to a preferred one."
+          <br/><br/>
+          - Rocco Piscatello
+          </h1>
           <div className="animated-scroll-video">
             <div>
             <Fade>

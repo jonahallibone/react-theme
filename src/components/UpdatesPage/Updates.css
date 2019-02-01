@@ -25,7 +25,6 @@
 .update-section {
     /* background: #f2f3f5; */
     width: 100%;
-    padding: 2.5rem 0;
 }
 
 .update-feed {
@@ -38,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr;
     padding:  0 0 2.5rem 0;
-    border-bottom: 1px solid #f2f3f5;
+    border-bottom: 1px solid #DDD;
     grid-gap: 2.5rem;
 }
 
@@ -85,7 +84,7 @@
     padding: .5rem 0;
     font-size: 3rem;
     font-weight: light;
-    border-bottom: 1px solid #EAEAEA;
+    border-bottom: 1px solid #DDD;
     outline: none;
     transition: .345s ease all;
     color: #999;
@@ -133,8 +132,8 @@
 
 .hover-underline {
     transition: .345s ease-in-out all;
-    border: 1px solid #f2f3f5;
-    padding: 1rem;
+    border-top: 1px solid #DDD;
+    padding: 2rem 0 1rem 0;
     margin-bottom: 1rem;
 }
 

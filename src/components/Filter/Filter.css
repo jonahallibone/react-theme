@@ -19,10 +19,11 @@
 }
 
 .filter-flex .filter {
-    margin-right: .75rem;
+    margin-right: 1.75rem;
     transform: translate(0, 10px);
     opacity: 0;
     transition: .345s ease all;
+    text-transform: capitalize;
 }
 
 .filter-flex:hover .filter {

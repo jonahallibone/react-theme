@@ -37,7 +37,7 @@ class Updates extends Component {
                             </div>
                         </div>
                     </div>
-                    <h2 className="light padding-btm-lg" style={{borderBottom: "1px solid #f2f3f5"}}>
+                    <h2 className="light padding-btm-lg" >
                         Showing – &nbsp;
                         <span className="text-black" style={{borderBottom: "1px solid #999"}}>All</span>&nbsp;&nbsp;
                     </h2>
@@ -55,6 +55,7 @@ class Updates extends Component {
                                             <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -73,6 +74,7 @@ class Updates extends Component {
                                             <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -91,6 +93,7 @@ class Updates extends Component {
                                             <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -109,6 +112,7 @@ class Updates extends Component {
                                             <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -127,6 +131,7 @@ class Updates extends Component {
                                             <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -145,6 +150,7 @@ class Updates extends Component {
                                             <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
                                         </h3>
                                         <p className="text-grey light padding-top-175">03 January 2019</p>
+                                        <br/>
                                         <p className="text-grey light">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
@@ -156,26 +162,24 @@ class Updates extends Component {
                                 </div>
                             </div>
                             <div></div>
-                            <div style={{position: "sticky", top: "70px", height: "100vh"}}>
+                            <div style={{position: "sticky", top: "75px", height: "100vh"}}>
                                 <div>
                                     <p className="reg light hover-underline padding-btm-md">
                                     <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="reg light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
                                     New Haven Connecticut
                                     </p>
                                 </div>
                                 <div>
                                     <p className="reg light hover-underline padding-btm-md">
                                     <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
-                                    New Haven Connecticut
-                                    </p>
-                                </div>
-                                <div>
-                                    <p className="reg light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019
-                                    New Haven Connecticut
+                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
                                     </p>
                                 </div>                                
                             </div>

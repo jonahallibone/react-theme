@@ -36,7 +36,7 @@ class ProjectList extends Component {
             {
                 title: "Timeless Massimo Vignelli",
                 thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-                type: "Exibition",
+                type: "Exhibition",
                 tagline: "A brand new company"
             },
             {
