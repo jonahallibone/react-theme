@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import '../../App.css';
 import './ContactPage.css';
 import Clock from 'react-live-clock';
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import HoverLink from '../HoverLink/HoverLink';
@@ -73,11 +72,8 @@ class ContactPage extends Component {
             Let's work together.
             <br/><br/>
             Email us at <a href="mailto:work@piscatello.com"><HoverLink grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
-            <br/><br/>
-            
-            
           </h1>
-          <div className="contact-banner padding-top-5 padding-btm-5">
+          <div className="contact-banner padding-btm-5">
               <Slider {...settings}>
                 <img src="https://s3.amazonaws.com/piscatello/Apple_Tools_Placeholder-Image.jpg"/>
               </Slider>

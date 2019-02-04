@@ -29,8 +29,9 @@ class ProjectContainer extends Component {
         downloadingImage.onload = () => {
             this.setState({imageLoaded: true})
         }
-
-        downloadingImage.src = this.props.project.thumbnail;
+        if (this.props.project.hasOwnProperty("acf")) {
+            downloadingImage.src = this.props.project.acf.featured_image 
+        }
     }
 
     componentDidMount() {
@@ -88,26 +89,19 @@ class ProjectContainer extends Component {
     render() {
         const el = this.props.project;
         const isNews = this.props.news || "";
-
+        // console.log(el)
         return(
             <div onMouseUp={this.goToLink} style={{height: "100%"}}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
-                        <img src={el.thumbnail} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+                        <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
                     </div>
                     <div className="project-description">
                         <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
-                            <HoverLink hovered={this.state.hovered}>{el.title}</HoverLink>
+                            <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
                         </div>
-                        {!isNews ?
-                            <div className="project-info text-grey">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra
-                            </div> 
-                            :
-                            <div></div>
-                        }
-                        
+                        <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }}>
+                        </div> 
                     </div>
                     <div className="details">
                         {isNews ? 
@@ -115,7 +109,7 @@ class ProjectContainer extends Component {
                             :
                             <div></div>
                         }
-                        <h5 className="text-red">{el.type}</h5>
+                        <h5 className="text-red" style={{textTransform: "capitalize"}}>{el.type}</h5>
                     </div>
                 </div>
             </div>

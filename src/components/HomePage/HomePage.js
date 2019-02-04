@@ -7,6 +7,7 @@ import ProjectList from '../ProjectList/ProjectList';
 import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 import '../../App.css';
+import { ProjectsContext } from '../../ProjectsContext';
 
 class HomePage extends Component {
     
@@ -62,7 +63,7 @@ class HomePage extends Component {
                     </h1>
                 </Statement>
                 <FlickSlider></FlickSlider>
-                <ProjectList></ProjectList>
+                <ProjectList />
             </div>
         );
     }

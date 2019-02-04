@@ -9,6 +9,7 @@ import DelayLink from '../DelayLink/DelayLink';
 
 import './ProjectList.css';
 import Button from '../Button/Button';
+import { ProjectsContext } from '../../ProjectsContext';
 
 class ProjectList extends Component {
     constructor(props) {
@@ -20,32 +21,6 @@ class ProjectList extends Component {
     }
 
     componentDidMount() {
-        const projects = [
-            {
-                title: "LostTribe Theatre Company",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
-                type: "Branding",
-                tagline: "A brand new company"
-            },
-            {
-                title: "Nomadx Solutions",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-                type: "Branding",
-                tagline: "Identifying a new start up"
-            },
-            {
-                title: "Timeless Massimo Vignelli",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-                type: "Exhibition",
-                tagline: "A brand new company"
-            },
-            {
-                title: "United States Courthouse",
-                thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-                type: "Signage and Wayfinding",
-                tagline: "Navigating a complex environment"
-            }
-        ]
 
         const news = [
             {
@@ -80,18 +55,22 @@ class ProjectList extends Component {
             }
         ]
 
-        this.setState({"projects": projects});
         this.setState({"news": news})
 
     }
 
-    renderProjects = () => {
-        
-        const template = this.state.projects.map((el, i) => (
-            <ProjectContainer project={el} key={i} />
-        ))
+    renderProjects = (projects) => {
+        console.log(projects)
+        if(projects.length) {
+            const template = projects.map((el, i) => (
+                <ProjectContainer project={el} key={i} />
+            ))
+            
+            return template;
+        }
 
-        return template;
+        else return;
+        
     }
 
     renderNews = () => {
@@ -123,26 +102,30 @@ class ProjectList extends Component {
             // afterChange: current => this.setState({ activeSlide2: current })
         };
         return(
-            <div id="project-list">
-                <Container fluid={true} className="container" style={{padding: 0}}>
-                    <div className="project-grid"  style={{paddingTop: "3rem"}}>
-                        {this.renderProjects()}
-                    </div>
-                    <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                        <DelayLink delay={1000} to="/work"><Button arrow className="black-border">More Work</Button></DelayLink>
-                    </div>
-                </Container>
-                <div className="homepage-news">
-                    <Container fluid={true} className="container news-grid" style={{padding: 0}}>
-                        <SwipeSlider>
-                            {this.renderNews()}
-                        </SwipeSlider> 
+            <ProjectsContext.Consumer>
+            {({ projects }) => (
+                <div id="project-list">                
+                    <Container fluid={true} className="container" style={{padding: 0}}>
+                        <div className="project-grid"  style={{paddingTop: "3rem"}}>
+                            {this.renderProjects(projects)}
+                        </div>
                         <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                            <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>
+                            <DelayLink delay={1000} to="/work"><Button arrow className="black-border">More Work</Button></DelayLink>
                         </div>
                     </Container>
+                    <div className="homepage-news">
+                        <Container fluid={true} className="container news-grid" style={{padding: 0}}>
+                            <SwipeSlider>
+                                {this.renderNews()}
+                            </SwipeSlider> 
+                            <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
+                                <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>
+                            </div>
+                        </Container>
+                    </div>
                 </div>
-            </div>
+            )}
+            </ProjectsContext.Consumer>
         )
     }
 

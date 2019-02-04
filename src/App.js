@@ -17,6 +17,7 @@ import Careers from './components/Careers/Careers';
 import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
 import Updates from './components/UpdatesPage/Updates';
 import UpdatePageSingle from './components/UpdatePageSingle/UpdatePageSingle';
+import {ProjectsContext} from "./ProjectsContext";
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 600, beforeChildren: true, transition: { default: { duration: 150 } } },
@@ -29,7 +30,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      transitioning: false
+      transitioning: false,
+      projects: []
     }
 
     this.props.history.listen((location, action) => {
@@ -39,6 +41,19 @@ class App extends Component {
         el.classList.remove("animate--post-animate");
       });
     });
+
+    /* Hydrate interface with projects async */
+
+    this.getProjects = async () => {
+      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/project")
+      const json = await response.json();
+
+      this.setState(state => ({
+        projects: json
+      }));
+    }
+
+    this.getProjects();
   }
 
   componentWillMount() {
@@ -72,23 +87,22 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-          <Switch location={location}>
-            <Route path="/" exact component = {HomePage}></Route>
-            <Route path="/practice" component = {PracticePage}></Route>
-            <Route path="/expertise" component = {Expterise}></Route>
-            <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
-            <Route path="/contact" component = {ContactPage}></Route>
-            <Route path="/careers" exact component = {Careers}></Route>
-            <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
-            <Route path="/update/:id" component = {UpdatePageSingle}></Route>
-            <Route path="/work" exact component = {WorkPage} key="work"></Route>
-            <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
-            <Route path="/update" exact component = {Updates}></Route>
-          </Switch>
-          <Footer></Footer>
-          <Switch location={location}>
-            
-          </Switch>
+          <ProjectsContext.Provider value={this.state}>
+            <Switch location={location}>
+              <Route path="/" exact component = {HomePage}></Route>
+              <Route path="/practice" component = {PracticePage}></Route>
+              <Route path="/expertise" component = {Expterise}></Route>
+              <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
+              <Route path="/contact" component = {ContactPage}></Route>
+              <Route path="/careers" exact component = {Careers}></Route>
+              <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
+              <Route path="/update/:id" component = {UpdatePageSingle}></Route>
+              <Route path="/work" exact component = {WorkPage} key="work"></Route>
+              <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
+              <Route path="/update" exact component = {Updates}></Route>
+            </Switch>
+            <Footer></Footer>
+          </ProjectsContext.Provider>
 
         <div className={this.state.transitioning ? "transition-curtain visible" : "transition-curtain"}></div>
       </div>
