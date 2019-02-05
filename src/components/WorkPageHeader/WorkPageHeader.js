@@ -44,7 +44,7 @@ class WorkPageHeader extends Component {
                     <div className="side">
                         <h1 className="reg project-title">
                             {this.props.projectTitle}
-                        </h1><br/>
+                        </h1>
                     </div>
                     <div className="side" style={{justifyContent: "flex-end"}}>
                         <div className="social-hover" style={{display: "flex"}}>

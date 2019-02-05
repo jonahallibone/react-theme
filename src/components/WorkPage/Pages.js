@@ -17,7 +17,7 @@ export const Pages = {
       description: `Our digital work includes websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
       url: "digital"
     },
-    "evironmental graphics": {
+    "environmental graphics": {
       title: "Environmental Graphics",
       description: `Our signage work encompasses projects from city transportation and park systems, building and retail signage, workplace and feature wall graphics, donor and digital signage.`,
       url: "signage"

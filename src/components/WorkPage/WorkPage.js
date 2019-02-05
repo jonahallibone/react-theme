@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { Link } from 'react-router-dom';
-import HoverLink from '../HoverLink/HoverLink';
-import Button from '../Button/Button';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
-import posed, { PoseGroup } from 'react-pose';
 import Fade from 'react-reveal/Reveal';
 import Filter from "../Filter/Filter";
 import { WorkContext, Pages } from "./Pages";
+import {ProjectsContext} from "../../ProjectsContext";
 
 /* @CSS */
 
@@ -47,66 +44,9 @@ class WorkPage extends Component {
 
     this.scrollAnim = null;
   }
-
-  componentWillMount() {
-
-    const projects = [
-      {
-          title: "LostTribe Theatre Company",
-          thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
-          type: "Branding",
-          tagline: "A brand new company"
-      },
-      {
-          title: "Nomadx Solutions",
-          thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-          type: "Branding",
-          tagline: "Identifying a new start up"
-      },
-      {
-          title: "Timeless Massimo Vignelli",
-          thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-          type: "Exibition",
-          tagline: "A brand new company"
-      },
-      {
-          title: "United States Courthouse",
-          thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-          type: "Signage and Wayfinding",
-          tagline: "Navigating a complex environment"
-      },
-      {
-        title: "LostTribe Theatre Company",
-        thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
-        type: "Branding",
-        tagline: "A brand new company"
-    },
-    {
-        title: "Nomadx Solutions",
-        thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-        type: "Branding",
-        tagline: "Identifying a new start up"
-    },
-    {
-        title: "Timeless Massimo Vignelli",
-        thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-        type: "Exibition",
-        tagline: "A brand new company"
-    },
-    {
-        title: "United States Courthouse",
-        thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-        type: "Signage and Wayfinding",
-        tagline: "Navigating a complex environment"
-    }
-    ]
-
-    this.setState({"projects": projects});
-  }
   
   componentDidMount() {
     this.styleWhite();
-
     this.setState({"pageDescription": Pages["all"].description})
   }
 
@@ -132,8 +72,12 @@ class WorkPage extends Component {
 
   }
 
-  renderProjects = () => {
-    const template = this.state.projects.map((el, i) => (
+  renderProjects = (projects) => {
+    if(this.state.filter && this.state.filter.title !== "All") {
+      projects = projects.filter(project => project._embedded["wp:term"][0][0].name === this.state.filter.title)
+    }
+
+    const template = projects.map((el, i) => (
       <Fade bottom key={i}>
         <ProjectContainer project={el} />
       </Fade>
@@ -152,7 +96,7 @@ class WorkPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           <Row style={{paddingTop: "7rem"}}>
             <Col xs={12} sm={10} md={9} lg={9}  style={{ paddingBottom: "5rem"}}>
-              <h1 className={"reg lighter text-grey animate " + this.state.animateDes}>
+              <h1 className={"reg lighter text-black animate " + this.state.animateDes}>
                 {this.state.pageDescription}
               </h1>
             </Col>
@@ -167,9 +111,13 @@ class WorkPage extends Component {
                   <Filter />
                 </WorkContext.Provider>
               </h2>
-              <div className="project-grid">
-                  {this.renderProjects()}
-              </div>
+              <ProjectsContext.Consumer>
+                {({ projects }) => (
+                  <div className="project-grid">
+                      {this.renderProjects(projects)}
+                  </div>
+                )}
+              </ProjectsContext.Consumer>
             </Container>
           </div>
           
@@ -179,57 +127,6 @@ class WorkPage extends Component {
   }
 }
 
-const projects = [
-  {
-      title: "LostTribe Theatre Company",
-      thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
-      type: "Branding",
-      tagline: "A brand new company"
-  },
-  {
-      title: "Nomadx Solutions",
-      thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-      type: "Branding",
-      tagline: "Identifying a new start up"
-  },
-  {
-      title: "Timeless Massimo Vignelli",
-      thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-      type: "Exibition",
-      tagline: "A brand new company"
-  },
-  {
-      title: "United States Courthouse",
-      thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-      type: "Signage and Wayfinding",
-      tagline: "Navigating a complex environment"
-  },
-  {
-    title: "LostTribe Theatre Company",
-    thumbnail: "https://s3.amazonaws.com/piscatello/Lost-Tribe_Bus.jpg",
-    type: "Branding",
-    tagline: "A brand new company"
-},
-{
-    title: "Nomadx Solutions",
-    thumbnail: "https://s3.amazonaws.com/piscatello/Nomadx-BC.jpg",
-    type: "Branding",
-    tagline: "Identifying a new start up"
-},
-{
-    title: "Timeless Massimo Vignelli",
-    thumbnail: "https://s3.amazonaws.com/piscatello/Timeless_Entrance.jpg",
-    type: "Exibition",
-    tagline: "A brand new company"
-},
-{
-    title: "United States Courthouse",
-    thumbnail: "https://s3.amazonaws.com/piscatello/Salt-Lake_Kiosks.jpg",
-    type: "Signage and Wayfinding",
-    tagline: "Navigating a complex environment"
-}
-]
 
-export { projects };
 export { WorkContext };
 export default WorkPage;

@@ -45,7 +45,7 @@ class App extends Component {
     /* Hydrate interface with projects async */
 
     this.getProjects = async () => {
-      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/project")
+      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/project?_embed")
       const json = await response.json();
 
       this.setState(state => ({

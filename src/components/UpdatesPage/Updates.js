@@ -27,7 +27,7 @@ class Updates extends Component {
             <section className="updates-page" style={{paddingTop: "70px"}}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
-                        <h1 className="text-grey reg lighter">Stay Updated.</h1>
+                        <h1 className="text-black reg lighter">Stay Updated.</h1>
                         <div className="update-input-container">
                             <input type="text" className="update-input" placeholder="example@example.com"/>
                             <div className="signup-button">

@@ -105,9 +105,10 @@ class WorkPageSingle extends Component {
         {projectInfo.acf.images.map((image, i) => {
           return(
             <div className="padding-top-15" key={i}>
-              <div className="single-project-banner">
-                {image.banner_image ? <img src={image.banner_image} alt={projectInfo.title.rendered} /> : ""}                  
-              </div>
+          
+              {image.banner_image ?  <div className="single-project-banner"><img src={image.banner_image} alt={projectInfo.title.rendered} /></div> : ""}                  
+              {image["square_image_#1"]
+              ?
               <div className="single-project-grid">
                 <div className="item">
                   {image["square_image_#1"] ? <img src={image["square_image_#1"]} alt={projectInfo.title.rendered} /> : ""}                  
@@ -116,6 +117,9 @@ class WorkPageSingle extends Component {
                   {image["square_image_#2"] ? <img src={image["square_image_#2"]} alt={projectInfo.title.rendered} /> : ""}                  
                 </div>
               </div>
+              :
+              ""
+              }
             </div>
           )
         })}

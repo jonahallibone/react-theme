@@ -35,12 +35,15 @@
     display: block;
 }
 
+.single-project-banner ~ .single-project-grid {
+    margin-top: 1.5rem;
+}
+
 .single-project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr 1fr;
     grid-gap: 1.5rem;
-    margin-top: 1.5rem;
 }
 
 .single-project-grid .item {

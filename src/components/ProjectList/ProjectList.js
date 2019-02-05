@@ -82,25 +82,7 @@ class ProjectList extends Component {
         return template;
     }
     
-
-    componentWillUnmount() {
-
-    }
-
     render() {
-        const settings = {
-            className: "",
-            dots: false,
-            infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            adaptiveHeight: false,
-            arrows: true,
-            // nextArrow: <NextArrow />,
-            // prevArrow: <PrevArrow />,
-            // beforeChange: (current, next) => this.setState({ activeSlide: next }),
-            // afterChange: current => this.setState({ activeSlide2: current })
-        };
         return(
             <ProjectsContext.Consumer>
             {({ projects }) => (
