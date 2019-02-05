@@ -136,9 +136,7 @@ class PracticePage extends Component {
             <h1 className="reg text-white lighter padding-top-2">
             We are a multidisciplinary design consultancy.
             <br/><br/>
-            We combine business strategy with creativity to develop communication systems and branded environments that define, inspire, and engage people.
-            <br/><br/>
-            Our work is informative, meaningful, and dignified.
+            We combine business strategy and creativity to develop communication systems that define, inspire, and engage.
             </h1>
           </div>
           <Slider {...settings}>

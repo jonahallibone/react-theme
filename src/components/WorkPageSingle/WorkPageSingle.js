@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import WorkPageHeader from '../WorkPageHeader/WorkPageHeader';
 import { Container, Row, Col } from 'react-grid-system';
-import { projects } from "../WorkPage/WorkPage";
 import '../../App.css';
 import './WorkPageSingle.css';
 import Reveal from 'react-reveal/Reveal';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import Icon from 'react-icons-kit';
 import {iosPlusEmpty} from 'react-icons-kit/ionicons/iosPlusEmpty';
+import { ProjectsContext } from "../../ProjectsContext";
+
+
 
 class WorkPageSingle extends Component {
   constructor(props) {
@@ -18,55 +20,18 @@ class WorkPageSingle extends Component {
     this.state = {
       post: null,
       transition: false,
-      projects: projects,
-      projectTitle: !this.props.isUpdate ? "Nomadx Solutions" : "Rocco Piscatello to speak at the University of New Haven"
+      projectTitle: !this.props.isUpdate ? "Nomadx Solutions" : "Rocco Piscatello to speak at the University of New Haven",
+      project: {}
     }
   }
+
   async componentDidMount() {
-    this.styleBlack();
-    const content = await this.getPostContent();
-    console.log(content);
-    this.setState({post: content.data.posts.edges[0].node})
-    document.addEventListener("scroll", this.handleScroll);
+    this.styleBlack();    
   }
 
   styleBlack = () => {
     document.querySelector("header").classList.remove("white-bg");
     document.querySelector("header").classList.add("black-bg");
-  }
-  
-  async getPostContent(id) {
-    let reqData = {
-      "query": `{ 
-        posts {
-          edges {
-            node {
-              id
-              title
-              date
-              author {
-                id
-                name
-                username
-                description
-              }
-            }
-          }
-        } 
-      }`
-    }
-
-    let res = await fetch("https://api.piscatello.space/graphql", {
-      method: "POST",
-      mode: "cors",
-      cache: "default",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-      body: JSON.stringify(reqData)
-    }).then(response => response.json());
-
-    return res;
   }
 
   getBodyClass() {
@@ -81,34 +46,12 @@ class WorkPageSingle extends Component {
     return (this.props.isUpdate ? "Reflections on Ten Qualities of Design" : "Nomadx");
   }
 
-  loadNext = () => {
-    // window.history.pushState(12, "/work/newwork")
-    this.setState({transition: true});
-
-    console.log(this.newProject);
-
-    let boundingRect = this.newProject.current.getBoundingClientRect();
-
-    
-    this.newProject.current.style.transform = `translateY(-${boundingRect.top - 115}px)`
-    
-    this.timeout = setTimeout(() => {
-      this.setState({projectTitle: "Fashionhaus"})
-      document.querySelector("#featured-header").classList.remove(".shrink");
-    },345)
-
-    this.timeout = setTimeout(() => {
-      window.scrollTo(0,0)
-      this.newProject.current.style.transform = `translateY(0)`
-      this.setState({transition: false})
-    },1000)
-  }
 
   revealDropDown = () => {
     document.querySelector(".drop-down").classList.toggle("open");
   }
 
-  getDropDown() {
+  getDropDown(services = [], content) {
     return(
       <div> 
           <div className="drop-down" onClick={this.revealDropDown}>
@@ -125,30 +68,10 @@ class WorkPageSingle extends Component {
             <article className="service-list">
               <h2 className="text-grey light">Services</h2>
               <ul className="text-grey">
-                <li>Identity Design</li>
-                <li>Identity System Development</li>
-                <li>Print Collateral</li>
-                <li>Stationary Program</li>
-                <li> Website Design</li>
+                {services.map((service, i) => <li key={i}>{service.service_item}</li>)}
               </ul>
             </article>
-            <article className="text-white">
-              <p>
-                Nomadx Solutions provides risk management services for trustees and other fiduciaries. 
-                Our team worked to develop a mark that embodies the trustworthy, sophisticated, and 
-                creative nature of the company.
-              </p>
-              <p>
-                The logo our team created conveys both integrity and confidence through thick, 
-                solid lines and a bold sans serif typeface. The diagonal cut through the square 
-                is implies the Nomadx ‘N’ and creates an upward pointing arrow, suggesting growth 
-                and innovation.
-              </p>
-              <p>
-                Our design program included a brand identity system, logotype, color scheme and 
-                typography, as well as several identity applications including a stationery system, forms, 
-                website, and other communication identifiers.
-              </p>
+            <article className="text-white" dangerouslySetInnerHTML={{__html: content.rendered}}>
             </article>
           </div>
       </div>
@@ -156,38 +79,46 @@ class WorkPageSingle extends Component {
   }
 
   
-  getProjectPost() {
-    return(
+  getProjectPost(project) {
+    if(!project.length) {
+      return(
+        <div></div>
+      )
+    }
+
+    let projectInfo = project[0];
+    console.log(projectInfo);
+    return (
       <div>
         <Row>
           <Col xs={12} sm={8}>
             <h2 className="light text-grey" style={{marginTop: "-1rem"}}>
-              Denver, Colorado
+              {projectInfo.acf.location}
             </h2>
           </Col>
         </Row>
         <div className="single-project-banner-description">
           <div className="padding-top-5">
-              {this.getDropDown()}
+              {this.getDropDown(projectInfo.acf.services, projectInfo.content)}
           </div>
         </div>
-        <div className="single-project-banner">
-            <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-1.jpg" alt="Nomadx"/> 
-        </div>
-        <div className="single-project-grid">
-          <div className="item">
-            <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-2.jpg" alt="Color Guide" />
-          </div>
-          <div className="item">
-            <img src="http://piscatello.com/wp-content/uploads/2018/09/Nomadx_Type.jpg" alt="Color Guide" />
-          </div>
-          <div className="item">
-            <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-5.jpg" alt="letterhead" />
-          </div>
-          <div className="item">
-            <img src="http://piscatello.com/wp-content/uploads/2018/09/NomadX-6.jpg" alt="tote" />
-          </div>
-        </div>
+        {projectInfo.acf.images.map((image, i) => {
+          return(
+            <div className="padding-top-15" key={i}>
+              <div className="single-project-banner">
+                {image.banner_image ? <img src={image.banner_image} alt={projectInfo.title.rendered} /> : ""}                  
+              </div>
+              <div className="single-project-grid">
+                <div className="item">
+                  {image["square_image_#1"] ? <img src={image["square_image_#1"]} alt={projectInfo.title.rendered} /> : ""}                  
+                </div>
+                <div className="item">
+                  {image["square_image_#2"] ? <img src={image["square_image_#2"]} alt={projectInfo.title.rendered} /> : ""}                  
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </div>
     )
   }
@@ -203,28 +134,41 @@ class WorkPageSingle extends Component {
   }
 
   render() {
+    const { match } = this.props;
+    const { projects } = this.context;
+    let project = [];
+    if(projects.length) {
+      project = projects.filter(project => project.slug === match.params.id);
+    }
+
     return (
-      <div className={"work-page-single " + this.getBodyClass()}>
-        <div className="project-container" style={{opacity: this.state.transition ? 0 : 1}}>
-          <WorkPageHeader projectTitle={this.state.projectTitle} isUpdate={this.props.isUpdate}></WorkPageHeader>
-          <section id="project-content" className={this.getBodyClass()}>
-            <Container className="container" fluid={true} style={{padding: 0}}>
-               {this.getProjectPost()}
-            </Container>
+      <ProjectsContext.Consumer>
+      {({ projects }) => (
+        <div className={"work-page-single " + this.getBodyClass()}>
+          <div className="project-container" style={{opacity: this.state.transition ? 0 : 1}}>
+            <WorkPageHeader projectTitle={project.length ? project[0].title.rendered : ""} isUpdate={this.props.isUpdate}></WorkPageHeader>
+            <section id="project-content" className={this.getBodyClass()}>
+              <Container className="container" fluid={true} style={{padding: 0}}>
+                { this.getProjectPost(project) }
+              </Container>
+            </section>
+          </div>
+          <section id="work-list" style={{paddingTop: "2rem"}}>
+            <div id="project-list">
+              <Container fluid={true} className="container" style={{padding: 0}}>
+                <div className="project-grid">
+                    {/* {this.renderProjects()} */}
+                </div>
+              </Container>
+            </div>
           </section>
         </div>
-        <section id="work-list" style={{paddingTop: "2rem"}}>
-          <div id="project-list">
-            <Container fluid={true} className="container" style={{padding: 0}}>
-              <div className="project-grid">
-                  {this.renderProjects()}
-              </div>
-            </Container>
-          </div>
-        </section>
-      </div>
+      )}
+      </ProjectsContext.Consumer>
     );
   }
 }
+
+WorkPageSingle.contextType = ProjectsContext;
 
 export default WorkPageSingle;

@@ -92,13 +92,12 @@ class App extends Component {
               <Route path="/" exact component = {HomePage}></Route>
               <Route path="/practice" component = {PracticePage}></Route>
               <Route path="/expertise" component = {Expterise}></Route>
-              <Route path="/work/:type/:id" component = {WorkPageSingle}></Route>
+              <Route path="/work/:id" component = {WorkPageSingle}></Route>
               <Route path="/contact" component = {ContactPage}></Route>
               <Route path="/careers" exact component = {Careers}></Route>
               <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
               <Route path="/update/:id" component = {UpdatePageSingle}></Route>
               <Route path="/work" exact component = {WorkPage} key="work"></Route>
-              <Route path="/work/:type" exact component = {WorkPage} key="workcat"></Route>
               <Route path="/update" exact component = {Updates}></Route>
             </Switch>
             <Footer></Footer>

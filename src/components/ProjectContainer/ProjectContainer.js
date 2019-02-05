@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { withRouter } from 'react-router-dom'
 import HoverLink from "../HoverLink/HoverLink";
+import { ProjectsContext } from '../../ProjectsContext';
+
 
 class ProjectContainer extends Component {
 
@@ -74,7 +76,7 @@ class ProjectContainer extends Component {
             link = "/update/test"
         }
 
-        else link = "/work/category/test";
+        else link = `/work/${this.props.project.slug}`;
 
         if(document.querySelector("#swipe-slider")) {
             if(!document.querySelector("#swipe-slider").classList.contains("active")) {
@@ -91,28 +93,32 @@ class ProjectContainer extends Component {
         const isNews = this.props.news || "";
         // console.log(el)
         return(
-            <div onMouseUp={this.goToLink} style={{height: "100%"}}>
-                <div className={"project"} ref={this.root}>
-                    <div className="image-container gradient">
-                        <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
-                    </div>
-                    <div className="project-description">
-                        <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
-                            <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
+            <ProjectsContext.Consumer>
+            {({ projects }) => (
+                <div onMouseUp={this.goToLink} style={{height: "100%"}}>
+                    <div className={"project"} ref={this.root}>
+                        <div className="image-container gradient">
+                            <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
                         </div>
-                        <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }}>
-                        </div> 
-                    </div>
-                    <div className="details">
-                        {isNews ? 
-                            <span className="text-grey" style={{fontWeight: "500"}}>{el.tagline}</span>
-                            :
-                            <div></div>
-                        }
-                        <h5 className="text-red" style={{textTransform: "capitalize"}}>{el.type}</h5>
+                        <div className="project-description">
+                            <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
+                                <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
+                            </div>
+                            <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }}>
+                            </div> 
+                        </div>
+                        <div className="details">
+                            {isNews ? 
+                                <span className="text-grey" style={{fontWeight: "500"}}>{el.tagline}</span>
+                                :
+                                <div></div>
+                            }
+                            <h5 className="text-red" style={{textTransform: "capitalize"}}>{el.type}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
+            </ProjectsContext.Consumer>
         )
     }
 }
