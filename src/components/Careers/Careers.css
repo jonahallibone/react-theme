@@ -1,46 +1,17 @@
-#careers {
-    padding-top: 10.75rem;
+.careers-page {
+    display: block;
     background: #000;
+    padding: 75px 0 10rem 0;
 }
 
-.image-grid {
+.careers-top-text {
+    padding: 7rem 0;
+    max-width: 75%;
+}
+
+.careers-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5rem;
-    padding-top: 5rem;
-}
-
-.image-grid .img-container img {
-    display: block;
-    width: 100%;
-}
-
-.career-grid {
-    background: #FFF;
     padding: 5rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.5rem;
-    height: 53vh;
-    grid-auto-rows: min-content;
-}
-
-.career-grid .career-block {
-    padding: 1.5rem;
-    transition: .345s ease-in-out all;
-    border-radius: 3px;
-    border: 2px solid #F1F1F1;
-    cursor: pointer;
-}
-
-.career-grid .career-block h3 {
-    transition: .345s ease all;
-}
-
-.career-grid .career-block:hover h3 {
-    color: #ff4350;
-}
-
-.career-grid .career-block:hover {
-    border: #ff4350 2px solid;
+    border-bottom: 1px solid #FFF;
 }
