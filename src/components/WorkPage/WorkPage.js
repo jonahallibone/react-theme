@@ -78,9 +78,7 @@ class WorkPage extends Component {
     }
 
     const template = projects.map((el, i) => (
-      <Fade bottom key={i}>
-        <ProjectContainer project={el} />
-      </Fade>
+        <ProjectContainer project={el} key={i} />
     ))
 
     return template;

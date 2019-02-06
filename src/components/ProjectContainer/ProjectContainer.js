@@ -21,6 +21,10 @@ class ProjectContainer extends Component {
             hovered: false
         }
 
+        this.rAF = undefined;
+        this.ticking = false;
+        this.last_known_scroll_position = 0;
+
         this.visible = false;
 
     }
@@ -37,11 +41,24 @@ class ProjectContainer extends Component {
     }
 
     componentDidMount() {
-        // document.addEventListener("scroll", this.checkVisibility, {passive: true});
         this.root.current.addEventListener("mouseenter", this.addHover.bind(this));
-        this.root.current.addEventListener("mouseleave", this.removeHover.bind(this) );
+        this.root.current.addEventListener("mouseleave", this.removeHover.bind(this));
+        document.addEventListener("scroll", this.handleScroll, {passive: true});
 
         this.checkVisibility();
+    }
+    
+    handleScroll = () => {
+        this.last_known_scroll_position = window.scrollY;
+
+        if (!this.ticking) {
+            this.rAF = window.requestAnimationFrame(() => {
+                this.checkVisibility();
+                this.ticking = false;
+            });
+
+            this.ticking = true;
+        }
     }
 
     addHover() {
@@ -53,18 +70,24 @@ class ProjectContainer extends Component {
     }
 
     checkVisibility = () => {
-        const top = this.root.current.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) - 50;
-        if(top > 0) {
+        const top = this.root.current.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) * .666;
+        const bottom = this.root.current.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight);
+        
+        if((top) > 0) {
             this.root.current.classList.add("visible")
         }
 
-        else this.root.current.classList.remove("visible")
+        else if(bottom) {
+            this.root.current.classList.remove("visible")
+        }
     }
+
+
 
     componentWillUnmount() {
         // document.removeEventListener("scroll", this.checkVisibility, {passive: true});
         this.root.current.removeEventListener("mouseenter", this.addHover);
-        this.root.current.removeEventListener("mouseleave", this.removeHover) ;
+        this.root.current.removeEventListener("mouseleave", this.removeHover);
     }
 
     goToLink = () => {
@@ -88,10 +111,14 @@ class ProjectContainer extends Component {
         }
     }
 
+    componentWillUnmount() {
+        window.cancelAnimationFrame(this.rAF);
+        document.removeEventListener("scroll", this.handleScroll, {passive: true})
+    }
+
     render() {
         const el = this.props.project;
         const isNews = this.props.news || "";
-        // console.log(el)
         return(
             <ProjectsContext.Consumer>
             {({ projects }) => (

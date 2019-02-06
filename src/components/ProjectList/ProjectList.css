@@ -83,8 +83,7 @@
 .news-grid .project .image-container img {
     display: block;
     width: 100%;
-    transition: .345s ease all;
-    transform: scale(1.01);
+    transition: .85s ease all;
 }
 
 .project-grid .project:hover .project-title,
@@ -140,6 +139,63 @@
     /* border-radius: 3px; */
     overflow: hidden;
 }
+
+.project .image-container:after {
+    content: '';
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scaleY(1) skew(0, 20deg);
+    margin-top: -1;
+    transition: .85s ease all;
+    transform-origin: 0% 0%;
+    position: relative;
+    /* clip-path: polygon(0 0, 1600px 0, 1600px 100%, 0 100%); */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project .image-container:before {
+    content: '';
+    background-color: #FFF;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 99;
+    transition: .85s ease all;
+    transform-origin: 0% 0%;
+}
+  
+.project .image-container img {
+    display: block;
+    width: 100%;
+    transform: scale(1.2);
+    transition: .85s ease all;
+}
+  
+.project.visible .image-container:after {
+    transform: scaleY(0) skew(0, 0);
+    /* clip-path: polygon(0 0, 1600px 0, 1600px -100%, 0 100%); */
+}
+
+.project.visible .image-container:before {
+    transform: scaleY(0)
+}
+  
+.project.visible img {
+    transform: scale(1)
+}
+
+
 
 @media all and (min-width: 1440px) {
     .news-grid .project .image-container {
