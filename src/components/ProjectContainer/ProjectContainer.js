@@ -78,7 +78,7 @@ class ProjectContainer extends Component {
         }
 
         else if(bottom) {
-            this.root.current.classList.remove("visible")
+            // this.root.current.classList.remove("visible")
         }
     }
 
