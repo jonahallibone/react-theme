@@ -53,7 +53,9 @@ class HoverLink extends Component {
 
         return(
             <div ref={elem => this.link = elem} className={`underline--container ${this.getClass()} ${className} ${hovered}`} {...this.props}>
-                {this.props.children}
+                <span className="red-underline">
+                    {this.props.children}
+                </span>
             </div>
         )
     }

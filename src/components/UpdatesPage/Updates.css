@@ -33,6 +33,12 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 960px) {
+    .update-feed {
+        grid-template-columns: 1fr;
+    }
+}
+
 .update-feed .update-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -90,6 +96,13 @@
     color: #999;
 }
 
+@media screen and (max-width: 600px) {
+    .update-input {
+        font-size: 2rem;
+        width: 65%;
+    }
+}
+
 .update-input::placeholder {
     color: #EAEAEA;
 }
@@ -111,6 +124,12 @@
     transform: translateX(-25%);
     transition: .345s ease all;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .signup-button {
+        height: 53px;
+    }
 }
 
 .signup-button svg {

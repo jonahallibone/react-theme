@@ -96,6 +96,18 @@ transition-delay: 10ms;
   opacity: 1;
 }
 
+@media screen and (max-width: 960px) {
+  .description {
+    position: relative;
+    grid-template-columns: 1fr;
+  }
+
+  .description .text-right {
+    text-align: left;
+    padding-top: .5rem;
+  }
+}
+
 .arrows {
   position: absolute;
   bottom: 0;

@@ -103,12 +103,12 @@ class WorkPage extends Component {
         <section id="work-list">
           <div id="project-list">
             <Container fluid={true} className="container" style={{padding: 0}}>
-              <h2 className="light padding-btm-lg" style={{display: "flex"}}>
-                Showing – &nbsp;
+              <span className="light filter-text padding-btm-lg" style={{display: "flex", whiteSpace: "nowrap"}}>
+                <span className="showing-text">Showing – &nbsp;</span>
                 <WorkContext.Provider value={this.state}>
                   <Filter />
                 </WorkContext.Provider>
-              </h2>
+              </span>
               <ProjectsContext.Consumer>
                 {({ projects }) => (
                   <div className="project-grid">

@@ -60,7 +60,7 @@ class WorkPageSingle extends Component {
                 <div style={{color: "#FFF" }} className="share-icon plus">
                     <Icon icon={iosPlusEmpty} size="31" />
                 </div>
-                <h2 className="light text-white drop-down--label">Project Information</h2>
+                <span className="light p-info-button text-white drop-down--label">Project Information</span>
               </li>
             </ul>
           </div>

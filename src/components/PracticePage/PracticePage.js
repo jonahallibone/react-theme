@@ -138,6 +138,9 @@ class PracticePage extends Component {
             <br/><br/>
             We combine business strategy and creativity to develop communication systems that define, inspire, and engage.
             </h1>
+            <h1 className="reg text-white lighter padding-top-2">
+              Whether you’re established or just starting, we can help your organization grow through the power of design.
+            </h1>
           </div>
           <Slider {...settings}>
               <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg"/>

@@ -143,7 +143,7 @@
 @media all and (max-width: 517px) {
     .information-grid {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
     }
 }
 

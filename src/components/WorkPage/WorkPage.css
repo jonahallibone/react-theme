@@ -126,3 +126,15 @@
     transform: translateY(0%);
     opacity: 1;
 }
+
+.filter-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .showing-text {
+        display: none;
+    }
+}

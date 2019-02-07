@@ -46,6 +46,20 @@
     grid-gap: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+    .single-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .single-project-grid .item:last-of-type {
+        margin-top: 1.5rem;
+    }
+
+    .p-info-button {
+        font-size: 1.5rem;
+    }
+}
+
 .single-project-grid .item {
     background-color: #DDD;
 }
@@ -88,6 +102,16 @@
     grid-template-columns: 1fr 1fr;
     display: none;
     padding: 1rem 0;
+}
+
+@media screen and (max-width: 675px) {
+    .project-description--inner {
+        grid-template-columns: 1fr;
+    }
+
+    .service-list {
+        margin: 3rem 0;
+    }
 }
 
 .drop-down--label {

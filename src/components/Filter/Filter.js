@@ -8,22 +8,31 @@ class Filter extends Component {
         super(props);
 
         this.state = { 
-            selectedFilter: "All"
+            selectedFilter: "all"
         }
     }
 
-    listFilters(selectFilter) {
+    listFilters = (setFilter) => {
         let delay = 0;
         return Object.keys(Pages).map((el, i) => {
             delay += 100;
+            console.log(el.toLowerCase, this.state.filter);
             return (
-                <div className="filter" key={i} style={{transitionDelay: `${delay}ms`}} onClick={() => { selectFilter(el.toLowerCase()) }}>{el}</div>
+                <div 
+                    className={this.state.selectedFilter == el.toLowerCase() ? "selected filter" : "filter"} 
+                    key={i} 
+                    style={{transitionDelay: `${delay}ms`}} 
+                    onClick={() => { this.setFilterState(setFilter, el) }}
+                >
+                        {el}
+                </div>
             )
         })
     }
 
-    selectFilter(el) {
-        this.setState({ "selectedFilter": el })
+    setFilterState = (setFilter, el) => {
+        setFilter(el.toLowerCase());
+        this.setState({"selectedFilter": el})
     }
 
     render() {

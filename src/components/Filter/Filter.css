@@ -24,6 +24,7 @@
     opacity: 0;
     transition: .345s ease all;
     text-transform: capitalize;
+    background: #FFF;
 }
 
 .filter-flex:hover .filter {
@@ -35,4 +36,20 @@
 
 .filter-flex .filter:hover {
     color: red;
+}
+
+
+@media screen and (max-width: 700px) {
+    .filter-flex .filter {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+
+    .filter-flex .selected-filter {
+        display: none;
+    }
+
+    .filter-flex .filter.selected {
+        color: red;
+    }
 }
