@@ -56,9 +56,9 @@ class HomePage extends Component {
                                 {this.state.isVisible && this.random == 1 && [
                                         <CSSAnimate key="i" delay="1000">
                                             <h1 className="reg text-white lighter padding-top-2">
-                                            A multidisciplinary design consultancy.
-                                            <br/><br/>
-                                            We combine business strategy and creativity to develop communication systems that define, inspire, and engage.
+                                            We are a multidisciplinary design consultancy.
+                                            <br/>
+                                            Our work is strategic, dignified, and timeless.
                                             </h1>
                                         </CSSAnimate>
                                 ]}

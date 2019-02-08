@@ -195,6 +195,10 @@ p {
     display: block;
 }
 
+p > span {
+    font-weight: 500 !important;
+}
+
 h1,
 h2,
 h3,

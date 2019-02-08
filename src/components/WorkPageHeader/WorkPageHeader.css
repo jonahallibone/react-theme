@@ -1,5 +1,5 @@
 #featured-header {
-    background-color: transparent;
+    background-color: #000;
     position: sticky;
     top: 75px;
     width: 85vw;
@@ -63,6 +63,12 @@
 #featured-header .title-row .side h5 {
     margin-top: -1rem;
     flex: 0 0 100%;
+}
+
+@media screen and (max-width: 960px) {
+    #featured-header .side.social-side {
+        display: none;
+    }
 }
 
 #featured-header .social-list {

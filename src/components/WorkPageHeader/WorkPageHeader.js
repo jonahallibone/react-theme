@@ -26,7 +26,7 @@ class WorkPageHeader extends Component {
     handleScroll = (e) => {
         let title = document.querySelector("#featured-header");
 
-        if(title.getBoundingClientRect().top <=75) {
+        if(title.getBoundingClientRect().top <= 80) {
             title.classList.add("shrink");
         }
         else title.classList.remove("shrink");
@@ -46,7 +46,7 @@ class WorkPageHeader extends Component {
                             {this.props.projectTitle}
                         </h1>
                     </div>
-                    <div className="side" style={{justifyContent: "flex-end"}}>
+                    <div className="side social-side" style={{justifyContent: "flex-end"}}>
                         <div className="social-hover" style={{display: "flex"}}>
                             <div className="social-icon" style={{display: "flex"}}>
                                 <div style={{color: this.props.isUpdate ? "#000" : "#FFF", marginLeft: "1rem"}}>
