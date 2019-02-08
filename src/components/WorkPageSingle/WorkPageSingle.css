@@ -1,8 +1,15 @@
 .work-page-single {
     min-height: 100%;
-    padding-top: 14rem;
+    padding-top: 7rem;
+    margin-top: 75px;
     padding-bottom: 5rem;
     background-color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    .work-page-single {
+        padding-top: 3.5rem;
+    }
 }
 
 #project-content {
@@ -52,7 +59,7 @@
     }
 
     .single-project-grid .item:last-of-type {
-        margin-top: 1.5rem;
+        /* margin-top: 1.5rem; */
     }
 
     .p-info-button {

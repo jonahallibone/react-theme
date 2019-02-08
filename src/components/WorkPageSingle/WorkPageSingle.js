@@ -157,15 +157,6 @@ class WorkPageSingle extends Component {
               </Container>
             </section>
           </div>
-          <section id="work-list" style={{paddingTop: "2rem"}}>
-            <div id="project-list">
-              <Container fluid={true} className="container" style={{padding: 0}}>
-                <div className="project-grid">
-                    {/* {this.renderProjects()} */}
-                </div>
-              </Container>
-            </div>
-          </section>
         </div>
       )}
       </ProjectsContext.Consumer>

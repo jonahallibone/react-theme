@@ -109,7 +109,7 @@ class Header extends Component {
                         <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex"}}>
                             <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
                                 <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
-                                    <Link className="page-link" to="/work" data-linkname="work">
+                                    <Link className="page-link" to="/" data-linkname="work">
                                         <HoverLink thick="true">
                                             <span>Home</span>
                                         </HoverLink>

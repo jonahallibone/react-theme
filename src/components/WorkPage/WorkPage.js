@@ -92,8 +92,8 @@ class WorkPage extends Component {
     return (
       <section className="transition-page" id="page-work">
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
-          <Row style={{paddingTop: "7rem"}}>
-            <Col xs={12} sm={10} md={9} lg={9}  style={{ paddingBottom: "5rem"}}>
+          <Row className="top-text-mobile">
+            <Col xs={12} sm={10} md={9} lg={9}>
               <h1 className={"reg lighter text-black animate " + this.state.animateDes}>
                 {this.state.pageDescription}
               </h1>

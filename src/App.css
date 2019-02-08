@@ -675,3 +675,13 @@ u:hover:before {
         transform: translateY(-100%)
     }
 }
+
+.top-text-mobile {
+    padding: 7rem 0;
+}
+
+@media screen and (max-width: 600px) {
+    .top-text-mobile {
+        padding: 3.5rem 0;
+    }
+}

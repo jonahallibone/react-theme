@@ -9,10 +9,10 @@ class Statement extends Component {
 
     render() {
         return( 
-            <div id="statement">
+            <div className="top-text-mobile">
             <Container fluid={true} className="container text-left" style={{padding: 0}}>
                 <Row justify="start" align="center" style={{height: "100%"}}>
-                    <Col xs={12} sm={9} md={9}>
+                    <Col xs={12} sm={12} md={12}>
                         {this.props.children}
                         {/* <Button button-lg black className="margin-top-3">See Our Work</Button> */}
                     </Col>
