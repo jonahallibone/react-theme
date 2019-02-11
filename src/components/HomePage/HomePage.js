@@ -58,7 +58,7 @@ class HomePage extends Component {
                                             <h1 className="reg text-white lighter">
                                             We are a multidisciplinary design consultancy.
                                             <br/> 
-                                            Our work is strategic, dignified, and timeless.
+                                            Our work is strategic, universal, and timeless.
                                             </h1>
                                         </CSSAnimate>
                                 ]}
