@@ -30,6 +30,7 @@
 
 #featured-header.shrink {
     background-color: #000;
+    padding-bottom: 1.3rem;
 }
 
 .update-page-single #featured-header.shrink {
@@ -55,7 +56,6 @@
 
 #featured-header .title-row .side {
     display: flex;
-    height: 75px;
     align-items: center;
     flex-wrap: wrap;
 }

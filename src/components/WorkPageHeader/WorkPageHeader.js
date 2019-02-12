@@ -20,13 +20,14 @@ class WorkPageHeader extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener("scroll", this.handleScroll)
+        setTimeout(() => {
+            document.addEventListener("scroll", this.handleScroll)
+        }, 400)
     }
 
     handleScroll = (e) => {
         let title = document.querySelector("#featured-header");
-
-        if(title.getBoundingClientRect().top <= 80) {
+        if(window.scrollY  >= 80) {
             title.classList.add("shrink");
         }
         else title.classList.remove("shrink");
