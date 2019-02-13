@@ -11,6 +11,10 @@ import "./Updates.css";
 class Updates extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            userEmail: ""
+        }
     }
 
     componentDidMount() {
@@ -22,15 +26,41 @@ class Updates extends Component {
         document.querySelector("header").classList.add("white-bg");
     }
 
+    addSubscriber = async () => {
+        document.querySelector(".update-input-container").classList.add("hide")
+        document.querySelector(".loader").classList.add("show")
+        let res = await fetch("https://api.piscatello.space/wp-json/subscribers/add-email", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({"email": this.state.userEmail}),
+        }).then(data => {
+            setTimeout(() => document.querySelector(".loader").classList.remove("show"), 1000);
+            document.querySelector(".thank-you-text").classList.add("show")
+            return data.json()
+        })
+
+        console.log(res);
+    }
+
+    handleChange = (event) => {
+        this.setState({userEmail: event.target.value});
+    }
+
     render() {
         return(
             <section className="updates-page" style={{paddingTop: "70px"}}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
                         <h1 className="text-black reg lighter">Stay Updated.</h1>
+                        <div className="loader"></div>
+                        <div className="thank-you-text">
+                            <h1 className="text-grey reg lighter">Thank you for subscribing.</h1>
+                        </div>
                         <div className="update-input-container">
-                            <input type="text" className="update-input" placeholder="example@example.com"/>
-                            <div className="signup-button">
+                            <input type="text" onChange={this.handleChange} className="update-input" value={this.state.userEmail} placeholder="example@example.com"/>
+                            <div className="signup-button" onClick={this.addSubscriber}>
                                 <div style={{ color: '#999' }}>
                                     <Icon size={50} icon={arrows_slim_right}/>
                                 </div>

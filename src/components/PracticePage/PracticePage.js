@@ -76,13 +76,14 @@ class PracticePage extends Component {
             <div className="image-grid-2">
               <div className="image-container">
                 <h2 className="text-grey light">
-                Rocco Piscatello is principal and creative director of Piscatello Design Centre. He was a former creative director at Vignelli Associates prior to founding Piscatello Design Centre. Piscatello is passionate about working with industry leaders to help their businesses grow and thrive.                <br/>
+                Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
+                Piscatello is passionate about working with industry leaders to help their businesses grow and thrive.
+                He was a former creative director at Vignelli Associates prior to founding Piscatello Design Centre.                
+                <br/>
                 <br/>
                 His past and present global clients include the Robin Hood Foundation, New York University, Ronald McDonald House, Ducati Motors, BMW, Frank Gehry Partners, Guggenheim Museum, Jean-Georges Management, Starwood Hotels and Resorts, Colorforms, PriceWaterHouseCoopers, United Colors of Benetton, Warner Bros., Metropolitan Transit Authority, Tishman Speyer, and the U.S. General Services Administration.                <br/>
                 <br/>
-                Piscatello has been cited for excellence by the leading organizations promoting superiority in design. Included are the American Institute of Graphic Arts and the Society for Experiential Graphic Design. Piscatello is a frequent speaker on design and was selected by Graphic Design USA as one of the 2003 “People to Watch.”                <br/>
-                <br/>
-                Piscatello has also been cited for excellence by the leading organizations promoting superiority in design. Included are: the American Institute of Graphic Arts and the Society for Experiential Graphic Design.
+                Piscatello has been cited for excellence by the leading organizations promoting superiority in design. Included are the American Institute of Graphic Arts and the Society for Experiential Graphic Design. Piscatello is a frequent speaker on design and was selected by Graphic Design USA as one of the 2003 “People to Watch.” 
                 <br/>
                 <br/>
                 His work is included in the permanent collections of the Denver Art Museum, the Vignelli Center for Design Studies, and the Library of Congress. His book. “Rocco Piscatello: Poster Works for FIT”, was published in 2017.                </h2>
@@ -94,10 +95,12 @@ class PracticePage extends Component {
           </Container>
           <div className="" style={{background: "#111", marginTop: "6rem"}}>
             <Container style={{padding: 0}} fluid={true} className="container">
-              <h1 className="text-white lighter reg" style={{padding: "14rem 0", width: "75%"}}>
+              <h1 className="text-white lighter reg" style={{padding: "7rem 0 0 0", width: "75%"}}>
                 Let's work together.
+              </h1>
                 <br/><br/>
-                Email us at <a href="mailto:work@piscatello.com"><HoverLink grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
+              <h1 className="text-grey lighter reg" style={{padding: "0 0 7rem 0", width: "75%"}}>
+                Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
               </h1>
             </Container>
           </div> 

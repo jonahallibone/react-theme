@@ -3,9 +3,8 @@ import React from "react";
 export const Pages = {
     "all": {
       title: "All",
-      description: `We create work that builds business value and enhances life for people and the places they inhabit.`,
+      description: `We consider all brand communications as a totality and apply a holistic approach to our work.`,
       url: "all"
-  
     },
     "brand identity": {
       title: "Brand Identity",

@@ -81,9 +81,87 @@
 
 .update-input-container {
     display: flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
+    transition: .345s ease all;
+    position: relative;
+    z-index: 99;
 }
+
+.update-input-container.hide {
+    transform: translateX(50px);
+    opacity: 0;
+    position: absolute;
+}
+
+.loader {
+    animation: rotate 1s infinite linear;
+    position: absolute;
+    top: 11.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background: #FFF;
+    background-image:
+      linear-gradient(
+        25deg,
+        #DDD 55%,
+        transparent 60%
+      ),
+      linear-gradient(
+        50deg,
+        #DDD 55%,
+        transparent 60%
+      ),
+      linear-gradient(
+        75deg,
+        #DDD 55%,
+        transparent 60%
+      );
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: ease-in .345s opacity .345s;
+}
+
+.loader.show {
+    opacity: 1;
+    transition: ease-in .345s opacity .345s;
+}
+
+.loader:after {
+    border-radius: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 47px;
+    height: 47px;
+    background: #FFF;
+}
+  
+  @keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.thank-you-text {
+    opacity: 0;
+    transition: .345s ease opacity 1.85s;
+    top: 11.5rem;
+    position: absolute;
+    left: 0;
+}
+
+.thank-you-text.show {
+    opacity: 1;
+}
+
+
 
 .update-input {
     border: 0;
