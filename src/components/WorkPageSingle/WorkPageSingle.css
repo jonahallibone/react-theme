@@ -195,8 +195,10 @@
 /* Next Project Header */
 
 .next-project-header {
-    transition: 0s ease height, .5s ease background;
+    transition: 0s ease height, .5s ease top;
     height: calc(14rem);
+    position: relative;
+    top: 0;
 }
 
 .next-project-header.moving {
@@ -228,5 +230,5 @@
 
 .fade-out {
     opacity: 0;
-    transition: 1s ease all;
+    transition: .5s ease all;
 }

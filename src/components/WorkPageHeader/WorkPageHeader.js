@@ -22,7 +22,7 @@ class WorkPageHeader extends Component {
     componentDidMount() {
         setTimeout(() => {
             document.addEventListener("scroll", this.handleScroll)
-        }, 400)
+        }, 1000)
     }
 
     handleScroll = (e) => {

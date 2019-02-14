@@ -57,16 +57,16 @@ class PracticePage extends Component {
               <img src="https://s3.amazonaws.com/piscatello/MidoriHse_512_1-2880x1922.jpeg"/>
           </Slider>
           <h2 className="light text-white reg padding-top-7 padding-btm-7">About</h2>
-          <div className="text-cols text-grey">
+          <div className="text-grey" style={{width: "50%"}}>
             <p>
-              Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodology for combining business strategy and creativity to help organizations realize their full potential. We consider all brand communications as a totality and apply a holistic approach to design.
-              <br/><br/>
-              <span>Central to our ethos is an appetite for enquiry, discovery, and understanding. We believe the best design solutions are achieved through discussion and listening. Every project begins with research to ensure our design solution is suitable to your brand and the culture of its location.</span>
-              <br/><br/>
-              We have always been passionate advocates for sustainable design and apply the principles of good design in every endeavor we undertake. Our ultimate aim is to create beautiful experiences that are strategic, universal, and timeless.
+            Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodology for combining business strategy and creativity to help organizations realize their full potential.
+            <br/><br/>
+            Over the years we’ve helped launch new businesses, rebranded existing ones, and created experiences for some of the best organizations in the world. We have always been passionate advocates for creating work that is long-lasting and thorough down to the last detail.
+            <br/><br/>
+            Whether you’re a Fortune 100 brand, small business, or new start-up, we’d love to help you design better experiences and build your brand.
             </p>
           </div>
-          <div className="image-container padding-top-5">
+          <div className="image-container padding-top-7">
             <img src="http://piscatello.com/wp-content/themes/pdc/images/client_logos/PDC_ClientLogos_Desktop.svg" />
           </div>
         </Container>

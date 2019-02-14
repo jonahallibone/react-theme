@@ -139,19 +139,24 @@ class WorkPageSingle extends Component {
 
   loadNextProject = (project) => {
     const { history } = this.props;
-    document.querySelector(".next-project-header").classList.add("pre-moving");
-    setTimeout(() => document.querySelector(".next-project-header").classList.add("moving"), 1);
-    document.querySelector(".project-container").classList.add("fade-out");
+    let pContainer = document.querySelector(".project-container");
+    pContainer.classList.add("fade-out");
+    let header = document.querySelector(".next-project-header");
+    let top = header.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+    let distance = windowHeight - top;
+    header.style.top = `-${top - 75}px`;
     document.body.style.overflow = "hidden";
-    setTimeout(() => window.scrollTo(0, 0), 1500);
-
+    setTimeout(() => document.querySelector("#featured-header").classList.remove("shrink"), 400);
+    setTimeout(() => {window.scrollTo(0, 0);}, 2000);
+    // setTimeout(() => {pContainer.style.display = "none"; }, 1999);
+    setTimeout(() => header.style.top = `0px`, 2000);
     setTimeout(() => {
       history.push(`/work/${project.slug}`);
+      pContainer.style.display = "block"
       document.querySelector(".project-container").classList.remove("fade-out");
-      document.querySelector(".next-project-header").classList.remove("moving");
-      document.querySelector(".next-project-header").classList.remove("pre-moving");
       document.body.style.overflow = "auto";
-    }, 2500);
+    }, 2000);
   }
 
   render() {
@@ -183,7 +188,7 @@ class WorkPageSingle extends Component {
               <div className="title-row">
                 <div className="side">
                   <h1 className="reg project-title text-white">
-                    {projects[index] ? projects[index].title.rendered: ""}
+                    {projects[index] ? projects[index].title.rendered : ""}
                   </h1>
                   <h2 className="light text-grey">
                     {projects[index] ? projects[index].acf.location: ""}
