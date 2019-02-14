@@ -173,7 +173,7 @@
 .list-row .share-icon {
     margin-right: .5rem;
     display: inline-block;
-    margin-left: -10px;
+    margin-left: -7px;
 }
 
 .list-row .share-icon svg {
@@ -210,7 +210,7 @@
 .next-project-header .title-row {
     transition: 0s ease all;
     position: absolute;
-    bottom: 0;
+    
 }
 
 .next-project-header.pre-moving .title-row {

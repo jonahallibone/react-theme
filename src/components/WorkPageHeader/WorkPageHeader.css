@@ -10,6 +10,7 @@
     max-width: 1440px;
     margin: 0 auto;
     overflow: hidden;
+    height: 75px;
 }
 
 @media all and (max-width: 1440px) {
@@ -30,7 +31,6 @@
 
 #featured-header.shrink {
     background-color: #000;
-    padding-bottom: 1.3rem;
 }
 
 .update-page-single #featured-header.shrink {

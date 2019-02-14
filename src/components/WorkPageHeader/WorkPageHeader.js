@@ -27,7 +27,7 @@ class WorkPageHeader extends Component {
 
     handleScroll = (e) => {
         let title = document.querySelector("#featured-header");
-        if(window.scrollY  >= 80) {
+        if(window.scrollY > 80) {
             title.classList.add("shrink");
         }
         else title.classList.remove("shrink");
