@@ -2,7 +2,7 @@
     min-height: 100%;
     padding-top: 7rem;
     margin-top: 75px;
-    padding-bottom: 5rem;
+    padding-bottom: 14rem;
     background-color: #000;
 }
 
@@ -187,4 +187,46 @@
 .project-content a > span {
     font-weight: 500 !important;
     text-decoration: underline !important;
+}
+
+
+
+
+/* Next Project Header */
+
+.next-project-header {
+    transition: 0s ease height, .5s ease background;
+    height: calc(14rem);
+}
+
+.next-project-header.moving {
+    position: fixed;
+    height: 100vh;
+    /* background: #000; */
+    top: 0;
+    width: 100%;
+}
+
+.next-project-header .title-row {
+    transition: 0s ease all;
+    position: absolute;
+    bottom: 0;
+}
+
+.next-project-header.pre-moving .title-row {
+    position: absolute;
+    bottom: calc(7rem + 105px);
+    transition: 1s ease all;
+}
+
+.next-project-header.moving .title-row {
+    position: absolute;
+    bottom: calc(100% - 7rem - 75px);
+    transform: translateY(100%);
+    transition: 1s ease all 1s;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 1s ease all;
 }

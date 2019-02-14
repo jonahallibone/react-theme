@@ -24,8 +24,7 @@ class Careers extends Component {
                     </div>
                     <div className="careers-grid career">
                         <div>
-                            <h2 className="reg text-white text-bold">Internships</h2>
-                            <h3 className="reg text-grey light">New York, New York</h3>
+                            <h3 className="reg text-white text-bold">Internships</h3>
                         </div>
                         <div>
                             <p className="text-grey">
@@ -41,25 +40,7 @@ class Careers extends Component {
                     </div>
                     <div className="careers-grid career">
                         <div>
-                            <h2 className="reg text-white text-bold">Internships</h2>
-                            <h3 className="reg text-grey light">New York, New York</h3>
-                        </div>
-                        <div>
-                            <p className="text-grey">
-                                We are currently accepting applications for design, strategy, and development internships. Experience in the relevant discipline is an advantage. Commitment, passion, flexibility, and independence is essential.
-                            </p><br/>
-                            <p className="text-grey">
-                                Interns work closely with our team on varied client and internal projects. A solid understanding of Piscatello Design Centre’s work and philosophy is vital.
-                            </p><br/>
-                            <p className="text-grey">
-                                Please send your CV, and/or pdf portfolio, and cover letter, as well as your availability to internships@piscatello.com
-                            </p>
-                        </div>
-                    </div>
-                    <div className="careers-grid career">
-                        <div>
-                            <h2 className="reg text-white text-bold">Internships</h2>
-                            <h3 className="reg text-grey light">New York, New York</h3>
+                            <h3 className="reg text-white text-bold">Internships</h3>
                         </div>
                         <div>
                             <p className="text-grey">

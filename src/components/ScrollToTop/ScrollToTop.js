@@ -6,7 +6,7 @@ class ScrollToTop extends Component {
         if (this.props.location.pathname !== prevProps.location.pathname) {
             setTimeout(() => {
                 window.scrollTo(0, 0);
-            }, 200);
+            },1);
         }
     }
   

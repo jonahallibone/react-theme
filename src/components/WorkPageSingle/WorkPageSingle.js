@@ -137,19 +137,38 @@ class WorkPageSingle extends Component {
     return template;
   }
 
+  loadNextProject = (project) => {
+    const { history } = this.props;
+    document.querySelector(".next-project-header").classList.add("pre-moving");
+    setTimeout(() => document.querySelector(".next-project-header").classList.add("moving"), 1);
+    document.querySelector(".project-container").classList.add("fade-out");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => window.scrollTo(0, 0), 1500);
+
+    setTimeout(() => {
+      history.push(`/work/${project.slug}`);
+      document.querySelector(".project-container").classList.remove("fade-out");
+      document.querySelector(".next-project-header").classList.remove("moving");
+      document.querySelector(".next-project-header").classList.remove("pre-moving");
+      document.body.style.overflow = "auto";
+    }, 2500);
+  }
+
   render() {
     const { match } = this.props;
     const { projects } = this.context;
     let project = [];
+    let index = null;
     if(projects.length) {
       project = projects.filter(project => project.slug === match.params.id);
+      index = projects.findIndex(project => project.slug === match.params.id) + 1;
     }
 
     return (
       <ProjectsContext.Consumer>
       {({ projects }) => (
         <div className={"work-page-single " + this.getBodyClass()}>
-          <div className="project-container" style={{opacity: this.state.transition ? 0 : 1}}>
+          <div className="project-container">
             <WorkPageHeader projectTitle={project.length ? project[0].title.rendered : ""} isUpdate={this.props.isUpdate}></WorkPageHeader>
             <section id="project-content" className={this.getBodyClass()}>
               <Container className="container" fluid={true} style={{padding: 0}}>
@@ -157,6 +176,22 @@ class WorkPageSingle extends Component {
               </Container>
             </section>
           </div>
+
+          {/* Header for 'Next Project' */}
+          <Container className="container" fluid={true} style={{padding: 0, position: "static !important"}}>
+            <div className="next-project-header padding-top-7 padding-btm-7" onClick={() => this.loadNextProject(projects[index])}>
+              <div className="title-row">
+                <div className="side">
+                  <h1 className="reg project-title text-white">
+                    {projects[index] ? projects[index].title.rendered: ""}
+                  </h1>
+                  <h2 className="light text-grey">
+                    {projects[index] ? projects[index].acf.location: ""}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </Container>
         </div>
       )}
       </ProjectsContext.Consumer>
