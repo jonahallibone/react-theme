@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import SimpleTyper from "../SimpleTyper/SimpleTyper";
 import HoverLink from "../HoverLink/HoverLink";
 import LogoRow from '../LogoRow/LogoRow';
+import {Helmet} from "react-helmet";
 
 class PracticePage extends Component {
 
