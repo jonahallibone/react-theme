@@ -73,9 +73,8 @@ class PracticePage extends Component {
           <Slider {...settings}>
               <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg" />
               <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
-              <img src="https://s3.amazonaws.com/piscatello/Screen+Shot+2019-01-31+at+4.47.01+PM.png" />
-              <img src="https://s3.amazonaws.com/piscatello/A0130FF7-26C8-44E1-B916-565DE6BB5170.png" />
               <img src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
+              <img src="https://s3.amazonaws.com/piscatello/PDCPractice.jpg" />
           </Slider>
           <h2 className="light text-white reg padding-top-7 padding-btm-7">About</h2>
           <div className="text-grey" style={{width: "50%"}}>

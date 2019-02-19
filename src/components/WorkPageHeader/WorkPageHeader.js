@@ -21,7 +21,7 @@ class WorkPageHeader extends Component {
 
     componentDidMount() {
         setTimeout(() => {
-            document.addEventListener("scroll", this.handleScroll)
+            // document.addEventListener("scroll", this.handleScroll)
         }, 1000)
     }
 

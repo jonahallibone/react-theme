@@ -1,6 +1,6 @@
 #featured-header {
     background-color: #000;
-    position: sticky;
+    /* position: sticky; */
     top: 75px;
     width: 85vw;
     z-index: 99;

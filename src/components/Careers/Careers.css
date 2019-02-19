@@ -5,14 +5,20 @@
 }
 
 .careers-top-text {
-    padding: 7rem 0;
+    padding: 7rem 0 7rem 0;
     max-width: 75%;
+}
+
+@media all and (max-width: 600px) {
+    .careers-top-text {
+        max-width: 100%;
+    }
 }
 
 .careers-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5rem 0;
+    padding: 2.5rem 0 5rem 0;
     border-bottom: 1px solid #999;
 }
 

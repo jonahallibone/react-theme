@@ -8,6 +8,20 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import Icon from 'react-icons-kit';
 import {iosPlusEmpty} from 'react-icons-kit/ionicons/iosPlusEmpty';
 import { ProjectsContext } from "../../ProjectsContext";
+import Transition from 'react-transition-group/Transition';
+
+
+const duration = 1000;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0,
+}
+
+const transitionStyles = {
+  entering: { opacity: 0, color: "white" },
+  entered:  { opacity: 1, color: "white" },
+};
 
 
 
@@ -173,6 +187,16 @@ class WorkPageSingle extends Component {
       <ProjectsContext.Consumer>
       {({ projects }) => (
         <div className={"work-page-single " + this.getBodyClass()}>
+          <Transition in={true} timeout={duration}>
+            {(state) => (
+              <div style={{
+                ...defaultStyle,
+                ...transitionStyles[state]
+              }}>
+                I'm a fade Transition!
+              </div>
+            )}
+          </Transition>
           <div className="project-container">
             <WorkPageHeader projectTitle={project.length ? project[0].title.rendered : ""} isUpdate={this.props.isUpdate}></WorkPageHeader>
             <section id="project-content" className={this.getBodyClass()}>
@@ -185,7 +209,8 @@ class WorkPageSingle extends Component {
           {/* Header for 'Next Project' */}
           <Container className="container" fluid={true} style={{padding: 0, position: "static !important"}}>
             <div className="next-project-header padding-top-7 padding-btm-7" onClick={() => this.loadNextProject(projects[index])}>
-              <div className="title-row">
+              <p className="text-red reg">Next Project</p>
+              <div className="title-row padding-top-175">
                 <div className="side">
                   <h1 className="reg project-title text-white">
                     {projects[index] ? projects[index].title.rendered : ""}

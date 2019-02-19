@@ -195,24 +195,14 @@
 /* Next Project Header */
 
 .next-project-header {
-    transition: 0s ease height, .5s ease top;
-    height: calc(14rem);
+    transition: 0s ease height, .5s ease top, .5s ease border-top;
     position: relative;
     top: 0;
-}
-
-.next-project-header.moving {
-    position: fixed;
-    height: 100vh;
-    /* background: #000; */
-    top: 0;
-    width: 100%;
+    border-top: #999 1px solid;
 }
 
 .next-project-header .title-row {
     transition: 0s ease all;
-    position: absolute;
-    
 }
 
 .next-project-header.pre-moving .title-row {
