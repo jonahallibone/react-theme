@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import './SwipeSlider.css';
-import { toJS, computed } from 'mobx';
 
 class SwipeSlider extends Component {
     constructor(props) {
