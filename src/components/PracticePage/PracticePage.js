@@ -44,6 +44,25 @@ class PracticePage extends Component {
 
     return (
       <div className="page-practice">
+
+        {/* Helmet Config for Page Meta and Title */}
+
+        <Helmet>
+            <title>Piscatello Design Centre | Practice</title>
+            <meta name="description" content="Whether you’re established or just starting, we can help your organization grow through the power of design." />
+
+            {/* <!-- Twitter Card data --> */}
+            <meta name="twitter:card" value="Whether you’re established or just starting, we can help your organization grow through the power of design." />
+
+            {/* <!-- Open Graph data --> */}
+            <meta property="og:title" content="Piscatello Design Centre | Practice" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://piscatello.space/practice" />
+            <meta property="og:image" content="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
+            <meta property="og:description" content="Whether you’re established or just starting, we can help your organization grow through the power of design." />
+
+          </Helmet>
+
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
             <h1 className="reg text-white lighter padding-top-2">

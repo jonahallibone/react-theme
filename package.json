@@ -24,6 +24,7 @@
     "react-flickity-component": "^3.2.0",
     "react-flickity-component-updated": "0.0.5",
     "react-grid-system": "^4.4.2",
+    "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
     "react-icons-kit": "^1.2.1",
     "react-live-clock": "^3.0.0",
