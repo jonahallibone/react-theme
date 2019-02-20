@@ -131,7 +131,7 @@
 .filter-text {
     font-size: 1.5rem;
     font-weight: 500;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 @media screen and (max-width: 700px) {

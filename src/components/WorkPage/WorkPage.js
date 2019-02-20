@@ -105,7 +105,7 @@ class WorkPage extends Component {
           <Row className="top-text-mobile">
             <Col xs={12} sm={10} md={9} lg={9}>
               <h1 className={"reg lighter text-black animate"}>
-                We consider all brand communications as a totality and apply a holistic approach to our work.
+                Design in every discipline, that lasts.
               </h1>
             </Col>
           </Row>

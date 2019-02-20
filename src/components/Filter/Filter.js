@@ -17,14 +17,14 @@ class Filter extends Component {
     }
 
     componentDidMount = () => {
-        document.addEventListener("scroll", this.toggleShowFilter.bind(this));       
+        document.addEventListener("scroll", this.toggleShowFilter, {passive: true});       
     }
 
     toggleShowFilter = () => {
         let filterFlex = document.querySelector(".filter-text");
 
 
-        if(filterFlex.getBoundingClientRect().top < 75 && this.state.showTop === false) {
+        if(filterFlex.getBoundingClientRect().top <= 75 && this.state.showTop === false) {
             this.setState({showTop: true});
             filterFlex.classList.add("scrolled")
         }
@@ -36,7 +36,8 @@ class Filter extends Component {
         }
 
         else if(this.state.showTop) {
-            if(window.scrollY > this.lastScrollY) {
+            console.log(window.scrollY >= this.lastScrollY)
+            if(window.scrollY >= this.lastScrollY) {
                 filterFlex.classList.add("up");
             }
 
@@ -52,7 +53,6 @@ class Filter extends Component {
         let delay = 0;
         return Object.keys(Pages).map((el, i) => {
             delay += 100;
-            console.log(el.toLowerCase, this.state.filter);
             return (
                 <div 
                     className={this.state.selectedFilter == el.toLowerCase() ? "selected filter" : "filter"} 
@@ -72,7 +72,7 @@ class Filter extends Component {
     }
 
     componentWillUnmount = () => {
-        document.removeEventListener("scroll", this.toggleShowFilter.bind(this));       
+        document.removeEventListener("scroll", this.toggleShowFilter, {passive: true})
     }
 
     render() {

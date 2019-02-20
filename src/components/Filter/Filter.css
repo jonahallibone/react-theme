@@ -40,15 +40,18 @@
 
 .filter-text {
     background: #FFF;
+    display: block;
+    width: 100%;
     transition: .345s ease transform;
-    will-change: transform;
+    position: sticky;
+    top: 75px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .filter-text.scrolled {
-    position: sticky;
-    top: 75px;
     z-index: 99999999;
     width: 100%;
+    padding: 0 0 1rem 0;
 }
 .filter-text.scrolled.up {
     transform: translateY(-100%)

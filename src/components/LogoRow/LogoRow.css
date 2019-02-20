@@ -2,18 +2,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    padding: 4rem 0;
+    padding: 10rem 0;
 }
 
 .logo-col {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
 
 .logo-grid img {
     display: block;
-    width: 45%;
+    width: 65%;
     /* position: relative; */
+    opacity: 0;
+    position: absolute;
+    transition: .345s ease opacity;
+}
+
+.logo-grid img:first-of-type {
     opacity: 1;
 }
