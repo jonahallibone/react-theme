@@ -2,14 +2,50 @@ import React, { Component } from "react";
 
 import "./Filter.css";
 import { WorkContext, Pages } from "../WorkPage/Pages";
+import HoverLink from "../HoverLink/HoverLink";
 
 class Filter extends Component {
     constructor(props) {
         super(props);
 
         this.state = { 
-            selectedFilter: "all"
+            selectedFilter: "all",
+            showTop: false,
         }
+        
+        this.lastScrollY = null;
+    }
+
+    componentDidMount = () => {
+        document.addEventListener("scroll", this.toggleShowFilter.bind(this));       
+    }
+
+    toggleShowFilter = () => {
+        let filterFlex = document.querySelector(".filter-text");
+
+
+        if(filterFlex.getBoundingClientRect().top < 75 && this.state.showTop === false) {
+            this.setState({showTop: true});
+            filterFlex.classList.add("scrolled")
+        }
+
+        else if(filterFlex.getBoundingClientRect().top > 75) {
+            this.setState({showTop: false});
+            filterFlex.classList.remove("up")
+            filterFlex.classList.remove("scrolled")
+        }
+
+        else if(this.state.showTop) {
+            if(window.scrollY > this.lastScrollY) {
+                filterFlex.classList.add("up");
+            }
+
+            else filterFlex.classList.remove("up")
+        }
+
+        
+
+        this.lastScrollY = window.scrollY;
     }
 
     listFilters = (setFilter) => {
@@ -24,7 +60,7 @@ class Filter extends Component {
                     style={{transitionDelay: `${delay}ms`}} 
                     onClick={() => { this.setFilterState(setFilter, el) }}
                 >
-                        {el}
+                        <HoverLink>{el}</HoverLink>
                 </div>
             )
         })
@@ -35,14 +71,21 @@ class Filter extends Component {
         this.setState({"selectedFilter": el})
     }
 
+    componentWillUnmount = () => {
+        document.removeEventListener("scroll", this.toggleShowFilter.bind(this));       
+    }
+
     render() {
         return(
             <WorkContext.Consumer>
                 {({ filter, setFilter}) => (
-                    <div className="filter-flex">
-                        <div className="selected-filter">{filter.title}</div>
-                        {this.listFilters(setFilter)}
-                    </div>
+                    <span className="light filter-text padding-btm-lg" style={{display: "flex", whiteSpace: "nowrap"}}>
+                        <span className="showing-text">Showing – &nbsp;</span>
+                        <div className="filter-flex">
+                            <div className="selected-filter">{filter.title}</div>
+                            {this.listFilters(setFilter)}
+                        </div>
+                    </span>
                 )}
             </WorkContext.Consumer>
         )
