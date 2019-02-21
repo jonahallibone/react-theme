@@ -41,11 +41,25 @@ class WorkPageSingle extends Component {
 
   async componentDidMount() {
     this.styleBlack();    
+    setTimeout(() => document.addEventListener("scroll", this.animateProjectImages), 1000);
+    // this.animateProjectImages();
   }
 
   styleBlack = () => {
     document.querySelector("header").classList.remove("white-bg");
     document.querySelector("header").classList.add("black-bg");
+  }
+
+  animateProjectImages = () => {
+    document.querySelectorAll(".project-images img").forEach((el, i) => {
+      if(i == 0) {
+        el.classList.add("pop-in");
+      }
+
+      if(el.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) * .666) {
+        el.classList.add("pop-in");
+      }
+    })
   }
 
   getBodyClass() {
@@ -103,7 +117,7 @@ class WorkPageSingle extends Component {
     let projectInfo = project[0];
     console.log(projectInfo);
     return (
-      <div>
+      <div className="project-images">
         <Row>
           <Col xs={12} sm={8}>
             <h2 className="light text-grey" style={{marginTop: "-1rem"}}>
@@ -120,7 +134,7 @@ class WorkPageSingle extends Component {
           return(
             <div className="padding-top-15" key={i}>
           
-              {image.banner_image ?  <div className="single-project-banner"><img src={image.banner_image} alt={projectInfo.title.rendered} /></div> : ""}                  
+              {image.banner_image ?  <div className={`single-project-banner`}><img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} /></div> : ""}                  
               {image["square_image_#1"]
               ?
               <div className="single-project-grid">
@@ -139,16 +153,6 @@ class WorkPageSingle extends Component {
         })}
       </div>
     )
-  }
-
-  renderProjects = () => {
-    const template = this.state.projects.map((el, i) => (
-      <Reveal effect="fadeInUp">
-        <ProjectContainer project={el} key={i} />
-      </Reveal>
-    ))
-
-    return template;
   }
 
   loadNextProject = (project) => {
@@ -171,6 +175,10 @@ class WorkPageSingle extends Component {
       document.querySelector(".project-container").classList.remove("fade-out");
       document.body.style.overflow = "auto";
     }, 2000);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.animateProjectImages);
   }
 
   render() {

@@ -71,10 +71,10 @@ class PracticePage extends Component {
             </h1>
           </div>
           <Slider {...settings}>
-              <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg" />
-              <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
-              <img src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
-              <img src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />
+            <img src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />
+            <img src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
+            <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg" />
+            <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
           </Slider>
           <h2 className="light text-white reg padding-top-7 padding-btm-5">About</h2>
           <div className="text-grey" style={{width: "50%"}}>
@@ -97,18 +97,6 @@ class PracticePage extends Component {
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block">
-              <h3 className="reg text-white light">Consulting</h3>
-              <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Design Workshops</li>
-                <li>Visitor Journey Mapping</li>
-                <li>Persona Development</li>
-                <li>Competitor Research</li>
-                <li>Stakeholder Interviews</li>
-                <li>Design Thinking Facilitation</li>
-                <li>Coaching and Mentoring</li>
-              </ul>
-            </div>
-            <div className="info-block">
               <h3 className="reg text-white light">Brand Identity</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Logomarks</li>
@@ -116,8 +104,8 @@ class PracticePage extends Component {
                 <li>Icon Development</li>
                 <li>Brand Identity Guidelines</li>
                 <li>Digital Templates</li>
-                <li>Launch and Event Production</li>
-                <li>Book Design</li>
+                <li>Launch & Event Production</li>
+                <li>Book & Publication Design</li>
               </ul>
             </div>
             <div className="info-block">
@@ -137,11 +125,23 @@ class PracticePage extends Component {
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Signage Programs</li>
                 <li>Branded Environments</li>
-                <li>Super Graphics and Fine Art</li>
+                <li>Super Graphics & Fine Art</li>
                 <li>Donor Recognition</li>
                 <li>Retail Tenant Guidelines</li>
-                <li>Exhibit and Retail Signage</li>
+                <li>Exhibit & Retail Signage</li>
                 <li>Memorial Graphics</li>
+              </ul>
+            </div>
+            <div className="info-block">
+              <h3 className="reg text-white light">Consulting</h3>
+              <ul className="text-grey service-list">
+                <li style={{marginTop: "2rem"}}>Design Workshops</li>
+                <li>Visitor Journey Mapping</li>
+                <li>Persona Development</li>
+                <li>Competitor Research</li>
+                <li>Stakeholder Interviews</li>
+                <li>Design Thinking Facilitation</li>
+                <li>Coaching & Mentoring</li>
               </ul>
             </div>
           </div>

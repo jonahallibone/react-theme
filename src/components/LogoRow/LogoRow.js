@@ -1,6 +1,5 @@
 import React, {Component} from "react"
 import "./LogoRow.css";
-import { clearInterval } from "timers";
 
 class LogoRow extends Component {
 
@@ -13,12 +12,11 @@ class LogoRow extends Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.interval, 4000);
+        this.intervalId = setInterval(this.interval, 4000);
     }
 
     interval = () => {
         let imageContainers = document.querySelectorAll(".logo-col");
-
         imageContainers.forEach((el, i) => {
             el.querySelectorAll("img").forEach(el => el.style.transitionDelay = `${i * 100}ms`)
             if(this.imageIndex == 1) {
@@ -40,6 +38,7 @@ class LogoRow extends Component {
 
     componentWillUnmount() {
         clearInterval(this.intervalId);
+        this.imageIndex = 1;
     }
 
     render() {

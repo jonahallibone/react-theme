@@ -9,6 +9,7 @@ import HoverLink from '../HoverLink/HoverLink';
 
 
 import '../FlickSlider/FlickSlider.css';
+import ContactSlider from '../ContactSlider/ContactSlider';
 
 class ContactPage extends Component {
 
@@ -49,22 +50,6 @@ class ContactPage extends Component {
   }
 
   render() {
-    const settings = {
-      className: "",
-      dots: false,
-      fade: true,
-      cssEase: "ease",
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      adaptiveHeight: true,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      speed: 1000,
-      pauseOnHover: false
-    };
-    
     return (
       <section className="transition-page contact-page">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
@@ -76,9 +61,7 @@ class ContactPage extends Component {
             Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
           </h1>
           <div className="contact-banner padding-btm-5">
-              <Slider {...settings}>
-                <img src="https://s3.amazonaws.com/piscatello/Apple_Tools_Placeholder-Image.jpg"/>
-              </Slider>
+              <ContactSlider></ContactSlider>
           </div>
         </Container>
         <div style={{backgroundColor: "#000", paddingTop:"0", paddingBottom: "10rem", borderBottom: "1px solid #DDD"}}>

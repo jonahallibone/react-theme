@@ -1,0 +1,48 @@
+.contact-slider {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;    
+    display: flex;
+    align-items: center;
+}
+
+.contact-slider-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-width: 100%;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.contact-slider .contact-slider-image-container {
+    min-width: 400px;
+    max-height: 500px;
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-slider .contact-slider-image-container img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact-slider .hover-zone {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.contact-slider .hover-zone.left {
+    left: 0;
+}
+
+.contact-slider .hover-zone.right {
+    right: 0;
+}
+

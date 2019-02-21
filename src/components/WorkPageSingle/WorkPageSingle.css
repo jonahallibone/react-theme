@@ -52,6 +52,9 @@
 .single-project-grid .item img {
     width: 100%;
     display: block;
+    transition: .5s ease all;
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 .single-project-banner ~ .single-project-grid {
@@ -84,7 +87,7 @@
 }
 
 .single-project-grid .item {
-    background-color: #DDD;
+    background-color: #000;
 }
 
 .bottom-directions {
@@ -198,7 +201,6 @@
     transition: 0s ease height, .5s ease top, .5s ease border-top;
     position: relative;
     top: 0;
-    border-top: #999 1px solid;
 }
 
 .next-project-header .title-row {
@@ -221,4 +223,9 @@
 .fade-out {
     opacity: 0;
     transition: .5s ease all;
+}
+
+.single-project-banner img.pop-in, .single-project-grid .item img.pop-in {
+    transform: scale(1);
+    opacity: 1;
 }
