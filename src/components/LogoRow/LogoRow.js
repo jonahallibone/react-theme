@@ -20,19 +20,19 @@ class LogoRow extends Component {
         imageContainers.forEach((el, i) => {
             el.querySelectorAll("img").forEach(el => el.style.transitionDelay = `${i * 100}ms`)
             if(this.imageIndex == 1) {
-                el.querySelectorAll(`img:nth-of-type(4)`)[0].style.opacity = 0;
+                el.querySelectorAll(`img:nth-of-type(5)`)[0].style.opacity = 0;
                 el.querySelectorAll(`img:nth-of-type(1)`)[0].style.opacity = 1;
             }
 
             else {
                 el.querySelectorAll(`img:nth-of-type(${parseInt(this.imageIndex - 1)})`)[0].style.opacity = 0;
-                el.querySelectorAll(`img:nth-of-type(${parseInt(this.imageIndex) + 1 == 5 ? 4 : parseInt(this.imageIndex)})`)[0].style.opacity = 1;
+                el.querySelectorAll(`img:nth-of-type(${parseInt(this.imageIndex) + 1 == 6 ? 5 : parseInt(this.imageIndex)})`)[0].style.opacity = 1;
             }
 
             console.log(this.imageIndex)
         })
 
-        this.imageIndex + 1 == 5 ? this.imageIndex = 1 : this.imageIndex++;
+        this.imageIndex + 1 == 6 ? this.imageIndex = 1 : this.imageIndex++;
 
     }
 
@@ -45,34 +45,39 @@ class LogoRow extends Component {
         return(
             <div className="logo-grid">
                 <div className="logo-col">
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/1100_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/Cornell_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/MountSinai_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/RobinHood_logo.svg"/>
+                   <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/RobinHood.svg"/>
+                   <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/NYCHealth.svg"/>
+                   <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/MountSinai.svg"/>
+                   <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/1100.svg"/>
+                   <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Guggenheim.svg"/>
                 </div>    
                 <div className="logo-col">
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/BMW_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/Ducati_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/NYCHealth_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/StRegis_logo.svg" />
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/StRegis.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/CS.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/MTA.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/CentralSyna.svg"/> 
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Beneton.svg"/>
                 </div>    
                 <div className="logo-col">
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/Baruch_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/FIT_logo.svg" />
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/NYCParks_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/USCourt_logo.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/JeanGeorges.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/FIT.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/RMHNY.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/UScourt.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Hyatt.svg"/>
                 </div>    
                 <div className="logo-col">
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/CS_logo_V2.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/JeanGeorges_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/NeighborhoodTrust_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/Vinoly_logo.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Warner.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/NT.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/NYCParks.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Vinoly.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/NYU.svg"/>
                 </div>    
                 <div className="logo-col">
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/CentralSyn_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/MTA_logo.svg"/>
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/RMHNY_logo.svg" />
-                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Resized_V2/WB_logo.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Baruch.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Mitchell.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Cornell.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/Ducati.svg"/>
+                    <img src="https://s3.amazonaws.com/piscatello/ClientLogos_Revised_02.22.19/BMW.svg"/>
                 </div>    
             </div>
         )

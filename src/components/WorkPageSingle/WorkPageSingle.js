@@ -194,7 +194,7 @@ class WorkPageSingle extends Component {
               <p className="text-red reg next-project-link">Next Project</p>
               <div className="title-row padding-top-175">
                 <div className="side">
-                  <h1 className="reg project-title text-white">
+                  <h1 className="reg project-title light text-white">
                     {projects[index] ? projects[index].title.rendered : ""}
                   </h1>
                   <h2 className="light text-grey project-location">
