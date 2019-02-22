@@ -92,7 +92,7 @@ class ProjectList extends Component {
                             {this.renderProjects(projects)}
                         </div>
                         <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
-                            <DelayLink delay={1000} to="/work"><Button arrow className="black-border">More Work</Button></DelayLink>
+                            <Link to="/work"><Button arrow className="black-border">More Work</Button></Link>
                         </div>
                     </Container>
                     <div className="homepage-news">

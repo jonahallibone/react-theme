@@ -43,7 +43,7 @@ class ProjectContainer extends Component {
     componentDidMount() {
         this.root.current.addEventListener("mouseenter", this.addHover.bind(this));
         this.root.current.addEventListener("mouseleave", this.removeHover.bind(this));
-        document.addEventListener("scroll", this.handleScroll, {passive: true});
+        setTimeout(document.addEventListener("scroll", this.handleScroll, {passive: true}), 1000);
 
         this.checkVisibility();
     }
@@ -75,6 +75,7 @@ class ProjectContainer extends Component {
         
         if((top) > 0) {
             this.root.current.classList.add("visible")
+            document.removeEventListener("scroll", this.handleScroll, {passive: true});
         }
 
         else if(bottom) {

@@ -4,9 +4,14 @@ import { withRouter } from 'react-router-dom';
 class ScrollToTop extends Component {
     componentDidUpdate(prevProps) {
         if (this.props.location.pathname !== prevProps.location.pathname) {
+            document.querySelector("#footer").style.display = "none";
             setTimeout(() => {
                 window.scrollTo(0, 0);
-            },1);
+            }, 600);
+
+            setTimeout(() => {
+                document.querySelector("#footer").style.display = "block";
+            }, 1500);
         }
     }
   

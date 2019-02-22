@@ -220,11 +220,6 @@
     transition: 1s ease all 1s;
 }
 
-.fade-out {
-    opacity: 0;
-    transition: .5s ease all;
-}
-
 .single-project-banner img.pop-in, .single-project-grid .item img.pop-in {
     transform: scale(1);
     opacity: 1;

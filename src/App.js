@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import { BrowserRouter, Route, Link, Switch, withRouter } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import posed, { PoseGroup } from 'react-pose';
  
 import './App.css';
@@ -18,11 +19,6 @@ import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
 import Updates from './components/UpdatesPage/Updates';
 import UpdatePageSingle from './components/UpdatePageSingle/UpdatePageSingle';
 import {ProjectsContext} from "./ProjectsContext";
-
-const RouteContainer = posed.div({
-  enter: { opacity: 1, delay: 600, beforeChildren: true, transition: { default: { duration: 150 } } },
-  exit: { opacity: 0, delay: 0, beforeChildren: false, transition: { default: { duration: 300 } } }
-});
 
 class App extends Component {
 
@@ -88,18 +84,22 @@ class App extends Component {
       <div className="App">
         <Header></Header>
           <ProjectsContext.Provider value={this.state}>
-            <Switch location={location}>
-              <Route path="/" exact component = {HomePage}></Route>
-              <Route path="/practice" component = {PracticePage}></Route>
-              <Route path="/expertise" component = {Expterise}></Route>
-              <Route path="/work/:id" component = {WorkPageSingle}></Route>
-              <Route path="/contact" component = {ContactPage}></Route>
-              <Route path="/careers" exact component = {Careers}></Route>
-              <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
-              <Route path="/update/:id" component = {UpdatePageSingle}></Route>
-              <Route path="/work" exact component = {WorkPage} key="work"></Route>
-              <Route path="/update" exact component = {Updates}></Route>
-            </Switch>
+          <TransitionGroup>
+              <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 2000, exit: 400}}>
+                <Switch location={location}>
+                  <Route path="/" exact component = {HomePage}></Route>
+                  <Route path="/practice" component = {PracticePage}></Route>
+                  <Route path="/expertise" component = {Expterise}></Route>
+                  <Route path="/work/:id" component = {WorkPageSingle}></Route>
+                  <Route path="/contact" component = {ContactPage}></Route>
+                  <Route path="/careers" exact component = {Careers}></Route>
+                  <Route path="/careers/:id" exact component = {CareerPageSingle}></Route>
+                  <Route path="/update/:id" component = {UpdatePageSingle}></Route>
+                  <Route path="/work" exact component = {WorkPage} key="work"></Route>
+                  <Route path="/update" exact component = {Updates}></Route>
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
             <Footer></Footer>
           </ProjectsContext.Provider>
 
