@@ -111,7 +111,14 @@
 /*** Drop Down ***/
 
 .drop-down {
-    
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .25s ease all .2s;
+}
+
+.fade-enter-done .drop-down {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -222,5 +229,14 @@
 
 .single-project-banner img.pop-in, .single-project-grid .item img.pop-in {
     transform: scale(1);
+    opacity: 1;
+}
+
+.project-images {
+    opacity: 0;
+    transition: .345s ease opacity .4s;
+}
+
+.fade-enter-done .project-images {
     opacity: 1;
 }

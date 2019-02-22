@@ -107,40 +107,44 @@ class WorkPageSingle extends Component {
     let projectInfo = project[0];
     console.log(projectInfo);
     return (
-      <div className="project-images">
-        <Row>
-          <Col xs={12} sm={8}>
-            <h2 className="light text-grey" style={{marginTop: "-1rem"}}>
-              {projectInfo.acf.location}
-            </h2>
-          </Col>
-        </Row>
-        <div className="single-project-banner-description">
-          <div className="padding-top-5">
-              {this.getDropDown(projectInfo.acf.services, projectInfo.content)}
+      <div>
+        <div className="project-top-information">
+          <Row>
+            <Col xs={12} sm={8}>
+              <h2 className="light text-grey post-location" style={{marginTop: "-1rem"}}>
+                {projectInfo.acf.location}
+              </h2>
+            </Col>
+          </Row>
+          <div className="single-project-banner-description">
+            <div className="padding-top-5">
+                {this.getDropDown(projectInfo.acf.services, projectInfo.content)}
+            </div>
           </div>
         </div>
-        {projectInfo.acf.images.map((image, i) => {
-          return(
-            <div className="padding-top-15" key={i}>
-          
-              {image.banner_image ?  <div className={`single-project-banner`}><img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} /></div> : ""}                  
-              {image["square_image_#1"]
-              ?
-              <div className="single-project-grid">
-                <div className="item">
-                  {image["square_image_#1"] ? <img src={image["square_image_#1"]} alt={projectInfo.title.rendered} /> : ""}                  
+        <div className="project-images">
+          {projectInfo.acf.images.map((image, i) => {
+            return(
+              <div className="padding-top-15" key={i}>
+            
+                {image.banner_image ?  <div className={`single-project-banner`}><img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} /></div> : ""}                  
+                {image["square_image_#1"]
+                ?
+                <div className="single-project-grid">
+                  <div className="item">
+                    {image["square_image_#1"] ? <img src={image["square_image_#1"]} alt={projectInfo.title.rendered} /> : ""}                  
+                  </div>
+                  <div className="item">
+                    {image["square_image_#2"] ? <img src={image["square_image_#2"]} alt={projectInfo.title.rendered} /> : ""}                  
+                  </div>
                 </div>
-                <div className="item">
-                  {image["square_image_#2"] ? <img src={image["square_image_#2"]} alt={projectInfo.title.rendered} /> : ""}                  
-                </div>
+                :
+                ""
+                }
               </div>
-              :
-              ""
-              }
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     )
   }
@@ -150,21 +154,11 @@ class WorkPageSingle extends Component {
     let pContainer = document.querySelector(".project-container");
     pContainer.classList.add("fade-out");
     let header = document.querySelector(".next-project-header");
-    let top = header.getBoundingClientRect().top;
-    let windowHeight = window.innerHeight;
-    let distance = windowHeight - top;
-    header.style.top = `-${top - 75}px`;
-    document.body.style.overflow = "hidden";
-    setTimeout(() => document.querySelector("#featured-header").classList.remove("shrink"), 400);
-    setTimeout(() => {window.scrollTo(0, 0);}, 2000);
-    // setTimeout(() => {pContainer.style.display = "none"; }, 1999);
-    setTimeout(() => header.style.top = `0px`, 2000);
+    header.classList.add("flip-out");
+
     setTimeout(() => {
       history.push(`/work/${project.slug}`);
-      pContainer.style.display = "block"
-      document.querySelector(".project-container").classList.remove("fade-out");
-      document.body.style.overflow = "auto";
-    }, 2000);
+    }, 200);
   }
 
   componentWillUnmount() {
@@ -197,13 +191,13 @@ class WorkPageSingle extends Component {
           {/* Header for 'Next Project' */}
           <Container className="container" fluid={true} style={{padding: 0, position: "static !important"}}>
             <div className="next-project-header padding-top-7 padding-btm-7" onClick={() => this.loadNextProject(projects[index])}>
-              <p className="text-red reg">Next Project</p>
+              <p className="text-red reg next-project-link">Next Project</p>
               <div className="title-row padding-top-175">
                 <div className="side">
                   <h1 className="reg project-title text-white">
                     {projects[index] ? projects[index].title.rendered : ""}
                   </h1>
-                  <h2 className="light text-grey">
+                  <h2 className="light text-grey project-location">
                     {projects[index] ? projects[index].acf.location: ""}
                   </h2>
                 </div>
