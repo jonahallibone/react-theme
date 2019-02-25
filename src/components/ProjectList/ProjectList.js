@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 import SwipeSlider from '../SwipeSlider/SwipeSlider';
 
-import DelayLink from '../DelayLink/DelayLink';
-
 import './ProjectList.css';
 import Button from '../Button/Button';
 import { ProjectsContext } from '../../ProjectsContext';
