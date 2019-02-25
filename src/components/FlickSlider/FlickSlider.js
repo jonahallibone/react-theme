@@ -35,31 +35,36 @@ class FlickSlider extends Component {
             activeSlide: 0,
             activeSlide2: 0,
             slides: [
-                {
-                    image: "https://s3.amazonaws.com/piscatello/Nomadx_Animation_30FPS_1.11.19+(1).mp4",
-                    title: "Nomadx Solutions",
-                    location: "New York, NY",
-                    video: true
-                },
-                {
-                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
-                    title: "Irish Hunger Memorial",
-                    location: "New York, NY"
-                },
+                // {
+                //     image: "https://s3.amazonaws.com/piscatello/Nomadx_Animation_30FPS_1.11.19+(1).mp4",
+                //     title: "Nomadx Solutions",
+                //     location: "New York, NY",
+                //     video: true
+                // },
                 {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
                     title: "New York University - Advanced Research Institutes",
                     location: "New York, NY"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/SaltLake_KioskRender3-2000x1125.jpg",
-                    title: "United States Courthouse - Salt Lake City",
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/Tringali_LosAngeles.jpg",
+                    title: "Tringali Photograpgy",
                     location: "New York, NY"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/Laguarda-Mockup_01_v7.jpg",
-                    title: "Laguarda Low Architects",
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/66_BlueDoors2.jpg",
+                    title: "66 Restaurant",
+                    location: "New York — London"
+                },
+                {
+                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
+                    title: "Irish Hunger Memorial",
                     location: "New York, NY"
+                },                
+                {
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
+                    title: "LostTribe Theatre",
+                    location: "New York — London"
                 }
             ],
             isVisible: false

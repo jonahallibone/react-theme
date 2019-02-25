@@ -14,7 +14,6 @@
 
 .project-grid .project,
 .news-grid .project {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     /* opacity: 0; */
@@ -169,7 +168,7 @@
 .project.visible .image-container {
     opacity: 1;
     transform: scale(1);
-    transition: .345s ease all;
+    transition: .45s ease all;
 }
 
 

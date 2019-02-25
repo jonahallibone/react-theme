@@ -17,7 +17,7 @@ class Filter extends Component {
     }
 
     componentDidMount = () => {
-        document.addEventListener("scroll", this.toggleShowFilter, {passive: true});       
+    
     }
 
     toggleShowFilter = () => {

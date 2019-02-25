@@ -10,7 +10,6 @@ import {ProjectsContext} from "../../ProjectsContext";
 
 import '../../App.css';
 import './WorkPage.css';
-import CSSAnimate from '../CSSAnimate/CSSAnimate';
 
 class WorkPage extends Component {
   constructor(props) {

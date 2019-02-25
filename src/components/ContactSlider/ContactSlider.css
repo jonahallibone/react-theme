@@ -1,19 +1,25 @@
 .contact-slider {
     position: relative;
     overflow: hidden;
-    min-height: 100vh;    
+    /* min-height: 100vh;     */
     display: flex;
     align-items: center;
+    padding: 6rem 0 9rem 0;
 }
 
 .contact-slider-track {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-width: 100%;
     justify-content: flex-start;
     position: relative;
+    animation: SlideLeft 20s linear infinite;
 }
+
+.contact-slider-track:hover {
+    animation-play-state: paused;
+}
+
 
 .contact-slider .contact-slider-image-container {
     min-width: 400px;
@@ -46,3 +52,16 @@
     right: 0;
 }
 
+.contact-slider-track .contact-slider-track {
+    animation: none;
+}
+
+@keyframes SlideLeft {
+    0% {
+    transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

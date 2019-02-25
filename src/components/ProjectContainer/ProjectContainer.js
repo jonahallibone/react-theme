@@ -43,9 +43,10 @@ class ProjectContainer extends Component {
     componentDidMount() {
         this.root.current.addEventListener("mouseenter", this.addHover.bind(this));
         this.root.current.addEventListener("mouseleave", this.removeHover.bind(this));
-        setTimeout(document.addEventListener("scroll", this.handleScroll, {passive: true}), 1000);
-
-        this.checkVisibility();
+        setTimeout(() => {
+            this.checkVisibility();
+            document.addEventListener("scroll", this.handleScroll, {passive: true});
+        }, 1000);        
     }
     
     handleScroll = () => {

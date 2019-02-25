@@ -158,7 +158,7 @@ class WorkPageSingle extends Component {
 
     setTimeout(() => {
       history.push(`/work/${project.slug}`);
-    }, 200);
+    }, 300);
   }
 
   componentWillUnmount() {

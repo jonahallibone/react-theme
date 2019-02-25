@@ -138,9 +138,9 @@ class PracticePage extends Component {
                 <li style={{marginTop: "2rem"}}>Design Workshops</li>
                 <li>Visitor Journey Mapping</li>
                 <li>Persona Development</li>
-                <li>Competitor Research</li>
                 <li>Stakeholder Interviews</li>
                 <li>Design Thinking Facilitation</li>
+                <li>Art Advisory</li>
                 <li>Coaching & Mentoring</li>
               </ul>
             </div>
@@ -154,7 +154,7 @@ class PracticePage extends Component {
                 <h2 className="text-grey light">
                 Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
                 Piscatello is passionate about working with industry leaders to help their businesses grow and thrive.
-                He was a former creative director at Vignelli Associates prior to founding Piscatello Design Centre.                
+                He was a former design director at Vignelli Associates prior to founding Piscatello Design Centre.                
                 <br/>
                 <br/>
                 His past and present global clients include the Robin Hood Foundation, New York University, Ronald McDonald House, Ducati Motors, BMW, Frank Gehry Partners, Guggenheim Museum, Jean-Georges Management, Starwood Hotels and Resorts, Colorforms, PriceWaterHouseCoopers, United Colors of Benetton, Warner Bros., Metropolitan Transit Authority, Tishman Speyer, and the U.S. General Services Administration.                <br/>

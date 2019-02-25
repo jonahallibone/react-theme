@@ -208,10 +208,41 @@
     transition: 0s ease height, .5s ease top, .5s ease border-top;
     position: relative;
     top: 0;
+    cursor: pointer;
 }
 
-.next-project-header .title-row {
-    transition: 0s ease all;
+.next-project-header .project-title,
+.next-project-header .project-location,
+.next-project-header .next-project-link  {
+    transition: .25s ease-in-out all;
+}
+
+.next-project-header .next-project-link {
+    transition-delay: .2s;
+}
+
+.next-project-header .project-title {
+    transition-delay: .15s;
+}
+
+.next-project-header .project-location {
+    transition-delay: 0s;
+}
+
+.next-project-header:hover .next-project-link {
+    transform: translateX(20px);
+    transition-delay: 0s;
+}
+
+
+.next-project-header:hover .project-title {
+    transform: translateX(20px);
+    transition-delay: .15s;
+}
+
+.next-project-header:hover .project-location {
+    transform: translateX(20px);
+    transition-delay: .2s;
 }
 
 .next-project-header.pre-moving .title-row {

@@ -2,6 +2,15 @@
     background-color: #FFF;
     padding-top: 70px;
     position: relative;
+    opacity: 0;
+    transition: .345s ease all;
+}
+
+#page-work.fade-enter-done {
+    background-color: #FFF;
+    padding-top: 70px;
+    position: relative;
+    opacity: 1;
 }
 
 #work-ticker {

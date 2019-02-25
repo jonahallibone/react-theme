@@ -194,7 +194,8 @@ header.header-overlay--visible .header-overlay {
     padding: 0 0;
     transition: .345s ease all;
     font-weight: 800;
-    padding: 1rem 0;
+    padding: .25rem 0;
+    margin: 1rem 0 0 0;
     line-height: 1;
     display: inline-flex;
 }

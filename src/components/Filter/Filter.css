@@ -10,7 +10,7 @@
     left: 0;
     opacity: 1;
     transition: .345s ease all;
-    border-bottom: 1px solid #999;
+    color: #ff4350;
 }
 
 .filter-flex:hover .selected-filter {
@@ -43,7 +43,6 @@
     display: block;
     width: 100%;
     transition: .345s ease transform;
-    position: sticky;
     top: 75px;
     -webkit-overflow-scrolling: touch;
 }

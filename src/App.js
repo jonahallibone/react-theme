@@ -84,7 +84,7 @@ class App extends Component {
         <Header></Header>
           <ProjectsContext.Provider value={this.state}>
           <TransitionGroup>
-              <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 2000, exit: 400}} appear={true}>
+              <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 900, exit: 900}} appear={true}>
                 <Switch location={location}>
                   <Route path="/" exact component = {HomePage}></Route>
                   <Route path="/practice" component = {PracticePage}></Route>
