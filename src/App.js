@@ -26,7 +26,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      transitioning: false,
       projects: []
     }
 
@@ -102,8 +101,6 @@ class App extends Component {
             </TransitionGroup>
             <Footer></Footer>
           </ProjectsContext.Provider>
-
-        <div className={this.state.transitioning ? "transition-curtain visible" : "transition-curtain"}></div>
       </div>
     )
   }
