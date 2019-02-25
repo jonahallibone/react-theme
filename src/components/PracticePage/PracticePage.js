@@ -93,7 +93,7 @@ class PracticePage extends Component {
             <h2 className="light text-white reg padding-top-7 padding-btm-5">Capabilities</h2>
           </div>
           <div className="text-grey" style={{width: "50%"}}>
-            <p>We believe design and collaboration go hand and hand. Through collaboration we share, inspire, and test ideas. Lets work together to create something engaging, unique, and special.</p>
+            <p>We have created a singular studio that works across many disciplines in the field of design. Each team member contributes to uncovering the core idea of a project and is responsible for working within their own area of expertise.</p>
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block">
