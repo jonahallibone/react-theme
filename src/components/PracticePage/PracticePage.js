@@ -133,15 +133,15 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
-              <h3 className="reg text-white light">Consulting</h3>
+              <h3 className="reg text-white light">Design Consulting</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Design Workshops</li>
                 <li>Visitor Journey Mapping</li>
                 <li>Persona Development</li>
                 <li>Stakeholder Interviews</li>
                 <li>Design Thinking Facilitation</li>
-                <li>Art Advisory</li>
                 <li>Coaching & Mentoring</li>
+                <li>Art Advisory</li>
               </ul>
             </div>
           </div>
@@ -176,7 +176,7 @@ class PracticePage extends Component {
               </h1>
                 <br/><br/>
               <h1 className="text-grey lighter reg" style={{padding: "0 0 10.5rem 0", width: "75%"}}>
-                Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
+                Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tel:12125024734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
               </h1>
             </Container>
           </div> 

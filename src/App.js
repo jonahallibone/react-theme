@@ -26,7 +26,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      projects: []
+      projects: [],
+      updates: []
     }
 
     this.props.history.listen((location, action) => {
@@ -48,7 +49,17 @@ class App extends Component {
       }));
     }
 
+    this.getUpdates = async () => {
+      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/update?_embed&per_page=99")
+      const json = await response.json();
+
+      this.setState(state => ({
+        updates: json
+      }));
+    }
+
     this.getProjects();
+    this.getUpdates();
   }
 
   componentWillMount() {

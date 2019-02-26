@@ -142,7 +142,7 @@ class ProjectContainer extends Component {
                                 :
                                 <div></div>
                             }
-                            <h5 className="text-red" style={{textTransform: "capitalize"}}>
+                            <h5 className="text-red light" style={{textTransform: "capitalize"}}>
                                 
                                 {el._embedded ? el._embedded["wp:term"][0].map((term, i) => <span key={i}>{i !== 0 ? ", " : ""}{term.name}</span>): <span>{el.type}</span>}
                             </h5>

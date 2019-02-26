@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import HoverLink from '../HoverLink/HoverLink';
-
+import {ProjectsContext} from "../../ProjectsContext";
 import Icon from 'react-icons-kit';
 import {arrows_slim_right} from 'react-icons-kit/linea/arrows_slim_right'
 import { Container, Row, Col } from 'react-grid-system';
@@ -47,6 +47,33 @@ class Updates extends Component {
     handleChange = (event) => {
         this.setState({userEmail: event.target.value});
     }
+    
+    renderUpdates = (updates) => {
+        console.log(updates)
+        if(!updates.length) {
+            return;
+        }
+
+        var options = {day: 'numeric', year: 'numeric', month: 'long', };
+
+        return updates.map(el => {
+            return (
+                <div className="update-row" key={el.id}>
+                    <div className="update-img">
+                        <img src={el.acf.featured_image} alt={el.title.rendered}/>
+                    </div>
+                    <div className="update-des">
+                        <h3 className="reg text-bold">
+                            <HoverLink black="true">{el.title.rendered}</HoverLink>
+                        </h3>
+                        <p className="text-grey light padding-top-175">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
+                        <br/>
+                        <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
+                    </div>
+                </div>
+            )
+        });
+    }
 
     render() {
         return(
@@ -75,123 +102,16 @@ class Updates extends Component {
                 <section className="update-section">
                     <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
                         <div className="update-feed">
-                            <div className="update-feed--grid">
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_DaVinci-Thumbnail-05-05.jpg" />
+                            <ProjectsContext.Consumer>
+                                {({ updates }) => (
+                                    <div className="update-feed--grid">
+                                        {this.renderUpdates(updates)}
                                     </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_Bauhaus-Thumbnail-03.jpg" />
-                                    </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_DaVinci-Thumbnail-05-05.jpg" />
-                                    </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_Bauhaus-Thumbnail-03.jpg" />
-                                    </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_DaVinci-Thumbnail-05-05.jpg" />
-                                    </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">Celebrating Leonardo DaVinci</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="update-row">
-                                    <div className="update-img">
-                                        <img src="https://s3.amazonaws.com/piscatello/PDC-Website_Updates_Bauhaus-Thumbnail-03.jpg" />
-                                    </div>
-                                    <div className="update-des">
-                                        <h3 className="reg text-bold">
-                                            <HoverLink black="true">100 Years of The Bauhaus</HoverLink>
-                                        </h3>
-                                        <p className="text-grey light padding-top-175">03 January 2019</p>
-                                        <br/>
-                                        <p className="text-grey light">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nam vitae odio porttitor, faucibus odio vel, suscipit nunc. 
-                                            Mauris urna lacus, cursus at nulla eu, dignissim fermentum elit. 
-                                            Etiam vel tincidunt tellus, vel elementum neque. Aliquam iaculis 
-                                            volutpat lacus vitae commodo. Nulla facilisi.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                                )}
+                            </ProjectsContext.Consumer>
+                            {/* Space for column gap */}
                             <div></div>
+                            {/* End space for column gap */}
                             <div style={{position: "sticky", top: "75px", height: "100vh"}}>
                                 <div>
                                     <p className="reg light hover-underline padding-btm-md">
@@ -214,9 +134,9 @@ class Updates extends Component {
                                 </div>                                
                             </div>
                         </div>
-                    </Container>
-                </section>
+                </Container>
             </section>
+        </section>
         )
     }
 }
