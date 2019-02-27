@@ -112,24 +112,29 @@ class Updates extends Component {
                             {/* Space for column gap */}
                             <div></div>
                             {/* End space for column gap */}
-                            <div style={{position: "sticky", top: "75px", height: "100vh"}}>
+                            <div style={{position: "sticky", bottom: "0px", height: "100vh"}}>
                                 <div>
-                                    <p className="reg light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
+                                    <p className="reg text-grey light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-black">22 March 2019</span></div>
+                                    Piscatello Design Centre to be featured in upcoming book,  ‘Wayfinding–Signs and Icons’ to be published by Design Media Publishing (UK) Limited.
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="reg light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
-                                    New Haven Connecticut
+                                    <p className="reg text-grey light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-black">04 March 2019</span></div>
+                                    Piscatello Design Centre launches a new website, redesigned and developed from the ground up. The website welcome visitors to our practice and offers an overview of our work.
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="reg light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-grey">31 January 2019</span></div>
-                                    Reflections on Ten Qualities of Design at the University of New Haven Extended through 23 February 2019.
+                                    <p className="reg text-grey light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-black">04 February 2019</span></div>
+                                    Piscatello Design Centre completes a comprehensive wayfinding design signage program for Saint David’s School.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="reg text-grey light hover-underline padding-btm-md">
+                                    <div className="padding-btm-sm"><span className="text-black">31 January 2019</span></div>
+                                    Exhibition, ‘Reflections on Ten Qualities of Design’ at the University of New Haven Extended through 23 February 2019.
                                     </p>
                                 </div>                                
                             </div>
