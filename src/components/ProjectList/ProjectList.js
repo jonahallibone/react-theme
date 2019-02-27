@@ -97,10 +97,6 @@ class ProjectList extends Component {
                         <Container fluid={true} className="container news-grid" style={{padding: 0}}>
                             <SwipeSlider>
                                 {this.renderNews(updates)}
-                                {this.renderNews(updates)}
-                                {this.renderNews(updates)}
-                                {this.renderNews(updates)}
-
                             </SwipeSlider> 
                             <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
                                 <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>

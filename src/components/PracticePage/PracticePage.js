@@ -97,6 +97,9 @@ class PracticePage extends Component {
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block">
+              <div className="practice-icon">
+                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-12.svg" />
+              </div>
               <h3 className="reg text-white light">Brand Identity</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Logomarks</li>
@@ -109,6 +112,9 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
+              <div className="practice-icon">
+                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-13.svg" />
+              </div>
               <h3 className="reg text-white light">Digital Design</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Content Strategy</li>
@@ -121,6 +127,9 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
+              <div className="practice-icon">
+                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-14.svg" />
+              </div>
               <h3 className="reg text-white light">Environmental Graphics</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Signage Programs</li>
@@ -133,6 +142,9 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
+              <div className="practice-icon">
+                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-15.svg" />
+              </div>
               <h3 className="reg text-white light">Design Consulting</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Design Workshops</li>

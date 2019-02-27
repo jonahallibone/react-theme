@@ -135,3 +135,10 @@
     stroke: #FFF;
     stroke-width: 10;
 }
+
+.practice-icon {
+    width: 60%;
+    margin-left: 30%;
+    transform: translateX(-50%);
+    margin-bottom: 6rem;
+}
