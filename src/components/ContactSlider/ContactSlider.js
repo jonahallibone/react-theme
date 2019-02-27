@@ -50,7 +50,7 @@ class ContactSlider extends Component {
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                     </div>
                     <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Items_02-min.jpg" />
+                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking+(1).jpg" />
                     </div>
                     <div className="contact-slider-image-container">
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2.jpg" />
@@ -79,7 +79,7 @@ class ContactSlider extends Component {
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                             </div>
                             <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Items_02-min.jpg" />
+                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking+(1).jpg" />
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2.jpg" />
