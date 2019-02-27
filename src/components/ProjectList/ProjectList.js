@@ -71,9 +71,9 @@ class ProjectList extends Component {
         
     }
 
-    renderNews = () => {
+    renderNews = (updates) => {
         
-        const template = this.state.news.map((el, i) => (
+        const template = updates.map((el, i) => (
             <ProjectContainer news={true} project={el} key={i} />
         ))
 
@@ -83,7 +83,7 @@ class ProjectList extends Component {
     render() {
         return(
             <ProjectsContext.Consumer>
-            {({ projects }) => (
+            {({ projects, updates }) => (
                 <div id="project-list">                
                     <Container fluid={true} className="container" style={{padding: 0}}>
                         <div className="project-grid"  style={{paddingTop: "3rem"}}>
@@ -96,7 +96,11 @@ class ProjectList extends Component {
                     <div className="homepage-news">
                         <Container fluid={true} className="container news-grid" style={{padding: 0}}>
                             <SwipeSlider>
-                                {this.renderNews()}
+                                {this.renderNews(updates)}
+                                {this.renderNews(updates)}
+                                {this.renderNews(updates)}
+                                {this.renderNews(updates)}
+
                             </SwipeSlider> 
                             <div style={{display: "flex", justifyContent: "center", paddingTop: "5rem"}}>
                                 <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>

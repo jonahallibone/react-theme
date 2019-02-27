@@ -98,7 +98,7 @@ class ProjectContainer extends Component {
         let link = "";
 
         if(isNews) {
-            link = "/update/test"
+            link = `/update/${this.props.project.slug}`;
         }
 
         else link = `/work/${this.props.project.slug}`;
@@ -122,35 +122,34 @@ class ProjectContainer extends Component {
         const el = this.props.project;
         const isNews = this.props.news || "";
         return(
-            <ProjectsContext.Consumer>
-            {({ projects }) => (
-                <div onMouseUp={this.goToLink} style={{height: "100%"}}>
-                    <div className={"project"} ref={this.root}>
-                        <div className="image-container gradient">
-                            <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+            <div onMouseUp={this.goToLink} style={{height: "100%"}}>
+                <div className={"project"} ref={this.root}>
+                    <div className="image-container gradient">
+                        <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+                    </div>
+                    <div className="project-description">
+                        <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
+                            <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
                         </div>
-                        <div className="project-description">
-                            <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
-                                <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
-                            </div>
-                            <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }}>
-                            </div> 
-                        </div>
-                        <div className="details">
-                            {isNews ? 
-                                <span className="text-grey" style={{fontWeight: "500"}}>{el.tagline}</span>
-                                :
-                                <div></div>
-                            }
-                            <h5 className="text-red light" style={{textTransform: "capitalize"}}>
-                                
-                                {el._embedded ? el._embedded["wp:term"][0].map((term, i) => <span key={i}>{i !== 0 ? ", " : ""}{term.name}</span>): <span>{el.type}</span>}
-                            </h5>
-                        </div>
+                        {isNews ?
+                            <div></div>
+                        :
+                            <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }} />
+                        }
+                    </div>
+                    <div className="details">
+                        {isNews ? 
+                            <span className="text-grey" style={{fontWeight: "500"}}>{el.tagline}</span>
+                            :
+                            <div></div>
+                        }
+                        <h5 className="text-red light" style={{textTransform: "capitalize"}}>
+                            
+                            {el._embedded ? el._embedded["wp:term"][0].map((term, i) => <span key={i}>{i !== 0 ? ", " : ""}{term.name}</span>): <span>{el.type}</span>}
+                        </h5>
                     </div>
                 </div>
-            )}
-            </ProjectsContext.Consumer>
+            </div>
         )
     }
 }

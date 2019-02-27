@@ -47,7 +47,7 @@
     
 }
 
-@keyframes placeHolderShimmer{
+@keyframes placeHolderShimmer {
     0%{
         background-position: -468px 0
     }
@@ -57,6 +57,8 @@
 }
 
 @media all and (min-width: 1440px) {
+
+
     .project-grid .project .image-container {
         overflow: hidden;
         height: calc((1440px * .5625 - 44px) / 2);

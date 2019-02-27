@@ -1,7 +1,7 @@
 .update-page-single {
     background: #FFF;
     min-height: 100vh;
-    padding-top: 14rem;
+    padding-top: calc(7rem + 75px);
     padding-bottom: 10rem;
 }
 
