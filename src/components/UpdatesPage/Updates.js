@@ -18,11 +18,10 @@ class Updates extends Component {
     }
 
     componentDidMount() {
-        this.styleWhite();
+        setTimeout(() => this.styleWhite(), 1000);
     }
 
     styleWhite = () => {
-        document.querySelector("header").classList.remove("black-bg");
         document.querySelector("header").classList.add("white-bg");
     }
 

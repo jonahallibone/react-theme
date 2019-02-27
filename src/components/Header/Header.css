@@ -7,8 +7,6 @@ header {
     top: 0;
     left: 0;
     z-index: 999999999;
-    transition: background-color ease .345s;
-    background-color: transparent;
     display: flex;
     align-items: center;
     transform: translate3d(0, 0, 0);
@@ -110,6 +108,7 @@ header a:hover {
 
 header.white-bg {
     background: #FFF;
+    /* transition: .5s ease all .8s; */
 }
 
 header.black-bg {

@@ -50,10 +50,10 @@ class ContactSlider extends Component {
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                     </div>
                     <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking+(1).jpg" />
+                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking_4_6.jpg" />
                     </div>
                     <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2.jpg" />
+                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                     </div>
                     <div className="contact-slider-image-container">
                         <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
@@ -79,10 +79,10 @@ class ContactSlider extends Component {
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                             </div>
                             <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking+(1).jpg" />
+                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2.jpg" />
+                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />

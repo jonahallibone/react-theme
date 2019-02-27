@@ -128,7 +128,7 @@ class PracticePage extends Component {
             </div>
             <div className="info-block">
               <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-14.svg" />
+                <img src="https://s3.amazonaws.com/piscatello/practice-icon-set-14.svg" />
               </div>
               <h3 className="reg text-white light">Environmental Graphics</h3>
               <ul className="text-grey service-list">

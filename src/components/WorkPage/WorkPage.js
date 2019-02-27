@@ -45,13 +45,12 @@ class WorkPage extends Component {
   }
   
   componentDidMount() {
-    this.styleWhite();
+    setTimeout(() => this.styleWhite(), 1000);
     this.setState({"pageDescription": Pages["all"].description})
   }
 
 
   styleWhite = () => {
-      document.querySelector("header").classList.remove("black-bg");
       document.querySelector("header").classList.add("white-bg");
   }
 
@@ -94,6 +93,7 @@ class WorkPage extends Component {
   }
 
   componentWillUnmount() {
+    document.querySelector("header").classList.remove("white-bg");
     document.removeEventListener("scroll", this.addShadow);
   }
 

@@ -21,15 +21,15 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.setState({isVisible: !this.state.isVisible})
-        this.styleBlack();
+        setTimeout(() => this.styleBlack(), 1000);
     }
 
     styleBlack = () => {
-        document.querySelector("header").classList.remove("white-bg");
         document.querySelector("header").classList.add("black-bg");
-      }
+    }
 
     componentWillUnmount() {
+        document.querySelector("header").classList.remove("black-bg");
         window.clearTimeout(this.timeout);
     }
 
