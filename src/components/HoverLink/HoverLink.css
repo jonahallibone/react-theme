@@ -3,6 +3,7 @@
     transition: .345s ease all;
     display: inline-flex;
     cursor: pointer;
+    color: #000;
 }
 
 .underline--container:hover {
