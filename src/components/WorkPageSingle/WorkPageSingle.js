@@ -30,7 +30,8 @@ class WorkPageSingle extends Component {
   }
 
   async componentDidMount() {
-    this.styleBlack();    
+    document.querySelector("#footer").style.opacity = 0;
+    setTimeout(() => this.styleBlack(),  2000);    
     setTimeout(() => document.addEventListener("scroll", this.animateProjectImages), 1000);
     // this.animateProjectImages();
   }
@@ -162,6 +163,7 @@ class WorkPageSingle extends Component {
   }
 
   componentWillUnmount() {
+    document.querySelector("#footer").style.opacity = 1;
     document.removeEventListener("scroll", this.animateProjectImages);
   }
 

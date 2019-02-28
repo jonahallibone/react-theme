@@ -13,7 +13,14 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     position: relative;
+}
+
+.contact-slider-track.left {
     animation: SlideLeft 20s linear infinite;
+}
+
+.contact-slider-track.right {
+    animation: SlideRight 20s linear infinite;
 }
 
 .contact-slider-track:hover {
@@ -63,5 +70,15 @@
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes SlideRight {
+    0% {
+    transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(50%);
     }
 }

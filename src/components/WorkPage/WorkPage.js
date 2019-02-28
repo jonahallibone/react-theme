@@ -45,7 +45,7 @@ class WorkPage extends Component {
   }
   
   componentDidMount() {
-    setTimeout(() => this.styleWhite(), 1000);
+    setTimeout(() => this.styleWhite(), 2000);
     this.setState({"pageDescription": Pages["all"].description})
   }
 
@@ -94,7 +94,6 @@ class WorkPage extends Component {
 
   componentWillUnmount() {
     document.querySelector("header").classList.remove("white-bg");
-    document.removeEventListener("scroll", this.addShadow);
   }
 
   render() {

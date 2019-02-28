@@ -18,7 +18,7 @@ class Updates extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => this.styleWhite(), 1000);
+        setTimeout(() => this.styleWhite(), 2000);
     }
 
     styleWhite = () => {
@@ -93,10 +93,11 @@ class Updates extends Component {
                             </div>
                         </div>
                     </div>
-                    <h2 className="light padding-btm-lg" >
-                        Showing – &nbsp;
-                        <span className="text-black" style={{borderBottom: "1px solid #999"}}>All</span>&nbsp;&nbsp;
-                    </h2>
+                    <div className="update-feed">
+                        <h2 className="light padding-btm-lg" >Essays</h2>
+                        <div></div>
+                        <h2 className="light padding-btm-lg" >News</h2>
+                    </div>
                 </Container>
                 <section className="update-section">
                     <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>

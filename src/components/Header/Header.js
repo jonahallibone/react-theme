@@ -52,9 +52,6 @@ class Header extends Component {
 
     componentDidMount = () => {
         this.menuButton.addEventListener("click", this.handleMenuClick);
-        document.addEventListener("scroll" , this.styleBlack);
-        document.querySelector("header").classList.add("black-bg");
-
     }
 
     componentWillUnmount = () => {

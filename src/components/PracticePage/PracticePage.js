@@ -15,8 +15,8 @@ class PracticePage extends Component {
   }
 
   componentDidMount() {
-    this.styleBlack();
-        
+    setTimeout(() => this.styleBlack(), 2000);
+
   }
 
 
@@ -169,7 +169,7 @@ class PracticePage extends Component {
                 He was a former design director at Vignelli Associates prior to founding Piscatello Design Centre.                
                 <br/>
                 <br/>
-                His past and present global clients include the Robin Hood Foundation, New York University, Ronald McDonald House, Ducati Motors, BMW, Frank Gehry Partners, Guggenheim Museum, Jean-Georges Management, Starwood Hotels and Resorts, Colorforms, PriceWaterHouseCoopers, United Colors of Benetton, Warner Bros., Metropolitan Transit Authority, Tishman Speyer, and the U.S. General Services Administration.                <br/>
+                His past and present global clients include the Robin Hood Foundation, New York University, Ronald McDonald House, Hyatt Hotels, Ducati Motors, BMW, Frank Gehry Partners, Guggenheim Museum, Jean-Georges Management, Starwood Hotels and Resorts, Colorforms, PriceWaterHouseCoopers, United Colors of Benetton, Warner Bros., Metropolitan Transit Authority, Tishman Speyer, and the U.S. General Services Administration.                <br/>
                 <br/>
                 Piscatello has been cited for excellence by the leading organizations promoting superiority in design. Included are the American Institute of Graphic Arts and the Society for Experiential Graphic Design. Piscatello is a frequent speaker on design and was selected by Graphic Design USA as one of the 2003 “People to Watch.” 
                 <br/>
