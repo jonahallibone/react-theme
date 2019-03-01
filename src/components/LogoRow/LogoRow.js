@@ -7,7 +7,7 @@ class LogoRow extends Component {
         super(props);
 
         this.intervalId = null;
-        this.currentIndex;
+        
         this.imageIndex = 1;
     }
 
