@@ -94,9 +94,9 @@ class Updates extends Component {
                         </div>
                     </div>
                     <div className="update-feed">
-                        <h2 className="light padding-btm-lg" >Essays</h2>
+                        <h2 className="light padding-btm-lg">Essays</h2>
                         <div></div>
-                        <h2 className="light padding-btm-lg" >News</h2>
+                        <h2 className="light padding-btm-lg">News</h2>
                     </div>
                 </Container>
                 <section className="update-section">
@@ -115,25 +115,25 @@ class Updates extends Component {
                             <div style={{position: "sticky", bottom: "0px", height: "100vh"}}>
                                 <div>
                                     <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black">22 March 2019</span></div>
+                                    <div className="padding-btm-sm"><span className="text-black text-bold">22 March 2019</span></div>
                                     Piscatello Design Centre to be featured in upcoming book,  ‘Wayfinding–Signs and Icons’ to be published by Design Media Publishing (UK) Limited.
                                     </p>
                                 </div>
                                 <div>
                                     <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black">04 March 2019</span></div>
+                                    <div className="padding-btm-sm"><span className="text-black text-bold">04 March 2019</span></div>
                                     Piscatello Design Centre launches a new website, redesigned and developed from the ground up. The website welcome visitors to our practice and offers an overview of our work.
                                     </p>
                                 </div>
                                 <div>
                                     <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black">04 February 2019</span></div>
+                                    <div className="padding-btm-sm"><span className="text-black text-bold">04 February 2019</span></div>
                                     Piscatello Design Centre completes a comprehensive wayfinding design signage program for Saint David’s School.
                                     </p>
                                 </div>
                                 <div>
                                     <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black">31 January 2019</span></div>
+                                    <div className="padding-btm-sm"><span className="text-black text-bold">31 January 2019</span></div>
                                     Exhibition, ‘Reflections on Ten Qualities of Design’ at the University of New Haven Extended through 23 February 2019.
                                     </p>
                                 </div>                                

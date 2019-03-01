@@ -98,7 +98,23 @@ class PracticePage extends Component {
           <div className="information-grid padding-top-7">
             <div className="info-block">
               <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-12.svg" />
+                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Consult_V3.svg" />
+                <div className="icon-hover-anim design-consult"></div>
+              </div>
+              <h3 className="reg text-white light">Design Consulting</h3>
+              <ul className="text-grey service-list">
+                <li style={{marginTop: "2rem"}}>Design Workshops</li>
+                <li>Visitor Journey Mapping</li>
+                <li>Persona Development</li>
+                <li>Stakeholder Interviews</li>
+                <li>Design Thinking Facilitation</li>
+                <li>Coaching & Mentoring</li>
+                <li>Art Advisory</li>
+              </ul>
+            </div>
+            <div className="info-block">
+              <div className="practice-icon">
+                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Brand_V3.svg" />
               </div>
               <h3 className="reg text-white light">Brand Identity</h3>
               <ul className="text-grey service-list">
@@ -113,7 +129,7 @@ class PracticePage extends Component {
             </div>
             <div className="info-block">
               <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-13.svg" />
+                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Digital_V3.svg" />
               </div>
               <h3 className="reg text-white light">Digital Design</h3>
               <ul className="text-grey service-list">
@@ -128,7 +144,7 @@ class PracticePage extends Component {
             </div>
             <div className="info-block">
               <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/practice-icon-set-14.svg" />
+                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Environmental_Josie_V3.svg" />
               </div>
               <h3 className="reg text-white light">Environmental Graphics</h3>
               <ul className="text-grey service-list">
@@ -139,21 +155,6 @@ class PracticePage extends Component {
                 <li>Retail Tenant Guidelines</li>
                 <li>Exhibit & Retail Signage</li>
                 <li>Memorial Graphics</li>
-              </ul>
-            </div>
-            <div className="info-block">
-              <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/Practice+Page+Icons/practice-icon-set-15.svg" />
-              </div>
-              <h3 className="reg text-white light">Design Consulting</h3>
-              <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Design Workshops</li>
-                <li>Visitor Journey Mapping</li>
-                <li>Persona Development</li>
-                <li>Stakeholder Interviews</li>
-                <li>Design Thinking Facilitation</li>
-                <li>Coaching & Mentoring</li>
-                <li>Art Advisory</li>
               </ul>
             </div>
           </div>

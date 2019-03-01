@@ -13,6 +13,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     position: relative;
+    will-change: transform;
 }
 
 .contact-slider-track.left {
