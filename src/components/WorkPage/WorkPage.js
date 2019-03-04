@@ -72,7 +72,9 @@ class WorkPage extends Component {
 
   renderProjects = (projects) => {
     if(this.state.filter && this.state.filter.title !== "All") {
-      projects = projects.filter((el) => {
+      let tmp = projects;
+      projects = [];
+      projects = tmp.filter((el) => {
         const categories = el._embedded["wp:term"][0];
         let result = false;
         for (let i = 0; i < categories.length; i++) {
@@ -84,6 +86,8 @@ class WorkPage extends Component {
         return result;
       })
     }
+
+
 
     const template = projects.map((el) => (
         <ProjectContainer project={el} key={el.id} />

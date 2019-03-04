@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    padding: 14rem 0;
+    padding: 20rem 0;
     background: rgb(17, 17, 17);
 }
 
@@ -27,7 +27,7 @@
 
 .logo-grid img {
     display: block;
-    width: 65%;
+    width: 60%;
     /* position: relative; */
     opacity: 0;
     position: absolute;
