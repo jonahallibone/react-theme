@@ -86,9 +86,11 @@ class PracticePage extends Component {
             We also believe in the social responsibility of the designer. Our aim is to create work that is long-lasting and thorough down to the last detail. Lets work together to create something engaging, unique, and special.
             </p>
           </div>
+          </Container>
           <div className="image-container padding-top-7">
             <LogoRow />
           </div>
+          <Container style={{padding: 0}} fluid={true} className="container">
           <div>
             <h2 className="light text-white reg padding-top-7 padding-btm-5">Capabilities</h2>
           </div>
