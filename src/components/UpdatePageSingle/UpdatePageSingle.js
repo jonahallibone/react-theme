@@ -27,7 +27,7 @@ class UpdatePageSingle extends Component {
             <div className="update-page-single">
                 <WorkPageHeader projectTitle={update.title.rendered} isUpdate={true}></WorkPageHeader>
                 <Container fluid={true} className="container" style={{padding: 0}}>                    
-                    <h2 className="text-grey light update-description padding-btm-7">
+                    <h2 className="text-grey light update-description padding-top-7">
                        By {update._embedded.author[0].name}
                     </h2>
                     <section className="update-content padding-top-3">
@@ -36,13 +36,7 @@ class UpdatePageSingle extends Component {
                         </div>
                         <div className="side">
                             <div className="image-side-single">
-                                <img src="https://s3.amazonaws.com/piscatello/VAP_ScherPhoto_sq.jpg" />
-                            </div>
-                            <div className="image-side-single">
-                                <img src="https://s3.amazonaws.com/piscatello/VAP_RockPhoto_sq.jpg" />
-                            </div>
-                            <div className="image-side-single">
-                                <img src="https://s3.amazonaws.com/piscatello/VAP_PostcardsGrey_square.jpg" />
+                                <img src={update.acf.featured_image} />
                             </div>
                         </div>
                     </section>
