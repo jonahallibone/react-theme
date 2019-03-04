@@ -93,6 +93,7 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
+                                    <h2>Home</h2>
                                     <span className="hamburger">
                                         
                                     </span>

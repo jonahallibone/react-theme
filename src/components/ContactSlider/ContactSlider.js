@@ -53,9 +53,9 @@ class ContactSlider extends React.Component {
         }
 
         this.direction === "left" ? 
-            this.track.style.transform = `translateX(${this.position -= 4}px)`
+            this.track.style.transform = `translateX(${this.position -= 3}px)`
             : 
-            this.track.style.transform = `translateX(${this.position += 4}px)` 
+            this.track.style.transform = `translateX(${this.position += 3}px)` 
     }
 
     componentWillUnmount() {
