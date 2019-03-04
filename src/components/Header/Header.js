@@ -77,7 +77,30 @@ class Header extends Component {
         });
     }
 
+    getPageName(pathname) {
+        if(pathname.indexOf("update") !== -1) {
+            return "Updates";
+        }
+      
+        else if(pathname.indexOf("work") !== -1) {
+            return "Work"
+        }
+      
+        else if(pathname.indexOf("contact") !== -1) {
+            return "Contact"
+        }
+
+        else if(pathname.indexOf("practice") !== -1) {
+            return "Practice"
+        }
+
+        else return "Home";
+    }
+
     render() {
+        
+        let { pathname } = this.props.location;
+        console.log(pathname)
         return (
             <header ref={elem => this.header = elem}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
@@ -93,7 +116,7 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <h2>Home</h2>
+                                    <h2>{this.getPageName(pathname)}</h2>
                                     <span className="hamburger">
                                         
                                     </span>

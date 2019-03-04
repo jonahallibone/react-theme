@@ -27,7 +27,8 @@ class App extends Component {
 
     this.state = {
       projects: [],
-      updates: []
+      updates: [],
+      location: ""
     }
 
     this.props.history.listen((location, action) => {
@@ -64,29 +65,29 @@ class App extends Component {
     this.getUpdates();
   }
 
+
+
   componentWillMount() {
     this.unlisten = this.props.history.listen((location, action) => {
       document.querySelector("header").classList.remove("white-bg");
-      document.querySelector("header").classList.remove("black-bg")
+      document.querySelector("header").classList.remove("black-bg");
 
     });
+
   }
 
   // Hook into react router v4
 
-  // componentDidUpdate(prevProps) {
-  //   let { pathname } = this.props.location;
-  //   if(pathname !== prevProps.location.pathname) {
-  //     this.onRouteChanged(pathname)
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    let { pathname } = this.props.location;
+
+    if(pathname !== prevProps.location.pathname) {
+      this.onRouteChanged(pathname)
+    }
+  }
 
   onRouteChanged(pathname) {
     console.log("Route change!!", pathname);
-    this.setState({transitioning: true});
-    setTimeout(() => {
-      this.setState({transitioning: false});
-    }, 2000)
   }
 
 
@@ -96,7 +97,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Header></Header>
+        <Header location={this.props.location}></Header>
           <ProjectsContext.Provider value={this.state}>
           <TransitionGroup>
               <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 900, exit: 900}} appear={true}>
