@@ -94,7 +94,7 @@ class PracticePage extends Component {
           <div>
             <h2 className="light text-white reg padding-top-7 padding-btm-5">Capabilities</h2>
           </div>
-          <div className="text-grey" style={{width: "50%"}}>
+          <div className="text-grey about-section">
             <p>We have created a singular studio that works across many disciplines in the field of design. Each team member contributes to uncovering the core idea of a project and is responsible for working within their own area of expertise.</p>
           </div>
           <div className="information-grid padding-top-7">
