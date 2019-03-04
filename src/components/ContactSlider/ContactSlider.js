@@ -26,6 +26,7 @@ class ContactSlider extends React.Component {
         let width = this.track.offsetWidth;
         this.position = (width / 3) * -1;
         this.track.style.transform = `translateX(${this.position}px)`;
+        document.querySelector("header").classList.add("bg-black");
     }
     
     handleMouseMove(e) {
