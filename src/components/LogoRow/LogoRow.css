@@ -12,6 +12,17 @@
     position: relative;
 }
 
+@media screen and (max-width: 800px) {
+    .logo-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .logo-col {
+        height: 200px;
+    }
+}
+
 
 .logo-grid img {
     display: block;

@@ -77,7 +77,7 @@ class PracticePage extends Component {
             <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
           </Slider>
           <h2 className="light text-white reg padding-top-7 padding-btm-5">About</h2>
-          <div className="text-grey" style={{width: "50%"}}>
+          <div className="text-grey about-section">
             <p>
             Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodlogy for combining business strategy and creativity to help organizations realize their full potential.
             <br/><br/>

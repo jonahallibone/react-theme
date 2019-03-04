@@ -9,6 +9,28 @@
     max-width: 75%;
 }
 
+@media screen and (max-width: 600px) {
+    .top-text {
+        max-width: 100%;
+    }
+}
+
+.about-section {
+    width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-section {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-section {
+        width: 100%;
+    }
+}
+
 .banner-image {
     padding-top: 7.5rem;
 }
