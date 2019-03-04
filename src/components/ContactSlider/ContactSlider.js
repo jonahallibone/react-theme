@@ -58,6 +58,10 @@ class ContactSlider extends React.Component {
             this.track.style.transform = `translateX(${this.position += 4}px)` 
     }
 
+    componentWillUnmount() {
+        cancelAnimationFrame(this.rAF);
+    }
+
     render() {
         return(
             <div className="contact-slider" 

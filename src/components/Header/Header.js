@@ -59,7 +59,7 @@ class Header extends Component {
     }
 
     handleMenuClick = () => {
-        this.header.classList.toggle("header-overlay--visible");
+        this.header.classList.toggle("header-overlay--visible")
 
 
         if(this.state.menuLabel === "Menu") {
@@ -93,9 +93,8 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <span>
-                                        <h2 className="open-menu">Menu</h2>
-                                        <h2 className="close-menu">Close</h2>
+                                    <span className="hamburger">
+                                        
                                     </span>
                                 </div>
                             </Col>

@@ -123,14 +123,39 @@ header .menu-button {
     color: #333;
 }
 
-header .menu-button .hamburger {
+header .hamburger {
     position: relative;
-    height: 10px;
-    width: 20px;
+    height: 15px;
+    width: 30px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: .345s ease all;
+    cursor: pointer;
+}
+
+header .hamburger:before,
+header .hamburger:after {
+    content: '';
+    background: #999;
+    height: 2px;
+    width: 100%;
+    transform-origin: 100% 50%;
+    transition: .345s ease all;
+}
+
+header.header-overlay--visible .hamburger:before,
+header.header-overlay--visible .hamburger:after {
+    transform-origin: 80% 50%;
+}
+
+header.header-overlay--visible .hamburger:before {
+    transform: rotate(-45deg)
+}
+
+header.header-overlay--visible .hamburger:after {
+    transform: rotate(45deg)
 }
 
 header .menu a {

@@ -27,12 +27,12 @@ class UpdatePageSingle extends Component {
             <div className="update-page-single">
                 <WorkPageHeader projectTitle={update.title.rendered} isUpdate={true}></WorkPageHeader>
                 <Container fluid={true} className="container" style={{padding: 0}}>                    
-                    <h2 className="text-grey light update-description">
+                    <h2 className="text-grey light update-description padding-btm-7">
                        By {update._embedded.author[0].name}
                     </h2>
                     <section className="update-content padding-top-3">
                         <div className="side">
-                            <p className="light" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
+                            <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
                         </div>
                         <div className="side">
                             <div className="image-side-single">

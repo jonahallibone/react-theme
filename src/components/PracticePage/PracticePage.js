@@ -97,10 +97,6 @@ class PracticePage extends Component {
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block">
-              <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Consult_V3.svg" />
-                <div className="icon-hover-anim design-consult"></div>
-              </div>
               <h3 className="reg text-white light">Design Consulting</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Design Workshops</li>
@@ -113,9 +109,6 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
-              <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Brand_V3.svg" />
-              </div>
               <h3 className="reg text-white light">Brand Identity</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Logomarks</li>
@@ -128,9 +121,6 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
-              <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Digital_V3.svg" />
-              </div>
               <h3 className="reg text-white light">Digital Design</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Content Strategy</li>
@@ -143,9 +133,6 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block">
-              <div className="practice-icon">
-                <img src="https://s3.amazonaws.com/piscatello/practice_icons_v3/SVG/Environmental_Josie_V3.svg" />
-              </div>
               <h3 className="reg text-white light">Environmental Graphics</h3>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Signage Programs</li>
