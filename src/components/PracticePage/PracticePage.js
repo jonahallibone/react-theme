@@ -152,6 +152,9 @@ class PracticePage extends Component {
           <Container style={{padding: 0}} fluid={true} className="container">
             <h2 className="light text-white reg padding-top-7 padding-btm-7" style={{paddingTop: "14rem"}}>Leadership</h2>
             <div className="image-grid-2">
+              <div className="image-container sticky display-mobile">
+                <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
+              </div>
               <div className="image-container">
                 <h2 className="text-grey light">
                 Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
