@@ -20,24 +20,29 @@ class UpdatePageSingle extends Component {
         if(!updates.length) return(<div></div>);
 
         const update = updates.filter(update => update.slug === match.params.id)[0];
+        const options = {day: 'numeric', year: 'numeric', month: 'long', };
         
-        console.log(update);
 
         return(
             <div className="update-page-single">
                 <WorkPageHeader projectTitle={update.title.rendered} isUpdate={true}></WorkPageHeader>
                 <Container fluid={true} className="container" style={{padding: 0}}>                    
-                    <h2 className="text-grey light update-description padding-top-7">
-                       By {update._embedded.author[0].name}
+                    <h2 className="text-grey light update-description padding-top-175">
+                        Posted by <span className="text-grey">{update._embedded.author[0].name}</span> on <span className="text-grey">{new Date(update.date).toLocaleDateString('en-US', options)}</span>
                     </h2>
                     <section className="update-content padding-top-3">
-                        <div className="side">
-                            <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
-                        </div>
                         <div className="side">
                             <div className="image-side-single">
                                 <img src={update.acf.featured_image} />
                             </div>
+                        </div>
+                    </section>
+                    <section className="update-content-row padding-top-3">
+                        <div className="content-flex">
+                            <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
+                        </div>
+                        <div className="content-flex-social">
+                            <p>Sidebar Area</p>
                         </div>
                     </section>
                 </Container>

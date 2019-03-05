@@ -112,7 +112,7 @@ class Updates extends Component {
                             {/* Space for column gap */}
                             <div></div>
                             {/* End space for column gap */}
-                            <div style={{position: "sticky", bottom: "0px", height: "100vh"}}>
+                            <div style={{bottom: "0px", minHeight: "100vh"}}>
                                 <div>
                                     <p className="reg text-grey light hover-underline padding-btm-md">
                                     <div className="padding-btm-sm"><span className="text-black text-bold">22 March 2019</span></div>
