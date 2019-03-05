@@ -94,6 +94,10 @@ class Header extends Component {
             return "Practice"
         }
 
+        else if(pathname.indexOf("careers") !== -1) {
+            return "Careers"
+        }
+
         else return "Home";
     }
 
@@ -116,10 +120,8 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <h2>{this.getPageName(pathname)}</h2>
-                                    <span className="hamburger">
-                                        
-                                    </span>
+                                    <h2 className="page-name-menu">{this.getPageName(pathname)}</h2>
+                                    <span className="hamburger"></span>
                                 </div>
                             </Col>
                     </Row>

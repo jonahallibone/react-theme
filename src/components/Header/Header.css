@@ -1,5 +1,5 @@
 header {
-    background-color: transparent;
+    background-color: #000;
     width: 100vw;
     height: 75px;
     padding: 1.5rem 0;
@@ -46,7 +46,7 @@ header .quote-col span.quote.hovered {
 }
 
 header .menu h2 {
-    color: #FFF;
+    color: #999;
     cursor: pointer;
     transition: .345s ease all;
 }
@@ -68,10 +68,6 @@ header.header-min a,
 header.header-min .menu-button,
 header.header-min .menu h2 {
     color: #999;
-}
-
-header .menu h2:hover {
-    color: #ff4350;
 }
 
 header.header-overlay--visible .menu,
@@ -126,7 +122,7 @@ header .menu-button {
 header .hamburger {
     position: relative;
     height: 15px;
-    width: 30px;
+    width: 25px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -147,7 +143,7 @@ header .hamburger:after {
 
 header.header-overlay--visible .hamburger:before,
 header.header-overlay--visible .hamburger:after {
-    transform-origin: 80% 50%;
+    transform-origin: 87% 50%;
 }
 
 header.header-overlay--visible .hamburger:before {
@@ -299,4 +295,10 @@ header.header-overlay--visible .header-overlay--footer {
     opacity: 0;
     z-index: -1;
     transition: .345s ease all;
+}
+
+@media screen and (max-width: 600px){
+    .page-name-menu {
+        display: none;
+    }
 }

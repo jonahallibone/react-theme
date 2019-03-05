@@ -90,7 +90,7 @@ class WorkPage extends Component {
 
 
     const template = projects.map((el) => (
-        <ProjectContainer project={el} key={el.id} />
+        <ProjectContainer project={el} key={`${this.state.filter.title}-${el.id}`} />
     ))
 
     return template;
