@@ -202,7 +202,7 @@ header.header-overlay--visible .header-overlay {
 }
 
 .header-overlay .menu-vert {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
@@ -301,4 +301,36 @@ header.header-overlay--visible .header-overlay--footer {
     .page-name-menu {
         display: none;
     }
+}
+
+.follow-image {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    will-change: transform;
+    transition: .15s ease-out transform, .345s ease opacity;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.follow-image img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transform-origin: 0% 50%;
+    transition: .345s ease all;
+}
+
+.follow-image img.selected {
+    opacity: 1;
+    transform: translateY(0px);
+    transform-origin: 0% 0%;
+}
+
+.menu-vert:hover ~ .follow-image {
+    opacity: 1;
 }
