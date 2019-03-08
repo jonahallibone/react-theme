@@ -317,12 +317,14 @@ header.header-overlay--visible .header-overlay--footer {
 .follow-image img {
     position: absolute;
     width: 100%;
+    max-height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
     transform: translateY(20px);
     transform-origin: 0% 50%;
     transition: .345s ease all;
+    object-fit: contain;
 }
 
 .follow-image img.selected {

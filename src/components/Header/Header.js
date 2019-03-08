@@ -16,11 +16,11 @@ const charPoses = {
 };
 
 const followImages = [
-    "https://s3.amazonaws.com/piscatello/header-images/PastedGraphic-1.jpg",
-    "https://s3.amazonaws.com/piscatello/header-images/PastedGraphic-10.png",
-    "https://s3.amazonaws.com/piscatello/header-images/PastedGraphic-2.png",
-    "https://s3.amazonaws.com/piscatello/header-images/PastedGraphic-8.png",
-    "https://s3.amazonaws.com/piscatello/header-images/PastedGraphic-9.jpg"
+    "https://s3.amazonaws.com/piscatello/header-images/circle.svg",
+    "https://s3.amazonaws.com/piscatello/header-images/triangle.svg",
+    "https://s3.amazonaws.com/piscatello/header-images/rectangle.svg",
+    "https://s3.amazonaws.com/piscatello/header-images/square.svg",
+    "https://s3.amazonaws.com/piscatello/header-images/rectanglecircle.svg",
 ]
 
 class Header extends Component {
@@ -90,7 +90,7 @@ class Header extends Component {
     }
 
     handleMouseMove = (e) => {
-        this.followImages.style.transform = `translate(${window.innerWidth / 2}px, ${(e.pageY - window.pageYOffset) * .75}px)`;
+        this.followImages.style.transform = `translate(${window.innerWidth / 3}px, ${(e.pageY - window.pageYOffset) * .75}px)`;
     }
 
     getPageName(pathname) {
