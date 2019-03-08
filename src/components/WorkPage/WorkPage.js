@@ -34,7 +34,7 @@ class WorkPage extends Component {
       pageDescription: undefined,
       selectedName: "",
       projects: [],
-      filter: Pages["all"],
+      filter: Pages["featured"],
       setFilter: this.setFilter,
       animateDes: null
     }
@@ -46,7 +46,7 @@ class WorkPage extends Component {
   
   componentDidMount() {
     setTimeout(() => this.styleWhite(), 2000);
-    this.setState({"pageDescription": Pages["all"].description})
+    this.setState({"pageDescription": Pages["featured"].description})
   }
 
 
@@ -71,7 +71,7 @@ class WorkPage extends Component {
   }
 
   renderProjects = (projects) => {
-    if(this.state.filter && this.state.filter.title !== "All") {
+    if(this.state.filter && this.state.filter.title !== "Featured") {
       let tmp = projects;
       projects = [];
       projects = tmp.filter((el) => {

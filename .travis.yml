@@ -1,15 +1,13 @@
-sudo: required
-
-language: ruby
-
-services:
-  - docker
-
-before_install:
-- docker pull carlad/sinatra
-- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
-- docker ps -a
-- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
-
+language: node_js
+node_js:
+  - "node"
+warnings_are_errors: false
+install:
+  - npm install
 script:
-- bundle exec rake test
+  - npm run build
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: "nEgj8Xc+XglNLGUfve718bEYbXXeVEOf/ve/Z/XigIhPImhxAqG6c1R/T3aHcDIAQ00QI4z3F6tdD/oDw/FWKqqZoMDuI8ccPlNFpJPOXRfpeXBJqpgfhTqhoilnRfUV3V6VXp3h8MWKgjFD1UNNcXI/aqq4YjRrjMPvWtzm8kWmfLzKBYjP7k5XABoG9nF3adLOWQ/X69i6AA4A/K6bGw3fBwZdZhIvCPXd32IyUJyEfSMMaClkWH/rSem5C5jwhU/sjMYqNRBvWL430csLanr0NHsI6I5CjZSPxYy+ezi0GEdtXxJtrq63dBIcZhLU0oxF+46MnjB6CwsmImMoXFkh14ARK934UboC1vW4o1IIWwz0S7uM+0hQ0+5rl3INRLPR/aW1KMRyPBVN/ryA3+IJzCyYqy3fFmjIP3mgKMABa6W/7zBJW2f6Mez1N2qyzwup6jvCu9+rBXlfhY5nPtp9WxJOt76vSlbN7exruzB9GLBS+je/fVKvxaiM3dkWC+8/+TgWjEKyes1N8C6dEoXioj3dGDTB2u9FR4P0XKGUMgR66PbEyf6MqxUxIPNovBHygi0ExT+xORdDQ9hTrgghj+rm+fY60WzC/OODj9iciYr8g1P+hOKUt+3eTlZz0KLu8XWBKxx1IxGogxMisyC5Yu2Q9poZENB2DrxaQG4="
