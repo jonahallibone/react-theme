@@ -18,6 +18,12 @@
     }
 }
 
+@media all and (max-width: 600px) {
+    #featured-header {
+        width: calc(100% - 2rem);
+    }
+}
+
 .fade-out {
     opacity: 0;
     transition: .25s ease all;

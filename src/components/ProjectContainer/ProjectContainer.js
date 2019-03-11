@@ -132,8 +132,7 @@ class ProjectContainer extends Component {
                             <HoverLink hovered={this.state.hovered}>{el.title.rendered}</HoverLink>
                         </div>
                         {isNews ?
-                            <div></div>
-                        :
+                            <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }} />                            :
                             <div className="project-info text-grey" dangerouslySetInnerHTML={{__html: el.hasOwnProperty("excerpt") ? el.excerpt.rendered : "" }} />
                         }
                     </div>

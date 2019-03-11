@@ -47,6 +47,11 @@
     grid-gap: 2.5rem;
 }
 
+.update-feed .update-row:first-of-type {
+    border-top: 1px solid #DDD;
+    padding-top: 2rem;
+}
+
 .update-feed .update-row .update-img img {
     display: block;
     width: 100%;
@@ -86,6 +91,12 @@
     transition: .345s ease all;
     position: relative;
     z-index: 99;
+}
+
+@media screen and (max-width: 800px) {
+    .update-input-container {
+        width: 100%;
+    }
 }
 
 .update-input-container.hide {
@@ -172,6 +183,7 @@
     outline: none;
     transition: .345s ease all;
     color: #999;
+    border-radius: 0;
 }
 
 @media screen and (max-width: 600px) {

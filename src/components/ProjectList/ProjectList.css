@@ -196,6 +196,15 @@
     }
 }
 
+@media all and (max-width: 600px) {
+    .news-grid .project .image-container {
+        overflow: hidden;
+        height: calc(((100vw - 2rem) / 4 - 1.25rem) * .5625);
+    }
+}
+
+
+
 @media all and (max-width: 700px) {
     .project-grid, .news-grid {
         grid-template-columns: 1fr;
@@ -205,7 +214,7 @@
     .news-grid .project .image-container {
         will-change: transform;
         overflow: hidden;
-        height: calc(((100vw - 4rem) * .5625));
+        height: calc(((100vw - 2rem) * .5625));
     }
 }
 

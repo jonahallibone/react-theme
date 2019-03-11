@@ -114,7 +114,7 @@ class Header extends Component {
             return "Careers"
         }
 
-        else return "Home";
+        else return "Main";
     }
 
     getFollowImages() {
@@ -154,7 +154,7 @@ class Header extends Component {
                 <div className="header-overlay" ref={elem => this.overlay = elem}> 
                     <Container fluid={true} className="container" style={{padding: 0, height: "100%"}}>
                         <div className="menu-vert">
-                            <Container fluid={true} className="container" style={{padding: 0, height: "100%", alignItems: "center", display: "flex", margin: 0, height: "100%"}}>
+                            <Container fluid={true} className="container links" style={{margin: 0}}>
                                 <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
                                     <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
                                         <Link 
@@ -163,7 +163,10 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(0)}}
                                         >
                                             <HoverLink thick="true">
-                                                <span>Home</span>
+                                                <div className="menu-icon">
+                                                    <img src={followImages[0]} />
+                                                </div>
+                                                <span>Main</span>
                                             </HoverLink>
                                         </Link>
                                         <Link 
@@ -173,6 +176,9 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(1)}}
                                         >
                                             <HoverLink thick="true">
+                                                <div className="menu-icon">
+                                                    <img src={followImages[1]} />
+                                                </div>
                                                 <span>Work</span>
                                             </HoverLink>
                                         </Link>
@@ -183,6 +189,9 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(2)}}
                                         >
                                             <HoverLink thick="true">
+                                                <div className="menu-icon">
+                                                    <img src={followImages[2]} />
+                                                </div>
                                                 <span>Practice</span>
                                             </HoverLink>
                                         </Link>
@@ -193,6 +202,9 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(3)}}
                                         >
                                             <HoverLink thick="true">
+                                                <div className="menu-icon">
+                                                    <img src={followImages[3]} />
+                                                </div>
                                                 <span>Updates</span>
                                             </HoverLink>
                                         </Link>
@@ -203,6 +215,9 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(4)}}
                                         >
                                             <HoverLink thick="true">
+                                                <div className="menu-icon">
+                                                    <img src={followImages[4]} />
+                                                </div>
                                                 <span>Contact</span>
                                             </HoverLink>
                                         </Link>

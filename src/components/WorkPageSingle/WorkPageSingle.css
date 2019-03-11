@@ -34,6 +34,12 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .single-project-banner {
+        height: calc((100% - 2rem) * .5625);
+    }
+}
+
 .single-project-banner:not(:first-of-type) {
     margin-top: 2.5rem;
 }

@@ -6,7 +6,8 @@
 }
 
 .update-description {
-    max-width: 60%;
+    max-width: 100%;
+    margin-top: calc(7rem - (75px / 2));
 }
 
 .update-content {

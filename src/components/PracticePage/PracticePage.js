@@ -66,7 +66,7 @@ class PracticePage extends Component {
 
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-            <h1 className="reg text-white lighter padding-top-2">
+            <h1 className="reg text-white lighter">
               Whether you’re established or just starting, we can help your organization grow through the power of design.
             </h1>
           </div>
@@ -153,10 +153,10 @@ class PracticePage extends Component {
             <h2 className="light text-white reg padding-top-7 padding-btm-7" style={{paddingTop: "14rem"}}>Leadership</h2>
             <div className="image-grid-2">
               <div className="image-container sticky display-mobile">
-                <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
+                <img src="https://s3.amazonaws.com/piscatello/Rocco_Portrait_2.jpg" />
               </div>
               <div className="image-container">
-                <h2 className="text-grey light">
+                <p className="text-grey light">
                 Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
                 Piscatello is passionate about working with industry leaders to help their businesses grow and thrive.
                 He was a former design director at Vignelli Associates prior to founding Piscatello Design Centre.                
@@ -167,10 +167,11 @@ class PracticePage extends Component {
                 Piscatello has been cited for excellence by the leading organizations promoting superiority in design. Included are the American Institute of Graphic Arts and the Society for Experiential Graphic Design. Piscatello is a frequent speaker on design and was selected by Graphic Design USA as one of the 2003 “People to Watch.” 
                 <br/>
                 <br/>
-                His work is included in the permanent collections of the Denver Art Museum, the Vignelli Center for Design Studies, and the Library of Congress. His book. “Rocco Piscatello: Poster Works for FIT”, was published in 2017.                </h2>
+                His work is included in the permanent collections of the Denver Art Museum, the Vignelli Center for Design Studies, and the Library of Congress. His book. “Rocco Piscatello: Poster Works for FIT”, was published in 2017.                
+                </p>
               </div>
               <div className="image-container sticky">
-                <img src="https://s3.amazonaws.com/piscatello/42496ed13e2a70401707ff27444ad5f31d774397+copy.jpg" />
+                <img src="https://s3.amazonaws.com/piscatello/Rocco_Portrait_2.jpg" />
               </div>
             </div>
           </Container>

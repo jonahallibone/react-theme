@@ -85,7 +85,7 @@ class WorkPageSingle extends Component {
           </div>
           <div className="project-description--inner">
             <article className="service-list">
-              <h2 className="text-grey light">Core Services</h2>
+              <p className="text-grey light">Core Services</p>
               <ul className="text-grey">
                 {services.map((service, i) => <li key={i}>{service.service_item}</li>)}
               </ul>

@@ -213,7 +213,7 @@ header.header-overlay--visible .header-overlay {
     font-size: 4rem;
     padding: 0 0;
     transition: .345s ease all;
-    font-weight: 800;
+    font-weight: 700;
     padding: .25rem 0;
     margin: 1rem 0 0 0;
     line-height: 1;
@@ -229,7 +229,7 @@ header.header-overlay--visible .header-overlay {
     color: rgba(255,255,255,0.15);
 }
 
-.header-overlay .menu-vert .link-container:hover span:hover {
+.header-overlay .menu-vert .link-container .underline--container:hover span {
     color: #ff4350;
 }
 
@@ -335,4 +335,47 @@ header.header-overlay--visible .header-overlay--footer {
 
 .menu-vert:hover ~ .follow-image {
     opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .follow-image {
+        display: none;
+    }
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 1rem);
+    margin-top: 1rem;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-icon {
+        display: flex;
+    }
+}
+
+.menu-icon img {
+    height: 30px;
+    width: 30px;
+    margin-right: 2rem;
+    display: inline-flex;
+    align-self: center;
+}
+
+.links {
+    padding: 3rem 0 !important;
+    height: 100;
+    align-items: center;
+    padding-top: 3rem;
+    display: flex;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .links {
+        align-items: flex-start;
+    }
 }

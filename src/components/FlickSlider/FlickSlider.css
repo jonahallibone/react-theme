@@ -37,6 +37,13 @@
   }
 }
 
+@media all and (max-width: 600px) {
+  .slick-slide {
+    will-change: transform;
+    height: calc((100vw - 2rem) * 56.25 / 100);
+  }
+}
+
 .slick-slider .slick-track,
 .slick-slider .slick-list
 {
