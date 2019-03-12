@@ -424,7 +424,7 @@ h5 {
     }
 }
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 600px) {
 
     h2.reg {
         font-size: 2.5rem;
@@ -436,7 +436,7 @@ h5 {
     }
 
     h3.reg {
-        font-size: 1.85rem;
+        font-size: 1.5rem;
         line-height: 1.27;
     }
 

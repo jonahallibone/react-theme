@@ -31,12 +31,10 @@ class SwipeSlider extends Component {
             rawWidth: undefined
         }
     }
-    
-    componentWillMount() {
-        window.addEventListener("resize", this.calcWidth)
-    }
 
     componentDidMount() {
+        window.addEventListener("resize", this.calcWidth)
+
         this.calcWidth();
         this.sliderTrack.current.addEventListener("mousemove", this.startDrag.bind(this))
         this.sliderTrack.current.addEventListener("mousedown", this.setUp.bind(this))

@@ -28,8 +28,8 @@ class ProjectContainer extends Component {
         this.visible = false;
 
     }
-    
-    componentWillMount() {
+
+    componentDidMount() {
         let downloadingImage = new Image();
         
         downloadingImage.onload = () => {
@@ -38,9 +38,7 @@ class ProjectContainer extends Component {
         if (this.props.project.hasOwnProperty("acf")) {
             downloadingImage.src = this.props.project.acf.featured_image 
         }
-    }
 
-    componentDidMount() {
         this.root.current.addEventListener("mouseenter", this.addHover.bind(this));
         this.root.current.addEventListener("mouseleave", this.removeHover.bind(this));
         setTimeout(() => {

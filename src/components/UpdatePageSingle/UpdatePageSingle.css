@@ -33,17 +33,27 @@
 .update-content-row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .update-content-row .content-flex {
     display: flex;
-    flex: 1;
+    flex: 0 0 50%;
 }
 
 .update-content-row .content-flex-social {
     flex: 0 0 25%;
     min-width: 300px;
-    padding-left: 2.5rem;
     position: sticky;
-    top: 75px;
+    top: 91px;
+    align-self: flex-start;
+}
+
+.related-updates {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.related-title {
+    margin-top: .75rem;
 }

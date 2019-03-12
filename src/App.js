@@ -67,7 +67,7 @@ class App extends Component {
 
 
 
-  componentWillMount() {
+  componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
       document.querySelector("header").classList.remove("white-bg");
       document.querySelector("header").classList.remove("black-bg");

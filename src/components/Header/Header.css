@@ -220,6 +220,12 @@ header.header-overlay--visible .header-overlay {
     display: inline-flex;
 }
 
+@media screen and (max-width: 600px) {
+    .header-overlay .menu-vert span {
+        font-size: 3rem;
+    }
+}
+
 .header-overlay .menu-vert .link-container {
     flex-direction: column;
     flex-grow: 0;
@@ -349,12 +355,6 @@ header.header-overlay--visible .header-overlay--footer {
     height: calc(100% - 1rem);
     margin-top: 1rem;
     display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .menu-icon {
-        display: flex;
-    }
 }
 
 .menu-icon img {

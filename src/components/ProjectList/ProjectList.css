@@ -111,6 +111,12 @@
     transition: .25s ease all .5s;
 }
 
+@media screen and (max-width: 600px) {
+    .project .project-title {
+        font-size: 1.5rem;
+    }
+}
+
 .project.visible .project-title {
     transform: translateY(0);
     opacity: 1;

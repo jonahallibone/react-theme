@@ -3,6 +3,7 @@ import "./UpdatePageSingle.css";
 import { Container } from "react-grid-system";
 import WorkPageHeader from "../WorkPageHeader/WorkPageHeader";
 import { withProjectsContext } from "../../ProjectsContext";
+import {Link} from "react-router-dom";
 
 class UpdatePageSingle extends Component {
 
@@ -13,6 +14,25 @@ class UpdatePageSingle extends Component {
     componentDidMount() {
         document.querySelector("header").classList.remove("black-bg");
         document.querySelector("header").classList.add("white-bg");
+    }
+
+    getSidebar() {
+        const { match, updates } = this.props;
+
+        const index = updates.findIndex(update => update.slug === match.params.id) + 1;
+
+        const related = index < updates.length - 2 ? [updates[index+1], updates[index+2]] : [updates[0], updates[1]]
+
+        return related.map(update => {
+            return(
+                <Link to={`/update/${update.slug}`} className="related-updates text-bold">
+                    <div className="image-container">
+                        <img src={update.acf.featured_image}/>
+                    </div>
+                    <p className="related-title text-black text-bold">{update.title.rendered}</p>
+                </Link>
+            )
+        })
     }
 
     render() {
@@ -27,22 +47,12 @@ class UpdatePageSingle extends Component {
             <div className="update-page-single">
                 <WorkPageHeader projectTitle={update.title.rendered} isUpdate={true}></WorkPageHeader>
                 <Container fluid={true} className="container" style={{padding: 0}}>                    
-                    <h2 className="text-grey light update-description padding-top-175">
-                        Posted by <span className="text-grey">{update._embedded.author[0].name}</span> on <span className="text-grey">{new Date(update.date).toLocaleDateString('en-US', options)}</span>
-                    </h2>
-                    <section className="update-content padding-top-3">
-                        <div className="side">
-                            <div className="image-side-single">
-                                <img src={update.acf.featured_image} />
-                            </div>
-                        </div>
-                    </section>
-                    <section className="update-content-row padding-top-3">
+                    <section className="update-content-row padding-top-7">
                         <div className="content-flex">
                             <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
                         </div>
                         <div className="content-flex-social">
-                            <p>Sidebar Area</p>
+                            {this.getSidebar()}
                         </div>
                     </section>
                 </Container>
