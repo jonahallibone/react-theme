@@ -676,7 +676,8 @@ u:hover:before {
 }
 
 .top-text-mobile {
-    padding: 7rem 0;
+    padding-top: calc(7rem + 75px);
+    padding-bottom: 5rem;
 }
 
 @media screen and (max-width: 600px) {
