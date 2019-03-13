@@ -177,11 +177,11 @@ class PracticePage extends Component {
           </Container>
           <div className="" style={{background: "#111", marginTop: "6rem"}}>
             <Container style={{padding: 0}} fluid={true} className="container">
-              <h1 className="text-white lighter reg" style={{padding: "10.5rem 0 0 0", width: "75%"}}>
+              <h1 className="text-white lighter reg lets-work-together" style={{padding: "10.5rem 0 0 0"}}>
                 Let's work together.
               </h1>
                 <br/><br/>
-              <h1 className="text-grey lighter reg" style={{padding: "0 0 10.5rem 0", width: "75%"}}>
+              <h1 className="text-grey lighter reg lets-work-together" style={{padding: "0 0 10.5rem 0"}}>
                 Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tel:12125024734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
               </h1>
             </Container>

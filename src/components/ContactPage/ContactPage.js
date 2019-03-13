@@ -53,7 +53,7 @@ class ContactPage extends Component {
     return (
       <section className="transition-page contact-page">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
-          <h1 className="text-white lighter reg" style={{padding: "7rem 0 0 0", width: "75%"}}>
+          <h1 className="text-white lighter reg lets-work-together" style={{padding: "7rem 0 0 0", width: "75%"}}>
             Let's work together.
           </h1>
             <br/><br/>
