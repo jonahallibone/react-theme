@@ -48,7 +48,7 @@ class FlickSlider extends Component {
                 },
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/Tringali_LosAngeles.jpg",
-                    title: "Tringali Photograpgy",
+                    title: "Tringali Photography",
                     location: "New York, NY"
                 },
                 {

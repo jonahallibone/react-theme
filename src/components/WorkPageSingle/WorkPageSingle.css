@@ -2,13 +2,14 @@
     min-height: 100%;
     padding-top: 7rem;
     margin-top: 75px;
-    padding-bottom: 14rem;
+    padding-bottom: 0;
     background-color: #000;
 }
 
 @media screen and (max-width: 600px) {
     .work-page-single {
         padding-top: 3.5rem;
+        padding-bottom: 0;
     }
 }
 

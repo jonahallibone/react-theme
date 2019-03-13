@@ -29,17 +29,7 @@ class WorkPageSingle extends Component {
     }
   }
 
-  async componentDidMount() {
-    document.querySelector("#footer").style.opacity = 0;
-    setTimeout(() => this.styleBlack(),  2000);    
-    setTimeout(() => document.addEventListener("scroll", this.animateProjectImages), 1000);
-    // this.animateProjectImages();
-  }
-
-  styleBlack = () => {
-    document.querySelector("header").classList.remove("white-bg");
-    document.querySelector("header").classList.add("black-bg");
-  }
+  
 
   animateProjectImages = () => {
     document.querySelectorAll(".project-images img").forEach((el, i) => {
@@ -51,6 +41,18 @@ class WorkPageSingle extends Component {
         el.classList.add("pop-in");
       }
     })
+  }
+
+  componentDidMount() {
+    document.querySelector("#footer").style.display = "none";
+    setTimeout(() => {
+      document.addEventListener("scroll", this.animateProjectImages)
+      this.animateProjectImages();
+    }, 1000);
+
+    this.animateProjectImages();
+
+    document.querySelector(".App").style.marginBottom = "0"
   }
 
   getBodyClass() {
@@ -106,7 +108,6 @@ class WorkPageSingle extends Component {
     }
 
     let projectInfo = project[0];
-    console.log(projectInfo);
     return (
       <div>
         <div className="project-top-information">
@@ -126,7 +127,7 @@ class WorkPageSingle extends Component {
         <div className="project-images">
           {projectInfo.acf.images.map((image, i) => {
             return(
-              <div className="padding-top-15" key={i}>
+              <div className="padding-top-15" key={`${projectInfo.id}-${i}`}>
             
                 {image.banner_image ?  <div className={`single-project-banner`}><img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} /></div> : ""}                  
                 {image["square_image_#1"]
@@ -159,12 +160,14 @@ class WorkPageSingle extends Component {
 
     setTimeout(() => {
       history.push(`/work/${project.slug}`);
-    }, 300);
+    }, 400);
   }
 
   componentWillUnmount() {
-    document.querySelector("#footer").style.opacity = 1;
     document.removeEventListener("scroll", this.animateProjectImages);
+    document.querySelectorAll(".project-images img").forEach((el, i) => {
+        el.classList.remove("pop-in");
+    })
   }
 
   render() {
