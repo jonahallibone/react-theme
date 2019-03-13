@@ -192,7 +192,16 @@ header.header-min .bar {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s ease .495s, opacity .345s ease .15s;
-    height: 100vh;
+    height: 100%;
+}
+
+header.header-overlay--visible {
+    height: 100%;
+    transition: 0s linear height;
+}
+
+header {
+    transition: 0s ease height .495s;
 }
 
 header.header-overlay--visible .header-overlay {
@@ -222,7 +231,8 @@ header.header-overlay--visible .header-overlay {
 
 @media screen and (max-width: 600px) {
     .header-overlay .menu-vert span {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        margin: .25rem 0;
     }
 }
 
@@ -366,7 +376,7 @@ header.header-overlay--visible .header-overlay--footer {
 }
 
 .links {
-    padding: 3rem 0 !important;
+    padding: 5rem 0 !important;
     height: 100;
     align-items: center;
     padding-top: 3rem;
@@ -378,4 +388,10 @@ header.header-overlay--visible .header-overlay--footer {
     .links {
         align-items: flex-start;
     }
+}
+
+.header-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
 }
