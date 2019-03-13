@@ -117,7 +117,8 @@
     position: relative;
 }
 
-.pdc-copy:before {
+.pdc-copy:before,
+.pdc-copy-mobile:before {
     content: '©';
     font-size: 1.75rem;
     transform: translateX(-1.15rem) !important;
@@ -138,7 +139,7 @@
     }
 
     .App {
-        margin-bottom: 18rem;
+        margin-bottom: 14rem;
     }
 
     #footer a {
@@ -151,7 +152,43 @@
     }
 
     .break {
-        flex: 0 0 100%;
+        flex: 0 0 50%;
         max-width: 100%;
+    }
+}
+
+.pdc-copy-mobile {
+    display: none;
+}
+
+.mobile-visible {
+    display: none !important;
+}
+
+.mobile-hidden {
+    display: block !important;
+}
+
+@media screen and (max-width: 600px) {
+    .pdc-copy {
+        display: none;
+    }
+
+    .pdc-copy-mobile {
+        display: block;
+        font-size: 1.2rem;
+        color: #000;
+        font-weight: 500;
+        position: relative;
+        margin-left: 1rem;
+        margin-top: 3rem;
+    }
+
+    .mobile-visible {
+        display: block !important;
+    }
+    
+    .mobile-hidden {
+        display: none !important;
     }
 }

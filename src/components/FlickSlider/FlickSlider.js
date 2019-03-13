@@ -43,7 +43,7 @@ class FlickSlider extends Component {
                 // },
                 {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
-                    title: "New York University - Advanced Research Institutes",
+                    title: "New York University",
                     location: "New York, NY"
                 },
                 {
@@ -164,10 +164,10 @@ class FlickSlider extends Component {
                             </Slider>
                             <div className="description">
                                 <div className="">
-                                    <h3 className="reg light"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
+                                    <h3 className="reg text-bold"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                                 </div>
                                 <div className="text-right">
-                                    <h3 className="reg light">0{this.state.activeSlide + 1} &mdash; 05</h3>
+                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; 05</h3>
                                 </div>
                             </div>
                         </div>
