@@ -122,7 +122,7 @@ class Header extends Component {
     }
 
     setFollowImage(index) {
-        console.log(index)
+        // console.log(index)
         this.setState({selectedIndex: index})
     }
 

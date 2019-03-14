@@ -36,7 +36,7 @@ class Filter extends Component {
         }
 
         else if(this.state.showTop) {
-            console.log(window.scrollY >= this.lastScrollY)
+            // console.log(window.scrollY >= this.lastScrollY)
             if(window.scrollY >= this.lastScrollY) {
                 filterFlex.classList.add("up");
             }

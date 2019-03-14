@@ -16,7 +16,7 @@ class Input extends Component {
     handleChange = (event) => {
         if(event.target.value.length) this.setState({hasInput: true});
         else this.setState({hasInput: false})
-        console.log(this.state.hasInput);
+        // console.log(this.state.hasInput);
     }
  
     render() {

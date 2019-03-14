@@ -41,11 +41,17 @@
     flex: 0 0 50%;
 }
 
+.update-content-row .content-flex img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 @media screen and (max-width: 600px) {
     .update-content-row {
         flex-direction: column;
     }
-    
+
     .content-flex {
         flex: 0 0 100%;
         min-width: 100%;

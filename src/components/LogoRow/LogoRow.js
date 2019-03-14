@@ -29,7 +29,7 @@ class LogoRow extends Component {
                 el.querySelectorAll(`img:nth-of-type(${parseInt(this.imageIndex) + 1 == 6 ? 5 : parseInt(this.imageIndex)})`)[0].style.opacity = 1;
             }
 
-            console.log(this.imageIndex)
+            // console.log(this.imageIndex)
         })
 
         this.imageIndex + 1 == 6 ? this.imageIndex = 1 : this.imageIndex++;

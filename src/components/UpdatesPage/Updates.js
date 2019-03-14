@@ -40,7 +40,7 @@ class Updates extends Component {
             return data.json()
         })
 
-        console.log(res);
+        // console.log(res);
     }
 
     handleChange = (event) => {
@@ -48,7 +48,7 @@ class Updates extends Component {
     }
     
     renderUpdates = (updates) => {
-        console.log(updates)
+        // console.log(updates)
         if(!updates.length) {
             return;
         }

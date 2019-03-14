@@ -181,7 +181,9 @@ class WorkPageSingle extends Component {
     if(projects.length) {
       project = projects.filter(project => project.slug === match.params.id);
       index = projects.findIndex(project => project.slug === match.params.id) + 1;
+      index >= projects.length ? index = 0 : index = index;
     }
+    
 
     return (
       <ProjectsContext.Consumer>
@@ -197,21 +199,26 @@ class WorkPageSingle extends Component {
           </div>
 
           {/* Header for 'Next Project' */}
-          <Container className="container" fluid={true} style={{padding: 0, position: "static !important"}}>
-            <div className="next-project-header padding-top-7 padding-btm-7" onClick={() => this.loadNextProject(projects[index])}>
-              <p className="text-red reg next-project-link">Next Project</p>
-              <div className="title-row padding-top-175">
-                <div className="side">
-                  <h1 className="reg project-title light text-white">
-                    {projects[index] ? projects[index].title.rendered : ""}
-                  </h1>
-                  <h2 className="light text-grey project-location">
-                    {projects[index] ? projects[index].acf.location: ""}
-                  </h2>
+          {
+          projects.length ? 
+            <Container className="container" fluid={true} style={{padding: 0, position: "static !important"}}>
+              <div className="next-project-header padding-top-7 padding-btm-7" onClick={() => this.loadNextProject(projects[index])}>
+                <p className="text-red reg next-project-link">Next Project</p>
+                <div className="title-row padding-top-175">
+                  <div className="side">
+                    <h1 className="reg project-title light text-white">
+                      {projects[index] ? projects[index].title.rendered : projects[0].title.rendered}
+                    </h1>
+                    <h2 className="light text-grey project-location">
+                      {projects[index] ? projects[index].acf.location : projects[0].acf.location}
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Container>
+            </Container>
+            :
+            <div></div>
+          }
         </div>
       )}
       </ProjectsContext.Consumer>

@@ -58,7 +58,7 @@ class ProjectList extends Component {
     }
 
     renderProjects = (projects) => {
-        console.log(projects)
+        // console.log(projects)
         if(projects.length) {
             const template = projects.filter(project => project.acf.featured_post).map((el, i) => (
                 <ProjectContainer project={el} key={i} />

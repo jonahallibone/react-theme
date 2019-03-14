@@ -34,7 +34,7 @@ class App extends Component {
     this.props.history.listen((location, action) => {
       document.querySelector("header").classList.remove("header-overlay--visible");
       
-      console.log(location);
+      // console.log(location);
       
       document.querySelectorAll(".animate--post-animate").forEach(el => {
         el.classList.remove("animate--post-animate");
@@ -87,7 +87,7 @@ class App extends Component {
   }
 
   onRouteChanged(pathname) {
-    console.log("Route change!!", pathname);
+    // console.log("Route change!!", pathname);
   }
 
 

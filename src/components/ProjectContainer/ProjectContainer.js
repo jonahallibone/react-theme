@@ -119,11 +119,19 @@ class ProjectContainer extends Component {
     render() {
         const el = this.props.project;
         const isNews = this.props.news || "";
+        const {filter} = this.props;
         return(
             <div onMouseUp={this.goToLink} style={{height: "100%"}}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
-                        <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+                        {
+                            filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project
+                            ?
+                                <img src={el.hasOwnProperty("acf") ? el.acf.brand_identity_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+                            :
+                                <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+
+                        }
                     </div>
                     <div className="project-description">
                         <div className="project-title margin-top-1 text-black" style={isNews ? {fontSize: "1.5rem"} : {}}>
