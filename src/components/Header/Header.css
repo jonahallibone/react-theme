@@ -230,9 +230,14 @@ header.header-overlay--visible .header-overlay {
 }
 
 @media screen and (max-width: 600px) {
+    .header-overlay .menu-vert {
+        padding-top: 3rem;
+    }
+
     .header-overlay .menu-vert span {
-        font-size: 2.8rem;
-        margin: .25rem 0;
+        font-size: 2.6rem;
+        margin: 0 0;
+        padding: .25rem 0;
     }
 }
 
@@ -389,9 +394,15 @@ header.header-overlay--visible .header-overlay--footer {
         align-items: flex-start;
     }
 }
-
 .header-info {
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .header-info {
+        display: block;
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+    }
 }

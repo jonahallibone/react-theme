@@ -57,7 +57,7 @@ class ContactPage extends Component {
             Let's work together.
           </h1>
             <br/><br/>
-          <h1 className="text-grey lighter reg" style={{padding: "0 0 7rem 0", width: "75%"}}>
+          <h1 className="text-grey lighter reg" style={{padding: "0 0 7rem 0"}}>
             Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
           </h1>
         </Container>

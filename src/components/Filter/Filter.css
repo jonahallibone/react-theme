@@ -61,13 +61,14 @@
     .filter-flex .filter {
         opacity: 1;
         transform: translate(0,0);
+        font-size: 1.15rem;
     }
 
     .filter-flex .selected-filter {
         display: none;
     }
 
-    .filter-flex .filter.selected {
+    .filter-flex .selected .red-underline {
         color: red;
     }
 }

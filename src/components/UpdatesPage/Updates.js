@@ -93,11 +93,6 @@ class Updates extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="update-feed">
-                        <h2 className="padding-btm-lg text-bold">Our Thoughts</h2>
-                        <div></div>
-                        <h2 className="padding-btm-lg text-bold">Latest News</h2>
-                    </div>
                 </Container>
                 <section className="update-section">
                     <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
@@ -105,6 +100,7 @@ class Updates extends Component {
                             <ProjectsContext.Consumer>
                                 {({ updates }) => (
                                     <div className="update-feed--grid">
+                                        <h2 className="text-bold">Our Thoughts</h2>
                                         {this.renderUpdates(updates)}
                                     </div>
                                 )}
@@ -112,29 +108,30 @@ class Updates extends Component {
                             {/* Space for column gap */}
                             <div></div>
                             {/* End space for column gap */}
-                            <div style={{bottom: "0px", minHeight: "100vh"}}>
+                            <div style={{bottom: "0px"}} className="padding-btm-lg">
+                                <h2 className="text-bold text-red" style={{marginBottom: "2.5rem"}}>News</h2>
                                 <div>
-                                    <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black text-light">22 March 2019</span></div>
-                                    Piscatello Design Centre to be featured in upcoming book,  ‘Wayfinding–Signs and Icons’ to be published by Design Media Publishing (UK) Limited.
+                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <div className=""><span className="text-black text-light">22 March 2019</span></div>
+                                        Upcoming Book
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black text-light">04 March 2019</span></div>
-                                    Piscatello Design Centre launches a new website, redesigned and developed from the ground up. The website welcome visitors to our practice and offers an overview of our work.
+                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <div className=""><span className="text-black text-light">04 March 2019</span></div>
+                                        New Website
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black text-light">04 February 2019</span></div>
-                                    Piscatello Design Centre completes a comprehensive wayfinding design signage program for Saint David’s School.
+                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <div className=""><span className="text-black light">04 February 2019</span></div>
+                                        Saint David's School
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="reg text-grey light hover-underline padding-btm-md">
-                                    <div className="padding-btm-sm"><span className="text-black text-light">31 January 2019</span></div>
-                                    Exhibition, ‘Reflections on Ten Qualities of Design’ at the University of New Haven Extended through 23 February 2019.
+                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <div className=""><span className="text-black light">31 January 2019</span></div>
+                                        Exhibition and Lecture
                                     </p>
                                 </div>                                
                             </div>

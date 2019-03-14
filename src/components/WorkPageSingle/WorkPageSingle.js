@@ -53,6 +53,9 @@ class WorkPageSingle extends Component {
     this.animateProjectImages();
 
     document.querySelector(".App").style.marginBottom = "0"
+    document.querySelectorAll(".project-images img").forEach((el, i) => {
+      el.classList.remove("pop-in");
+    })
   }
 
   getBodyClass() {

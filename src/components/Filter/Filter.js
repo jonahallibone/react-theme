@@ -9,7 +9,7 @@ class Filter extends Component {
         super(props);
 
         this.state = { 
-            selectedFilter: "all",
+            selectedFilter: "featured",
             showTop: false,
         }
         

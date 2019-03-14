@@ -229,9 +229,9 @@ class Header extends Component {
                             {this.getFollowImages()}
                         </div>
                         <div className="header-info">
-                            <p className="text-white">Info</p>
-                            <p className="text-grey">T - +1 212 502 4734</p>
-                            <p className="text-grey">E - work@piscatello.com</p>
+                            <p className="text-white text-bold">Info</p>
+                            <p className="text-grey">+1 212 502 4734</p>
+                            <p className="text-grey">info@piscatello.com</p>
                         </div>
                     </Container>
                 </div>
