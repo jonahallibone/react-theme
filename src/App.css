@@ -710,3 +710,23 @@ u:hover:before {
     opacity: 0;
     transition: all 345ms ease-out;
 }
+
+
+
+/* Up Arrow */
+
+.up-arrow {
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    /* background-color: #FFF; */
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    /* box-shadow: 0 0 14px 0 rgba(0, 0, 0, .1); */
+    background-image: url('https://s3.amazonaws.com/piscatello/UpArrow_Grey.svg');
+    background-repeat: no-repeat;
+    background-size: 45% 45%;
+    background-position: center center;
+    
+}

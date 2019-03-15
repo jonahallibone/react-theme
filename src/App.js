@@ -90,6 +90,9 @@ class App extends Component {
     // console.log("Route change!!", pathname);
   }
 
+  scrollTop = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+  }
 
   render() {
 
@@ -117,6 +120,8 @@ class App extends Component {
             </TransitionGroup>
             <Footer></Footer>
           </ProjectsContext.Provider>
+          <div className="up-arrow" onClick={this.scrollTop}>
+          </div>
       </div>
     )
   }
