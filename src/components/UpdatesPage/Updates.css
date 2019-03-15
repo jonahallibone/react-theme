@@ -1,6 +1,12 @@
 .updates-page {
     background: #FFF;
     min-height: 100vh;
+    opacity: 0;
+    transition: .345s ease opacity;
+}
+
+.updates-page.fade-enter-done {
+    opacity: 1;
 }
 
 .updates-quick-grid {

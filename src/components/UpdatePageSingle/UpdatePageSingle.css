@@ -3,6 +3,12 @@
     min-height: 100vh;
     padding-top: calc(7rem + 75px);
     padding-bottom: 10rem;
+    opacity: 0;
+    transition: .345s ease opacity;
+}
+
+.update-page-single.fade-enter-done {
+    opacity: 1;
 }
 
 .update-description {

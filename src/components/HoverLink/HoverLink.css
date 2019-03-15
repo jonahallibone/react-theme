@@ -1,176 +1,53 @@
-.underline--container {
+.link {
+    display: inline-block;
+    align-self: flex-start;
     position: relative;
-    transition: .345s ease all;
-    display: inline-flex;
-    cursor: pointer;
+}
+
+:visited .underline {
     color: #000;
 }
 
-.underline--container:hover {
+.link.grey-grey {
+    color: #999;
+}
+
+:visited .grey-grey: {
+    color: #999;
+}
+
+.selected .underline {
     color: #ff4350;
 }
 
-.underline--container:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff4350;
-    color: #ff4350;
-    z-index: 2;
-    will-change: transform,color;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    transition: -webkit-transform .35s;
-    transition: transform .35s;
-    transition: transform .35s,-webkit-transform .35s;
-    transition-timing-function: cubic-bezier(.25,.46,.45,.94);
-}
-
-.underline--container:hover:after,
-.underline--container.hovered:after {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    transition-timing-function: ease;
-    background-color: #ff4350;
-    color: #ff4350;
-}
-
-.underline--container.inverse:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff4350;
-    z-index: 2;
-    will-change: transform,color;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    transition: -webkit-transform .35s;
-    transition: transform .35s;
-    transition: transform .35s,-webkit-transform .35s;
-    transition-timing-function: cubic-bezier(.25,.46,.45,.94);
-}
-
-.underline--container.inverse:before {
-    content: '';
-    width: 100%;
-    position: absolute;
- }
-
-.underline--container.inverse:hover:after {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    transition-timing-function: ease;
-}
-
-.underline--container.thick:after {
-    height: 3px;
-}
-
-.underline--container.grey {
-    color: #FFF;
-}
-
-.underline--container.grey:before {
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: -2px;
-    position: absolute;
-    left: 0;
-    background-color: #AAA;
-}
-
-.underline--container.grey-grey {
-    color: #AAA;
-}
-
-
-
-.underline--container.grey-grey:before {
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: -2px;
-    position: absolute;
-    left: 0;
-    background-color: #AAA;
-}
-
-.underline--container.white-grey {
-    color: #FFF;
-}
-
-.underline--container.white-grey:before {
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: -2px;
-    position: absolute;
-    left: 0;
-    background-color: #FFF;
-}
-
-.underline--container.grey-black:before {
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: -2px;
-    position: absolute;
-    left: 0;
-    background-color: #000;
-}
-
-.underline--container.grey {
-    color: #FFF;
-}
-
-.underline--container.grey:before {
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: -2px;
-    position: absolute;
-    left: 0;
-    background-color: #AAA;
-}
-
-.underline--container.grey:hover,
-.underline--container.grey-black:hover,
-.underline--container.grey-grey:hover,
-.underline--container.white-grey:hover {
-    color: #ff4350;
-}
-
-.underline--container.selected:after {
-    transform: scaleX(1);
-    transition: 0s;
-}
-
-.underline--container.selected {
-    color: #ff4350;
-}
-
-.underline--container.solid-black {
+.link.grey-black {
     color: #000;
 }
 
-.underline--container.solid-black:after {
-    background-color: #000;
-    transform: scaleX(1);
+.link.grey-grey:after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #999;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    z-index: 1;
 }
+
+.underline {
+    /* I don't know why this is needed, I just added it and it worked in IE Edge. If we remove this width, the gradient breaks in IE Edge */
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #ff4350 2px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .345s;
+    z-index: 999;
+    position: relative;
+}
+  
+  .link:hover .underline,
+  .link.hovered .underline,
+  .selected .underline {
+    background-size: 100% 100%;
+  }

@@ -55,7 +55,7 @@ class HomePage extends Component {
 
                                 {this.state.isVisible && this.random == 1 && [
                                         <CSSAnimate key="i" delay="1000">
-                                            <h1 className="reg lighter">
+                                            <h1 className="reg lighter top-text">
                                             We are a multidisciplinary design consultancy.
                                             Our work is strategic, universal, and timeless.
                                             </h1>

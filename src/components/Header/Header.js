@@ -163,9 +163,6 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(0)}}
                                         >
                                             <HoverLink thick="true">
-                                                <div className="menu-icon">
-                                                    <img src={followImages[0]} />
-                                                </div>
                                                 <span>Main</span>
                                             </HoverLink>
                                         </Link>
@@ -176,9 +173,6 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(1)}}
                                         >
                                             <HoverLink thick="true">
-                                                <div className="menu-icon">
-                                                    <img src={followImages[1]} />
-                                                </div>
                                                 <span>Work</span>
                                             </HoverLink>
                                         </Link>
@@ -189,9 +183,6 @@ class Header extends Component {
                                             onMouseOver={() => {this.setFollowImage(2)}}
                                         >
                                             <HoverLink thick="true">
-                                                <div className="menu-icon">
-                                                    <img src={followImages[2]} />
-                                                </div>
                                                 <span>Practice</span>
                                             </HoverLink>
                                         </Link>

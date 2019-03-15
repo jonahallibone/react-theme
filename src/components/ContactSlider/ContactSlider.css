@@ -83,3 +83,16 @@
         transform: translateX(50%);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .contact-slider-track {
+        transform: translateX(0) !important;
+    }
+    .contact-slider { 
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    }
+    .clones {
+        display: none;
+    }
+}

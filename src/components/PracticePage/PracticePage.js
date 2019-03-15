@@ -11,18 +11,35 @@ import {Helmet} from "react-helmet";
 class PracticePage extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.nodeList = [];
   }
 
   componentDidMount() {
-    setTimeout(() => this.styleBlack(), 2000);
+    this.nodeList = document.querySelectorAll(".animate-in");
 
+    document.addEventListener("scroll", this.animateElements, {passive: true});
+    this.animateElements();
   }
 
 
   styleBlack = () => {
     document.querySelector("header").classList.remove("white-bg");
     document.querySelector("header").classList.add("black-bg");
+  }
+
+  animateElements = () => {
+    this.nodeList.forEach( el => {
+      let top = el.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) * .65;
+      if(top) {
+        el.classList.add(el.dataset.animationClass);
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.animateElements, {passive: true});
   }
 
   render() {
@@ -66,7 +83,7 @@ class PracticePage extends Component {
 
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-            <h1 className="reg text-white lighter">
+            <h1 className="reg text-white lighter animate-in" data-animation-class="pop-in">
               Whether you’re established or just starting, we can help your organization grow through the power of design.
             </h1>
           </div>
@@ -76,8 +93,8 @@ class PracticePage extends Component {
             <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg" />
             <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
           </Slider>
-          <h2 className="light text-white reg padding-top-7 padding-btm-5">About</h2>
-          <div className="text-grey about-section">
+          <h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in">About</h2>
+          <div className="text-grey about-section animate-in"  data-animation-class="pop-in" >
             <p>
             Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodlogy for combining business strategy and creativity to help organizations realize their full potential.
             <br/><br/>
@@ -87,17 +104,17 @@ class PracticePage extends Component {
             </p>
           </div>
           </Container>
-          <div className="image-container padding-top-7">
+          <div className="image-container padding-top-7 animate-in" data-animation-class="pop-in">
             <LogoRow />
           </div>
           <Container style={{padding: 0}} fluid={true} className="container">
           <div>
-            <h2 className="light text-white reg padding-top-7 padding-btm-5">Capabilities</h2>
+            <h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in">Capabilities</h2>
           </div>
-          <div className="text-grey about-section">
+          <div className="text-grey about-section animate-in" data-animation-class="pop-in">
             <p>We have created a singular studio that works across many disciplines in the field of design. Each team member contributes to uncovering the core idea of a project and is responsible for working within their own area of expertise.</p>
           </div>
-          <div className="information-grid padding-top-7">
+          <div className="information-grid padding-top-7 animate-in" data-animation-class="pop-in">
             <div className="info-block">
               <h3 className="reg text-white light">Design Consulting</h3>
               <ul className="text-grey service-list">
@@ -150,13 +167,13 @@ class PracticePage extends Component {
         </Container>
         <div className="bottom">
           <Container style={{padding: 0}} fluid={true} className="container">
-            <h2 className="light text-white reg padding-top-7 padding-btm-7" style={{paddingTop: "14rem"}}>Leadership</h2>
+            <h2 className="light text-white reg padding-top-7 padding-btm-7 animate-in" data-animation-class="pop-in" style={{paddingTop: "14rem"}}>Leadership</h2>
             <div className="image-grid-2">
               <div className="image-container sticky display-mobile">
                 <img src="https://s3.amazonaws.com/piscatello/Rocco_Portrait_2.jpg" />
               </div>
               <div className="image-container">
-                <p className="text-grey light">
+                <p className="text-grey light animate-in" data-animation-class="pop-in">
                 Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
                 Piscatello is passionate about working with industry leaders to help their businesses grow and thrive.
                 He was a former design director at Vignelli Associates prior to founding Piscatello Design Centre.                
@@ -177,11 +194,11 @@ class PracticePage extends Component {
           </Container>
           <div className="" style={{background: "#111", marginTop: "6rem"}}>
             <Container style={{padding: 0}} fluid={true} className="container">
-              <h1 className="text-white lighter reg lets-work-together" style={{padding: "10.5rem 0 0 0"}}>
+              <h1 className="text-white lighter reg lets-work-together animate-in" data-animation-class="pop-in" style={{padding: "10.5rem 0 0 0"}}>
                 Let's work together.
               </h1>
                 <br/><br/>
-              <h1 className="text-grey lighter reg lets-work-together" style={{padding: "0 0 10.5rem 0"}}>
+              <h1 className="text-grey lighter reg lets-work-together animate-in" data-animation-class="pop-in" style={{padding: "0 0 10.5rem 0"}}>
                 Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tel:12125024734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
               </h1>
             </Container>

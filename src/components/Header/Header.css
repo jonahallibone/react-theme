@@ -191,7 +191,7 @@ header.header-min .bar {
     color: #999;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s ease .495s, opacity .345s ease .15s;
+    transition: visibility 0s linear .495s, opacity .345s ease;
     height: 100%;
 }
 
@@ -207,7 +207,7 @@ header {
 header.header-overlay--visible .header-overlay {
     visibility: visible;
     opacity: 1;
-    transition: opacity .345s ease;
+    transition: opacity .345s ease, visibility linear 0s;
 }
 
 .header-overlay .menu-vert {
@@ -405,4 +405,8 @@ header.header-overlay--visible .header-overlay--footer {
         bottom: 1rem;
         left: 0;
     }
+}
+
+.page-link {
+    align-self: flex-start;
 }
