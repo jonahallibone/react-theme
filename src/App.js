@@ -120,8 +120,6 @@ class App extends Component {
             </TransitionGroup>
             <Footer></Footer>
           </ProjectsContext.Provider>
-          <div className="up-arrow" onClick={this.scrollTop}>
-          </div>
       </div>
     )
   }

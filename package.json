@@ -10,6 +10,7 @@
     "card-vibes": "0.0.3",
     "flickity": "^2.2.0",
     "flubber": "^0.4.2",
+    "gsap": "^2.1.2",
     "imagesloaded": "^4.1.4",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
@@ -42,7 +43,8 @@
     "react-transition-group": "^2.6.0",
     "react-vanilla-tilt": "^1.0.0",
     "react-with-gesture": "^4.0.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "splitting": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

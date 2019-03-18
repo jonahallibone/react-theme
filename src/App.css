@@ -196,7 +196,7 @@ p {
 }
 
 p > span {
-    font-weight: 500 !important;
+    font-weight: 500;
 }
 
 h1,
@@ -673,7 +673,7 @@ u:hover:before {
 }
 
 .top-text-mobile {
-    padding-top: calc(7rem - 32.5px);
+    padding-top: calc(7rem);
     padding-bottom: 7rem;
 }
 

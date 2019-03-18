@@ -270,6 +270,10 @@
     color: red;
 }
 
+.updates-page .news-column a:visited {
+    color: #999;
+}
+
 
 @media screen and (max-width: 600px) {
     .news-side-item {

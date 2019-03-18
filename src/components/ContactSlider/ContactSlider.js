@@ -48,7 +48,6 @@ class ContactSlider extends React.Component {
     animate(width) {
         this.rAF = requestAnimationFrame(() => this.animate(width));
         
-        console.log(Math.abs(this.position), width / 3, this.position >= width / 2);
         if(Math.abs(this.position) <= 0 || Math.abs(this.position) >= width * .666666) {
             this.position = (width / 3) * -1;
         }

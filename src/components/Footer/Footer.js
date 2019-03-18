@@ -2,9 +2,37 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
 import './Footer.css';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class Footer extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount() {
+
+        console.log(this.props)
+        document.querySelector("#footer").style.opacity="1";
+
+        this.toggleFooter();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.toggleFooter();
+    }
+
+    toggleFooter() {
+        const {location} = this.props;
+
+        if(location.pathname.includes("/work/")) {
+            document.querySelector("#footer").style.display="none";
+        }
+
+        else {
+            document.querySelector("#footer").style.display="block";
+        }
+    }
+
     render() {
         return (
             <div id="footer">
@@ -19,9 +47,9 @@ class Footer extends Component {
                             <Link className="light mobile-visible" to="/contact"><HoverLink grey-black="true">Contact</HoverLink></Link>
                         </div>
                         <div className="column-right break">
-                            <a className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>
-                            <a className="light"><HoverLink grey-black="true">LinkedIn</HoverLink></a>
-                            <a className="light"><HoverLink grey-black="true">Twitter</HoverLink></a>
+                            <a href="https://www.instagram.com/piscatellodesigncentre/" className="light"><HoverLink grey-black="true">Instagram</HoverLink></a>
+                            <a href="https://www.linkedin.com/company/piscatello-design-centre" className="light"><HoverLink grey-black="true">LinkedIn</HoverLink></a>
+                            <a href="http://twitter.com/piscatelloPDC" className="light" target="_blank"><HoverLink grey-black="true">Twitter</HoverLink></a>
                             <Link className="light mobile-hidden" to="/contact"><HoverLink grey-black="true">Contact</HoverLink></Link>
                         </div>
                         <span className="light pdc-copy-mobile">
@@ -33,4 +61,4 @@ class Footer extends Component {
         )
     }
 }
-export default Footer;
+export default withRouter(Footer);

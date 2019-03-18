@@ -119,6 +119,15 @@ header .menu-button {
     color: #333;
 }
 
+header .menu-button:hover h2 {
+    color: #FFF;
+}
+
+header .menu-button:hover .hamburger:before,
+header .menu-button:hover .hamburger:after {
+    background: #FFF;
+}
+
 header .hamburger {
     position: relative;
     height: 15px;

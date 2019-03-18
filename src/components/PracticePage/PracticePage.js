@@ -169,9 +169,9 @@ class PracticePage extends Component {
           <Container style={{padding: 0}} fluid={true} className="container">
             <h2 className="light text-white reg padding-top-7 padding-btm-7 animate-in" data-animation-class="pop-in" style={{paddingTop: "14rem"}}>Leadership</h2>
             <div className="image-grid-2">
-              <div className="image-container sticky display-mobile">
+              {/* <div className="image-container sticky display-mobile">
                 <img src="https://s3.amazonaws.com/piscatello/Rocco_Portrait_2.jpg" />
-              </div>
+              </div> */}
               <div className="image-container">
                 <p className="text-grey light animate-in" data-animation-class="pop-in">
                 Rocco Piscatello is principal and creative director of Piscatello Design Centre.  
@@ -187,9 +187,10 @@ class PracticePage extends Component {
                 His work is included in the permanent collections of the Denver Art Museum, the Vignelli Center for Design Studies, and the Library of Congress. His book. “Rocco Piscatello: Poster Works for FIT”, was published in 2017.                
                 </p>
               </div>
-              <div className="image-container sticky">
+              <div></div>
+              {/* <div className="image-container sticky">
                 <img src="https://s3.amazonaws.com/piscatello/Rocco_Portrait_2.jpg" />
-              </div>
+              </div> */}
             </div>
           </Container>
           <div className="" style={{background: "#111", marginTop: "6rem"}}>

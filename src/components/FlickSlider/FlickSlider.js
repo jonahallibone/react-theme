@@ -35,16 +35,15 @@ class FlickSlider extends Component {
             activeSlide: 0,
             activeSlide2: 0,
             slides: [
-                // {
-                //     image: "https://s3.amazonaws.com/piscatello/Nomadx_Animation_30FPS_1.11.19+(1).mp4",
-                //     title: "Nomadx Solutions",
-                //     location: "New York, NY",
-                //     video: true
-                // },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
-                    title: "New York University",
+                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
+                    title: "Irish Hunger Memorial",
                     location: "New York, NY"
+                }, 
+                {
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
+                    title: "LostTribe Theatre",
+                    location: "New York — London"
                 },
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/Tringali_LosAngeles.jpg",
@@ -52,20 +51,20 @@ class FlickSlider extends Component {
                     location: "New York, NY"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/66_BlueDoors2.jpg",
-                    title: "66 Restaurant",
-                    location: "New York — London"
+                    image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
+                    title: "New York University",
+                    location: "New York, NY"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
-                    title: "Irish Hunger Memorial",
+                    image: "https://s3.amazonaws.com/piscatello/AEA_4thFloorFeature3-1920x1080.jpg",
+                    title: "Actors Equity",
                     location: "New York, NY"
-                },                
+                },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
-                    title: "LostTribe Theatre",
-                    location: "New York — London"
-                }
+                    image: "https://s3.amazonaws.com/piscatello/RVA_iMac_1920x1080.jpg",
+                    title: "Viñoly",
+                    location: "New York, NY"
+                }              
             ],
             isVisible: false
         }
@@ -167,7 +166,7 @@ class FlickSlider extends Component {
                                     <h3 className="reg text-bold"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                                 </div>
                                 <div className="text-right">
-                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; 05</h3>
+                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; 06</h3>
                                 </div>
                             </div>
                         </div>

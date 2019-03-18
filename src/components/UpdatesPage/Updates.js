@@ -100,7 +100,7 @@ class Updates extends Component {
                             <ProjectsContext.Consumer>
                                 {({ updates }) => (
                                     <div className="update-feed--grid">
-                                        <h2 className="text-bold">Our Thoughts</h2>
+                                        <h2 className="text-bold">Thoughts</h2>
                                         {this.renderUpdates(updates)}
                                     </div>
                                 )}
@@ -108,32 +108,31 @@ class Updates extends Component {
                             {/* Space for column gap */}
                             <div></div>
                             {/* End space for column gap */}
-                            <div style={{bottom: "0px"}} className="padding-btm-lg">
-                                <h2 className="text-bold text-red" style={{marginBottom: "2.5rem"}}>News</h2>
-                                <div>
-                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <div className=""><span className="text-black text-light">22 March 2019</span></div>
-                                        Upcoming Book
+                            <div style={{bottom: "0px"}} className="padding-btm-lg news-column">
+                                <h2 className="text-bold" style={{marginBottom: "2.5rem"}}>News</h2>
+                                <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
+                                    <p><span className="text-grey text-light">22 March 2019</span></p>
+                                    <p className="padding-top-1">
+                                        Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
                                     </p>
                                 </div>
-                                <div>
-                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <div className=""><span className="text-black text-light">04 March 2019</span></div>
-                                        New Website
+                                <div target="_blank" className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <a href="https://www.mohawkconnects.com/article/mohawk-blog/rocco-piscatello-poster-works-fit" target="_blank">
+                                    <p className="text-black"><span className="text-black text-bold">Exhibition</span></p>
+                                    <p><span className="text-grey text-light">15 December 2018</span></p>
+                                    <p className="padding-top-1">
+                                        Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
                                     </p>
+                                    </a>
                                 </div>
-                                <div>
-                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <div className=""><span className="text-black light">04 February 2019</span></div>
-                                        Saint David's School
+                                <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <p className="text-black"><span className="text-black text-bold">Guest Speaker</span></p>
+                                    <p><span className="text-grey text-light">12 November 2018</span></p>
+                                    <p className="padding-top-1">
+                                        Rocco Piscatello to Speak at the University of New Haven
                                     </p>
-                                </div>
-                                <div>
-                                    <p className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <div className=""><span className="text-black light">31 January 2019</span></div>
-                                        Exhibition and Lecture
-                                    </p>
-                                </div>                                
+                                </div>                              
                             </div>
                         </div>
                 </Container>

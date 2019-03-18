@@ -12,12 +12,13 @@
     min-width: 100%;
     width: auto;
     grid-template-columns: min-content;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #swipe-slider .swipe-track .swipe-slide {
     margin-left: 1.75rem;
     flex-basis: auto;
+    max-width: 25%;
 }
 
 #swipe-slider:not(.dragging) .swipe-track {

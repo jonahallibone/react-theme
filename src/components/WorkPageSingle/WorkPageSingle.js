@@ -44,7 +44,6 @@ class WorkPageSingle extends Component {
   }
 
   componentDidMount() {
-    document.querySelector("#footer").style.display = "none";
     setTimeout(() => {
       document.addEventListener("scroll", this.animateProjectImages)
       this.animateProjectImages();
@@ -52,7 +51,6 @@ class WorkPageSingle extends Component {
 
     this.animateProjectImages();
 
-    document.querySelector(".App").style.marginBottom = "0"
     document.querySelectorAll(".project-images img").forEach((el, i) => {
       el.classList.remove("pop-in");
     })
@@ -95,7 +93,7 @@ class WorkPageSingle extends Component {
                 {services.map((service, i) => <li key={i}>{service.service_item}</li>)}
               </ul>
             </article>
-            <article className="text-white project-content" dangerouslySetInnerHTML={{__html: content.rendered}}>
+            <article className="text-grey project-content" dangerouslySetInnerHTML={{__html: content.rendered}}>
             </article>
           </div>
       </div>
