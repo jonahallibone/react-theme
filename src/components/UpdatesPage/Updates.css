@@ -266,10 +266,6 @@
     }
 }
 
-.hover-underline:hover {
-    color: red;
-}
-
 .updates-page .news-column a:visited {
     color: #999;
 }

@@ -119,11 +119,16 @@ class Updates extends Component {
                                 </div>
                                 <div target="_blank" className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <a href="https://www.mohawkconnects.com/article/mohawk-blog/rocco-piscatello-poster-works-fit" target="_blank">
-                                    <p className="text-black"><span className="text-black text-bold">Exhibition</span></p>
-                                    <p><span className="text-grey text-light">15 December 2018</span></p>
-                                    <p className="padding-top-1">
-                                        Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
-                                    </p>
+                                        <p className="text-black">
+                                            <span className="text-black text-bold">Exhibition</span>
+                                        </p>
+                                        <p>
+                                            <span className="text-grey text-light">15 December 2018</span>
+                                        </p>
+                                        <p className="padding-top-1">
+                                            Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
+                                            <span className="link-arrow black"></span>
+                                        </p>
                                     </a>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">

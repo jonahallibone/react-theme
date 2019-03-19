@@ -730,3 +730,7 @@ u:hover:before {
     background-position: center center;
     
 }
+
+.hover-white:hover {
+    color: #FFF;
+}

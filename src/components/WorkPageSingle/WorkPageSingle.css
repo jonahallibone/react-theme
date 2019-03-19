@@ -139,7 +139,7 @@
 
 .project-description--inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     display: none;
     padding: 1rem 0;
 }

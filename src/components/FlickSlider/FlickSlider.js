@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './FlickSlider.css';
 import Slider from "react-slick";
 import CSSAnimate from "../CSSAnimate/CSSAnimate";
-
+import { Link } from "react-router-dom";
 import { Container } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
 
@@ -38,32 +38,38 @@ class FlickSlider extends Component {
                 {
                     image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
                     title: "Irish Hunger Memorial",
-                    location: "New York, NY"
+                    location: "New York, NY",
+                    link: "/work/irish-hunger-memorial"
                 }, 
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
                     title: "LostTribe Theatre",
-                    location: "New York — London"
+                    location: "New York — London",
+                    link: "/work/lost-tribe-theatre"
                 },
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/Tringali_LosAngeles.jpg",
                     title: "Tringali Photography",
-                    location: "New York, NY"
+                    location: "New York, NY",
+                    link: "/work/tringali-photography"
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
                     title: "New York University",
-                    location: "New York, NY"
+                    location: "New York, NY",
+                    link: "/work/nyu-advanced-research-institutes"
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/AEA_4thFloorFeature3-1920x1080.jpg",
                     title: "Actors Equity",
-                    location: "New York, NY"
+                    location: "New York, NY",
+                    link: "/work/actors-equity-association"
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/RVA_iMac_1920x1080.jpg",
                     title: "Viñoly",
-                    location: "New York, NY"
+                    location: "New York, NY",
+                    link: "/work/vinoly"
                 }              
             ],
             isVisible: false
@@ -122,7 +128,7 @@ class FlickSlider extends Component {
                                     Your browser does not support the video tag.
                                 </video>
                             : 
-                            <img src={el.image} alt={el.title}/>
+                            <Link to={el.link}><img src={el.image} alt={el.title}/></Link>
                         }
                         
                 </div>

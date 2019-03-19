@@ -87,13 +87,14 @@ class WorkPageSingle extends Component {
             </ul>
           </div>
           <div className="project-description--inner">
+            <article className="text-grey project-content" dangerouslySetInnerHTML={{__html: content.rendered}}>
+            </article>
+            <div></div>
             <article className="service-list">
               <p className="text-grey light">Core Services</p>
               <ul className="text-grey">
                 {services.map((service, i) => <li key={i}>{service.service_item}</li>)}
               </ul>
-            </article>
-            <article className="text-grey project-content" dangerouslySetInnerHTML={{__html: content.rendered}}>
             </article>
           </div>
       </div>
