@@ -1,5 +1,5 @@
 .cssanimation {
-    transition: .5s ease-in-out;
+    transition: .5s ease-in-out all;
     opacity: 0;
     transform: translateY(-10%);
 }
@@ -12,4 +12,14 @@
 .cssanimation.translate-opacity.enter {
     opacity: 1;
     transform: translateY(0%);
+}
+
+.cssanimation.translate-opacity > * {
+    line-height: 3;
+    transition: .495s ease all;
+}
+
+
+.cssanimation.translate-opacity.enter > * {
+    line-height: 1.5;
 }

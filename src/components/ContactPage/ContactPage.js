@@ -10,6 +10,7 @@ import HoverLink from '../HoverLink/HoverLink';
 
 import '../FlickSlider/FlickSlider.css';
 import ContactSlider from '../ContactSlider/ContactSlider';
+import CSSAnimate from '../CSSAnimate/CSSAnimate';
 
 class ContactPage extends Component {
 
@@ -53,13 +54,17 @@ class ContactPage extends Component {
     return (
       <section className="transition-page contact-page">
         <Container fluid={true} className="container" style={{padding: 0, background: "#000"}}>
-          <h1 className="text-white lighter reg lets-work-together" style={{padding: "7rem 0 0 0", width: "75%"}}>
-            Let's work together.
-          </h1>
-            <br/><br/>
-          <h1 className="text-grey lighter reg  lets-work-together" style={{padding: "0 0 7rem 0"}}>
-            Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
-          </h1>
+          <CSSAnimate key="i" delay="1000">
+            <h1 className="text-white lighter reg lets-work-together" style={{padding: "7rem 0 0 0", width: "75%"}}>
+              Let's work together.
+            </h1>
+          </CSSAnimate>
+              <br/><br/>
+          <CSSAnimate key="i" delay="1200">
+            <h1 className="text-grey lighter reg  lets-work-together" style={{padding: "0 0 7rem 0"}}>
+              Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
+            </h1>
+          </CSSAnimate>
         </Container>
         <div className="contact-banner padding-btm-5">
           <ContactSlider></ContactSlider>

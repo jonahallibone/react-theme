@@ -7,6 +7,7 @@ import SimpleTyper from "../SimpleTyper/SimpleTyper";
 import HoverLink from "../HoverLink/HoverLink";
 import LogoRow from '../LogoRow/LogoRow';
 import {Helmet} from "react-helmet";
+import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 class PracticePage extends Component {
 
@@ -19,7 +20,7 @@ class PracticePage extends Component {
   componentDidMount() {
     this.nodeList = document.querySelectorAll(".animate-in");
 
-    document.addEventListener("scroll", this.animateElements, {passive: true});
+    setTimeout(() => document.addEventListener("scroll", this.animateElements, {passive: true}), 2000);
     this.animateElements();
   }
 
@@ -83,9 +84,11 @@ class PracticePage extends Component {
 
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-            <h1 className="reg text-white lighter animate-in" data-animation-class="pop-in">
-              Whether you’re established or just starting, we can help your organization grow through the power of design.
-            </h1>
+          <CSSAnimate key="i" delay="1000">
+              <h1 className="reg text-white lighter animate-in" data-animation-class="pop-in">
+                Whether you’re established or just starting, we can help your organization grow through the power of design.
+              </h1>
+            </CSSAnimate>
           </div>
           <Slider {...settings}>
             <img src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />

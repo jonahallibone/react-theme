@@ -2,6 +2,12 @@
     display: block;
     background: #000;
     padding: 75px 0 10rem 0;
+    opacity: 0;
+    transition: .345s ease all;
+}
+
+.careers-page.fade-enter-done {
+    opacity: 1;
 }
 
 .careers-top-text {

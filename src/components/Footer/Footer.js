@@ -12,7 +12,7 @@ class Footer extends Component {
     componentDidMount() {
 
         console.log(this.props)
-        document.querySelector("#footer").style.opacity="1";
+        setTimeout(() => document.querySelector("#footer").style.opacity="1", 1200);
 
         this.toggleFooter();
     }

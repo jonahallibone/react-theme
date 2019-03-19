@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Reveal';
 import Filter from "../Filter/Filter";
 import { WorkContext, Pages } from "./Pages";
 import {ProjectsContext} from "../../ProjectsContext";
-
+import CSSAnimate from "../CSSAnimate/CSSAnimate";
 /* @CSS */
 
 import '../../App.css';
@@ -106,9 +106,11 @@ class WorkPage extends Component {
         <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
           <Row className="top-text-mobile">
             <Col xs={12} sm={10} md={9} lg={9}>
-              <h1 className={"reg lighter text-black animate"}>
-                Design in every discipline, that lasts.
-              </h1>
+            <CSSAnimate key="i" delay="1000">
+                <h1 className={"reg lighter text-black animate"}>
+                  Design in every discipline, that lasts.
+                </h1>
+              </CSSAnimate>
             </Col>
           </Row>
         </Container>

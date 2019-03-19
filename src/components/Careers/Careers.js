@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import HoverLink from '../HoverLink/HoverLink';
+import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 import './Careers.css';
 
@@ -18,7 +18,9 @@ class Careers extends Component {
         return (
             <div className="careers-page">
                 <Container fluid={true} className="container" style={{padding: 0}}>
-                    <h1 className="text-white lighter reg careers-top-text">We're always on the lookout for the best designers, strategists, and developers to join our team.</h1>
+                    <CSSAnimate delay="1000">
+                        <h1 className="text-white lighter reg careers-top-text">We're always on the lookout for the best designers, strategists, and developers to join our team.</h1>
+                    </CSSAnimate>
                     <div className="image-container">
                         <img src="https://s3.amazonaws.com/piscatello/studio-hands.jpg" />
                     </div>
@@ -50,7 +52,7 @@ class Careers extends Component {
                                 Interns work closely with our team on varied client and internal projects. A solid understanding of Piscatello Design Centre’s work and philosophy is vital.
                             </p><br/>
                             <p className="text-grey">
-                                Please send your CV, and/or pdf portfolio, and cover letter, as well as your availability to internships@piscatello.com
+                                Please send your CV, and/or pdf portfolio, and cover letter, as well as your availability to <a href="mailto:internship@piscatello.com" className="text-white">internship@piscatello.com</a>
                             </p>
                         </div>
                     </div>
