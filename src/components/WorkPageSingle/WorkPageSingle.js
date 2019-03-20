@@ -115,9 +115,9 @@ class WorkPageSingle extends Component {
         <div className="project-top-information">
           <Row>
             <Col xs={12} sm={8}>
-              <h2 className="light text-white post-location" style={{marginTop: "-1rem"}}>
+              <p className="light text-white post-location" style={{marginTop: "-1rem"}}>
                 {projectInfo.acf.location}
-              </h2>
+              </p>
             </Col>
           </Row>
           <div className="single-project-banner-description">
@@ -208,9 +208,9 @@ class WorkPageSingle extends Component {
                     <h1 className="reg project-title light text-white">
                       {projects[index] ? projects[index].title.rendered : projects[0].title.rendered}
                     </h1>
-                    <h2 className="light text-white project-location">
+                    <p className="light text-white project-location">
                       {projects[index] ? projects[index].acf.location : projects[0].acf.location}
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
