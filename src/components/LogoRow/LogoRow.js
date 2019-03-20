@@ -12,7 +12,7 @@ class LogoRow extends Component {
     }
 
     componentDidMount() {
-        this.intervalId = setInterval(this.interval, 4000);
+        this.intervalId = setInterval(this.interval, 3000);
     }
 
     interval = () => {

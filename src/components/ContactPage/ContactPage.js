@@ -60,7 +60,7 @@ class ContactPage extends Component {
             </h1>
           </CSSAnimate>
               <br/><br/>
-          <CSSAnimate key="i" delay="1200">
+          <CSSAnimate key="j" delay="1200">
             <h1 className="text-grey lighter reg  lets-work-together" style={{padding: "0 0 7rem 0"}}>
               Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tele:+1 212 502 4734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
             </h1>

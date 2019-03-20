@@ -136,7 +136,7 @@ class Header extends Component {
                     <Row className={"text-white logo"} style={{alignItems: "center"}}>
                         <Col xs={10} sm={6} style={{alignItems: "center"}}>
                             <h2>
-                                <Link to="/" className="logo-link" className="text-grey hover-white">
+                                <Link to="/" className="logo-link" className="text-white hover-white">
                                     <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
                                         Piscatello Design Centre
                                     </SplitText>

@@ -195,8 +195,19 @@ p {
     display: block;
 }
 
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 1.3125rem;
+    }
+
+    li {
+        font-size: 1.3rem;
+    }
+
+}
+
 p > span {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 h1,
@@ -227,6 +238,28 @@ h5.lighter {
     font-weight: 300;
 }
 
+blockquote {
+    padding: 10%;
+}
+
+blockquote > p {
+    font-size: 2.7rem;
+    font-weight: 400;
+    line-height: 1.2;
+    /* font-style: italic; */
+}
+
+@media screen and (max-width: 600px) {
+    blockquote {
+        padding: 8% 0 8% 8%;
+    }
+
+    blockquote > p {
+        font-size: 1.8rem;
+        text-emphasis: italic;
+    }
+}
+
 h1.light-white,
 h2.light-white,
 h3.light-white,
@@ -248,7 +281,7 @@ h1.reg {
 @media screen and (max-width: 600px) {
     h1.reg {
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 

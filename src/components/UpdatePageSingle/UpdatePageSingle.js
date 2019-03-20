@@ -23,9 +23,9 @@ class UpdatePageSingle extends Component {
 
         const related = index < updates.length - 2 ? [updates[index+1], updates[index+2]] : [updates[0], updates[1]]
 
-        return related.map(update => {
+        return related.map((update, index) => {
             return(
-                <Link to={`/update/${update.slug}`} className="related-updates text-bold">
+                <Link to={`/update/${update.slug}`} className="related-updates text-bold" key={`${update.slug}-${index}`}>
                     <div className="image-container">
                         <img src={update.acf.featured_image}/>
                     </div>

@@ -55,8 +55,8 @@ class SwipeSlider extends Component {
 
         this.clickedXPos = e.pageX || e.touches[0].pageX;;
         this.isClicked = true;
-        this.originalPosition = this.position
-        this.slider.current.classList.add("dragging")
+        this.originalPosition = this.position;
+        this.slider.current.classList.add("dragging");
     }
 
     startDrag(e) {

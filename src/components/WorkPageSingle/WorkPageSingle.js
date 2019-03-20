@@ -82,7 +82,7 @@ class WorkPageSingle extends Component {
                 <div style={{color: "#FFF" }} className="share-icon plus">
                     <Icon icon={iosPlusEmpty} size="31" />
                 </div>
-                <span className="light p-info-button text-white drop-down--label">Project Information</span>
+                <p className="light p-info-button text-white drop-down--label">Project Information</p>
               </li>
             </ul>
           </div>
@@ -115,7 +115,7 @@ class WorkPageSingle extends Component {
         <div className="project-top-information">
           <Row>
             <Col xs={12} sm={8}>
-              <h2 className="light text-grey post-location" style={{marginTop: "-1rem"}}>
+              <h2 className="light text-white post-location" style={{marginTop: "-1rem"}}>
                 {projectInfo.acf.location}
               </h2>
             </Col>
@@ -208,7 +208,7 @@ class WorkPageSingle extends Component {
                     <h1 className="reg project-title light text-white">
                       {projects[index] ? projects[index].title.rendered : projects[0].title.rendered}
                     </h1>
-                    <h2 className="light text-grey project-location">
+                    <h2 className="light text-white project-location">
                       {projects[index] ? projects[index].acf.location : projects[0].acf.location}
                     </h2>
                   </div>
