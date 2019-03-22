@@ -266,7 +266,7 @@
 .hover-underline {
     transition: .345s ease-in-out all;
     border-top: 1px solid #DDD;
-    padding: 2rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
     margin-bottom: 1rem;
 }
 

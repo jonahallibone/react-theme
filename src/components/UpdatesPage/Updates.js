@@ -79,7 +79,7 @@ class Updates extends Component {
             <section className="updates-page" style={{paddingTop: "70px"}}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
-                        <h1 className="text-black reg lighter">Stay Updated.</h1>
+                        <h1 className="text-black reg lighter">Stay Updated.</h1> 
                         <div className="loader"></div>
                         <div className="thank-you-text">
                             <h1 className="text-grey reg lighter">Thank you for subscribing.</h1>
@@ -100,21 +100,21 @@ class Updates extends Component {
                             <div style={{bottom: "0px"}} className="padding-btm-lg news-column">
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
-                                    <p><span className="text-grey text-light">22 March 2019</span></p>
+                                    <p className="padding-top-1"><span className="text-grey text-light">22 March 2019</span></p>
                                     <p className="padding-top-1">
                                         Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
                                     </p>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Website Launch</span></p>
-                                    <p><span className="text-grey text-light">25 March 2018</span></p>
+                                    <p className="padding-top-1"><span className="text-grey text-light">25 March 2018</span></p>
                                     <p className="padding-top-1">
                                         Piscatello Design Centre launches a new website, redesigned and developed from the ground up.
                                     </p>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Guest Speaker</span></p>
-                                    <p><span className="text-grey text-light">12 November 2018</span></p>
+                                    <p className="padding-top-1"><span className="text-grey text-light">12 November 2018</span></p>
                                     <p className="padding-top-1">
                                         Rocco Piscatello to Speak at the University of New Haven
                                     </p>
@@ -124,7 +124,7 @@ class Updates extends Component {
                                         <p className="text-black">
                                             <span className="text-black text-bold">Exhibition</span>
                                         </p>
-                                        <p>
+                                        <p className="padding-top-1">
                                             <span className="text-grey text-light">15 December 2018</span>
                                         </p>
                                         <p className="padding-top-1">
