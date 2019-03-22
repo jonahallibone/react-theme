@@ -43,7 +43,7 @@ class WorkPageHeader extends Component {
             <section onClick = {this.props.onclick}id="featured-header">
                 <div className="title-row">
                     <div className="side">
-                        <h1 className="reg project-title light">
+                        <h1 className="reg project-title lighter">
                             {this.props.projectTitle}
                         </h1>
                     </div>

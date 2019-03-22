@@ -76,13 +76,13 @@ class WorkPageSingle extends Component {
   getDropDown(services = [], content) {
     return(
       <div> 
-          <div className="drop-down" onClick={this.revealDropDown}>
-            <ul>
-              <li className="list-row">                
-                <div style={{color: "#FFF" }} className="share-icon plus">
+          <div className="drop-down">
+            <ul style={{display: "flex", flexDirection: "column", justifyContent: "flex-start"}}>
+              <li className="list-row" onClick={this.revealDropDown} style={{alignSelf: "flex-start"}}>                
+                <div style={{color: "#999" }} className="share-icon plus">
                     <Icon icon={iosPlusEmpty} size="31" />
                 </div>
-                <p className="light p-info-button text-white drop-down--label">Project Information</p>
+                <p className="light p-info-button text-grey drop-down--label">Project Information</p>
               </li>
             </ul>
           </div>

@@ -157,6 +157,7 @@ header .menu .bar {
     height: 353px;
     width: 353px;
     box-shadow: 0 0 14px 0 rgba(17, 17, 17, .25);
+    outline: none;
 }
 
 header.header-overlay--visible .header-overlay {

@@ -48,22 +48,10 @@ class FlickSlider extends Component {
                     link: "/work/lost-tribe-theatre"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/Tringali_LosAngeles.jpg",
-                    title: "Tringali Photography",
-                    location: "New York, NY",
-                    link: "/work/tringali-photography"
-                },
-                {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
                     title: "New York University",
                     location: "New York, NY",
                     link: "/work/nyu-advanced-research-institutes"
-                },
-                {
-                    image: "https://s3.amazonaws.com/piscatello/AEA_4thFloorFeature3-1920x1080.jpg",
-                    title: "Actors Equity",
-                    location: "New York, NY",
-                    link: "/work/actors-equity-association"
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/RVA_iMac_1920x1080.jpg",
@@ -128,7 +116,7 @@ class FlickSlider extends Component {
                                     Your browser does not support the video tag.
                                 </video>
                             : 
-                            <Link to={el.link}><img src={el.image} alt={el.title}/></Link>
+                            <Link to={this.state.slides[this.state.activeSlide].link}><img src={el.image} alt={el.title}/></Link>
                         }
                         
                 </div>
@@ -172,7 +160,7 @@ class FlickSlider extends Component {
                                     <h3 className="reg text-bold"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                                 </div>
                                 <div className="text-right">
-                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; 06</h3>
+                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; {this.state.slides.length}</h3>
                                 </div>
                             </div>
                         </div>

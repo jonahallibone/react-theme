@@ -62,8 +62,8 @@ class Updates extends Component {
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
                     </div>
                     <div className="update-des">
-                        <h3 className="reg text-bold">
-                            <HoverLink white-grey={true}>{el.title.rendered}</HoverLink>
+                        <h3 className="reg text-bold" style={{marginTop: "-8px"}}>
+                            <HoverLink grey-black={true}>{el.title.rendered}</HoverLink>
                         </h3>
                         <p className="text-grey light padding-top-175">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
                         <br/>
@@ -97,25 +97,25 @@ class Updates extends Component {
                 <section className="update-section">
                     <Container fluid={true} className="container" style={{padding: 0, display: "flex", alignItems: "center"}}>
                         <div className="update-feed">
-                            <div style={{bottom: "0px"}} className="padding-btm-lg news-column">
+                            <div style={{bottom: "0px"}} className="news-column">
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
                                     <p className="padding-top-1"><span className="text-grey text-light">22 March 2019</span></p>
-                                    <p className="padding-top-1">
+                                    <p className="text-black padding-top-1">
                                         Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
                                     </p>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Website Launch</span></p>
                                     <p className="padding-top-1"><span className="text-grey text-light">25 March 2018</span></p>
-                                    <p className="padding-top-1">
+                                    <p className="text-black padding-top-1">
                                         Piscatello Design Centre launches a new website, redesigned and developed from the ground up.
                                     </p>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Guest Speaker</span></p>
                                     <p className="padding-top-1"><span className="text-grey text-light">12 November 2018</span></p>
-                                    <p className="padding-top-1">
+                                    <p className="text-black padding-top-1">
                                         Rocco Piscatello to Speak at the University of New Haven
                                     </p>
                                 </div>    
@@ -127,7 +127,7 @@ class Updates extends Component {
                                         <p className="padding-top-1">
                                             <span className="text-grey text-light">15 December 2018</span>
                                         </p>
-                                        <p className="padding-top-1">
+                                        <p className="text-black padding-top-1">
                                             Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
                                             <span className="link-arrow black"></span>
                                         </p>
@@ -137,7 +137,6 @@ class Updates extends Component {
                             <ProjectsContext.Consumer>
                                 {({ updates }) => (
                                     <div className="update-feed--grid">
-                                        <h2 className="text-bold">Thoughts</h2>
                                         {this.renderUpdates(updates)}
                                     </div>
                                 )}

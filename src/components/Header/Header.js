@@ -21,8 +21,7 @@ class Header extends Component {
         super(props);
         this.state = {
             menuLabel: "Menu",
-            currentQuote: "",
-            selectedIndex: null
+            open: false
         }
 
         this.animation = null;
@@ -53,7 +52,7 @@ class Header extends Component {
     }
 
     componentDidMount = () => {
-        this.menuButton.addEventListener("click", this.handleMenuClick);
+        this.menuButton.addEventListener("mousedown", this.handleMenuClick);
 
         document.querySelectorAll(".links li").forEach((el, i) => {
             console.log(el)
@@ -66,22 +65,7 @@ class Header extends Component {
     }
 
     handleMenuClick = () => {
-        this.header.classList.toggle("header-overlay--visible")
-
-
-        if(this.state.menuLabel === "Menu") {
-            this.setState({menuLabel: "Close"})
-        }
-        else {
-            this.setState({menuLabel : "Menu"})
-        }
-
-
-        this.header.querySelectorAll(".animate--pre-animate").forEach((el, i) => {
-            setTimeout(() => {
-                el.classList.toggle("animate--post-animate")
-            }, i * 200);
-        });
+        this.header.classList.toggle("header-overlay--visible");
     }
 
     getPageName(pathname) {
@@ -132,7 +116,7 @@ class Header extends Component {
                                 </div>
                             </Col>
                     </Row>
-                    <div className="header-overlay">
+                    <div className="header-overlay" ref={elem => this.overlay = elem} tabIndex="-1" onBlur={this.handleBlur}>
                         <ul className="links">
                             <li>
                                 <Link to="/">Main</Link>
