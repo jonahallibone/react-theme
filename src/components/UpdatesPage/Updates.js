@@ -63,7 +63,7 @@ class Updates extends Component {
                     </div>
                     <div className="update-des">
                         <h3 className="reg text-bold">
-                            <HoverLink black={true}>{el.title.rendered}</HoverLink>
+                            <HoverLink white-grey={true}>{el.title.rendered}</HoverLink>
                         </h3>
                         <p className="text-grey light padding-top-175">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
                         <br/>

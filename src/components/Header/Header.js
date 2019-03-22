@@ -15,14 +15,6 @@ const charPoses = {
     }
 };
 
-const followImages = [
-    "https://s3.amazonaws.com/piscatello/header-images/circle.svg",
-    "https://s3.amazonaws.com/piscatello/header-images/triangle.svg",
-    "https://s3.amazonaws.com/piscatello/header-images/rectangle.svg",
-    "https://s3.amazonaws.com/piscatello/header-images/square.svg",
-    "https://s3.amazonaws.com/piscatello/header-images/rectanglecircle.svg",
-]
-
 class Header extends Component {
 
     constructor(props) {
@@ -57,8 +49,6 @@ class Header extends Component {
                 about the Centre and sign-up
                 to our newsletter`
         }
-
-        this.handleMouseMove = this.handleMouseMove.bind(this);
         
     }
 
@@ -89,10 +79,6 @@ class Header extends Component {
         });
     }
 
-    handleMouseMove = (e) => {
-        this.followImages.style.transform = `translate(${window.innerWidth / 3}px, ${(e.pageY - window.pageYOffset) * .75}px)`;
-    }
-
     getPageName(pathname) {
         if(pathname.indexOf("update") !== -1) {
             return "Updates";
@@ -117,15 +103,6 @@ class Header extends Component {
         else return "Main";
     }
 
-    getFollowImages() {
-        return followImages.map((el, i) => <img src={el} className={this.state.selectedIndex == i ? "selected" : ""} key={`image-${i}`} />)
-    }
-
-    setFollowImage(index) {
-        // console.log(index)
-        this.setState({selectedIndex: index})
-    }
-
     render() {
         
         let { pathname } = this.props.location;
@@ -145,87 +122,23 @@ class Header extends Component {
                         </Col>
                             <Col xs={2} sm={6} className={"menu"} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
                                 <div className="menu-button" ref={elem => this.menuButton = elem}>
-                                    <h2 className="page-name-menu">{this.getPageName(pathname)}</h2>
+                                    <h2 className="page-name-menu light">{this.getPageName(pathname)}</h2>
                                     <span className="hamburger"></span>
                                 </div>
                             </Col>
                     </Row>
+                    <div className="header-overlay">
+                        <ul className="links">
+                            <li>
+                                <Link to="/">Main</Link>
+                            </li>
+                            <li><Link to="/work">Work</Link></li>
+                            <li><Link to="/practice">Practice</Link></li>
+                            <li><Link to="/update">Updates</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
+                        </ul>
+                    </div>
                 </Container>
-                <div className="header-overlay" ref={elem => this.overlay = elem}> 
-                    <Container fluid={true} className="container" style={{padding: 0, height: "100%"}}>
-                        <div className="menu-vert">
-                            <Container fluid={true} className="container links" style={{margin: 0}}>
-                                <Row style={{ flex: "0 0 100%", margin: 0}} align="center" justify={"start"}>
-                                    <div className="link-container" style={{display: "flex", justifyContent: "flex-start", padding: 0}}>
-                                        <Link 
-                                            className="page-link" 
-                                            to="/" data-linkname="work" 
-                                            onMouseOver={() => {this.setFollowImage(0)}}
-                                        >
-                                            <HoverLink thick="true">
-                                                <span>Main</span>
-                                            </HoverLink>
-                                        </Link>
-                                        <Link 
-                                            className="page-link" 
-                                            to="/work" 
-                                            data-linkname="work"
-                                            onMouseOver={() => {this.setFollowImage(1)}}
-                                        >
-                                            <HoverLink thick="true">
-                                                <span>Work</span>
-                                            </HoverLink>
-                                        </Link>
-                                        <Link 
-                                            className="page-link" 
-                                            to="/practice" 
-                                            data-linkname="centre"
-                                            onMouseOver={() => {this.setFollowImage(2)}}
-                                        >
-                                            <HoverLink thick="true">
-                                                <span>Practice</span>
-                                            </HoverLink>
-                                        </Link>
-                                        <Link 
-                                            className="page-link" 
-                                            to="/update" 
-                                            data-linkname="update"
-                                            onMouseOver={() => {this.setFollowImage(3)}}
-                                        >
-                                            <HoverLink thick="true">
-                                                <div className="menu-icon">
-                                                    <img src={followImages[3]} />
-                                                </div>
-                                                <span>Updates</span>
-                                            </HoverLink>
-                                        </Link>
-                                        <Link 
-                                            className="page-link" 
-                                            to="/contact" 
-                                            data-linkname="contact"
-                                            onMouseOver={() => {this.setFollowImage(4)}}
-                                        >
-                                            <HoverLink thick="true">
-                                                <div className="menu-icon">
-                                                    <img src={followImages[4]} />
-                                                </div>
-                                                <span>Contact</span>
-                                            </HoverLink>
-                                        </Link>
-                                    </div>
-                                </Row>
-                            </Container>
-                        </div>  
-                        <div className="follow-image" ref={elem => this.followImages = elem}>
-                            {this.getFollowImages()}
-                        </div>
-                        <div className="header-info">
-                            <p className="text-white text-bold">Info</p>
-                            <p className="text-grey">+1 212 502 4734</p>
-                            <p className="text-grey">info@piscatello.com</p>
-                        </div>
-                    </Container>
-                </div>
             </header>
 
         );

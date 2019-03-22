@@ -5,11 +5,15 @@
 }
 
 :visited .underline {
-    color: #000;
+    color: inherit;
 }
 
 .link.grey-grey {
     color: #999;
+}
+
+.link.white-grey {
+    color: #FFF;
 }
 
 :visited .grey-grey .underline {
@@ -23,6 +27,8 @@
 .link.grey-black {
     color: #000;
 }
+
+
 
 .link.grey-grey:after {
     content: '';
