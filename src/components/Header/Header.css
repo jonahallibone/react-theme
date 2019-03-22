@@ -184,7 +184,14 @@ header.header-overlay--visible .page-name-menu {
 .links li {
     font-size: 2rem;
     margin: 0 0 2.8rem 0;
-    transition: .345s ease color;
+    transition: .345s ease color, .15s ease transform, .15s ease opacity;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+header.header-overlay--visible .links li {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .links li a:hover {

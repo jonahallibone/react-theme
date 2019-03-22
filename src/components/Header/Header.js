@@ -54,6 +54,11 @@ class Header extends Component {
 
     componentDidMount = () => {
         this.menuButton.addEventListener("click", this.handleMenuClick);
+
+        document.querySelectorAll(".links li").forEach((el, i) => {
+            console.log(el)
+            el.style.transitionDelay = `${i * 65}ms`;
+        })
     }
 
     componentWillUnmount = () => {
