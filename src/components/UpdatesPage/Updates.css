@@ -186,12 +186,14 @@
     opacity: 0;
     transition: .345s ease opacity 1.85s;
     top: 11.5rem;
-    position: absolute;
+    /* position: absolute; */
+    display: none;
     left: 0;
 }
 
 .thank-you-text.show {
     opacity: 1;
+    display: block;
 }
 
 
@@ -201,7 +203,7 @@
     padding: .5rem 0;
     font-size: 3rem;
     font-weight: light;
-    border-bottom: 1px solid #DDD;
+    /* border-bottom: 1px solid #DDD; */
     outline: none;
     transition: .345s ease all;
     color: #999;
@@ -227,7 +229,7 @@
 .signup-button {
     font-size: 1.5frem;
     color: #999;
-    border-bottom: 1px solid #999;
+    /* border-bottom: 1px solid #999; */
     height: 71px;
     padding-left: 1rem;
     display: flex;

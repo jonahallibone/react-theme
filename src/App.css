@@ -207,7 +207,7 @@ p {
 }
 
 p > span {
-    font-weight: 500 !important;
+    /* font-weight: 500 !important; */
 }
 
 h1,
