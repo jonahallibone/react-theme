@@ -160,7 +160,7 @@ class FlickSlider extends Component {
                                     <h3 className="reg text-bold"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
                                 </div>
                                 <div className="text-right">
-                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; {this.state.slides.length}</h3>
+                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; {this.state.slides.length < 10 ? `0${this.state.slides.length}` : this.state.slides.length}</h3>
                                 </div>
                             </div>
                         </div>

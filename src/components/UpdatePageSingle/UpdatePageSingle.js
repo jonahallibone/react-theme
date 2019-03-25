@@ -51,9 +51,6 @@ class UpdatePageSingle extends Component {
                         <div className="content-flex">
                             <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
                         </div>
-                        <div className="content-flex-social">
-                            {this.getSidebar()}
-                        </div>
                     </section>
                 </Container>
             </div>

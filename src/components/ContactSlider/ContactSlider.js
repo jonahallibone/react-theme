@@ -96,9 +96,6 @@ class ContactSlider extends React.Component {
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                             </div>
                             <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking_4_6.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
@@ -125,9 +122,6 @@ class ContactSlider extends React.Component {
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                     </div>
                     <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking_4_6.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                     </div>
                     <div className="contact-slider-image-container">
@@ -152,9 +146,6 @@ class ContactSlider extends React.Component {
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_DesignThinking_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />

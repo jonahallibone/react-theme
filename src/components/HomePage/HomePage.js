@@ -56,7 +56,6 @@ class HomePage extends Component {
                         <CSSAnimate key="i" delay="1000">
                             <h1 className="reg lighter top-text" data-splitting="words">
                             We are a multidisciplinary design consultancy.
-                            Our work is strategic, universal, and timeless.
                             </h1>
                         </CSSAnimate>
                     </h1>

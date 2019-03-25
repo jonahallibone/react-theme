@@ -58,7 +58,7 @@
 
 .update-feed .update-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .update-feed .update-row:nth-of-type(even) {
@@ -78,13 +78,15 @@
 .update-feed--grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2.5rem;
+    grid-gap: 14rem;
+    margin-top: 5rem;
 }
 
 .update-des {
     /* background: #000; */
-    padding: 0 2.5rem 2.5rem 2.5rem;
-    width: 75%;
+    padding: 2.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 

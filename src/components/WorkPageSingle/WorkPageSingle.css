@@ -200,6 +200,10 @@
     color: #FFF;
 }
 
+.project-content p > span {
+    font-weight: 500 !important;
+}
+
 .project-content a > span {
     font-weight: 500 !important;
     text-decoration: underline !important;

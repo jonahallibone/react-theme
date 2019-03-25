@@ -58,16 +58,19 @@ class Updates extends Component {
         return updates.map(el => {
             return (
                 <Link to={`/update/${el.slug}`} className="update-row" key={el.id}>
+                    <div className="update-des">
+                        <div>
+                            <h3 className="reg text-bold">
+                                <HoverLink grey-black={true}>{el.title.rendered}</HoverLink>
+                            </h3>
+                            <p className="text-grey light">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
+                        </div>
+                        <div>
+                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
+                        </div>
+                    </div>
                     <div className="update-img">
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
-                    </div>
-                    <div className="update-des">
-                        <h3 className="reg text-bold" style={{marginTop: "-8px"}}>
-                            <HoverLink grey-black={true}>{el.title.rendered}</HoverLink>
-                        </h3>
-                        <p className="text-grey light padding-top-175">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
-                        <br/>
-                        <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
                     </div>
                 </Link>
             )
