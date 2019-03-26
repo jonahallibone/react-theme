@@ -118,13 +118,11 @@ class Header extends Component {
                     </Row>
                     <div className="header-overlay" ref={elem => this.overlay = elem} tabIndex="-1" onBlur={this.handleBlur}>
                         <ul className="links">
-                            <li>
-                                <Link to="/">Main</Link>
-                            </li>
-                            <li><Link to="/work">Work</Link></li>
-                            <li><Link to="/practice">Practice</Link></li>
-                            <li><Link to="/update">Updates</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><HoverLink><Link to="/">Main</Link></HoverLink></li>
+                            <li><HoverLink><Link to="/work">Work</Link></HoverLink></li>
+                            <li><HoverLink><Link to="/practice">Practice</Link></HoverLink></li>
+                            <li><HoverLink><Link to="/update">Updates</Link></HoverLink></li>
+                            <li><HoverLink><Link to="/contact">Contact</Link></HoverLink></li>
                         </ul>
                     </div>
                 </Container>

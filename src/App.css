@@ -767,3 +767,13 @@ u:hover:before {
 .hover-white:hover {
     color: #FFF;
 }
+
+.large-br {
+    display: none;
+}
+
+@media screen and (min-width: 1280px) {
+    .large-br {
+        display: block;
+    }
+}

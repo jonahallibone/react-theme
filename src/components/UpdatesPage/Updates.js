@@ -67,6 +67,7 @@ class Updates extends Component {
                         </div>
                         <div>
                             <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
+                            <p><HoverLink grey-black={true}>Read More</HoverLink></p>
                         </div>
                     </div>
                     <div className="update-img">
@@ -102,11 +103,13 @@ class Updates extends Component {
                         <div className="update-feed">
                             <div style={{bottom: "0px"}} className="news-column">
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
-                                    <p className="padding-top-1"><span className="text-grey text-light">22 March 2019</span></p>
-                                    <p className="text-black padding-top-1">
-                                        Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
-                                    </p>
+                                    <a href="http://www.cadc.org/announcements/4096884/reflections-on-ten-qualities-of-design-11-15" target="_blank">
+                                        <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
+                                        <p className="padding-top-1"><span className="text-grey text-light">22 March 2019</span></p>
+                                        <p className="text-black padding-top-1">
+                                            Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
+                                        </p>
+                                    </a>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <p className="text-black"><span className="text-black text-bold">Website Launch</span></p>
@@ -122,7 +125,7 @@ class Updates extends Component {
                                         Rocco Piscatello to Speak at the University of New Haven
                                     </p>
                                 </div>    
-                                <div target="_blank" className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <a href="https://www.mohawkconnects.com/article/mohawk-blog/rocco-piscatello-poster-works-fit" target="_blank">
                                         <p className="text-black">
                                             <span className="text-black text-bold">Exhibition</span>
