@@ -116,6 +116,17 @@ class ProjectContainer extends Component {
         document.removeEventListener("scroll", this.handleScroll, {passive: true})
     }
 
+    getThumbnail(filter, el) {
+        if(filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project)
+            return <img src={el.hasOwnProperty("acf") ? el.acf.brand_identity_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+        else if(filter == "Digital Design" && el.acf.is_this_a_digital_design_project)
+            return <img src={el.hasOwnProperty("acf") ? el.acf.digital_design_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+        else if(filter == "Environmental Graphics" && el.acf.is_this_an_environmental_design_project)
+            return <img src={el.hasOwnProperty("acf") ? el.acf.environment_design_project : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+        else
+            return <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+    }
+
     render() {
         const el = this.props.project;
         const isNews = this.props.news || "";
@@ -125,11 +136,7 @@ class ProjectContainer extends Component {
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
                         {
-                            filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project
-                            ?
-                                <img src={el.hasOwnProperty("acf") ? el.acf.brand_identity_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
-                            :
-                                <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+                            this.getThumbnail(filter, el)
 
                         }
                     </div>
