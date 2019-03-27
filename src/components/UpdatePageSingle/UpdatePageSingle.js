@@ -45,7 +45,9 @@ class UpdatePageSingle extends Component {
 
         return(
             <div className="update-page-single">
-                <WorkPageHeader projectTitle={update.title.rendered} isUpdate={true}></WorkPageHeader>
+                <div style={{textAlign: "center", width: "50%", margin: "0 auto"}}>
+                    <h1 className="reg lighter">{update.title.rendered}</h1>
+                </div>
                 <Container fluid={true} className="container" style={{padding: 0}}>                    
                     <section className="update-content-row padding-top-7">
                         <div className="content-flex">

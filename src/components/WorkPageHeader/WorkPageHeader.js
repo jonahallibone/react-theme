@@ -39,6 +39,7 @@ class WorkPageHeader extends Component {
 
 
     render() {
+        const {centered} = this.props;
         return (
             <section onClick = {this.props.onclick}id="featured-header">
                 <div className="title-row">
