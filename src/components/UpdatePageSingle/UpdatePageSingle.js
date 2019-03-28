@@ -57,11 +57,13 @@ class UpdatePageSingle extends Component {
                         </div>
                     </section>
                 </Container>
-                <div className="update-page-bottom">
+                <Link to={`/update/${updates[index].slug}`} className="update-page-bottom">
                     <div className="container">                    
                         <h1 className="reg lighter text-white">Next Update</h1>
                     </div>
-                </div>
+                    <div className="image-scale" style={{backgroundImage: `url(${updates[index].acf.featured_image}`}}/>
+                    <div style={{position: "absolute", width: "100%", height: "100%", top: 0, left: 0, background: "rgba(0,0,0,0.7)"}}></div>
+                </Link>
             </div>
         );
     }

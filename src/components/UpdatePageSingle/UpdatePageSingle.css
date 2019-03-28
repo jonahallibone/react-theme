@@ -156,9 +156,29 @@
 .update-page-bottom {
     background: #222;
     margin-top: 10rem;
-    padding: 7rem 0;
+    padding: 9rem 0;
     width: 100%;
     display: flex;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.update-page-bottom .image-scale {
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    position: absolute;
+    top: 0;
+    transition: transform .345s ease;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.update-page-bottom:hover .image-scale {
+    transform: scale(1.05);
 }
 
 .update-page-single .update-page-bottom .container {
