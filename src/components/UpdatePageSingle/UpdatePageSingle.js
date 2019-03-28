@@ -19,27 +19,12 @@ class UpdatePageSingle extends Component {
         document.querySelector("header").classList.add("white-bg");
     }
 
-    getSidebar() {
-        const { match, updates } = this.props;
+    render() {
+        const {updates, match} = this.props;
 
         const index = updates.findIndex(update => update.slug === match.params.id) + 1;
 
         const related = index < updates.length - 2 ? [updates[index+1], updates[index+2]] : [updates[0], updates[1]]
-
-        return related.map((update, index) => {
-            return(
-                <Link to={`/update/${update.slug}`} className="related-updates text-bold" key={`${update.slug}-${index}`}>
-                    <div className="image-container">
-                        <img src={update.acf.featured_image}/>
-                    </div>
-                    <p className="related-title text-black text-bold">{update.title.rendered}</p>
-                </Link>
-            )
-        })
-    }
-
-    render() {
-        const {updates, match} = this.props;
         if(!updates.length) return(<div></div>);
 
         const update = updates.filter(update => update.slug === match.params.id)[0];
