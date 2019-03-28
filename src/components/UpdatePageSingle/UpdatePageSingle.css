@@ -2,7 +2,6 @@
     background: #FFF;
     min-height: 100vh;
     padding-top: calc(7rem + 75px);
-    padding-bottom: 10rem;
     opacity: 0;
     transition: .345s ease opacity;
 }
@@ -38,13 +37,20 @@
 
 .update-content-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .update-content-row .content-flex {
     display: flex;
-    flex: 0 0 50%;
+    width: 800px;
+}
+
+.update-title {
+    text-align: "center";
+    width: 800px; 
+    margin: 0 auto;
 }
 
 .update-content-row .content-flex img {
@@ -53,15 +59,26 @@
     height: auto;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
+
+    .update-page-single {
+        padding-top: 10rem;
+    }
+
     .update-content-row {
         flex-direction: column;
     }
 
-    .content-flex {
+    .update-content-row .content-flex {
         flex: 0 0 100%;
-        min-width: 100%;
+        width: 100%;
     }
+
+    .update-title {
+        width: 100%;
+    }
+
 }
 
 .update-content-row .content-flex-social {
@@ -72,6 +89,12 @@
     align-self: flex-start;
 }
 
+@media screen and (max-width: 800px) {
+    .update-content-row {
+        padding-top: 2.5rem;
+    }
+}
+
 .related-updates {
     margin-bottom: 1.5rem;
     display: block;
@@ -79,4 +102,72 @@
 
 .related-title {
     margin-top: .75rem;
+}
+
+.update-bottom-info {
+    display: flex;
+    width: 800px;
+    border-top: 1px solid #DDD;
+    padding: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+    .update-bottom-info {
+        width: 100%;
+    }
+}
+
+.update-bottom-info .profile-image {
+    height: 70px;
+    width: 70px;
+    border: 3px solid #999;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.update-bottom-info .author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.update-share-info {
+    width: 800px;
+    padding: 1rem 0;
+}
+.update-share-info svg {
+    margin-right: 1rem;
+    transition: color .345s ease;
+}
+
+.update-share-info .twitter:hover {
+    color: #00aced !important;
+}
+
+.update-share-info .facebook:hover {
+    color: #4267b2 !important;
+}
+
+.update-share-info .linkedin:hover {
+    color: #0077B5 !important;
+}
+
+.update-page-bottom {
+    background: #222;
+    margin-top: 10rem;
+    padding: 7rem 0;
+    width: 100%;
+    display: flex;
+}
+
+.update-page-single .update-page-bottom .container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+    .update-page-single .update-page-bottom .container {
+        width: calc(100% - 2rem);
+    }
 }

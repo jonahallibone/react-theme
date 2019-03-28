@@ -5,6 +5,9 @@ import WorkPageHeader from "../WorkPageHeader/WorkPageHeader";
 import { withProjectsContext } from "../../ProjectsContext";
 import {Link} from "react-router-dom";
 
+import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
+
+
 class UpdatePageSingle extends Component {
 
     constructor(props) {
@@ -45,16 +48,35 @@ class UpdatePageSingle extends Component {
 
         return(
             <div className="update-page-single">
-                <div style={{textAlign: "center", width: "50%", margin: "0 auto"}}>
-                    <h1 className="reg lighter">{update.title.rendered}</h1>
-                </div>
-                <Container fluid={true} className="container" style={{padding: 0}}>                    
+                <Container fluid={true} className="container" style={{padding: 0}}> 
+                    <div className="update-title">
+                        <h1 className="reg lighter">{update.title.rendered}</h1>
+                    </div>                   
                     <section className="update-content-row padding-top-7">
                         <div className="content-flex">
                             <p className="light text-grey" dangerouslySetInnerHTML={{__html: update.content.rendered}} />
                         </div>
+                        <div className="update-share-info">
+                            <a href={`https://www.facebook.com/sharer/sharer.php?${document.location}`}><FaFacebookSquare className="facebook" color="#222" size="23px"/></a>
+                            <a href={`https://twitter.com/intent/tweet?text=${"a"}&source=webclient`}><FaTwitter className="twitter" color="#222" size="23px"/></a>
+                            <FaLinkedin className="linkedin" color="#222" size="23px"/>
+                        </div>
+                        <div className="update-bottom-info">
+                            <div className="profile-image">
+                                <img src="https://joeschmoe.io/api/local/jon" />
+                            </div>
+                            <div className="author-info">
+                                <p>Rocco Piscatello</p>
+                                <h5 className="light text-grey">Principal</h5>
+                            </div>
+                        </div>
                     </section>
                 </Container>
+                <div className="update-page-bottom">
+                    <div className="container">                    
+                        <h1 className="reg lighter text-white">Next Update</h1>
+                    </div>
+                </div>
             </div>
         );
     }
