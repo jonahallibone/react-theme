@@ -147,7 +147,7 @@
     }
 
     .App {
-        margin-bottom: 14rem;
+        margin-bottom: 12rem;
     }
 
     #footer a {
@@ -201,5 +201,9 @@
     
     .mobile-hidden {
         display: none !important;
+    }
+
+    .App {
+        margin-bottom: 14rem;
     }
 }

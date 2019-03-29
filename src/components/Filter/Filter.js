@@ -68,6 +68,7 @@ class Filter extends Component {
 
     setFilterState = (setFilter, el) => {
         setFilter(el.toLowerCase());
+        document.querySelector("#work-list");
         this.setState({"selectedFilter": el})
     }
 

@@ -103,37 +103,34 @@ class Updates extends Component {
                         <div className="update-feed">
                             <div style={{bottom: "0px"}} className="news-column">
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <a href="http://www.cadc.org/announcements/4096884/reflections-on-ten-qualities-of-design-11-15" target="_blank">
-                                        <p className="text-black"><span className="text-black text-bold">Exhibition Extended</span></p>
-                                        <p className="padding-top-1"><span className="text-grey text-light">22 March 2019</span></p>
-                                        <p className="text-black padding-top-1">
-                                            Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
-                                        </p>
-                                    </a>
-                                </div>
-                                <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <p className="text-black"><span className="text-black text-bold">Website Launch</span></p>
-                                    <p className="padding-top-1"><span className="text-grey text-light">25 March 2018</span></p>
-                                    <p className="text-black padding-top-1">
+                                    <h3 className="text-black reg"><span className="text-black text-bold">03 April</span></h3>
+                                    <p className="padding-top-1"><span className="text-grey text-light">Work</span></p>
+                                    <p className="text-black">
                                         Piscatello Design Centre launches a new website, redesigned and developed from the ground up.
                                     </p>
                                 </div>
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
-                                    <p className="text-black"><span className="text-black text-bold">Guest Speaker</span></p>
-                                    <p className="padding-top-1"><span className="text-grey text-light">12 November 2018</span></p>
-                                    <p className="text-black padding-top-1">
+                                    <a href="http://www.cadc.org/announcements/4096884/reflections-on-ten-qualities-of-design-11-15" target="_blank">
+                                        <h3 className="text-black reg"><span className="text-black text-bold">23 February</span></h3>
+                                        <p className="padding-top-1"><span className="text-grey text-light">Exhibition</span></p>
+                                        <p className="text-black">
+                                            Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
+                                            <span className="link-arrow black"></span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
+                                    <h3 className="text-black reg"><span className="text-black text-bold">12 November</span></h3>
+                                    <p className="padding-top-1"><span className="text-grey text-light">Lecture</span></p>
+                                    <p className="text-black">
                                         Rocco Piscatello to Speak at the University of New Haven
                                     </p>
                                 </div>    
                                 <div className="reg text-grey light hover-underline news-side-item padding-btm-md">
                                     <a href="https://www.mohawkconnects.com/article/mohawk-blog/rocco-piscatello-poster-works-fit" target="_blank">
+                                        <h3 className="text-black reg"><span className="text-black text-bold">05 November</span></h3>
+                                        <p className="padding-top-1"><span className="text-grey text-light">Featured</span></p>
                                         <p className="text-black">
-                                            <span className="text-black text-bold">Exhibition</span>
-                                        </p>
-                                        <p className="padding-top-1">
-                                            <span className="text-grey text-light">15 December 2018</span>
-                                        </p>
-                                        <p className="text-black padding-top-1">
                                             Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
                                             <span className="link-arrow black"></span>
                                         </p>

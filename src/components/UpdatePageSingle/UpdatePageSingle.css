@@ -43,8 +43,10 @@
 }
 
 .update-content-row .content-flex {
-    display: flex;
-    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    width: 100%;
+    grid-gap: 1.5rem;
 }
 
 .update-title {
@@ -106,9 +108,7 @@
 
 .update-bottom-info {
     display: flex;
-    width: 800px;
-    border-top: 1px solid #DDD;
-    padding: 1rem 0 0 0;
+    padding: 0 0 1rem 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -128,12 +128,11 @@
 .update-bottom-info .author-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: 1rem;
 }
 
 .update-share-info {
-    width: 800px;
     padding: 1rem 0;
 }
 .update-share-info svg {
@@ -192,3 +191,5 @@
         width: calc(100% - 2rem);
     }
 }
+
+/*** Sidebar Styles ***/

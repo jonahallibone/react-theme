@@ -93,6 +93,9 @@ class ContactSlider extends React.Component {
                                 <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
+                                <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
+                            </div>
+                            <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                             </div>
                             <div className="contact-slider-image-container">
@@ -119,6 +122,9 @@ class ContactSlider extends React.Component {
                         <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
                     </div>
                     <div className="contact-slider-image-container">
+                        <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
+                    </div>
+                    <div className="contact-slider-image-container">
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
                     </div>
                     <div className="contact-slider-image-container">
@@ -143,6 +149,9 @@ class ContactSlider extends React.Component {
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
+                            </div>
+                            <div className="contact-slider-image-container">
+                                <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
