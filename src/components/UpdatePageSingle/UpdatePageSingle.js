@@ -22,14 +22,15 @@ class UpdatePageSingle extends Component {
     render() {
         const {updates, match} = this.props;
 
-        const index = updates.findIndex(update => update.slug === match.params.id) + 1;
+        var index = updates.findIndex(update => update.slug === match.params.id) + 1;
 
-        const related = index < updates.length - 2 ? [updates[index+1], updates[index+2]] : [updates[0], updates[1]]
+        if(index >= updates.length) {
+            index = 0;
+        }
+
         if(!updates.length) return(<div></div>);
 
-        const update = updates.filter(update => update.slug === match.params.id)[0];
-        const options = {day: 'numeric', year: 'numeric', month: 'long', };
-        
+        const update = updates.filter(update => update.slug === match.params.id)[0];        
 
         return(
             <div className="update-page-single">
@@ -58,8 +59,9 @@ class UpdatePageSingle extends Component {
                     </section>
                 </Container>
                 <Link to={`/update/${updates[index].slug}`} className="update-page-bottom">
-                    <div className="container">                    
-                        <h1 className="reg lighter text-white">Next Update</h1>
+                    <div className="container">
+                        <p className="text-white">Next Update</p>                    
+                        <h1 className="reg lighter text-white">{updates[index].title.rendered}</h1>
                     </div>
                     <div className="image-scale" style={{backgroundImage: `url(${updates[index].acf.featured_image}`}}/>
                     <div style={{position: "absolute", width: "100%", height: "100%", top: 0, left: 0, background: "rgba(0,0,0,0.7)"}}></div>

@@ -182,6 +182,7 @@
 }
 
 .update-page-single .update-page-bottom .container {
+    z-index: 99;
     width: 800px;
     margin: 0 auto;
 }
