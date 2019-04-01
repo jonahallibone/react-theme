@@ -36,8 +36,8 @@ class FlickSlider extends Component {
             activeSlide2: 0,
             slides: [
                 {
-                    image: "https://s3.amazonaws.com/piscatello/irish-hunger-placeholder.jpg",
-                    title: "Irish Hunger Memorial",
+                    image: "https://s3.amazonaws.com/piscatello/italiancinema_homepageimage.jpg",
+                    title: "New Italian Cinema Events",
                     location: "New York, NY",
                     link: "/work/irish-hunger-memorial"
                 }, 
