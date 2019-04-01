@@ -35,12 +35,12 @@ class FlickSlider extends Component {
             activeSlide: 0,
             activeSlide2: 0,
             slides: [
-                {
-                    image: "https://s3.amazonaws.com/piscatello/italiancinema_homepageimage.jpg",
-                    title: "New Italian Cinema Events",
-                    location: "New York, NY",
-                    link: "/work/irish-hunger-memorial"
-                }, 
+                // {
+                //     image: "https://s3.amazonaws.com/piscatello/italiancinema_homepageimage.jpg",
+                //     title: "New Italian Cinema Events",
+                //     location: "New York, NY",
+                //     link: "/work/irish-hunger-memorial"
+                // }, 
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
                     title: "LostTribe Theatre",
