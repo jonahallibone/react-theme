@@ -44,16 +44,13 @@ class UpdatePageSingle extends Component {
                         <div className="content-flex">
                             <div className="sidebar">
                                 <div className="update-bottom-info">
-                                    <div className="profile-image">
-                                        <img src="https://joeschmoe.io/api/local/jon" />
-                                    </div>
                                     <div className="author-info">
-                                        <p>Rocco Piscatello</p>
-                                        <h5 className="light text-grey">Principal</h5>
-                                        <h5 className="light text-grey padding-top-1">{new Date(update.date).toLocaleDateString('en-FR', options)}</h5>
+                                        <p>{update._embedded.author[0].name}</p>
+                                        <p className="light text-grey">{update._embedded.author[0].description}</p>
+                                        <p className="light text-grey padding-top-1">{new Date(update.date).toLocaleDateString('en-FR', options)}</p>
                                         <div className="update-share-info padding-top-1">
-                                            <a href={`https://www.facebook.com/sharer/sharer.php?${document.location}`}><FaFacebookSquare className="facebook" color="#222" size="23px"/></a>
-                                            <a href={`https://twitter.com/intent/tweet?text=${document.location}&source=webclient`}><FaTwitter className="twitter" color="#222" size="23px"/></a>
+                                            <a href={`https://www.facebook.com/sharer/sharer.php?${document.location}`} target="_blank"><FaFacebookSquare className="facebook" color="#222" size="23px"/></a>
+                                            <a href={`https://twitter.com/intent/tweet?text=${document.location}&source=webclient`} target="_blank"><FaTwitter className="twitter" color="#222" size="23px"/></a>
                                             <FaLinkedin className="linkedin" color="#222" size="23px"/>
                                         </div>
                                     </div>

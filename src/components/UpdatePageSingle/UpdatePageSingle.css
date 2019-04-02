@@ -49,6 +49,12 @@
     grid-gap: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+    .update-content-row .content-flex {
+        grid-template-columns: 1fr;
+    }
+}
+
 .update-title {
     text-align: "center";
     width: 800px; 
@@ -109,6 +115,8 @@
 .update-bottom-info {
     display: flex;
     padding: 0 0 1rem 0;
+    position: sticky;
+    top: 100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -129,7 +137,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: 1rem;
 }
 
 .update-share-info {
@@ -141,15 +148,15 @@
 }
 
 .update-share-info .twitter:hover {
-    color: #00aced !important;
+    color: #ff4350 !important;
 }
 
 .update-share-info .facebook:hover {
-    color: #4267b2 !important;
+    color: #ff4350 !important;
 }
 
 .update-share-info .linkedin:hover {
-    color: #0077B5 !important;
+    color: #ff4350 !important;
 }
 
 .update-page-bottom {

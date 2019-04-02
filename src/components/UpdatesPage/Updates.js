@@ -19,6 +19,8 @@ class Updates extends Component {
 
     componentDidMount() {
         setTimeout(() => this.styleWhite(), 2000);
+        this.handleScroll();
+        document.addEventListener("scroll", this.handleScroll)
     }
 
     styleWhite = () => {
@@ -47,6 +49,17 @@ class Updates extends Component {
         this.setState({userEmail: event.target.value});
     }
     
+    handleScroll = () => {
+        let rows = document.querySelectorAll(".update-row");
+
+        rows.forEach(el => {
+            let top = el.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) * .85;
+            if(top) {
+                el.classList.add("animate-in");
+            }
+        });
+    }
+
     renderUpdates = (updates) => {
         // console.log(updates)
         if(!updates.length) {
@@ -113,7 +126,7 @@ class Updates extends Component {
                                     <a href="http://www.cadc.org/announcements/4096884/reflections-on-ten-qualities-of-design-11-15" target="_blank">
                                         <h3 className="text-black reg"><span className="text-black text-bold">23 February</span></h3>
                                         <p className="padding-top-1"><span className="text-grey text-light">Exhibition</span></p>
-                                        <p className="text-black">
+                                        <p className="text-red">
                                             Reflections on Ten Qualities of Design Exhibition at the University of New Haven lengthened
                                             <span className="link-arrow black"></span>
                                         </p>
@@ -130,7 +143,7 @@ class Updates extends Component {
                                     <a href="https://www.mohawkconnects.com/article/mohawk-blog/rocco-piscatello-poster-works-fit" target="_blank">
                                         <h3 className="text-black reg"><span className="text-black text-bold">05 November</span></h3>
                                         <p className="padding-top-1"><span className="text-grey text-light">Featured</span></p>
-                                        <p className="text-black">
+                                        <p className="text-red">
                                             Mohawk Fine Paper Features Rocco Piscatello’s Ten Qualities of Design
                                             <span className="link-arrow black"></span>
                                         </p>
