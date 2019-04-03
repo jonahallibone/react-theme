@@ -61,7 +61,7 @@ class HomePage extends Component {
                         </CSSAnimate>
                     </h1>
                 </Statement>
-                <FlickSlider></FlickSlider>
+                <FlickSlider />
                 <ProjectList />
             </div>
         );

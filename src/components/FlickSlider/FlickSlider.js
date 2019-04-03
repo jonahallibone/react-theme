@@ -5,6 +5,7 @@ import CSSAnimate from "../CSSAnimate/CSSAnimate";
 import { Link } from "react-router-dom";
 import { Container } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
+import { withProjectsContext } from "../../ProjectsContext";
 
 
 
@@ -35,12 +36,12 @@ class FlickSlider extends Component {
             activeSlide: 0,
             activeSlide2: 0,
             slides: [
-                // {
-                //     image: "https://s3.amazonaws.com/piscatello/italiancinema_homepageimage.jpg",
-                //     title: "New Italian Cinema Events",
-                //     location: "New York, NY",
-                //     link: "/work/irish-hunger-memorial"
-                // }, 
+                {
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/CenSyn_FeatureWall.jpg",
+                    title: "Central Synagogue",
+                    location: "New York, NY",
+                    link: "/work/central-synagogue"
+                }, 
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
                     title: "Lost Tribe",
@@ -171,4 +172,4 @@ class FlickSlider extends Component {
     }
 }
 
-export default FlickSlider;
+export default withProjectsContext(FlickSlider);
