@@ -41,7 +41,7 @@ class FlickSlider extends Component {
                     title: "Central Synagogue",
                     location: "New York, NY",
                     link: "/work/central-synagogue"
-                }, 
+                },
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
                     title: "Lost Tribe",
@@ -55,7 +55,7 @@ class FlickSlider extends Component {
                     link: "/work/nyu-advanced-research-institutes"
                 },
                 {
-                    image: "https://s3.amazonaws.com/piscatello/RVA_iMac_1920x1080.jpg",
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/vinoly-ipad-mockup.jpg",
                     title: "Rafael Viñoly Architects",
                     location: "New York, NY",
                     link: "/work/vinoly"
