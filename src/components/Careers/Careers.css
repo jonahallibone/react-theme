@@ -28,6 +28,17 @@
     border-bottom: 1px solid #999;
 }
 
+@media all and (max-width: 600px) {
+    .careers-grid {
+        padding-top: 7rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .careers-grid h3 {
+        margin-bottom: 2rem;
+    }
+}
+
 .careers-grid:last-of-type {
     border: 0;
 }

@@ -141,6 +141,7 @@
 
 @media all and (max-width: 996px) {
     .information-grid {
+        grid-gap: 5rem;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -148,6 +149,7 @@
 
 @media all and (max-width: 517px) {
     .information-grid {
+        grid-gap: 5rem;
         grid-template-columns: 1fr;
         text-align: left;
     }
