@@ -3,7 +3,9 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Route, Link, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import posed, { PoseGroup } from 'react-pose';
- 
+
+import ReactGA from 'react-ga';
+
 import './App.css';
 
 import HomePage from './components/HomePage/HomePage';
@@ -68,12 +70,19 @@ class App extends Component {
 
 
   componentDidMount() {
+    this.initializeReactGA();
+
     this.unlisten = this.props.history.listen((location, action) => {
       document.querySelector("header").classList.remove("white-bg");
       document.querySelector("header").classList.remove("black-bg");
 
     });
 
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-123791717-1');
+    ReactGA.pageview('/homepage');
   }
 
   // Hook into react router v4
