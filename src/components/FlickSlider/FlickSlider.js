@@ -43,7 +43,7 @@ class FlickSlider extends Component {
                 // }, 
                 {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
-                    title: "LostTribe",
+                    title: "Lost Tribe",
                     location: "New York — London",
                     link: "/work/lost-tribe-theatre"
                 },
@@ -55,7 +55,7 @@ class FlickSlider extends Component {
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/RVA_iMac_1920x1080.jpg",
-                    title: "Raphael Viñoly Architects",
+                    title: "Rafael Viñoly Architects",
                     location: "New York, NY",
                     link: "/work/vinoly"
                 }              
