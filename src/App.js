@@ -34,6 +34,8 @@ class App extends Component {
     }
 
     this.props.history.listen((location, action) => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+
       document.querySelector("header").classList.remove("header-overlay--visible");
       
       // console.log(location);
@@ -81,8 +83,8 @@ class App extends Component {
   }
 
   initializeReactGA() {
-    ReactGA.initialize('UA-123791717-1');
-    ReactGA.pageview('/homepage');
+    ReactGA.initialize('UA-90138439-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   // Hook into react router v4
