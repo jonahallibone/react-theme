@@ -93,8 +93,8 @@ class PracticePage extends Component {
           <Slider {...settings}>
             <img src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />
             <img src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
-            <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_Studio3.jpg" />
-            <img src="http://piscatello.com/wp-content/uploads/2014/04/PDC_StudioDetail2.jpg" />
+            <img src="https://api.piscatello.space/wp-content/uploads/2019/04/PDC_StudioDetail2.jpg" />
+            <img src="https://api.piscatello.space/wp-content/uploads/2019/04/PDC_Studio3.jpg" />
           </Slider>
           <h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in">About</h2>
           <div className="text-grey about-section animate-in"  data-animation-class="pop-in" >
