@@ -49,6 +49,11 @@ class Updates extends Component {
         this.setState({userEmail: event.target.value});
     }
     
+    getDateFormat(postdate) {
+        const date = new Date(postdate);
+        return `${date.toLocaleDateString('en-EN', {day: "numeric"})} ${date.toLocaleDateString('en-EN', {month: "long"})}, ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
+    }
+    
     handleScroll = () => {
         let rows = document.querySelectorAll(".update-row");
 
@@ -76,7 +81,7 @@ class Updates extends Component {
                             <h3 className="reg text-bold">
                                 <HoverLink grey-black={true}>{el.title.rendered}</HoverLink>
                             </h3>
-                            <p className="text-grey light">{new Date(el.date).toLocaleDateString('en-US', options)}</p>
+                            <p className="text-grey light">{this.getDateFormat(el.date)}</p>
                         </div>
                         <div>
                             <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />

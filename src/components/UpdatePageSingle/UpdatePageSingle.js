@@ -19,6 +19,11 @@ class UpdatePageSingle extends Component {
         document.querySelector("header").classList.add("white-bg");
     }
 
+    getDateFormat(postdate) {
+        const date = new Date(postdate);
+        return `${date.toLocaleDateString('en-EN', {day: "numeric"})} ${date.toLocaleDateString('en-EN', {month: "long"})}, ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
+    }
+
     render() {
         const {updates, match} = this.props;
 
@@ -47,7 +52,7 @@ class UpdatePageSingle extends Component {
                                     <div className="author-info">
                                         <p>{update._embedded.author[0].name}</p>
                                         <p className="light text-grey">{update._embedded.author[0].description}</p>
-                                        <p className="light text-grey padding-top-1">{new Date(update.date).toLocaleDateString('en-FR', options)}</p>
+                                        <p className="light text-grey padding-top-1">{this.getDateFormat(update.date)}</p>
                                         <div className="update-share-info padding-top-1">
                                             <a href={`https://www.facebook.com/sharer/sharer.php?${document.location}`} target="_blank"><FaFacebookSquare className="facebook" color="#222" size="23px"/></a>
                                             <a href={`https://twitter.com/intent/tweet?text=${document.location}&source=webclient`} target="_blank"><FaTwitter className="twitter" color="#222" size="23px"/></a>
