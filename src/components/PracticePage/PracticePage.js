@@ -99,7 +99,7 @@ class PracticePage extends Component {
           <h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in">About</h2>
           <div className="text-grey about-section animate-in"  data-animation-class="pop-in" >
             <p>
-            Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodlogy for combining business strategy and creativity to help organizations realize their full potential.
+            Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodology for combining business strategy and creativity to help organizations realize their full potential.
             <br/><br/>
             Over the year’s we’ve helped launch new businesses, rebranded existing ones, and created environmental signage for some of the best organizations in the world. We believe design and collaboration go hand and hand. Through collaboration we share, inspire, and test ideas.
             <br/><br/>
