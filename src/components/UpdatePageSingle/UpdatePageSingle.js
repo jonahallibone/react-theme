@@ -21,7 +21,7 @@ class UpdatePageSingle extends Component {
 
     getDateFormat(postdate) {
         const date = new Date(postdate);
-        return `${date.toLocaleDateString('en-EN', {day: "numeric"})} ${date.toLocaleDateString('en-EN', {month: "long"})}, ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
+        return `${date.toLocaleDateString('en-EN', {day: "numeric"})} ${date.toLocaleDateString('en-EN', {month: "long"})} ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
     }
 
     render() {
