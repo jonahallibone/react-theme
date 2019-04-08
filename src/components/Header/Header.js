@@ -124,6 +124,11 @@ class Header extends Component {
                             <li><HoverLink><Link to="/update">Updates</Link></HoverLink></li>
                             <li><HoverLink><Link to="/contact">Contact</Link></HoverLink></li>
                         </ul>
+                        <div className="email-and-phone">
+                            <p>Information</p>
+                            <p><a href="mailto:info@piscatello.com">info@piscatello.com</a></p>
+                            <p><a href="tel:+12125024734">(212) 502-4734</a></p>
+                        </div>
                     </div>
                 </Container>
             </header>

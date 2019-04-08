@@ -208,3 +208,21 @@ header.header-overlay--visible .links li {
 .links li a:hover {
     color: #ff4350;
 }
+
+.email-and-phone {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .email-and-phone {
+        display: block;
+        position: absolute;
+        bottom: 1rem;
+        left: 1.5rem;
+    }
+    
+    .email-and-phone > p > a {
+        color: #FFF;
+    }
+}
+
