@@ -29,9 +29,14 @@
 }
 
 @media all and (max-width: 600px) {
+    
     .careers-grid {
-        padding-top: 7rem;
+        padding-top: 1.5rem;
         grid-template-columns: 1fr;
+    }
+    
+    .careers-grid:first-of-type {
+        padding-top: 5rem;
     }
     
     .careers-grid h3 {
