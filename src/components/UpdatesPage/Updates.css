@@ -332,7 +332,11 @@
     }
 }
 
-
+@media screen and (max-width: 800px) {
+    .news-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .news-column {

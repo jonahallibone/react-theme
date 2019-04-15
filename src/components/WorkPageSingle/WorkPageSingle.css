@@ -134,7 +134,9 @@
 }
 .service-list li {
     padding: .25rem 0;
+    margin-bottom: .1rem;
     display: block;
+    line-height: 1.35;
 }
 
 .project-description--inner {

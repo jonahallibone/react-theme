@@ -49,6 +49,12 @@
     grid-gap: 1.5rem;
 }
 
+@media screen and (max-width: 1025px) {
+    .update-content-row .content-flex {
+        grid-template-columns: .3fr .7fr;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .update-content-row .content-flex {
         grid-template-columns: 1fr;
