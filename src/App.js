@@ -48,7 +48,7 @@ class App extends Component {
     /* Hydrate interface with projects async */
 
     this.getProjects = async () => {
-      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/project?_embed&per_page=99")
+      const response = await fetch("http://api.piscatello.space/wp-json/wp/v2/project?_embed&per_page=99")
       const json = await response.json();
 
       this.setState(state => ({
@@ -57,7 +57,7 @@ class App extends Component {
     }
 
     this.getUpdates = async () => {
-      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/update?_embed&per_page=99")
+      const response = await fetch("http://api.piscatello.space/wp-json/wp/v2/update?_embed&per_page=99")
       const json = await response.json();
 
       this.setState(state => ({
