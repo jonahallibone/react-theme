@@ -43,10 +43,12 @@ class FlickSlider extends Component {
                     link: "/work/central-synagogue"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/LostTribe_2.jpg",
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
+                    video: true,
                     title: "Lost Tribe",
                     location: "New York — London",
-                    link: "/work/lost-tribe-theatre"
+                    link: "/work/lost-tribe-theatre",
+                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/lost_tribe_still.jpg"
                 },
                 {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
@@ -55,10 +57,12 @@ class FlickSlider extends Component {
                     link: "/work/nyu-advanced-research-institutes"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/vinoly-ipad-mockup.jpg",
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Phones_Grid_1920x1080_vinoly.mp4",
+                    video: true,
                     title: "Rafael Viñoly Architects",
                     location: "New York, NY",
-                    link: "/work/vinoly"
+                    link: "/work/vinoly",
+                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/Vinoly_still.jpg"
                 }              
             ],
             isVisible: false
@@ -111,15 +115,16 @@ class FlickSlider extends Component {
         return this.state.slides.map((el, i) => {
             return(
                 <div key={i}>
+                    <Link to={this.state.slides[this.state.activeSlide].link}>
                         {el.video ?
-                                <video autoPlay={true} muted loop playsInline={true} controls={false} poster="https://s3.amazonaws.com/piscatello/Piscatello_Nomadx_Logo-01.jpg">
+                                <video autoPlay={true} muted loop playsInline={true} controls={false} poster={el.poster}>
                                     <source src={el.image} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             : 
-                            <Link to={this.state.slides[this.state.activeSlide].link}><img src={el.image} alt={el.title}/></Link>
+                            <img src={el.image} alt={el.title}/>
                         }
-                        
+                    </Link>
                 </div>
             )
         })

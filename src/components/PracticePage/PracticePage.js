@@ -84,7 +84,7 @@ class PracticePage extends Component {
 
         <Container style={{padding: 0}} fluid={true} className="container">
           <div className="top-text">
-          <CSSAnimate key="i" delay="1000">
+            <CSSAnimate key="i" delay="1000">
               <h1 className="reg text-white lighter animate-in" data-animation-class="pop-in">
                 Whether you’re established or just starting, we can help your organization grow through the power of design.
               </h1>
