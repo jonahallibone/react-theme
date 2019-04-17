@@ -37,14 +37,6 @@ class FlickSlider extends Component {
             activeSlide2: 0,
             slides: [
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
-                    video: true,
-                    title: "Lost Tribe",
-                    location: "New York — London",
-                    link: "/work/lost-tribe-theatre",
-                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/lost_tribe_still.jpg"
-                },
-                {
                     image: "https://s3.amazonaws.com/piscatello/NYU_FeatureWall3_Horiz-2000x1125.jpg",
                     title: "New York University",
                     location: "New York, NY",
@@ -57,6 +49,14 @@ class FlickSlider extends Component {
                     location: "New York, NY",
                     link: "/work/vinoly",
                     poster: "https://api.piscatello.space/wp-content/uploads/2019/04/Vinoly_still.jpg"
+                },
+                {
+                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
+                    video: true,
+                    title: "Lost Tribe",
+                    location: "New York — London",
+                    link: "/work/lost-tribe-theatre",
+                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/lost_tribe_still.jpg"
                 }              
             ],
             isVisible: false
