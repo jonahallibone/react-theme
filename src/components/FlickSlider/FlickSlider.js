@@ -37,12 +37,6 @@ class FlickSlider extends Component {
             activeSlide2: 0,
             slides: [
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/02/CenSyn_FeatureWall.jpg",
-                    title: "Central Synagogue",
-                    location: "New York, NY",
-                    link: "/work/central-synagogue"
-                },
-                {
                     image: "https://api.piscatello.space/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
                     video: true,
                     title: "Lost Tribe",
