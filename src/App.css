@@ -161,6 +161,10 @@ textarea {
     font-family: "Rotis Sans Serif", "Arial", sans-serif;
 }
 
+a:visited {
+    color: inherit;
+}
+
 strong {
     font-weight: 700;
 }
