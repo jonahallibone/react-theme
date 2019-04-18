@@ -34,13 +34,13 @@ header.header-min .menu a,
 header.header-min a,
 header.header-min .menu-button,
 header.header-min .menu h2 {
-    color: #999;
+    color: #FFF;
 }
 
 header.header-overlay--visible .menu,
 header.header-overlay--visible a,
 header.header-overlay--visible .menu-button {
-    color: #999;
+    color: #FFF;
 }
 
 header.header-overlay--visible .menu .bar {
