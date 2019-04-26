@@ -1,5 +1,5 @@
 .updates-page {
-    background: #FFF;
+    background: #000;
     min-height: 100vh;
     opacity: 0;
     transition: .345s ease opacity;
@@ -33,15 +33,6 @@
     width: 100%;
 }
 
-.update-row:nth-of-type(even) .update-des {
-   /* order: 1; */
-}
-
-
-.update-row:nth-of-type(even) .update-img {
-    /* order: 2; */
-}
-
 .update-feed {
     display: grid;
     grid-template-columns: 1fr;
@@ -49,16 +40,8 @@
     padding-bottom: 6rem;
 }
 
-@media screen and (max-width: 960px) {
-    .update-feed {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 .update-feed .update-row {
-    display: grid;
-    grid-template-columns: 1fr;
     opacity: 0;
     transform: translateY(100px);
     transition: .5s ease all;
@@ -69,15 +52,6 @@
     opacity: 1;
 }
 
-.update-feed .update-row:nth-of-type(even) {
-    /* grid-template-columns: 1fr 2fr; */
-}
-
-.update-feed .update-row:first-of-type {
-    /* border-top: 1px solid #DDD; */
-    padding-top: 4rem;
-}
-
 .update-feed .update-row .update-img img {
     display: block;
     width: 100%;
@@ -85,25 +59,23 @@
 
 .update-feed--grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
     margin-top: 0;
 }
 
 .update-des {
     /* background: #000; */
-    padding: 4.5rem 0 6.5rem 0;
+    padding: 2rem 0 6.5rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 
 @media all and (max-width: 960px) {
     .update-feed--grid {
+        grid-template-columns: 1fr 1fr;
         order: 2;
-    }
-    .update-feed .update-row {
-        grid-template-columns: 1fr;
     }
 
     .updates-quick-grid {
@@ -118,6 +90,11 @@
 
     .updates-quick-grid {
         grid-template-columns: 1fr;
+    }
+
+    .update-feed--grid {
+        grid-template-columns: 1fr;
+        order: 2;
     }
 }
 
@@ -221,6 +198,7 @@
     transition: .345s ease all;
     color: #999;
     border-radius: 0;
+    background: transparent;
 }
 
 @media screen and (max-width: 600px) {
@@ -339,6 +317,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    .update-feed--grid {
+        grid-gap: 1rem;
+    }
+
     .news-column {
         grid-template-columns: 1fr;
         grid-gap: 1rem;
@@ -351,6 +333,7 @@
 
     .update-des {
         grid-template-columns: 1fr;
+        padding: 2.5rem 0 2.5rem 0;
     }
 
     .update-des h3 {
