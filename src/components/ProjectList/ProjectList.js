@@ -85,7 +85,7 @@ class ProjectList extends Component {
             <ProjectsContext.Consumer>
             {({ projects, updates }) => (
                 <div id="project-list">                
-                    <Container fluid={true} className="container" style={{padding: 0}}>
+                    <Container fluid={true} className="container" style={{padding: " 0 0 5rem 0"}}>
                         <div className="project-grid"  style={{paddingTop: "3rem"}}>
                             {this.renderProjects(projects)}
                         </div>
@@ -93,7 +93,7 @@ class ProjectList extends Component {
                             <Link to="/work"><Button arrow className="black-border">More Work</Button></Link>
                         </div>
                     </Container>
-                    <div className="homepage-news">
+                    {/* <div className="homepage-news">
                         <Container fluid={true} className="container news-grid" style={{padding: 0}}>
                             <SwipeSlider>
                                 {this.renderNews(updates)}
@@ -102,7 +102,7 @@ class ProjectList extends Component {
                                 <Link to="/update"><Button arrow className="black-border">More Updates</Button></Link>
                             </div>
                         </Container>
-                    </div>
+                    </div> */}
                 </div>
             )}
             </ProjectsContext.Consumer>
