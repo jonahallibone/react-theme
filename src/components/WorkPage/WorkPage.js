@@ -108,7 +108,7 @@ class WorkPage extends Component {
             <Col xs={12} sm={10} md={9} lg={9}>
             <CSSAnimate key="i" delay="1000">
                 <h1 className={"reg lighter text-black animate"}>
-                  Design in every discipline, that lasts.
+                  Thoughtful design in every discipline to ensure your communication needs are met.
                 </h1>
               </CSSAnimate>
             </Col>
