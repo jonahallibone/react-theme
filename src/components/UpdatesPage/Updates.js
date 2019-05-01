@@ -75,6 +75,25 @@ class Updates extends Component {
 
         return updates.map(el => {
             return (
+                el.acf.instagram_url 
+                ?
+                <a href={el.acf.instagram_url} target="_blank" className="update-row" key={el.id}>
+                    <div className="update-img">
+                        <img src={el.acf.featured_image} alt={el.title.rendered}/>
+                    </div>
+                    <div className="update-des">
+                        <div>
+                            <p className="text-grey light padding-btm-sm">{this.getDateFormat(el.date)}</p>
+                            <p className="reg text-bold text-white">
+                                <HoverLink>{el.title.rendered}</HoverLink>
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
+                        </div>
+                    </div>
+                </a>
+                :
                 <Link to={`/update/${el.slug}`} className="update-row" key={el.id}>
                     <div className="update-img">
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
