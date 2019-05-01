@@ -193,7 +193,7 @@
     padding: .5rem 0;
     font-size: 3rem;
     font-weight: light;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #999;
     outline: none;
     transition: .345s ease all;
     color: #999;
@@ -209,7 +209,7 @@
 }
 
 .update-input::placeholder {
-    color: #EAEAEA;
+    color: #999;
 }
 
 .update-input:focus,

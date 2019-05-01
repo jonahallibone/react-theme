@@ -81,7 +81,7 @@ class Updates extends Component {
                     </div>
                     <div className="update-des">
                         <div>
-                            <p className="text-grey light">{this.getDateFormat(el.date)}</p>
+                            <p className="text-grey light padding-btm-sm">{this.getDateFormat(el.date)}</p>
                             <p className="reg text-bold text-white">
                                 <HoverLink>{el.title.rendered}</HoverLink>
                             </p>
