@@ -26,10 +26,10 @@ class UpdatePageSingle extends Component {
 
     render() {
         const {updates, match} = this.props;
-
-        var index = updates.findIndex(update => update.slug === match.params.id) + 1;
-
-        if(index >= updates.length) {
+        
+        var notInstagram = updates.filter(update => !update.acf.instagram_url);
+        var index = notInstagram.findIndex(update => update.slug === match.params.id) + 1;
+        if(index >= notInstagram.length) {
             index = 0;
         }
 
@@ -65,12 +65,12 @@ class UpdatePageSingle extends Component {
                         </div>
                     </section>
                 </Container>
-                <Link to={`/update/${updates[index].slug}`} className="update-page-bottom">
+                <Link to={`/update/${notInstagram[index].slug}`} className="update-page-bottom">
                     <div className="container">
                         <p className="text-white">Next Update</p>                    
-                        <h1 className="reg lighter text-white">{updates[index].title.rendered}</h1>
+                        <h1 className="reg lighter text-white">{notInstagram[index].title.rendered}</h1>
                     </div>
-                    <div className="image-scale" style={{backgroundImage: `url(${updates[index].acf.featured_image}`}}/>
+                    <div className="image-scale" style={{backgroundImage: `url(${notInstagram[index].acf.featured_image}`}}/>
                     <div style={{position: "absolute", width: "100%", height: "100%", top: 0, left: 0, background: "rgba(0,0,0,0.8)"}}></div>
                 </Link>
             </div>
