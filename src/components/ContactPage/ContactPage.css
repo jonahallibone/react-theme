@@ -157,9 +157,10 @@
 
 .link-arrow {
     background: url('./link-arrow.svg');
-    width: 13px;
+    width: 11px;
     height: 10px;
     background-repeat: no-repeat;
+    background-size: contain;
     display: inline-flex;
     align-self: center;
     margin-left: 5px;

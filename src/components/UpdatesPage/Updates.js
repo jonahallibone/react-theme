@@ -63,7 +63,18 @@ class Updates extends Component {
             if(top) {
                 el.classList.add("animate-in");
             }
+
+            el.addEventListener("mouseenter", this.addHover.bind(this));
+            el.addEventListener("mouseleave", this.removeHover.bind(this));
         });
+    }
+
+    addHover(event) {
+        event.target.querySelector(".underline--container ").classList.add("hovered");
+    }
+
+    removeHover(event) {
+        event.target.querySelector(".underline--container ").classList.remove("hovered");
     }
 
     renderUpdates = (updates) => {
@@ -107,7 +118,7 @@ class Updates extends Component {
                             </p>
                         </div>
                         <div>
-                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: el.excerpt.rendered}} />
+                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: `${el.excerpt.rendered}Read More`}} />
                         </div>
                     </div>
                 </Link>

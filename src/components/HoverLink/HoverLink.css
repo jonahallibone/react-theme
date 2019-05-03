@@ -60,3 +60,8 @@
     background-position: 0% 100%;
     color: #ff4350;
   }
+
+  a:hover .link-arrow,
+  a:hover ~ .link-arrow {
+    background: url('../ContactPage/link-arrow-red.svg') no-repeat !important;
+  }
