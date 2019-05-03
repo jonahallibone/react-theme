@@ -119,7 +119,7 @@ class PracticePage extends Component {
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <h3 className="reg text-white light">Design Consulting</h3>
+              <p className="reg text-white light">Design Consulting</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Design Workshops</li>
                 <li>Visitor Journey Mapping</li>
