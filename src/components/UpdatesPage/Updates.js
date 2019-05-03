@@ -51,7 +51,8 @@ class Updates extends Component {
     
     getDateFormat(postdate) {
         const date = new Date(postdate);
-        return `${date.toLocaleDateString('en-EN', {day: "numeric"})} ${date.toLocaleDateString('en-EN', {month: "long"})} ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
+        const day = date.toLocaleDateString('en-EN', {day: "numeric"});
+        return `${day < 10 ? "0" : "" }${day} ${date.toLocaleDateString('en-EN', {month: "long"})} ${date.toLocaleDateString('en-EN', {year: "numeric"})}`;
     }
     
     handleScroll = () => {
