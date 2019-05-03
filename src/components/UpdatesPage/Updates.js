@@ -19,7 +19,7 @@ class Updates extends Component {
 
     componentDidMount() {
         setTimeout(() => this.styleWhite(), 2000);
-        this.handleScroll();
+        setTimeout(() => this.handleScroll(), 1000);
         document.addEventListener("scroll", this.handleScroll)
     }
 
