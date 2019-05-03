@@ -131,7 +131,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <h3 className="reg text-white light">Brand Identity</h3>
+              <p className="reg text-white light">Brand Identity</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Logomarks</li>
                 <li>Identity Systems</li>
@@ -143,7 +143,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <h3 className="reg text-white light">Digital Design</h3>
+              <p className="reg text-white light">Digital Design</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Content Strategy</li>
                 <li>Visual & Interface Design</li>
@@ -155,7 +155,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <h3 className="reg text-white light">Environmental Graphics</h3>
+              <p className="reg text-white light">Environmental Graphics</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: "2rem"}}>Signage Programs</li>
                 <li>Branded Environments</li>
