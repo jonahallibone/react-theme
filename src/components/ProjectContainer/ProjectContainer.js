@@ -44,7 +44,10 @@ class ProjectContainer extends Component {
         setTimeout(() => {
             this.checkVisibility();
             document.addEventListener("scroll", this.handleScroll, {passive: true});
-        }, 1000);        
+        }, 1000);      
+        
+        setTimeout(() => this.handleScroll(), 1000);
+
     }
     
     handleScroll = () => {
