@@ -57,7 +57,7 @@ class App extends Component {
     }
 
     this.getUpdates = async () => {
-      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/update?_embed&per_page=99")
+      const response = await fetch("https://api.piscatello.space/wp-json/wp/v2/update?_embed&per_page=99&filter[orderby]=date&order=desc")
       const json = await response.json();
 
       this.setState(state => ({

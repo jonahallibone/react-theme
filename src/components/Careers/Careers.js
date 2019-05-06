@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import CSSAnimate from "../CSSAnimate/CSSAnimate";
 
 import './Careers.css';
+import HoverLink from '../HoverLink/HoverLink';
 
 class Careers extends Component {
     componentDidMount() {
@@ -36,7 +37,7 @@ class Careers extends Component {
                             We are looking for someone who is rooted in visual design and capable of performing design thinking activities. The designer will work closely with our team on a variety of projects including the development of brand identities, websites and interactive environments, signage and wayfinding. In each instance, you will be responsible for working within a collaborative environment as well as independently.
                             </p><br/>
                             <p className="text-grey">
-                            Please send your CV, online or pdf portfolio, and cover letter explaining why you believe to be the right candidate for this position to <a href="mailto:careers@piscatello.com" className="text-white">careers@piscatello.com</a>
+                            Please send your CV, online or pdf portfolio, and cover letter explaining why you believe to be the right candidate for this position to <HoverLink><a href="mailto:careers@piscatello.com" className="text-white">careers@piscatello.com</a></HoverLink>
                             </p>
                         </div>
                     </div>
@@ -52,7 +53,7 @@ class Careers extends Component {
                                 Interns work closely with our team on varied client and internal projects. A solid understanding of Piscatello Design Centre’s work and philosophy is vital.
                             </p><br/>
                             <p className="text-grey">
-                                Please send your CV, and/or pdf portfolio, and cover letter, as well as your availability to <a href="mailto:internship@piscatello.com" className="text-white">internship@piscatello.com</a>
+                                Please send your CV, and/or pdf portfolio, and cover letter, as well as your availability to <HoverLink><a href="mailto:internship@piscatello.com" className="text-white">internship@piscatello.com</a></HoverLink>
                             </p>
                         </div>
                     </div>
