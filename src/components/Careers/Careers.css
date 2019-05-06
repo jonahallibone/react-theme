@@ -6,6 +6,14 @@
     transition: .345s ease all;
 }
 
+.careers-page a {
+    transition: .345s ease all 0s !important;
+}
+
+.careers-page a:hover {
+    color: #FF4350;
+}
+
 .careers-page.fade-enter-done {
     opacity: 1;
 }
