@@ -61,7 +61,7 @@ class App extends Component {
       const json = await response.json();
 
       this.setState(state => ({
-        updates: json
+        updates: json.sort((a, b) => new Date(a.acf.date) - new Date(b.acf.date))
       }));
     }
 

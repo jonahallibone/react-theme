@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './Practice.css';
 import { Container } from 'react-grid-system';
 import Slider from "react-slick";
-import SimpleTyper from "../SimpleTyper/SimpleTyper";
 import HoverLink from "../HoverLink/HoverLink";
 import LogoRow from '../LogoRow/LogoRow';
 import {Helmet} from "react-helmet";
@@ -121,7 +120,7 @@ class PracticePage extends Component {
             <div className="info-block animate-in" data-animation-class="pop-in">
               <p className="reg text-white light">Design Consulting</p>
               <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Design Workshops</li>
+                <li style={{marginTop: ".5rem"}}>Design Workshops</li>
                 <li>Visitor Journey Mapping</li>
                 <li>Persona Development</li>
                 <li>Stakeholder Interviews</li>
@@ -133,7 +132,7 @@ class PracticePage extends Component {
             <div className="info-block animate-in" data-animation-class="pop-in">
               <p className="reg text-white light">Brand Identity</p>
               <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Logomarks</li>
+                <li style={{marginTop: ".5rem"}}>Logomarks</li>
                 <li>Identity Systems</li>
                 <li>Icon Development</li>
                 <li>Brand Identity Guidelines</li>
@@ -145,7 +144,7 @@ class PracticePage extends Component {
             <div className="info-block animate-in" data-animation-class="pop-in">
               <p className="reg text-white light">Digital Design</p>
               <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Content Strategy</li>
+                <li style={{marginTop: ".5rem"}}>Content Strategy</li>
                 <li>Visual & Interface Design</li>
                 <li>Cross Platform Design</li>
                 <li>Content Management Systems</li>
@@ -157,7 +156,7 @@ class PracticePage extends Component {
             <div className="info-block animate-in" data-animation-class="pop-in">
               <p className="reg text-white light">Environmental Graphics</p>
               <ul className="text-grey service-list">
-                <li style={{marginTop: "2rem"}}>Signage Programs</li>
+                <li style={{marginTop: ".5rem"}}>Signage Programs</li>
                 <li>Branded Environments</li>
                 <li>Super Graphics & Fine Art</li>
                 <li>Donor Recognition</li>
