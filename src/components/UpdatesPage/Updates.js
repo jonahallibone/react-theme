@@ -13,7 +13,8 @@ class Updates extends Component {
         super(props);
 
         this.state = {
-            userEmail: ""
+            userEmail: "",
+            isFocused: false
         }
     }
 
@@ -118,7 +119,7 @@ class Updates extends Component {
                             </p>
                         </div>
                         <div>
-                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: `${el.excerpt.rendered}Read More`}} />
+                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: `${el.excerpt.rendered}${`<span class="read-more-update">Read More</span>`}`}} />
                         </div>
                     </div>
                 </Link>
@@ -131,15 +132,21 @@ class Updates extends Component {
             <section className="updates-page" style={{paddingTop: "70px"}}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
-                        <h1 className="text-white reg lighter">Stay Updated</h1> 
+                        <h1 className={`reg lighter 4 ${this.state.isFocused ? "text-grey" : "text-white"}`}>Stay Updated</h1> 
                         <div className="loader"></div>
                         <div className="thank-you-text">
                             <h1 className="text-grey reg lighter">Thank you for subscribing.</h1>
                         </div>
                         <div className="update-input-container">
-                            <input type="text" onChange={this.handleChange} className="update-input" value={this.state.userEmail} placeholder="example@example.com"/>
+                            <input type="text" 
+                                onChange={this.handleChange} 
+                                onFocus={() => this.setState({isFocused: true})}
+                                onBlur={() => this.setState({isFocused: false})}
+                                className="update-input" value={this.state.userEmail} 
+                                placeholder="example@example.com"
+                            />
                             <div className="signup-button" onClick={this.addSubscriber}>
-                                <div style={{ color: '#999' }}>
+                                <div style={{ color: '#ff4350' }}>
                                     <Icon size={50} icon={arrows_slim_right}/>
                                 </div>
                             </div>

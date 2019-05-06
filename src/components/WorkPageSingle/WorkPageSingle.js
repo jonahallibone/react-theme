@@ -131,7 +131,23 @@ class WorkPageSingle extends Component {
             return(
               <div className="padding-top-15" key={`${projectInfo.id}-${i}`}>
             
-                {image.banner_image ?  <div className={`single-project-banner`}><img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} /></div> : ""}                  
+                {image.banner_image 
+                ?  
+                <div className={`single-project-banner`}>
+                  {image.banner_video === "yes"
+                  ? 
+                    <video style={{width: "100%"}} className={i === 0 ? "pop-in" : ""} autoPlay muted loop alt={projectInfo.title.rendered}>
+                      <source src={image.banner_image} type="video/mp4" />
+                    </video>
+                  :
+                    <img src={image.banner_image} className={i === 0 ? "pop-in" : ""}  alt={projectInfo.title.rendered} />
+                  }
+                </div> 
+                
+                : 
+                
+                ""}      
+                            
                 {image["square_image_#1"]
                 ?
                 <div className="single-project-grid">

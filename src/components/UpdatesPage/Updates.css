@@ -47,6 +47,14 @@
     transition: .5s ease all;
 }
 
+.update-feed .update-row .read-more-update {
+    transition: .345s ease all;
+}
+
+.update-feed .update-row:hover .read-more-update {
+    color: #ff4350;
+}
+
 .update-feed .update-row.animate-in {
     transform: translateY(0);
     opacity: 1;
@@ -100,6 +108,10 @@
 
 .updates-heading {
     padding: 7rem 0;
+}
+
+.updates-heading h1 {
+    transition: .345s ease color;
 }
 
 .update-input-container {
@@ -210,15 +222,20 @@
 
 .update-input::placeholder {
     color: #999;
+    transition: .345s ease all;
+}
+
+.update-input:focus::placeholder {
+    color: #999;
 }
 
 .update-input:focus,
 .update-input:focus:hover {
-    border-color: #999;
+    border-color: #ff4350;
 }
 
 .signup-button {
-    font-size: 1.5frem;
+    font-size: 1.5rem;
     color: #999;
     /* border-bottom: 1px solid #999; */
     height: 71px;
