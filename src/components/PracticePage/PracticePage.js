@@ -118,7 +118,7 @@ class PracticePage extends Component {
           </div>
           <div className="information-grid padding-top-7">
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <p className="reg text-white light">Design Consulting</p>
+              <p className="reg text-white light text-bold">Design Consulting</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: ".5rem"}}>Design Workshops</li>
                 <li>Visitor Journey Mapping</li>
@@ -130,7 +130,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <p className="reg text-white light">Brand Identity</p>
+              <p className="reg text-white text-bold">Brand Identity</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: ".5rem"}}>Logomarks</li>
                 <li>Identity Systems</li>
@@ -142,7 +142,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <p className="reg text-white light">Digital Design</p>
+              <p className="reg text-white light text-bold">Digital Design</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: ".5rem"}}>Content Strategy</li>
                 <li>Visual & Interface Design</li>
@@ -154,7 +154,7 @@ class PracticePage extends Component {
               </ul>
             </div>
             <div className="info-block animate-in" data-animation-class="pop-in">
-              <p className="reg text-white light">Environmental Graphics</p>
+              <p className="reg text-white light text-bold">Environmental Graphics</p>
               <ul className="text-grey service-list">
                 <li style={{marginTop: ".5rem"}}>Signage Programs</li>
                 <li>Branded Environments</li>
