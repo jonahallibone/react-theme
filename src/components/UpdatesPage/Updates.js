@@ -71,11 +71,11 @@ class Updates extends Component {
     }
 
     addHover(event) {
-        event.target.querySelector(".underline--container ").classList.add("hovered");
+        event.target.querySelectorAll(".underline--container").forEach( el => el.classList.add("hovered"));
     }
 
     removeHover(event) {
-        event.target.querySelector(".underline--container ").classList.remove("hovered");
+        event.target.querySelectorAll(".underline--container").forEach(el => el.classList.remove("hovered"));
     }
 
     renderUpdates = (updates) => {
@@ -119,7 +119,8 @@ class Updates extends Component {
                             </p>
                         </div>
                         <div>
-                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: `${el.excerpt.rendered}${`<span class="read-more-update">Read More</span>`}`}} />
+                            <p className="text-grey light" dangerouslySetInnerHTML={{__html: `${el.excerpt.rendered}`}} />
+                            <p><HoverLink><span className="text-grey read-more-update">Read More</span></HoverLink></p>
                         </div>
                     </div>
                 </Link>
@@ -132,7 +133,7 @@ class Updates extends Component {
             <section className="updates-page" style={{paddingTop: "70px"}}>
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
-                        <h1 className={`reg lighter 4 ${this.state.isFocused ? "text-grey" : "text-white"}`}>Stay Updated</h1> 
+                        <h1 className={`reg lighter 4 ${this.state.isFocused ? "text-white" : "text-white"}`}>Stay Updated</h1> 
                         <div className="loader"></div>
                         <div className="thank-you-text">
                             <h1 className="text-grey reg lighter">Thank you for subscribing.</h1>
@@ -142,7 +143,8 @@ class Updates extends Component {
                                 onChange={this.handleChange} 
                                 onFocus={() => this.setState({isFocused: true})}
                                 onBlur={() => this.setState({isFocused: false})}
-                                className="update-input" value={this.state.userEmail} 
+                                className="update-input" 
+                                value={this.state.userEmail} 
                                 placeholder="example@example.com"
                             />
                             <div className="signup-button" onClick={this.addSubscriber}>
