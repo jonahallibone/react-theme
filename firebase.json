@@ -19,8 +19,8 @@
         "type": 301
       },
       {
-        "source": "/projects/:project_id*",
-        "destination": "/work/:project_id",
+        "source": "/projects/:slug*",
+        "destination": "/work/:slug",
         "type": 301
       },
       {
