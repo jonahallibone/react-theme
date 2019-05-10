@@ -20,6 +20,7 @@ import Careers from './components/Careers/Careers';
 import CareerPageSingle from './components/CareerPageSingle/CareerPageSingle';
 import Updates from './components/UpdatesPage/Updates';
 import UpdatePageSingle from './components/UpdatePageSingle/UpdatePageSingle';
+import Page404 from "./components/404/404.js";
 import {ProjectsContext} from "./ProjectsContext";
 
 class App extends Component {
@@ -126,6 +127,7 @@ class App extends Component {
                   <Route path="/update/:id" component = {UpdatePageSingle}></Route>
                   <Route path="/work" exact component = {WorkPage} key="work"></Route>
                   <Route path="/update" exact component = {Updates}></Route>
+                  <Route component={Page404} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
