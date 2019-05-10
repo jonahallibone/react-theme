@@ -1,0 +1,87 @@
+#circle-container {
+    height: 300vh;
+    display: flex;
+    flex-direction: row;
+}
+
+@media all and (max-width: 600px) {
+    #circle-container {
+        flex-direction: column;
+    }
+}
+  
+.circles {
+    height: 17.5vw;
+    width: 17.5vw;
+    left: 0;
+    top: 300px;
+    transform-origin: 50% 50%;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.circles-side {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+}
+
+.sections {
+    flex: 0 0 50%;
+}
+  
+.circle {
+    height: 17.5vw;
+    width: 17.5vw;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 17.5vw;
+    background: #999;
+    position: absolute;
+    display: flex;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: .345s ease background-color;
+}
+
+.circle span {
+    font-size: 1.65rem;
+}
+  
+.circle:nth-of-type(1) {
+    transform: translate(-75%, 43.3%);
+}
+  
+.circle:nth-of-type(2) {
+    transform: translate(75%, 43.3%);
+}
+  
+.circle:nth-of-type(3) {
+    transform: translateY(-86.60%)
+}
+
+.selected-circle {
+    background: #FFF;
+    color: #000;
+}
+
+section.circle-sections {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+}
