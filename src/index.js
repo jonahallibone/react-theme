@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import registerServiceWorker from './registerServiceWorker';
+import { unregister as unregisterServiceWorker } from './registerServiceWorker'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 ReactDOM.render((
@@ -13,4 +13,4 @@ ReactDOM.render((
         </ScrollToTop>
     </BrowserRouter>
 ), document.getElementById('root'));
-registerServiceWorker();
+unregisterServiceWorker();
