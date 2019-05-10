@@ -11,6 +11,23 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/projects",
+        "destination": "/work",
+        "type": 301
+      },
+      {
+        "source": "/projects/:project_id*",
+        "destination": "/work/:project_id",
+        "type": 301
+      },
+      {
+        "source": "/vap{,/**}",
+        "destination": "/",
+        "type": 301
+      }
     ]
   }
 }
