@@ -24,9 +24,19 @@
         "type": 301
       },
       {
-        "source": "/vap{,/**}",
+        "source": "/VAP{,/**}",
         "destination": "/",
         "type": 301
+      },
+      {
+        "source": "/posters{,/**}",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/VAP/dh_poster.html",
+        "destination": "/",
+        "type": 301        
       }
     ]
   }

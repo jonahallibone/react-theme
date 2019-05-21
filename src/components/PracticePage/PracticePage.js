@@ -7,6 +7,7 @@ import HoverLink from "../HoverLink/HoverLink";
 import LogoRow from '../LogoRow/LogoRow';
 import {Helmet} from "react-helmet";
 import CSSAnimate from "../CSSAnimate/CSSAnimate";
+import ScrollCircles from "../ScrollCircles/ScrollCircles";
 
 class PracticePage extends Component {
 
@@ -105,8 +106,10 @@ class PracticePage extends Component {
             We also believe in the social responsibility of the designer. Our aim is to create work that is long-lasting and thorough down to the last detail. Lets work together to create something engaging, unique, and special.
             </p>
           </div>
-          </Container>
-          <div className="image-container padding-top-7 animate-in" data-animation-class="pop-in">
+          <ScrollCircles/> 
+        </Container>
+
+          <div className="image-container animate-in" data-animation-class="pop-in">
             <LogoRow />
           </div>
           <Container style={{padding: 0}} fluid={true} className="container">
