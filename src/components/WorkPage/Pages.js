@@ -11,8 +11,8 @@ export const Pages = {
       description: `Our brand identity work includes visual identity systems, logomarks, color palettes, typography, icon development, graphic elements and brand guidelines.`,
       url: "brand"
     },
-    "digital design": {
-      title: "Digital Design",
+    "digital experiences": {
+      title: "Digital Experiences",
       description: `Our digital work includes websites, product microsites, email newsletters, online advertising, social media, content management systems and analytics.`,
       url: "digital"
     },

@@ -30,7 +30,6 @@ class Updates extends Component {
 
     addSubscriber = async () => {
         document.querySelector(".update-input-container").classList.add("hide")
-        document.querySelector(".loader").classList.add("show")
         let res = await fetch("https://api.piscatello.space/wp-json/subscribers/add-email", {
             method: "POST",
             headers: {
@@ -38,7 +37,6 @@ class Updates extends Component {
             },
             body: JSON.stringify({"email": this.state.userEmail}),
         }).then(data => {
-            setTimeout(() => document.querySelector(".loader").classList.remove("show"), 1000);
             document.querySelector(".thank-you-text").classList.add("show")
             return data.json()
         })
@@ -134,7 +132,6 @@ class Updates extends Component {
                 <Container fluid={true} className="container" style={{padding: 0}}>
                     <div className="updates-heading">
                         <h1 className={`reg lighter 4 ${this.state.isFocused ? "text-white" : "text-white"}`}>Stay Updated</h1> 
-                        <div className="loader"></div>
                         <div className="thank-you-text">
                             <h1 className="text-grey reg lighter">Thank you for subscribing.</h1>
                         </div>
