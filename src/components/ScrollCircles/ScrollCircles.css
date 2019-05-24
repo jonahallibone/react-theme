@@ -1,7 +1,8 @@
 #circle-container {
-    height: 300vh;
+    min-height: 400vh;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 @media all and (max-width: 600px) {
@@ -9,7 +10,7 @@
         flex-direction: column;
     }
 }
-  
+
 .circles {
     height: 17.5vw;
     width: 17.5vw;
@@ -73,8 +74,8 @@
 }
 
 .selected-circle {
-    background: #FFF;
-    color: #000;
+    background: #ff4350;
+    color: #FFF;
 }
 
 section.circle-sections {
@@ -84,4 +85,54 @@ section.circle-sections {
     justify-content: center;
     align-items: center;
     padding-left: 3rem;
+}
+
+
+.circle-sections h2 {
+    transition: .345s ease color .345s;
+}
+
+@media all and (max-width: 600px) {
+    .circles {
+        margin-top: 100px;
+    }
+
+    .circles-side {
+        width: 100%;
+        position: sticky;
+        top: 43px;
+        padding-top: 20px;
+        left: 0;
+        align-items: flex-start;
+        background: #000;
+        z-index: 99999;
+        height: 40vh;
+    }
+
+    .circle span {
+        font-size: 1rem;
+    }
+
+    .sections {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: cener;
+    }
+
+    section.circle-sections {
+        padding-left: 0;
+        justify-content: center;
+        align-items: flex-end;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .circle-sections h2 {
+        font-size: 1.5rem;
+        padding-bottom: 50%;
+    }
+    
 }
