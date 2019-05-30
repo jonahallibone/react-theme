@@ -1,8 +1,8 @@
 import React from "react";
 
 export const Pages = {
-    "featured": {
-      title: "Featured",
+    "all projects": {
+      title: "All Projects",
       description: `We consider all brand communications as a totality and apply a holistic approach to our work.`,
       url: "all"
     },
