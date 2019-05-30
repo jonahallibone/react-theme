@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
-import Fade from 'react-reveal/Reveal';
 import Filter from "../Filter/Filter";
 import { WorkContext, Pages } from "./Pages";
 import {ProjectsContext} from "../../ProjectsContext";
@@ -11,74 +10,30 @@ import CSSAnimate from "../CSSAnimate/CSSAnimate";
 import '../../App.css';
 import './WorkPage.css';
 
-class WorkPage extends Component {
-  constructor(props) {
-    super(props);
+const WorkPage = () => {
 
-    this.setFilter = (filter) => {
-      this.setState({animateDes: "animate-out"})
-      setTimeout(() => {
-        this.setState(state => ({
-          filter: Pages[filter],
-          pageDescription: Pages[filter].description,
-          animateDes: "animate-in"
-        }));
-      }, 600)
-      
-    };
+  const [filter, setFilter] = useState(Pages["all projects"]);
 
-    this.des = React.createRef();
+  const setFilterKey = filter => {
+    setTimeout(() => {
+      setFilter(Pages[filter])
+    }, 600)
+  };
 
-    this.state = {
-      pageTitle: undefined,
-      pageDescription: undefined,
-      selectedName: "",
-      projects: [],
-      filter: Pages["featured"],
-      setFilter: this.setFilter,
-      animateDes: null
-    }
-
-    this.lastScrollY = null;
-
-    this.scrollAnim = null;
-  }
-  
-  componentDidMount() {
-    setTimeout(() => this.styleWhite(), 2000);
-    this.setState({"pageDescription": Pages["featured"].description})
+  const contextState = {
+    setFilter: setFilterKey,
+    filter: filter
   }
 
-
-  styleWhite = () => {
-      document.querySelector("header").classList.add("white-bg");
-  }
-
-  addShadow = () => {
-    let list = document.querySelector(".option-list");
-
-
-    if(this.lastScrollY < window.scrollY) {
-      list.classList.add("up");
-    }
-
-    else {
-      list.classList.remove("up");
-    }
-
-    this.lastScrollY = window.scrollY;
-
-  }
-
-  renderProjects = (projects) => {
-    if(this.state.filter && this.state.filter.title !== "Featured") {
+  const renderProjects = (projects) => {
+    if(filter && filter.title !== "All Projects") {
       let tmp = projects;
       projects = [];
       projects = tmp.filter((el) => {
         const categories = el._embedded["wp:term"][0];
         let result = false;
         for (let i = 0; i < categories.length; i++) {
-          if (categories[i].name === this.state.filter.title) {
+          if (categories[i].name === filter.title) {
             result = true;
             break;
           }
@@ -87,53 +42,45 @@ class WorkPage extends Component {
       })
     }
 
-
-
     const template = projects.map((el) => (
-        <ProjectContainer project={el} filter={this.state.filter.title} key={`${this.state.filter.title}-${el.id}`} />
+        <ProjectContainer project={el} filter={filter.title} key={`${filter.title}-${el.id}`} />
     ))
 
     return template;
   }
 
-  componentWillUnmount() {
-    document.querySelector("header").classList.remove("white-bg");
-  }
-
-  render() {
-    return (
-      <section className="transition-page" id="page-work">
-        <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
-          <Row className="top-text-mobile">
-            <Col xs={12} sm={10} md={9} lg={9}>
-            <CSSAnimate key="i" delay="1000">
-                <h1 className={"reg lighter text-black animate"}>
-                  Thoughtful design in every discipline to ensure your communication needs are met.
-                </h1>
-              </CSSAnimate>
-            </Col>
-          </Row>
-        </Container>
-        <section id="work-list">
-          <div id="project-list">
-            <Container fluid={true} className="container" style={{padding: 0}}>
-                <WorkContext.Provider value={this.state}>
-                  <Filter />
-                </WorkContext.Provider>
-              <ProjectsContext.Consumer>
-                {({ projects }) => (
-                  <div className="project-grid">
-                      {this.renderProjects(projects)}
-                  </div>
-                )}
-              </ProjectsContext.Consumer>
-            </Container>
-          </div>
-          
-        </section>
+  return (
+    <section className="transition-page" id="page-work">
+      <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
+        <Row className="top-text-mobile">
+          <Col xs={12} sm={10} md={9} lg={9}>
+          <CSSAnimate key="i" delay="1000">
+              <h1 className={"reg lighter text-black animate"}>
+                Thoughtful design in every discipline to ensure your communication needs are met.
+              </h1>
+            </CSSAnimate>
+          </Col>
+        </Row>
+      </Container>
+      <section id="work-list">
+        <div id="project-list">
+          <Container fluid={true} className="container" style={{padding: 0}}>
+              <WorkContext.Provider value={contextState}>
+                <Filter />
+              </WorkContext.Provider>
+            <ProjectsContext.Consumer>
+              {({ projects }) => (
+                <div className="project-grid">
+                    {renderProjects(projects)}
+                </div>
+              )}
+            </ProjectsContext.Consumer>
+          </Container>
+        </div>
+        
       </section>
-    );
-  }
+    </section>
+  );
 }
 
 

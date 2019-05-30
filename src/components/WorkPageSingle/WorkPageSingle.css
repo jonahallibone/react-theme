@@ -216,6 +216,10 @@
 
 /* Next Project Header */
 
+.next-project-container {
+    display: flex;
+}
+
 .next-project-header {
     transition: 0s ease height, .5s ease top, .5s ease border-top;
     position: relative;
@@ -231,6 +235,59 @@
 
 .next-project-header .next-project-link {
     transition-delay: .2s;
+    display: flex;
+}
+
+.back-to-grid {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    color: #999;
+    fill: #999;
+    font-size: 1.45rem;
+    padding: 7rem 0;
+    font-weight: 500;
+    transition: .345s ease color;
+}
+
+.back-to-grid:hover {
+    color: #ff4350;
+    fill: #ff4350;
+    cursor: pointer
+}
+
+.back-to-grid svg {
+    margin-top: 9px;
+    margin-left: 1.5rem;
+    color: #999;
+    transition: .345s ease fill;
+}
+
+@media screen and (max-width: 1024px) {
+    .back-to-grid {
+        order: 1;
+        width: 100%;
+        flex: 0 0 100%;
+        padding-top: 7rem;
+        padding-bottom: 0;
+    }
+
+    .next-project-header {
+        order: 2;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .next-project-container {
+        flex-wrap: wrap;
+    }
+}
+
+.next-project-header:hover .back-to-grid {
+    transform: translateX(-20px);
+    transition-delay: 0s;
+    transition: .25s ease-in-out all;
+    color: inherit;
 }
 
 .next-project-header .project-title {
