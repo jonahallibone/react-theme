@@ -100,11 +100,11 @@ const PracticePage = () => {
           </p>
 				</div>
 			</Container>
-			{/* <div className="image-container animate-in" style={{ marginTop: "10rem" }}>
+			<div className="image-container animate-in" style={{ marginTop: "10rem" }}>
 				<Container style={{ padding: 0 }} fluid={true} className="container">
 					<ScrollCircles />
 				</Container>
-			</div> */}
+			</div>
 			<div className="image-container animate-in" data-animation-class="pop-in">
 				<LogoRow />
 			</div>
