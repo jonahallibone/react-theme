@@ -10,7 +10,8 @@ class ProjectContainer extends Component {
     static propTypes = {
         match: PropTypes.object.isRequired,
         location: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        index: PropTypes.number.isRequired
     };
 
     constructor(props) {
@@ -44,7 +45,8 @@ class ProjectContainer extends Component {
         setTimeout(() => {
             this.checkVisibility();
             document.addEventListener("scroll", this.handleScroll, {passive: true});
-        }, 1000);      
+        }, 2000);    
+        
         
         setTimeout(() => this.handleScroll(), 1000);
 
@@ -71,11 +73,11 @@ class ProjectContainer extends Component {
         this.setState({"hovered": false})
     }
 
-    checkVisibility = () => {
+    checkVisibility = (firstrun = false) => {
         const top = this.root.current.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) * .666;
         const bottom = this.root.current.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight);
         
-        if((top) > 0) {
+        if((top) > 0 || this.props.index < 2) {
             this.root.current.classList.add("visible")
             document.removeEventListener("scroll", this.handleScroll, {passive: true});
         }

@@ -102,7 +102,7 @@ const PracticePage = () => {
 			</Container>
 			<div className="image-container animate-in" style={{ marginTop: "10rem" }}>
 				<Container style={{ padding: 0 }} fluid={true} className="container">
-					<ScrollCircles />
+					{/* <ScrollCircles /> */}
 				</Container>
 			</div>
 			<div className="image-container animate-in" data-animation-class="pop-in">

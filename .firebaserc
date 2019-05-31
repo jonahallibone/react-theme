@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "piscatello-58c86"
+    "default": "piscatello-58c86",
+    "staging": "pdc-dev-9f51e"
   }
 }
