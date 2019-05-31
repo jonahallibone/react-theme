@@ -42,8 +42,8 @@ const WorkPage = () => {
       })
     }
 
-    const template = projects.map((el) => (
-        <ProjectContainer project={el} filter={filter.title} key={`${filter.title}-${el.id}`} />
+    const template = projects.map((el, i) => (
+        <ProjectContainer project={el} filter={filter.title} index={i} key={`${filter.title}-${el.id}`} />
     ))
 
     return template;

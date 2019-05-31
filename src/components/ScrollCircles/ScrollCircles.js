@@ -54,7 +54,7 @@ const ScrollCircles = () => {
             setSelectedCircle("ideation");
         }
 
-        else if(scrolled >= 300 && scrolled <= 360) {
+        else if(scrolled >= 300) {
             setSelectedCircle("implementation");
         }
 
@@ -100,6 +100,7 @@ const ScrollCircles = () => {
         
     }
 
+    const fontSize = "2.15rem";
     return(
         <div id="circle-container">
             <div className="circles-side">
@@ -117,23 +118,29 @@ const ScrollCircles = () => {
             </div>
             <div className="sections">
                 <section className="circle-sections main-section">
-                    <h2 className={selectedCircle === "inspiration" ? "text-white reg lighter" : "text-white reg lighter"}>
-                        Through design, we aim to make the world a more beautiful place. With every project we work on, we create timeless and elegant solutions.
+                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                        We see these three features most often in our work: design, experience, and people. We use them to ensure success for our clients.
                     </h2>
                 </section>
                 <section className="circle-sections idea-section">
-                    <h2 className={selectedCircle === "inspiration" ? "text-white reg lighter" : "text-grey reg lighter"}>
-                        Through design, we aim to make the world a more beautiful place. With every project we work on, we create timeless and elegant solutions.
+                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                        <h3 className="text-red reg text-bold">1</h3>
+                        <br/>
+                        We bring our passion for design to create brands that surprise, delight, and deliver positive emotions.                    
                     </h2>
                 </section>
                 <section className="circle-sections places-section">
-                    <h2 className={selectedCircle === "ideation" ? "text-white reg lighter" : "text-grey reg lighter"}>
-                        From signage to identity to digital we work to create cohesive design programs that clarify the user’s journey.
+                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "ideation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                        <h3 className="text-red reg text-bold">2</h3>
+                        <br/>
+                        We guide an organization’s brand across all touchpoints both physical and digital to ensure a meaningful and memorable experience.
                     </h2>
                 </section>
                 <section className="circle-sections people-section">
-                    <h2 className={selectedCircle === "implementation" ? "text-white reg lighter" : "text-grey reg lighter"}>
-                        We deliver our clients with visually impactful solutions that make their products, places, and ideas more navigable to their target audiences.
+                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "implementation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                        <h3 className="text-red reg text-bold">3</h3>
+                        <br/>
+                        We help organization’s bring their brand to life by designing for peoples’ preferences, desires, and values.
                     </h2>
                 </section>
             </div>
