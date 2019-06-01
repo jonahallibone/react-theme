@@ -4,6 +4,7 @@ node_js:
 warnings_are_errors: false
 install:
   - npm install
+  - firebase use default
 script:
   - npm run build
 deploy:
