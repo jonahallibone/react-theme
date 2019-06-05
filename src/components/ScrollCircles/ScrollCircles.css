@@ -19,8 +19,8 @@
     transform-origin: 50% 50%;
     max-width: 200px;
     max-height: 200px;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 125px;
+    min-height: 125px;
 }
 
 .circles-side {
@@ -43,8 +43,8 @@
     width: 17.5vw;
     max-width: 200px;
     max-height: 200px;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 125px;
+    min-height: 125px;
     border-radius: 17.5vw;
     background: #999;
     position: absolute;
@@ -88,8 +88,18 @@ section.circle-sections {
 }
 
 
+.mobile-sections {
+    display: none;
+    height: 400vh;
+}
+
 .circle-sections h2 {
     transition: .345s ease color .345s;
+    font-size: 2.15rem;
+}
+
+.mobile-section {
+    display: none;
 }
 
 @media all and (max-width: 600px) {
@@ -101,7 +111,7 @@ section.circle-sections {
         width: 100%;
         position: sticky;
         top: 43px;
-        padding-top: 20px;
+        padding-top: 4rem;
         left: 0;
         align-items: flex-start;
         background: #000;
@@ -119,20 +129,46 @@ section.circle-sections {
         left: 0;
         display: flex;
         flex-direction: column;
-        align-items: cener;
+        align-items: center;
+        height: 100vh;
+        position: sticky;
     }
 
     section.circle-sections {
         padding-left: 0;
         justify-content: center;
         align-items: flex-end;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
+        position: absolute;
+        opacity: 0;
+        transition: .345s ease opacity 0s;
+    }
+
+    section.circle-sections.visible {
+        opacity: 1;
+        transition: .345s ease opacity .345s;
     }
 
     .circle-sections h2 {
-        font-size: 1.5rem;
-        padding-bottom: 50%;
+        font-size: 1.3125rem;
+        line-height: 1.35;
+        padding-bottom: 40%;
+        font-weight: 500;
+    }
+
+    .mobile-section {
+        display: block;
+        height: 100vh;
+    }
+
+
+    .mobile-sections {
+        height: 400vh;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
     }
     
 }

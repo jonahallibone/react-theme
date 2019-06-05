@@ -1,20 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import zenscroll from 'zenscroll';
 
 import "./ScrollCircles.css";
 
 const ScrollCircles = () => {
     const [selectedCircle, setSelectedCircle] = useState("inspiration");
+    const [isMobile, setIsMobile] = useState(false);
     let isScrolling = null;
 
+    //For mount
+
     useEffect(() => {
-        document.addEventListener("scroll", handleScroll, {passive: true})
+        handleResize();
+
         return () => {
             clearTimeout(isScrolling);
             isScrolling = null;
-            document.removeEventListener("scroll", handleScroll, {passive: true})
         }
     }, []);
+
+    //For event listeners
+    
+    useEffect(() => {
+        document.addEventListener("scroll", handleScroll, {passive: true});
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            document.removeEventListener("scroll", handleScroll, {passive: true});
+            window.removeEventListener("resize", handleResize);
+        }
+    })
+
+    const handleResize = () => {
+        const mobileQuery = window.matchMedia("(max-width: 600px)");
+        if(mobileQuery.matches) {
+            console.log("<b>Mobile!!</b>")
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    }
 
     const getPercentOfPageScrolled = () => {
         const circles = document.querySelector("#circle-container");
@@ -33,15 +58,15 @@ const ScrollCircles = () => {
         const scrolled = getPercentOfPageScrolled();
 
         if(scrolled > 60 && scrolled < 180) {
-            zenscroll.to(document.querySelector(".idea-section"));
+            !isMobile ? zenscroll.to(document.querySelector(".idea-section")) : zenscroll.to(document.querySelector(".idea-section-mobile"));
         }
 
         else if(scrolled >= 180 && scrolled < 300) {
-            zenscroll.to(document.querySelector(".places-section"));
+            !isMobile ? zenscroll.to(document.querySelector(".places-section")) : zenscroll.to(document.querySelector(".places-section-mobile"));
         }
 
         else if(scrolled >= 300 && scrolled <= 360) {
-            zenscroll.to(document.querySelector(".people-section"));
+            !isMobile ? zenscroll.to(document.querySelector(".people-section")) : zenscroll.to(document.querySelector(".people-section-mobile"));
         }
     }
 
@@ -54,8 +79,12 @@ const ScrollCircles = () => {
             setSelectedCircle("ideation");
         }
 
-        else if(scrolled >= 300) {
+        else if(scrolled >= 300 && scrolled <= 360) {
             setSelectedCircle("implementation");
+        }
+
+        else if(scrolled >= 360) {
+            setSelectedCircle("none");
         }
 
         else {
@@ -64,7 +93,8 @@ const ScrollCircles = () => {
     }
 
     const handleScroll = () => {
-        window.clearTimeout( isScrolling );
+        window.clearTimeout(isScrolling);
+        isScrolling = null;
 
         const circles = document.querySelector(".circles");
         const words = document.querySelectorAll(".circle span");
@@ -86,7 +116,7 @@ const ScrollCircles = () => {
             words.forEach(el => el.style.transform = `rotate(-${scrolled - 120}deg)`);
         }
 
-        else if(scrolled > 240) {
+        else if(scrolled > 360) {
             circles.style.transform = `rotate(${240}deg)`;
             words.forEach(el => el.style.transform = `rotate(-${240}deg)`);
         }
@@ -100,7 +130,6 @@ const ScrollCircles = () => {
         
     }
 
-    const fontSize = "2.15rem";
     return(
         <div id="circle-container">
             <div className="circles-side">
@@ -117,32 +146,42 @@ const ScrollCircles = () => {
                 </div>
             </div>
             <div className="sections">
-                <section className="circle-sections main-section">
-                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
-                        We see these three features most often in our work: design, experience, and people. We use them to ensure success for our clients.
+                <section className={`circle-sections main-section ${selectedCircle === "" ? "visible" : ""}`}>
+                    <h2 className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                    To ensure success for our clients, we consider three driving factors.
+                    The people who use the things that we design, the ease of use and overall experience of the ecosystems we create, 
+                    and the value of timeless beauty in a refined deliverable.
                     </h2>
                 </section>
-                <section className="circle-sections idea-section">
-                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                <section className={`circle-sections idea-section ${selectedCircle === "inspiration" ? "visible" : ""}`}>
+                    <h2 className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">1</h3>
                         <br/>
-                        We bring our passion for design to create brands that surprise, delight, and deliver positive emotions.                    
+                        We believe that design can make organizations stronger. 
+                        We strive to create intelligent and intuitive work that 
+                        inspires loyalty in the people who interact with our clients' brands.                    
                     </h2>
                 </section>
-                <section className="circle-sections places-section">
-                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "ideation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                <section className={`circle-sections places-section ${selectedCircle === "ideation" ? "visible" : ""}`}>
+                    <h2 className={selectedCircle === "ideation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">2</h3>
                         <br/>
                         We guide an organization’s brand across all touchpoints both physical and digital to ensure a meaningful and memorable experience.
                     </h2>
                 </section>
-                <section className="circle-sections people-section">
-                    <h2 style={{fontSize: fontSize}} className={selectedCircle === "implementation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
+                <section className={`circle-sections people-section ${selectedCircle === "implementation" ? "visible" : ""}`}>
+                    <h2 className={selectedCircle === "implementation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">3</h3>
                         <br/>
                         We help organization’s bring their brand to life by designing for peoples’ preferences, desires, and values.
                     </h2>
                 </section>
+            </div>
+            <div className="mobile-sections">
+                <section className="mobile-section main-section-mobile"></section>
+                <section className="mobile-section idea-section-mobile"></section>
+                <section className="mobile-section places-section-mobile"></section>
+                <section className="mobile-section people-section-mobile"></section>
             </div>
         </div>
     )
