@@ -5,40 +5,46 @@ import "./ScrollCircles.css";
 
 const ScrollCircles = () => {
     const [selectedCircle, setSelectedCircle] = useState("inspiration");
-    const [isMobile, setIsMobile] = useState(false);
+    let isMobile = false;
     let isScrolling = null;
 
     //For mount
 
     useEffect(() => {
         handleResize();
+        document.addEventListener("scroll", handleScroll);
 
         return () => {
+            document.removeEventListener("scroll", handleScroll);
             clearTimeout(isScrolling);
             isScrolling = null;
         }
-    }, []);
+    }, [handleScroll]);
 
     //For event listeners
     
     useEffect(() => {
-        document.addEventListener("scroll", handleScroll, {passive: true});
         window.addEventListener("resize", handleResize);
 
         return () => {
-            document.removeEventListener("scroll", handleScroll, {passive: true});
             window.removeEventListener("resize", handleResize);
         }
-    })
+    }, [handleResize]);
+
+    const toggleEventListeners = () => {
+        document.removeEventListener("scroll", handleScroll, {passive: true});
+        document.addEventListener("scroll", handleScroll, {passive: true});
+    }
 
     const handleResize = () => {
         const mobileQuery = window.matchMedia("(max-width: 600px)");
         if(mobileQuery.matches) {
-            console.log("<b>Mobile!!</b>")
-            setIsMobile(true);
+            isMobile = true;
         } else {
-            setIsMobile(false);
+            isMobile = false;
         }
+
+        // toggleEventListeners();
     }
 
     const getPercentOfPageScrolled = () => {
@@ -54,8 +60,8 @@ const ScrollCircles = () => {
         
     }
 
-    const snapToSection = () => {
-        const scrolled = getPercentOfPageScrolled();
+    const snapToSection = (scrolled) => {
+        // const scrolled = getPercentOfPageScrolled();
 
         if(scrolled > 60 && scrolled < 180) {
             !isMobile ? zenscroll.to(document.querySelector(".idea-section")) : zenscroll.to(document.querySelector(".idea-section-mobile"));
@@ -93,7 +99,7 @@ const ScrollCircles = () => {
     }
 
     const handleScroll = () => {
-        window.clearTimeout(isScrolling);
+        clearTimeout(isScrolling);
         isScrolling = null;
 
         const circles = document.querySelector(".circles");
@@ -126,7 +132,7 @@ const ScrollCircles = () => {
             words.forEach(el => el.style.transform = `rotate(-${0}deg)`);
         }
 
-        isScrolling = setTimeout(snapToSection, 66);
+        isScrolling = setTimeout(() => snapToSection(scrolled), 66);
         
     }
 

@@ -90,7 +90,10 @@ class Updates extends Component {
                 ?
                 <a href={el.acf.instagram_url} target="_blank" className="update-row" key={el.id}>
                     <div className="update-img">
+                        {el.acf.featured_image.includes(".mp4") ?
+                        <video src={el.acf.featured_image} controls={false} loop autoPlay muted /> :
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
+                        }
                     </div>
                     <div className="update-des">
                         <div>
@@ -107,7 +110,10 @@ class Updates extends Component {
                 :
                 <Link to={`/update/${el.slug}`} className="update-row" key={el.id}>
                     <div className="update-img">
+                        {el.acf.featured_image.includes(".mp4") ?
+                        <video src={el.acf.featured_image} controls={false} loop autoPlay muted /> :
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
+                        }
                     </div>
                     <div className="update-des">
                         <div>

@@ -16,10 +16,6 @@ class Filter extends Component {
         this.lastScrollY = null;
     }
 
-    componentDidMount = () => {
-    
-    }
-
     toggleShowFilter = () => {
         let filterFlex = document.querySelector(".filter-text");
 

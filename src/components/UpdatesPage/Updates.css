@@ -60,7 +60,8 @@
     opacity: 1;
 }
 
-.update-feed .update-row .update-img img {
+.update-feed .update-row .update-img img,
+.update-feed .update-row .update-img video {
     display: block;
     width: 100%;
 }
@@ -208,7 +209,7 @@
     border-bottom: 1px solid #999;
     outline: none;
     transition: .345s ease all;
-    color: #999;
+    color: #ff4350;
     border-radius: 0;
     background: transparent;
 }
