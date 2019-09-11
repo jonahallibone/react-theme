@@ -1,0 +1,105 @@
+.new_practice_section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.full_bleed {
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.cube {
+    width: 50%;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.cube:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.cube_para {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.full_bleed img,
+.cube img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.cube_img {
+    position: absolute;
+}
+
+.cube_content {
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.padding_left {
+    padding-left: 5rem;
+}
+
+.padding_right {
+    padding-right: 5rem;
+}
+
+@media all and (max-width: 920px) {
+
+    .row {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .cube {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    
+    .full_bleed img {
+        transform: scale(1.5);
+    }
+
+    .img_cube {
+        order: 1;
+    }
+
+    .padding_left {
+        padding-left: 0;
+    }
+    
+    .padding_right {
+        padding-right: 0;
+    }
+}
+
+.cube_content h2 {
+    margin-bottom: 3rem;
+}

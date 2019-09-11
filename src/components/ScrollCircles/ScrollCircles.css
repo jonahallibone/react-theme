@@ -84,7 +84,7 @@ section.circle-sections {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 3rem;
+    padding-left: 5rem;
 }
 
 
@@ -95,7 +95,7 @@ section.circle-sections {
 
 .circle-sections h2 {
     transition: .345s ease color .345s;
-    font-size: 2.15rem;
+    font-size: 1.65rem;
 }
 
 .mobile-section {

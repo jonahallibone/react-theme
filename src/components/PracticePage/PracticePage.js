@@ -8,13 +8,15 @@ import LogoRow from '../LogoRow/LogoRow';
 import { Helmet } from "react-helmet";
 import CSSAnimate from "../CSSAnimate/CSSAnimate";
 import ScrollCircles from "../ScrollCircles/ScrollCircles";
+import NewPracticeSection from '../NewPracticeSection/NewPracticeSection';
+
 
 const PracticePage = () => {
 	let nodeList = [];
 
 	useEffect(() => {
 		nodeList = document.querySelectorAll(".animate-in");
-
+		
 		setTimeout(() => document.addEventListener("scroll", animateElements, { passive: true }), 2000);
 		animateElements();
 
@@ -80,25 +82,10 @@ const PracticePage = () => {
 					<CSSAnimate key="i" delay="1000">
 						<h1 className="reg text-white lighter animate-in" data-animation-class="pop-in">
 							Whether you’re established or just starting, we can help your organization grow through the power of design.
-            </h1>
+            			</h1>
 					</CSSAnimate>
 				</div>
-				<Slider {...settings}>
-					<img src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />
-					<img src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
-					<img src="https://api.piscatello.space/wp-content/uploads/2019/04/PDC_StudioDetail2.jpg" />
-					<img src="https://api.piscatello.space/wp-content/uploads/2019/04/PDC_Studio3.jpg" />
-				</Slider>
-				<h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in">About</h2>
-				<div className="text-grey about-section animate-in" data-animation-class="pop-in" >
-					<p>
-						Piscatello Design Centre is a multidisciplinary design consultancy, founded by Rocco Piscatello in 1997. Since then, he, and the team around him, have established a methodology for combining business strategy and creativity to help organizations realize their full potential.
-          <br /><br />
-						Over the year’s we’ve helped launch new businesses, rebranded existing ones, and created environmental signage for some of the best organizations in the world. We believe design and collaboration go hand and hand. Through collaboration we share, inspire, and test ideas.
-          <br /><br />
-						We also believe in the social responsibility of the designer. Our aim is to create work that is long-lasting and thorough down to the last detail. Lets work together to create something engaging, unique, and special.
-          </p>
-				</div>
+				<NewPracticeSection />
 			</Container>
 			<div className="image-container animate-in" style={{ marginTop: "10rem" }}>
 				<Container style={{ padding: 0 }} fluid={true} className="container">

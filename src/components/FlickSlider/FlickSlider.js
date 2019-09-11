@@ -43,20 +43,20 @@ class FlickSlider extends Component {
                     link: "/work/nyu-advanced-research-institutes"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Phones_Grid_1920x1080_vinoly.mp4",
+                    image: "https://api.piscatello.com/wp-content/uploads/2019/04/Phones_Grid_1920x1080_vinoly.mp4",
                     video: true,
                     title: "Rafael Viñoly Architects",
                     location: "New York, NY",
                     link: "/work/vinoly",
-                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/Vinoly_still.jpg"
+                    poster: "https://api.piscatello.com/wp-content/uploads/2019/04/Vinoly_still.jpg"
                 },
                 {
-                    image: "https://api.piscatello.space/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
+                    image: "https://api.piscatello.com/wp-content/uploads/2019/04/Lost_Tribe_gradient_final.mp4",
                     video: true,
                     title: "Lost Tribe",
                     location: "New York — London",
                     link: "/work/lost-tribe-theatre",
-                    poster: "https://api.piscatello.space/wp-content/uploads/2019/04/lost_tribe_still.jpg"
+                    poster: "https://api.piscatello.com/wp-content/uploads/2019/04/lost_tribe_still.jpg"
                 }              
             ],
             isVisible: false

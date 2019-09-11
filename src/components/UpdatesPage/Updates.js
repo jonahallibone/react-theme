@@ -30,7 +30,7 @@ class Updates extends Component {
 
     addSubscriber = async () => {
         document.querySelector(".update-input-container").classList.add("hide")
-        let res = await fetch("https://api.piscatello.space/wp-json/subscribers/add-email", {
+        let res = await fetch("https://api.piscatello.com/wp-json/subscribers/add-email", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

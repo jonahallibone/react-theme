@@ -1,9 +1,6 @@
 import React from "react";
-import ReactDOM from 'react-dom'
-import { useSpring, animated, interpolate, config } from 'react-spring'
-import { useGesture } from 'react-with-gesture'
-
 import "./ContactSlider.css";
+
 
 
 class ContactSlider extends React.Component {
@@ -105,7 +102,13 @@ class ContactSlider extends React.Component {
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
+                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
+                            </div>
+                            <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
+                            </div>
+                            <div className="contact-slider-image-container">
+                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
                             </div>                                
                         </div>
                     </div>  
@@ -137,7 +140,13 @@ class ContactSlider extends React.Component {
                         <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                     </div>
                     <div className="contact-slider-image-container">
+                        <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
+                    </div>  
+                    <div className="contact-slider-image-container">
                         <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
+                    </div>   
+                    <div className="contact-slider-image-container">
+                        <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
                     </div>   
                     <div className="clones" ref={elem => this.clones = elem}>
                         <div className="contact-slider-track" ref={elem => this.track = elem}>
@@ -169,8 +178,14 @@ class ContactSlider extends React.Component {
                                 <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
                             </div>
                             <div className="contact-slider-image-container">
+                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
+                            </div>
+                            <div className="contact-slider-image-container">
                                 <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
-                            </div>                                
+                            </div>
+                            <div className="contact-slider-image-container">
+                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
+                            </div>                                   
                         </div>
                     </div>          
                 </div>

@@ -259,3 +259,10 @@ h1[data-animation-class], h2[data-animation-class], div[data-animation-class], p
 .info-block:nth-last-of-type(1) {
     transition-delay: 700ms;
 }
+.parallax-inner {
+    height: 100%;
+}
+
+.parallax-outer {
+    overflow: hidden;
+}
