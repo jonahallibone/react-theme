@@ -24,6 +24,11 @@
         "type": 301
       },
       {
+        "source": "/projects/new-york-university-60-fifth-avenue/",
+        "destination": "/work/nyu-advanced-research-institutes",
+        "type": 301
+      },
+      {
         "source": "/VAP{,/**}",
         "destination": "/",
         "type": 301
@@ -36,6 +41,16 @@
       {
         "source": "/VAP/dh_poster.html",
         "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/studio",
+        "destination": "/practice",
+        "type": 301
+      },
+      {
+        "source": "/admin",
+        "destination": "https://api.piscatello.com/wp-admin",
         "type": 301
       }
     ]
