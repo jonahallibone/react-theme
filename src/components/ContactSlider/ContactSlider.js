@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactSlider.css";
+import {ProjectsContext} from "../../ProjectsContext";
 
 
 
@@ -59,137 +60,47 @@ class ContactSlider extends React.Component {
         cancelAnimationFrame(this.rAF);
     }
 
+    renderImages(images) {
+        if(images.length) {
+            console.log(images[0].acf)
+            return images[0].acf.slider_images.map(image => (
+                <div className="contact-slider-image-container" key={image.slider_image}>
+                    <img src={image.slider_image} />
+                </div>
+            ));
+        }
+    }
+
     render() {
         return(
-            <div className="contact-slider" 
-                onMouseEnter={this.handleMouseEnter} 
-                onMouseLeave={this.handleMouseLeave}
-                onMouseMove={this.handleMouseMove}
+            <ProjectsContext.Consumer>
+                {({ contact_images }) => (
+                    <div className="contact-slider" 
+                        onMouseEnter={this.handleMouseEnter} 
+                        onMouseLeave={this.handleMouseLeave}
+                        onMouseMove={this.handleMouseMove}
 
-                ref={elem => this.slider = elem}
-            >
-                <div
-                    className="contact-slider-track" 
-                    ref={elem => this.track = elem}
-                >     
-                     <div className="clones">
-                        <div className="contact-slider-track" ref={elem => this.track = elem}>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Leandra_Hands.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Intersection_01.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Butterflies-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Tape_Measures-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/contact-circles.png" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
-                            </div>                                
+                        ref={elem => this.slider = elem}
+                    >
+                        <div
+                            className="contact-slider-track" 
+                            ref={elem => this.track = elem}
+                        >     
+                            <div className="clones">
+                                <div className="contact-slider-track" ref={elem => this.track = elem}>
+                                        {this.renderImages(contact_images)}
+                                </div>
+                            </div>  
+                            {this.renderImages(contact_images)}   
+                            <div className="clones" ref={elem => this.clones = elem}>
+                                <div className="contact-slider-track" ref={elem => this.track = elem}>
+                                    {this.renderImages(contact_images)}                                   
+                                </div>
+                            </div>          
                         </div>
-                    </div>  
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Leandra_Hands.jpg" />
                     </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Intersection_01.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Butterflies-min.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Tape_Measures-min.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://piscatello.s3.amazonaws.com/contact-circles.png" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
-                    </div>
-                    <div className="contact-slider-image-container">
-                        <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
-                    </div>  
-                    <div className="contact-slider-image-container">
-                        <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
-                    </div>   
-                    <div className="contact-slider-image-container">
-                        <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
-                    </div>   
-                    <div className="clones" ref={elem => this.clones = elem}>
-                        <div className="contact-slider-track" ref={elem => this.track = elem}>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Leandra_Hands.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Intersection_01.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Butterflies-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Tape_Measures-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/V2/Dots_02.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/contact-circles.png" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Waterstones_Cropped.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_notebook+(1).jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/Piscatello_digitalpencil2_4_6.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_bluepaint.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/ContactPage_Images_Compressed/Rock-Shultz_Postcard-min.jpg" />
-                            </div>
-                            <div className="contact-slider-image-container">
-                                <img src="https://piscatello.s3.amazonaws.com/Piscatello_Mondrian.jpeg" />
-                            </div>                                   
-                        </div>
-                    </div>          
-                </div>
-            </div>
+                )}
+            </ProjectsContext.Consumer>
         )
     }
 }

@@ -30,6 +30,8 @@ class App extends Component {
     this.state = {
       projects: [],
       updates: [],
+      contact_images: [],
+      careers: [],
       location: ""
     }
 
@@ -56,6 +58,24 @@ class App extends Component {
       }));
     }
 
+    this.getContactImages = async () => {
+      const response = await fetch("https://api.piscatello.com/wp-json/wp/v2/custom-page?include[]=1038");  // 1038 is the ID of the contact-page
+      const json = await response.json();
+
+      this.setState(state => ({
+        contact_images: json
+      }));
+    }
+
+    this.getCareers = async () => {
+      const response = await fetch("https://api.piscatello.com/wp-json/wp/v2/custom-page?include[]=1056");  // 1038 is the ID of the contact-page
+      const json = await response.json();
+
+      this.setState(state => ({
+        careers: json
+      }));
+    }
+
     this.getUpdates = async () => {
       const response = await fetch("https://api.piscatello.com/wp-json/wp/v2/update?_embed&per_page=99&filter[orderby]=date&order=desc")
       const json = await response.json();
@@ -67,19 +87,14 @@ class App extends Component {
 
     this.getProjects();
     this.getUpdates();
+    this.getContactImages();
+    this.getCareers();
   }
 
 
 
   componentDidMount() {
     this.initializeReactGA();
-
-    this.unlisten = this.props.history.listen((location, action) => {
-      document.querySelector("header").classList.remove("white-bg");
-      document.querySelector("header").classList.remove("black-bg");
-
-    });
-
   }
 
   initializeReactGA() {
@@ -113,7 +128,7 @@ class App extends Component {
       <div className="App">
         <Header location={this.props.location}></Header>
           <ProjectsContext.Provider value={this.state}>
-          <TransitionGroup>
+            <TransitionGroup>
               <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 900, exit: 900}} appear={true}>
                 <Switch location={location}>
                   <Route path="/" exact component = {HomePage}></Route>
