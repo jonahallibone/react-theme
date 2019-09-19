@@ -164,6 +164,7 @@ header.header-overlay--visible .header-overlay {
     visibility: visible;
     opacity: 1;
     transition: opacity .345s ease, visibility linear 0s;
+    z-index: 9;
 }
 
 header.header-overlay--visible .page-name-menu {

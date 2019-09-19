@@ -11,7 +11,7 @@ const NewPracticeSection = () => {
             <div className={styles.row}>
                 <div className={styles.full_bleed}>
                     <Parallax className={styles.cube_para} y={[-40, 40]} tagOuter="figure">
-                        <Image src="https://piscatello.s3.amazonaws.com/PDC_Studio3.jpg" />
+                        <Image src="https://api.piscatello.com/wp-content/uploads/2019/04/PDC_Studio3.jpg" />
                     </Parallax>
                 </div>
             </div>
@@ -26,14 +26,14 @@ const NewPracticeSection = () => {
                 </div>
                 <div className={`${styles.cube} ${styles.img_cube}`}>
                     <Parallax className={styles.cube_para} y={[-20, 20]} tagOuter="figure">
-                        <Image src="https://piscatello.s3.amazonaws.com/josh_book.jpg" />
+                        <Image src="https://api.piscatello.com/wp-content/uploads/2019/04/PDC_StudioDetail2.jpg" />
                     </Parallax>
                 </div>
             </div>
             <div className={styles.row}>
                 <div className={`${styles.cube} ${styles.img_cube}`}>
                     <Parallax className={styles.cube_para} y={[-20, 20]} tagOuter="figure">
-                        <Image src="https://piscatello.s3.amazonaws.com/studio_people.jpg" />
+                        <Image src="https://s3.amazonaws.com/piscatello/Josie-Wall_16x9.jpg" />
                     </Parallax>
                 </div>
                 <div className={styles.cube}>
@@ -48,7 +48,7 @@ const NewPracticeSection = () => {
             <div className={styles.row}>
                 <div className={styles.full_bleed}>
                     <Parallax className={styles.cube_para} y={[-40, 40]} tagOuter="figure">
-                        <Image src="https://piscatello.s3.amazonaws.com/PDC_StudioDetail2.jpg" />
+                        <Image src="https://s3.amazonaws.com/piscatello/PDC_DeskImage_02.20.19.jpg" />
                     </Parallax>
                 </div>
             </div>

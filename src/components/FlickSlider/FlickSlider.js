@@ -5,7 +5,7 @@ import CSSAnimate from "../CSSAnimate/CSSAnimate";
 import { Link } from "react-router-dom";
 import { Container } from 'react-grid-system';
 import HoverLink from '../HoverLink/HoverLink';
-import { withProjectsContext } from "../../ProjectsContext";
+import { withProjectsContext, ProjectsContext } from "../../ProjectsContext";
 
 
 
@@ -105,18 +105,24 @@ class FlickSlider extends Component {
         window.cancelAnimationFrame(this.animation) ;
     }
 
-    renderSlides() {
-        return this.state.slides.map((el, i) => {
+    renderSlides(slider) {
+        if(!slider.length) {
+            return;
+        };
+
+        console.log(slider.length)
+
+        return slider[0].acf.slider_assets.map((el, i) => {
             return(
                 <div key={i}>
-                    <Link to={this.state.slides[this.state.activeSlide].link}>
-                        {el.video ?
-                                <video autoPlay={true} muted loop playsInline={true} controls={false} poster={el.poster}>
-                                    <source src={el.image} type="video/mp4" />
+                    <Link to={"/work/" + slider[0].acf.slider_assets[this.state.activeSlide > -1 ? this.state.activeSlide : 0].project_slug}>
+                        {el.is_video ?
+                                <video autoPlay={true} muted loop playsInline={true} controls={false} poster={el.video_poster}>
+                                    <source src={el.slider_asset} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             : 
-                            <img src={el.image} alt={el.title}/>
+                            <img src={el.slider_asset} alt={el.slide_title}/>
                         }
                     </Link>
                 </div>
@@ -147,26 +153,34 @@ class FlickSlider extends Component {
         };
 
         return (
-            <Container className="container slider" fluid={true} style={{padding: 0}}>
+            <ProjectsContext.Consumer>
+                { ({ slider }) => (
 
-                {this.state.isVisible && [
-                    <CSSAnimate key="i" delay="1250">
-                        <div>
-                            <Slider {...settings}>
-                                {this.renderSlides()}
-                            </Slider>
-                            <div className="description">
-                                <div className="">
-                                    <h3 className="reg text-bold"><HoverLink grey="true">{this.state.slides[this.state.activeSlide].title}</HoverLink></h3>
+                    <Container className="container slider" fluid={true} style={{padding: 0}}>
+                        {this.state.isVisible && [
+                            <CSSAnimate key="i" delay="1250">
+                                <div>
+                                    {slider.length ?
+                                        <Slider {...settings}>
+                                            {this.renderSlides(slider)}
+                                        </Slider>
+                                        :
+                                        ""
+                                    }
+                                    <div className="description">
+                                        <div className="">
+                                            <h3 className="reg text-bold"><HoverLink grey="true">{slider.length && this.state.activeSlide >= 0 ? slider[0].acf.slider_assets[this.state.activeSlide].slide_title : ""}</HoverLink></h3>
+                                        </div>
+                                        <div className="text-right">
+                                            <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; {this.state.slides.length < 10 ? `0${slider.length && this.state.activeSlide >= 0 ? slider[0].acf.slider_assets.length : ""}` : this.state.slides.length}</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="text-right">
-                                    <h3 className="reg text-bold">0{this.state.activeSlide + 1} &mdash; {this.state.slides.length < 10 ? `0${this.state.slides.length}` : this.state.slides.length}</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </CSSAnimate>
-                ]}
-            </Container>
+                            </CSSAnimate>
+                        ]}
+                    </Container>  
+                )}
+            </ProjectsContext.Consumer>
         )
     }
 }

@@ -126,7 +126,7 @@ const WorkPageSingle = ({...props}) => {
                 <div className={`single-project-banner`}>
                   {image.banner_video === "yes"
                   ? 
-                    <video style={{width: "100%"}} className={i === 0 ? "pop-in" : ""} autoPlay muted loop alt={projectInfo.title.rendered}>
+                    <video style={{width: "100%"}} className={i === 0 ? "pop-in" : ""} autoPlay controls={false} playsInline="true" muted loop alt={projectInfo.title.rendered}>
                       <source src={image.banner_image} type="video/mp4" />
                     </video>
                   :
@@ -194,7 +194,7 @@ const WorkPageSingle = ({...props}) => {
   return (
     <ProjectsContext.Consumer>
     {({ projects }) => (
-      <div className={"work-page-single " + getBodyClass()}>
+      <div className={`work-page-single ${getBodyClass()}`}>
         <div className="project-container">
           <WorkPageHeader projectTitle={project.length ? project[0].title.rendered : ""} isUpdate={props.isUpdate}></WorkPageHeader>
           <section id="project-content" className={getBodyClass()}>

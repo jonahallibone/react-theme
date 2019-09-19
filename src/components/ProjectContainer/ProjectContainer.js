@@ -22,6 +22,8 @@ class ProjectContainer extends Component {
             hovered: false
         }
 
+        this.videoPlayer = React.createRef();
+
         this.rAF = undefined;
         this.ticking = false;
         this.last_known_scroll_position = 0;
@@ -122,22 +124,69 @@ class ProjectContainer extends Component {
     }
 
     getThumbnail(filter, el) {
-        if(filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project)
+        if(filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project) {
+            if(el.acf.is_brand_identity_thumbnail_a_video) {
+                return (
+                    <video ref={this.videoPlayer} autoPlay={false} muted loop playsInline={true} controls={false} style={{width: "100%"}}>
+                        <source src={el.acf.brand_identity_thumbnail} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )
+            }
+
             return <img src={el.hasOwnProperty("acf") ? el.acf.brand_identity_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
-        else if(filter == "Digital Design" && el.acf.is_this_a_digital_design_project)
+        }
+        
+        else if(filter == "Digital Design" && el.acf.is_this_a_digital_design_project) {
+            if(el.acf.is_digital_design_thumbnail_a_video) {
+                return (
+                    <video ref={this.videoPlayer} autoPlay={false} muted loop playsInline={true} controls={false} style={{width: "100%"}}>
+                        <source src={el.acf.digital_design_thumbnail} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )
+            }
+
             return <img src={el.hasOwnProperty("acf") ? el.acf.digital_design_thumbnail : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
-        else if(filter == "Environmental Graphics" && el.acf.is_this_an_environmental_design_project)
+        }
+
+        else if(filter == "Environmental Graphics" && el.acf.is_this_an_environmental_design_project) {
+            if(el.acf.is_environmental_design_thumbnail_a_video) {
+                return (
+                    <video ref={this.videoPlayer} autoPlay={false} muted loop playsInline={true} controls={false} style={{width: "100%"}}>
+                        <source src={el.acf.environment_design_project} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )
+            }
+
             return <img src={el.hasOwnProperty("acf") ? el.acf.environment_design_project : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
-        else
+        }
+        else {
             return <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
+        }
+    }
+
+    handleHover = event => {
+        if(this.videoPlayer.current) {
+            this.videoPlayer.current.play()
+        }
+    }
+
+    handleLeave = event => {
+        if(this.videoPlayer.current) {
+            this.videoPlayer.current.pause();
+            this.videoPlayer.current.currentTime = 0;
+        }
     }
 
     render() {
         const el = this.props.project;
         const isNews = this.props.news || "";
         const {filter} = this.props;
+
         return(
-            <div onMouseUp={this.goToLink} style={{height: "100%"}}>
+            <div onMouseUp={this.goToLink} style={{height: "100%"}} onMouseEnter={this.handleHover} onMouseLeave={this.handleLeave}>
                 <div className={"project"} ref={this.root}>
                     <div className="image-container gradient">
                         {

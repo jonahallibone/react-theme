@@ -32,6 +32,7 @@ class App extends Component {
       updates: [],
       contact_images: [],
       careers: [],
+      slider: [],
       location: ""
     }
 
@@ -76,16 +77,27 @@ class App extends Component {
       }));
     }
 
+    this.getSlider = async () => {
+      const response = await fetch("https://api.piscatello.com/wp-json/wp/v2/custom-page?include[]=1069");  // 1038 is the ID of the contact-page
+      const json = await response.json();
+
+      this.setState(state => ({
+        slider: json
+      }));
+    }
+
     this.getUpdates = async () => {
       const response = await fetch("https://api.piscatello.com/wp-json/wp/v2/update?_embed&per_page=99&filter[orderby]=date&order=desc")
       const json = await response.json();
 
       this.setState(state => ({
+        ...state,
         updates: json.sort((a, b) => new Date(a.acf.date) - new Date(b.acf.date))
       }));
     }
 
     this.getProjects();
+    this.getSlider();
     this.getUpdates();
     this.getContactImages();
     this.getCareers();
