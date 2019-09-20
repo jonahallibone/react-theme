@@ -124,6 +124,8 @@ class ProjectContainer extends Component {
     }
 
     getThumbnail(filter, el) {
+        const str = el.acf.featured_image;
+
         if(filter == "Brand Identity" && el.acf.is_this_a_brand_identity_project) {
             if(el.acf.is_brand_identity_thumbnail_a_video) {
                 return (
@@ -162,6 +164,17 @@ class ProjectContainer extends Component {
 
             return <img src={el.hasOwnProperty("acf") ? el.acf.environment_design_project : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
         }
+        // Just a video on the work page
+        
+        else if(str.length && str.includes(".mp4")) {
+            return (
+                <video ref={this.videoPlayer} autoPlay={false} muted loop playsInline={true} controls={false} style={{width: "100%"}}>
+                    <source src={el.acf.featured_image} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            )        
+        }
+
         else {
             return <img src={el.hasOwnProperty("acf") ? el.acf.featured_image : ""} style={this.state.imageLoaded ? {opacity: 1} : {opacity: 0}} alt=""/>
         }
