@@ -91,7 +91,7 @@ class Updates extends Component {
                 <a href={el.acf.instagram_url} target="_blank" className="update-row" key={el.id}>
                     <div className="update-img">
                         {el.acf.featured_image.includes(".mp4") ?
-                        <video src={el.acf.featured_image} controls={false} loop autoPlay muted /> :
+                        <video src={el.acf.featured_image} controls={false} playsInline={true} loop autoPlay muted /> :
                         <img src={el.acf.featured_image} alt={el.title.rendered}/>
                         }
                     </div>

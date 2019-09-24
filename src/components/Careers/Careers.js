@@ -49,7 +49,7 @@ class Careers extends Component {
                                 <h1 className="text-white lighter reg careers-top-text">We're always on the lookout for the best designers, strategists, and developers to join our team.</h1>
                             </CSSAnimate>
                             <div className="image-container">
-                                <img src="https://s3.amazonaws.com/piscatello/studio-hands.jpg" />
+                                <img src={careers.length ? careers[0].acf.top_image : ""} />
                             </div>
                             {this.getCareers(careers)}
                         </Container>

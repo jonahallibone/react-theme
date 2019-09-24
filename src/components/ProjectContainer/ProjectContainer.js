@@ -168,7 +168,7 @@ class ProjectContainer extends Component {
         
         else if(str.length && str.includes(".mp4")) {
             return (
-                <video ref={this.videoPlayer} autoPlay={false} muted loop playsInline={true} controls={false} style={{width: "100%"}}>
+                <video ref={this.videoPlayer} autoPlay={false} muted loop poster={el.acf.video_poster} playsInline={true} controls={false} style={{width: "100%"}}>
                     <source src={el.acf.featured_image} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

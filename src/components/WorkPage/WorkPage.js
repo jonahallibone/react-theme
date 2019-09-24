@@ -52,14 +52,14 @@ const WorkPage = () => {
   return (
     <section className="transition-page" id="page-work">
       <Container fluid={true} className="container" style={{padding: 0, background: "#FFF"}}>
-        <Row className="top-text-mobile">
-          <Col xs={12} sm={10} md={9} lg={9}>
+        <Row className="top-text top-text-mobile">
           <CSSAnimate key="i" delay="1000">
-              <h1 className={"reg lighter text-black animate"}>
-                Thoughtful design in every discipline to ensure your communication needs are met.
-              </h1>
-            </CSSAnimate>
-          </Col>
+            <Col>
+            <h1 className={"reg lighter text-black animate"}>
+              Thoughtful design in every discipline to ensure your communication needs are met.
+            </h1>
+            </Col>
+          </CSSAnimate>
         </Row>
       </Container>
       <section id="work-list">

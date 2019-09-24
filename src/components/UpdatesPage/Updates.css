@@ -216,7 +216,7 @@
 
 @media screen and (max-width: 600px) {
     .update-input {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         width: calc(100% - 66px);
     }
 }

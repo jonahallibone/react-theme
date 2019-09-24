@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-
 import "./CSSAnimate.css";
 
 class CSSAnimate extends Component {

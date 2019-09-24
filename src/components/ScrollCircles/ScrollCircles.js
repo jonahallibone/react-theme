@@ -3,7 +3,7 @@ import zenscroll from 'zenscroll';
 
 import "./ScrollCircles.css";
 
-const ScrollCircles = () => {
+const ScrollCircles = ({content}) => {
     const [selectedCircle, setSelectedCircle] = useState("inspiration");
     let isMobile = false;
     let isScrolling = null;
@@ -154,32 +154,28 @@ const ScrollCircles = () => {
             <div className="sections">
                 <section className={`circle-sections main-section ${selectedCircle === "" ? "visible" : ""}`}>
                     <h2 className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
-                    To ensure success for our clients, we consider three driving factors.
-                    The people who use the things that we design, the ease of use and overall experience of the ecosystems we create, 
-                    and the value of timeless beauty in a refined deliverable.
+                        {content[0].acf.circle_intro}
                     </h2>
                 </section>
                 <section className={`circle-sections idea-section ${selectedCircle === "inspiration" ? "visible" : ""}`}>
                     <h2 className={selectedCircle === "inspiration" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">1</h3>
                         <br/>
-                        We believe that design can make organizations stronger. 
-                        We strive to create intelligent and intuitive work that 
-                        inspires loyalty in the people who interact with our clients' brands.                    
+                        {content[0].acf.design_circle_text}                
                     </h2>
                 </section>
                 <section className={`circle-sections places-section ${selectedCircle === "ideation" ? "visible" : ""}`}>
                     <h2 className={selectedCircle === "ideation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">2</h3>
                         <br/>
-                        We guide an organization’s brand across all touchpoints both physical and digital to ensure a meaningful and memorable experience.
+                        {content[0].acf.experience_circle_text}
                     </h2>
                 </section>
                 <section className={`circle-sections people-section ${selectedCircle === "implementation" ? "visible" : ""}`}>
                     <h2 className={selectedCircle === "implementation" ? "text-grey reg lighter" : "text-grey reg lighter"}>
                         <h3 className="text-red reg text-bold">3</h3>
                         <br/>
-                        We help organization’s bring their brand to life by designing for peoples’ preferences, desires, and values.
+                        {content[0].acf.people_circle_text}
                     </h2>
                 </section>
             </div>
