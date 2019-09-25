@@ -115,6 +115,7 @@ transition-delay: 10ms;
   .description {
     position: relative;
     grid-template-columns: 1fr;
+    opacity: 1!important;
   }
 
   .description .text-right {

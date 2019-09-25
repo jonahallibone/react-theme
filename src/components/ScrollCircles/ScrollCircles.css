@@ -5,7 +5,7 @@
     position: relative;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
     #circle-container {
         flex-direction: column;
     }
@@ -102,7 +102,7 @@ section.circle-sections {
     display: none;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
     .circles {
         margin-top: 100px;
     }
@@ -151,7 +151,6 @@ section.circle-sections {
     }
 
     .circle-sections h2 {
-        font-size: 1.3125rem;
         line-height: 1.35;
         padding-bottom: 20%;
         font-weight: 500;
@@ -171,4 +170,10 @@ section.circle-sections {
         flex-direction: column;
     }
     
+}
+
+@media all and (max-width: 600px) {
+    .circle-sections h2 {
+        font-size: 1.3125rem;
+    }
 }

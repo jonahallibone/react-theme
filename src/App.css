@@ -282,6 +282,16 @@ h1.reg {
     font-size: 3rem;
 }
 
+.random-space {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .random-space {
+        display: inline;
+    }
+}
+
 @media screen and (max-width: 600px) {
     h1.reg {
         font-size: 1.75rem;

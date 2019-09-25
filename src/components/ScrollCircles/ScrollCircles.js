@@ -37,7 +37,7 @@ const ScrollCircles = ({content}) => {
     }
 
     const handleResize = () => {
-        const mobileQuery = window.matchMedia("(max-width: 600px)");
+        const mobileQuery = window.matchMedia("(max-width: 768px)");
         if(mobileQuery.matches) {
             isMobile = true;
         } else {

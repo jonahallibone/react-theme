@@ -117,7 +117,7 @@ const PracticePage = () => {
 			</Container>
 			<div className="bottom">
 				<Container style={{ padding: 0 }} fluid={true} className="container">
-					<h2 className="light text-white reg padding-top-7 padding-btm-7 animate-in" data-animation-class="pop-in" style={{ paddingTop: "14rem" }}>Leadership</h2>
+					<h2 className="light text-white reg padding-top-7 padding-btm-5 animate-in" data-animation-class="pop-in" style={{ paddingTop: "14rem" }}>Leadership</h2>
 					<div className="image-grid-2">
 						<div className="image-container">
 							<p 
@@ -133,11 +133,11 @@ const PracticePage = () => {
 					<Container style={{ padding: 0 }} fluid={true} className="container">
 						<h1 className="text-white lighter reg lets-work-together animate-in" data-animation-class="pop-in" style={{ padding: "10.5rem 0 0 0" }}>
 							Let's work together.
-			</h1>
+						</h1>
 						<br /><br />
 						<h1 className="text-grey lighter reg lets-work-together animate-in" data-animation-class="pop-in" style={{ padding: "0 0 10.5rem 0" }}>
 							Email us at <a href="mailto:work@piscatello.com"><HoverLink grey-grey="true">work@piscatello.com</HoverLink></a> or call <a href="tel:12125024734"><HoverLink grey-grey="true">+1 212 502 4734</HoverLink></a> to learn how we can become an extension of your team.
-			</h1>
+						</h1>
 					</Container>
 				</div>
 			</div>
