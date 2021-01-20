@@ -11,7 +11,7 @@
     "flickity": "^2.2.0",
     "flow-bin": "^0.107.0",
     "flubber": "^0.4.2",
-    "gsap": "^2.1.3",
+    "gsap": "^3.6.0",
     "imagesloaded": "^4.1.4",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.4",
