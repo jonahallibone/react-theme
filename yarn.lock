@@ -2848,8 +2848,8 @@ decamelize@^2.0.0:
     xregexp "4.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 deep-equal@^1.0.1:
   version "1.0.1"
@@ -3925,6 +3925,10 @@ flickity@^2.2.0, flickity@^2.2.1:
     get-size "^2.0.3"
     unidragger "^2.3.0"
     unipointer "^2.3.0"
+
+flow-bin@^0.107.0:
+  version "0.107.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.107.0.tgz#b37bfcce51204d35d58f8eb93b3a76b52291e4cc"
 
 flubber@^0.4.2:
   version "0.4.2"
